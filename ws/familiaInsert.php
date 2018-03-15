@@ -25,9 +25,9 @@ if (isset($idHeredado) || isset($familiaNombre)) {
     } else {
         try {
             
-            $stmt = $conn->prepare("INSERT INTO FAMILIA (idHeredado, familiaNombre)VALUES (:idHeredado,:familiaNombre)");
-            $stmt->bindParam(':idHeredado', $idHeredado);
-            $stmt->bindParam(':familiaNombre',$familiaNombre);
+            $stmt = $conn->prepare("CALL FAMILIAinsert(:PfamiliaNombre,:pidHeredado)");
+            $stmt->bindParam(':pidHeredado', $idHeredado);
+            $stmt->bindParam(':PfamiliaNombre',$familiaNombre);
             $stmt->execute();
             $respuesta['estado'] = "1";
             $respuesta['mensajelog'] = "Consulta Exitosa (insert)";
