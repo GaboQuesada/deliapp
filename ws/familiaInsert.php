@@ -7,6 +7,7 @@ $this->conn = $conexion->conect();
 @$familia= $_POST['familiaNombre'];
 @$id = $Post['idHeredado'];
 
+/*
 if (empty($familia) || empty($familia)){
     
 }else{
@@ -15,6 +16,9 @@ if (empty($familia) || empty($familia)){
     $respuesta['mensaje'] = "Campos obligatorios :|";
     return $respuesta;
 }
+ * 
+ * */
+
 try {
 
     $stmt = $this->conn->prepare("CALL FAMILIAinsert(:pfamiliaNombre,:pidHeredado)");
