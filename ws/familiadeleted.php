@@ -6,7 +6,7 @@ $conn = $conexion->conect();
 
 try {
             
-            $stmt = $conn->prepare("CALL FAMILIAdeleted");
+            $stmt = $conn->prepare("CALL FAMILIAdeleted()");
             $stmt->execute();
             $respuesta['estado'] = "1";
             $respuesta['mensajelog'] = "Consulta Exitosa (deleted)";
