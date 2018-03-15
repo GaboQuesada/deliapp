@@ -1,6 +1,6 @@
 <?php
 
-echo 'hola';
+include './connect.php';
 
 $conexion = new Connect();
 $conn = $conexion->conect();
