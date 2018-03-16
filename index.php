@@ -11,12 +11,13 @@
     <body>
 
         <section class="container">
-            <div class="panel panel-default">
-                <div class="panel-heading">Panel Heading nn</div>
-                <div class="panel-body">
+            <section class="col-md-4"></section>
+            <section class="col-md-8">
 
-                    <section class="col-md-4"></section>
-                    <section class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Panel Heading nn xxx</div>
+                    <div class="panel-body">
+
                         <ul class="nav nav-tabs">
                             <li id="me0" class="active"><a onclick="activarseccion('me0')" data-toggle="tab" href="#home">FAMILIAS</a></li>
                             <li id="me1"><a onclick="activarseccion('me1')" data-toggle="tab" href="#menu1">GRUPO</a></li>
@@ -48,19 +49,21 @@
                             </div>
                         </div> 
 
-                    </section>
-                    </section>
 
+
+                    </div>
                 </div>
-            </div>
+            </section>
+
+
+        </section>
 
 
 
-
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-            <script src="index.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="index.js"></script>
     </body>
 </html>
