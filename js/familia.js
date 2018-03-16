@@ -57,7 +57,11 @@ function ConstriyeTablaYcuadroPaginacion(pini, pfini) {  // construye la tabla y
             $("#tablaresultadosfamilia").empty();
             $.each(datosrespuesta, function (i, item) {
                 tam = tam + 1;
-                $("#tablaresultadosfamilia").append("<tr id='" + datosrespuesta[i].PER_CODIGO + "' onclick='test(" + datosrespuesta[i].PER_CODIGO + ")'><td>" + datosrespuesta[i].PER_CODIGO + "</td><td>" + datosrespuesta[i].PER_NOMBRE + "</td><td>" + datosrespuesta[i].PER_P_APELLIDO + "</td><td>" + datosrespuesta[i].PER_S_APELLIDO + "</td></tr>");
+                $("#tablaresultadosfamilia").append('<tr>\n\
+                                                            <td>' + datosrespuesta[i].id+ '</td>\n\
+                                                            <td>' + datosrespuesta[i].familiaNombre + '</td>\n\
+                                                            <td>' + datosrespuesta[i].idHeredado + '</td>\n\
+                                                            <td></td></tr>');
 
             });
 
