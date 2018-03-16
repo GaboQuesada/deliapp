@@ -26,7 +26,7 @@
                         </ul>
 
                         <div class="tab-content">
-                            <div id="home" class="tab-pane fade in active">
+                            <div id="home" class="tab-pane fade ">
                                 <h3>HOME</h3>
                                 <p>Some content.</p>
                             </div>
