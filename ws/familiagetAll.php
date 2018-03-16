@@ -16,7 +16,7 @@ $parametros = array(
 $respuesta['parametros'] = $parametros;
 
 if (isset($ini) || isset($fin)) {
-    if (empty($ini) || empty($fin)) {
+    if (empty($fin)) {
         
         $respuesta['estado'] = "4";
         $respuesta['mensajelog'] = "Variable  definida pero vacìa (EMPTY ERROR)";
