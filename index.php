@@ -18,15 +18,15 @@
                     <section class="col-md-4"></section>
                     <section class="col-md-8">
                         <ul class="nav nav-tabs">
-                            <li class="active"><a data-toggle="tab" href="#home">FAMILIAS</a></li>
-                            <li><a data-toggle="tab" href="#menu1">GRUPO</a></li>
-                            <li><a data-toggle="tab" href="#menu2">MESA</a></li>
-                            <li><a data-toggle="tab" href="#menu3">PRODUCTO</a></li>
-                            <li><a data-toggle="tab" href="#menu4">DOCUMENTOS</a></li>
+                            <li id="me0" class="active"><a onclick="activarseccion(me0)" data-toggle="tab" href="#home">FAMILIAS</a></li>
+                            <li id="me1"><a onclick="activarseccion(me1)" data-toggle="tab" href="#menu1">GRUPO</a></li>
+                            <li id="me2"><a onclick="activarseccion(me2)" data-toggle="tab" href="#menu2">MESA</a></li>
+                            <li id="me3"><a onclick="activarseccion(me3)" data-toggle="tab" href="#menu3">PRODUCTO</a></li>
+                            <li id="me4"><a onclick="activarseccion(me4)" data-toggle="tab" href="#menu4">DOCUMENTOS</a></li>
                         </ul>
 
                         <div class="tab-content">
-                            <div id="home" class="tab-pane fade ">
+                            <div id="home" class="tab-pane fade in active">
                                 <h3>HOME</h3>
                                 <p>Some content.</p>
                             </div>
