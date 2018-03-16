@@ -5,8 +5,8 @@ include './connect.php';
 
 $conexion = new Connect();
 $conn = $conexion->conect();
-$ini= $_POST["ini"];
-$fin= $_POST["fin"];
+@$ini= $_POST["ini"];
+@$fin= $_POST["fin"];
 
 $parametros = array(
     'URL' => 'ws/familiagetAll.php',
@@ -32,6 +32,7 @@ if (isset($ini) || isset($fin)) {
             $respuesta['estado'] = "1";
             $respuesta['mensajelog'] = "Consulta Exitosa (getAll)";
             $respuesta['mensaje'] = "Se obtuvieron los resgistros con exito";
+             $respuesta['resultados'] = $stmt->fetchAll(PDO::FETCH_ASSOC);
             
         } catch (PDOException $e) {
             
