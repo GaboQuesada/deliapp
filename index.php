@@ -10,7 +10,10 @@
     </head>
     <body>
 
-        <ul class="nav nav-tabs">
+        <section class="container">
+            <section class="col-md-4"></section>
+            <section class="col-md-8">
+                <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
             <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
             <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
@@ -30,6 +33,11 @@
                 <p>Some content in menu 2.</p>
             </div>
         </div> 
+                
+            </section>
+        </section>
+        
+        
 
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
