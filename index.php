@@ -11,8 +11,8 @@
     <body>
 
         <section class="container">
-            <section class="col-md-4"></section>
-            <section class="col-md-8">
+            <section class="col-md-4 col-sm-12"></section>
+            <section class="col-md-8 col-sm-12">
 
                 <div class="panel panel-default">
                     <div class="panel-heading">Panel Heading nn xxx</div>
