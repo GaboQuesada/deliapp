@@ -342,7 +342,7 @@ function preguntarSiNo(id)
 
 $(document).ready(function () {
 
-    hacertablaInstructores(0, 10);
+   ConstriyeTablaYcuadroPaginacion(0, 10);
 
 });
 
