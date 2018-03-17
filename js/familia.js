@@ -15,7 +15,7 @@ function ConstriyeTablaYcuadroPaginacion(pini, pfini) {  // construye la tabla y
           
             var bloques = 0;
             cantidad = respuesta.resultados;
-
+             alert(cantidad);
             var resultado = cantidad / 10;
             if (cantidad <= 10)
             {
@@ -26,7 +26,7 @@ function ConstriyeTablaYcuadroPaginacion(pini, pfini) {  // construye la tabla y
                 bloques = Math.trunc(resultado);
             }
             $("#listapaginacionfamilia").empty();
-            $("#cantregfamilia").html('<p>Total registros:' + cantidad + ' </p>')
+            $("#cantregfamilia").html('<p>Total registros:' + cantidad + ' </p>');
             var desde = 0;
             var hasta = 10;
             var contador = 0;
