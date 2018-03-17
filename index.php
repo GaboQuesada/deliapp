@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
     <body>
-
+        <div id="cosita"></div>
         <section class="container">
             <section class="col-md-4 col-sm-12"></section>
             <section class="col-md-8 col-sm-12">
