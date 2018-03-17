@@ -1,5 +1,9 @@
 <?php
+include './settings.php';
 include './connect.php';
+
+$jsondata = file_get_contents('../config/config.json');
+$data = json_decode($jsondata, true);
 
 
 $conexion = new Connect();

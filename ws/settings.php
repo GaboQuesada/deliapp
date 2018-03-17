@@ -13,53 +13,33 @@ class Settings {
 
     function getSERVER() {
         if ($this->servicio == "local") {
-
-            return $this->data['configServerLocal']['servername'];
-            
+            return $this->data['configServerLocal']['servername'];     
         } else { 
-
-      
            return  $this->data['configServerRemoto']['servername'];
-          
         }
     }
 
     function getPASWORD() {
         if ($this->servicio == "local") {
-
-            return $this->data['configServerLocal']['password'];
-            
+            return $this->data['configServerLocal']['password']; 
         } else { 
-
-      
            return  $this->data['configServerRemoto']['password'];
-          
         }
     }
 
     function getUSER() {
         if ($this->servicio == "local") {
-
-            return $this->data['configServerLocal']['username'];
-            
+            return $this->data['configServerLocal']['username']; 
         } else { 
-
-      
-           return  $this->data['configServerRemoto']['username'];
-          
+           return  $this->data['configServerRemoto']['username']; 
         }
     }
 
     function getBD() {
        if ($this->servicio == "local") {
-
             return $this->data['configServerLocal']['dbname'];
-            
         } else { 
-
-      
            return  $this->data['configServerRemoto']['dbname'];
-          
         }
     }
 
