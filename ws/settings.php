@@ -3,48 +3,63 @@
 class Settings {
 
     private $servicio;
-    private $SERVERLOCAL = "something";
-    private $PASWORDLOCAL = "something";
-    private $USERlOCAL = "something";
-    private $BDLOCAL = "something";
-    private $SERVERREMOTO = "mysql.hostinger.es";
-    private $PASWORDREMOTO = "something";
-    private $USERREMOTO = "admin123";
-    private $DBREMOTO = "u868864184_deli";
+    private $data;
 
-    function __construct($servicio) {
-        $this->servicio = $servicio;
+    function __construct($datas) {
+       
+        $this->data = $datas;
+        $this->servicio = $this->data['configType'];
     }
 
     function getSERVER() {
         if ($this->servicio == "local") {
-            return $this->SERVERLOCAL;
-        } else {
-            return $this->SERVERREMOTO;
+
+            return $this->data['configServerLocal']['servername'];
+            
+        } else { 
+
+      
+           return  $this->data['configServerRemoto']['servername'];
+          
         }
     }
 
     function getPASWORD() {
         if ($this->servicio == "local") {
-            return $this->SERVERLOCAL;
-        } else {
-            return $this->SERVERREMOTO;
+
+            return $this->data['configServerLocal']['password'];
+            
+        } else { 
+
+      
+           return  $this->data['configServerRemoto']['password'];
+          
         }
     }
 
     function getUSER() {
         if ($this->servicio == "local") {
-            return $this->SERVERLOCAL;
-        } else {
-            return $this->SERVERREMOTO;
+
+            return $this->data['configServerLocal']['username'];
+            
+        } else { 
+
+      
+           return  $this->data['configServerRemoto']['username'];
+          
         }
     }
 
     function getBD() {
        if ($this->servicio == "local") {
-            return $this->SERVERLOCAL;
-        } else {
-            return $this->SERVERREMOTO;
+
+            return $this->data['configServerLocal']['dbname'];
+            
+        } else { 
+
+      
+           return  $this->data['configServerRemoto']['dbname'];
+          
         }
     }
 

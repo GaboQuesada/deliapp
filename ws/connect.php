@@ -1,6 +1,6 @@
 <?php
 
-include './settings.php';
+
 
 class Connect {
 
@@ -9,12 +9,14 @@ class Connect {
     private $password;
     private $dbname;
 
-    function __construct($servicio) {
-        $set = new Settings($servicio);
-        $servername;
-        $username;
-        $password;
-        $dbname;
+    function __construct($data) {
+       
+        $pr = new Settings($data);
+
+        $this->servername = $pr->getSERVER();
+        $this->username = $pr->getUSER();
+        $this->password =$pr->getPASWORD();
+        $this->dbname = $pr->getBD();
     }
 
     public function conect() {

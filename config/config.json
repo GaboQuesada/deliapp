@@ -1,12 +1,35 @@
 
-
 {
-    "serverRemoto": "quesa",
-    "userRemoto": "quesa",
-    "dbRemoto": "quesa",
-    "passremoto": "quesa",
-    "serverlocal": "quesa",
-    "userlocal": "quesa",
-    "dblocal": "quesa",
-    "passlocal": "quesa"
+    "configServerLocal": {
+        "servername": "localhsot",
+        "username": "u868864184_deli", 
+        "password": "admin123",
+        "dbname": "u868864184_deli"
+    },
+    "configServerRemoto": {
+        "servername": "mysql.hostinger.es",
+        "username": "u868864184_deli",
+        "password": "admin123",
+        "dbname": "u868864184_deli"
+    },
+    "configType": "remoto",
+    "LocalUrl": {
+        "root": "http://deliapp.tk/ws/"
+    },
+    "RemotoUrl": {
+        "root": "http://localhost/deliapp/ws/"
+    },
+    "uris": {
+        "vr":"0.02",
+        "familia": {
+        "insert":"familiaInsert.php",
+        "deleted":"familiadeleted.php",
+        "getAll":"familiagetAll.php",
+        "count":"familiacount.php"
+        },
+        "mesa": {},
+        "producto": {},
+        "pedido": {},
+        "documentos": {}
+    }
 }
