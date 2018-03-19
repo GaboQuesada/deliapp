@@ -9,6 +9,7 @@
    
     </head>
     <body>
+        <button id="boton1">dddvv</button>
         <div id="cosita"></div>
         <section class="container">
             <section class="col-md-4 col-sm-12"></section>
@@ -136,5 +137,7 @@
         <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
         <script src="js/index.js"></script>
         <script src="js/familia.js"></script>
+        <script src="config/settings.js"></script>
+        <script src="js/urls.js"></script>
     </body>
 </html>

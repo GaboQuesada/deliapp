@@ -2,7 +2,7 @@
 
 function ConstriyeTablaYcuadroPaginacion() {  // construye la tabla y la paginacion persona
 
-    alert("entro 222");
+
     var cantidad;
     $.ajax({
         url: "http://deliapp.tk/ws/familiacount.php",
@@ -32,8 +32,8 @@ function ConstriyeTablaYcuadroPaginacion() {  // construye la tabla y la paginac
 
 $(document).ready(function () {
 
-   alert("listo");
-   $("#cosita").html('<p>hola mundo</p>');
+
+  
    ConstriyeTablaYcuadroPaginacion();
 
 });

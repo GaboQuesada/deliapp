@@ -1,7 +1,10 @@
 
 
+$(document).ready(function () {
 
-var rutaLocal="http://localhost/deliapp/ws/";
-var rutaremota="http://deliapp.tk/ws/";
+    var servicio = getServicio();
+    alert(servicio);
 
-var raiz = rutaLocal;
+
+});
+

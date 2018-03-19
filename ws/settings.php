@@ -42,6 +42,14 @@ class Settings {
            return  $this->data['configServerRemoto']['dbname'];
         }
     }
+    
+     function getUrlRoot() {
+       if ($this->servicio == "local") {
+            return $this->data['LocalUrl']['root'];
+        } else { 
+           return  $this->data['RemotoUrl']['root'];
+        }
+    }
 
 }
 
