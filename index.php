@@ -6,13 +6,50 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" >
-   
+        <link rel="stylesheet" href="lib/dropzone/dist/basic.css" >
+        <link rel="stylesheet" href="lib/dropzone/dist/dropzone.css" >
+
     </head>
     <body>
-        <button id="boton1">dddvv</button>
-        <div id="cosita"></div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">WebSiteName</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </nav>
+        <br>
         <section class="container">
-            <section class="col-md-4 col-sm-12"></section>
+            <section class="col-md-4 col-sm-12">
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Panel Heading</div>
+                    <div class="panel-body"> <form action="/file-upload" class="dropzone"  method="post" enctype="multipart/form-data">
+                            <div class="fallback">
+                                <input name="file" type="file" multiple />
+                            </div>
+                        </form></div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">Panel Heading</div>
+                    <div class="panel-body"> <form action="/file-upload" class="dropzone"  method="post" enctype="multipart/form-data">
+                            <div class="fallback">
+                                <input name="file" type="file" multiple />
+                            </div>
+                        </form></div>
+                </div>
+
+            </section>
             <section class="col-md-8 col-sm-12">
 
                 <div class="panel panel-default">
@@ -21,10 +58,9 @@
 
                         <ul class="nav nav-tabs">
                             <li id="me0" class="active"><a onclick="activarseccion('me0')" data-toggle="tab" href="#familia">FAMILIAS</a></li>
-                            <li id="me1"><a onclick="activarseccion('me1')" data-toggle="tab" href="#Grupos">GRUPOS</a></li>
-                            <li id="me2"><a onclick="activarseccion('me2')" data-toggle="tab" href="#Mesas">MESAS</a></li>
-                            <li id="me3"><a onclick="activarseccion('me3')" data-toggle="tab" href="#Productos">PRODUCTOS</a></li>
-                            <li id="me4"><a onclick="activarseccion('me4')" data-toggle="tab" href="#Documentos">DOCUMENTOS</a></li>
+                            <li id="me3"><a onclick="activarseccion('me1')" data-toggle="tab" href="#Productos">PRODUCTOS</a></li>
+                            <li id="me3"><a onclick="activarseccion('me1')" data-toggle="tab" href="#Provedores">PROVEDORES</a></li>
+
                         </ul>
 
                         <div class="tab-content">
@@ -32,9 +68,8 @@
                                 <table class="table table-hover">
                                     <thead>
                                         <tr>
-                                            <th>Id</th>
-                                            <th>Familia Nombre</th>
-                                            <th>Id Heredado</th>
+                                            <th>#</th>
+                                            <th>Nombre</th>
                                             <th>OPCIONES</th>
                                         </tr>
                                     </thead>
@@ -47,54 +82,41 @@
                                 </ul>
                                 <div id="cantregfamilia"></div>
                             </div>
-                            <div id="Grupos" class="tab-pane fade">
+
+                            <div id="Provedores" class="tab-pane fade in active">
                                 <table class="table table-hover">
                                     <thead>
                                         <tr>
-                                            <th>Id</th>
-                                            <th>Men&uacute Tipo</th>
-                                            <th>Id Heredado</th>
+                                            <th>#</th>
+                                            <th>Nombre</th>
                                             <th>OPCIONES</th>
                                         </tr>
                                     </thead>
-                                    <tbody id="tablaresultadosGrupos">
+                                    <tbody id="tablaresultadosProvedores">
 
                                     </tbody>
                                 </table>
-                                <ul id="listapaginacionGrupos" class="pagination">
+                                <ul id="listapaginacionProvedores" class="pagination">
 
                                 </ul>
-                                <div id="cantregGrupos"></div>
+                                <div id="cantregProvedores"></div>
                             </div>
-                            <div id="Mesas" class="tab-pane fade">
-                                <table class="table table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th>Id</th>
-                                            <th>Id Heredado</th>
-                                            <th>OPCIONES</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="tablaresultadosMesas">
 
-                                    </tbody>
-                                </table>
-                                <ul id="listapaginacionMesas" class="pagination">
 
-                                </ul>
-                                <div id="cantregMesas"></div>
-                            </div>
                             <div id="Productos" class="tab-pane fade">
                                 <table class="table table-hover">
                                     <thead>
                                         <tr>
+                                            <th>#</th>
                                             <th>Id</th>
+                                            <th>Nombre</th>
                                             <th>Descripci&oacuten</th>
                                             <th>Precio</th>
-                                            <th>Grupo</th>
                                             <th>Familia</th>
-                                            <th>Id Heredado</th>
+                                            <th>Exepto</th>
+                                            <th>Provedor</th>
                                             <th>OPCIONES</th>
+
                                         </tr>
                                     </thead>
                                     <tbody id="tablaresultadosProductos">
@@ -105,26 +127,7 @@
                                 </ul>
                                 <div id="cantregProductos"></div>
                             </div>
-                            <div id="Documentos" class="tab-pane fade">
-                                <table class="table table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th>Id</th>
-                                            <th>Nombre</th>
-                                            <th>Comentarios</th>
-                                            <th>Fecha</th>
-                                            <th>Hora</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="tablaresultadosDocumentos">
 
-                                    </tbody>
-                                </table>
-                                <ul id="listapaginacionDocumentos" class="pagination">
-
-                                </ul>
-                                <div id="cantregDocumentos"></div>
-                            </div>
                         </div> 
                     </div>
                 </div>
@@ -132,12 +135,9 @@
         </section>
 
         <script src="lib/jquery/jquery-3.2.1.min.js"></script>
-        
-       
         <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-        <script src="js/index.js"></script>
-        <script src="js/familia.js"></script>
-        <script src="config/settings.js"></script>
-        <script src="js/urls.js"></script>
+        <script src="lib/dropzone.js"></script>
+
+
     </body>
 </html>
