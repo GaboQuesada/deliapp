@@ -1,8 +1,23 @@
 /* make sidebar nav vertical */ 
 
+.navbar{
+    background-color: black;
+}
+
+.bloqueizquierdo{
+    
+    background-color: slategray;
+}
+
+.bloquederecho{
+    
+    background-color:#122b40;
+}
 
 .containerbox{
     margin-top: 70px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 @media (min-width: 768px) {
   .sidebar-nav .navbar .navbar-collapse {
