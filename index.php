@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" >
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="animation.css">
         <script type="text/javascript" src="lib/jquery/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -24,12 +25,12 @@
 
                                 <fieldset class="clearfix">
 
-                                    <p ><span class="fa fa-user"></span><input type="text"  Placeholder="Usuario" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
-                                    <p><span class="fa fa-lock"></span><input type="password"  Placeholder="Contraseña" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+                                    <p ><span class="fa fa-user"></span><input type="text"  class="slideDown" Placeholder="Usuario" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
+                                    <p><span class="fa fa-lock"></span><input type="password" class="slideRight"  Placeholder="Contraseña" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
 
                                     <div>
-                                        <span style="width:48%; text-align:left;  display: inline-block;"><a class="small-text" href="#">Recuperar contraseña?</a></span>
-                                        <span style="width:50%; text-align:right;  display: inline-block;"><input type="submit" value="Ingresar"></span>
+                                        <span style="width:48%; text-align:left;  display: inline-block;"><a class="small-text slideUp" href="#">Recuperar contraseña?</a></span>
+                                        <span style="width:50%; text-align:right;  display: inline-block;"><input  class="slideUp"type="submit" value="Ingresar"></span>
                                     </div>
 
                                 </fieldset>
@@ -40,7 +41,7 @@
 
                         </div> <!-- end login -->
                         <div class="logo">
-                            <img src="img/logo.png" width="170" height="170"/>
+                            <img class="slideExpandUp" src="img/logo.png" width="170" height="170"/>
                             <div class="clearfix"></div>
                         </div>
 
