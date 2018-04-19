@@ -8,6 +8,7 @@
         
         <link rel="stylesheet" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" >
         <link rel="stylesheet" href="../css/2.css">
+        <link rel="stylesheet" href="../css/navbar.css">
         <link rel="stylesheet" href="../css/animation.css">
 
         <script type="text/javascript" src="../lib/jquery/jquery-3.2.1.min.js"></script>
@@ -18,7 +19,7 @@
     <body>
 
 
-        <nav class="navbar navbar-inverse navbar-fixed-top slideDown">
+        <nav class="navbar navbar-inverse navbar-fixed-top slideDown navup">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
