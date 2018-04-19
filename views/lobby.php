@@ -1,299 +1,51 @@
 <html>
     <head>
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-                overflow:hidden;
-            }
-            .example2 {
-                background: #08B;
-                background: -webkit-linear-gradient(180deg, #0BF 0%, #056 100%);
-                background: -moz-linear-gradient(180deg, #0BF 0%, #056 100%);
-                background: linear-gradient(180deg, #0BF 0%, #056 100%);
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-            }
+        <link rel="stylesheet" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="../css/lobby.css"/>
+        <link rel="stylesheet" href="../css/animation.css"/>
 
-            .cuadrados {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 1;
-            }
-            .cuadrados li {
-                position: absolute;
-                list-style: none;
-                display: block;
-                width: 40px;
-                height: 40px;
-                background-color: rgba(255, 255, 255, 0.15);
-                bottom: -160px;
-                -webkit-animation: square 25s infinite linear;
-                -moz-animation: square 25s infinite linear;
-                animation: square 25s infinite linear;
-            }
-            .cuadrados li:nth-child(1) {
-                left: 10%;
-            }
-            .cuadrados li:nth-child(2) {
-                left: 20%;
-                width: 80px;
-                height: 80px;
-                -webkit-animation-delay: 2s;
-                -moz-animation-delay: 2s;
-                animation-delay: 2s;
-                -webkit-animation-duration: 17s;
-                -moz-animation-duration: 17s;
-                animation-duration: 17s;
-            }
-            .cuadrados li:nth-child(3) {
-                left: 25%;
-                -webkit-animation-delay: 4s;
-                -moz-animation-delay: 4s;
-                animation-delay: 4s;
-            }
-            .cuadrados li:nth-child(4) {
-                left: 40%;
-                width: 60px;
-                height: 60px;
-                -webkit-animation-duration: 22s;
-                -moz-animation-duration: 22s;
-                animation-duration: 22s;
-                background-color: rgba(255, 255, 255, 0.25);
-            }
-            .cuadrados li:nth-child(5) {
-                left: 70%;
-            }
-            .cuadrados li:nth-child(6) {
-                left: 80%;
-                width: 120px;
-                height: 120px;
-                -webkit-animation-delay: 3s;
-                -moz-animation-delay: 3s;
-                animation-delay: 3s;
-                background-color: rgba(255, 255, 255, 0.2);
-            }
-            .cuadrados li:nth-child(7) {
-                left: 32%;
-                width: 160px;
-                height: 160px;
-                -webkit-animation-delay: 7s;
-                -moz-animation-delay: 7s;
-                animation-delay: 7s;
-            }
-            .cuadrados li:nth-child(8) {
-                left: 55%;
-                width: 20px;
-                height: 20px;
-                -webkit-animation-delay: 15s;
-                -moz-animation-delay: 15s;
-                animation-delay: 15s;
-                -webkit-animation-duration: 40s;
-                -moz-animation-duration: 40s;
-                animation-duration: 40s;
-            }
-            .cuadrados li:nth-child(9) {
-                left: 25%;
-                width: 10px;
-                height: 10px;
-                -webkit-animation-delay: 2s;
-                -moz-animation-delay: 2s;
-                animation-delay: 2s;
-                -webkit-animation-duration: 40s;
-                -moz-animation-duration: 40s;
-                animation-duration: 40s;
-                background-color: rgba(255, 255, 255, 0.3);
-            }
-            .cuadrados li:nth-child(10) {
-                left: 90%;
-                width: 160px;
-                height: 160px;
-                -webkit-animation-delay: 11s;
-                -moz-animation-delay: 11s;
-                animation-delay: 11s;
-            }
-            .cuadrados li:nth-child(11) {
-                left: 15%;
-                width: 17px;
-                height: 17px;
-                -webkit-animation-delay: 12s;
-                -moz-animation-delay: 12s;
-                animation-delay: 12s;
-                -webkit-animation-duration: 40s;
-                -moz-animation-duration: 40s;
-                animation-duration: 40s;
-                background-color: rgba(255, 255, 255, 0.5);
-            }
-            .cuadrados li:nth-child(12) {
-                left: 20%;
-                width: 5px;
-                height: 5px;
-                -webkit-animation-delay: 15s;
-                -moz-animation-delay: 15s;
-                animation-delay: 15s;
-                -webkit-animation-duration: 15s;
-                -moz-animation-duration: 15s;
-                animation-duration: 15s;
-                background-color: rgba(255, 255, 255, 0.1);
-            }
-            .cuadrados li:nth-child(13) {
-                left: 45%;
-                width: 8px;
-                height: 8px;
-                -webkit-animation-delay: 17s;
-                -moz-animation-delay: 17s;
-                animation-delay: 17s;
-                -webkit-animation-duration: 29s;
-                -moz-animation-duration: 29s;
-                animation-duration: 29s;
-                background-color: rgba(255, 255, 255, 0.3);
-            }
-            .cuadrados li:nth-child(14) {
-                left: 50%;
-                width: 120px;
-                height: 120px;
-                -webkit-animation-delay: 11s;
-                -moz-animation-delay: 11s;
-                animation-delay: 11s;
-                -webkit-animation-duration: 19s;
-                -moz-animation-duration: 19s;
-                animation-duration: 19s;
-                background-color: rgba(255, 255, 255, 0.35);
-            }
-            .cuadrados li:nth-child(15) {
-                left: 67%;
-                width: 50px;
-                height: 50px;
-                -webkit-animation-delay: 6s;
-                -moz-animation-delay: 6s;
-                animation-delay: 6s;
-                -webkit-animation-duration: 12s;
-                -moz-animation-duration: 12s;
-                animation-duration: 12s;
-                background-color: rgba(255, 255, 255, 0.5);
-            }
-            .cuadrados li:nth-child(16) {
-                left: 75%;
-                width: 20px;
-                height: 20px;
-                -webkit-animation-delay: 1s;
-                -moz-animation-delay: 1s;
-                animation-delay: 1s;
-                -webkit-animation-duration: 25s;
-                -moz-animation-duration: 25s;
-                animation-duration: 25s;
-                background-color: rgba(255, 255, 255, 0.3);
-            }
-            .cuadrados li:nth-child(17) {
-                left: 10%;
-                width: 10px;
-                height: 10px;
-                -webkit-animation-delay: 2s;
-                -moz-animation-delay: 2s;
-                animation-delay: 2s;
-                -webkit-animation-duration: 20s;
-                -moz-animation-duration: 20s;
-                animation-duration: 20s;
-                background-color: rgba(255, 255, 255, 0.45);
-            }
-            .cuadrados li:nth-child(18) {
-                left: 55%;
-                width: 10px;
-                height: 10px;
-                -webkit-animation-delay: 2s;
-                -moz-animation-delay: 2s;
-                animation-delay: 2s;
-                -webkit-animation-duration: 32s;
-                -moz-animation-duration: 32s;
-                animation-duration: 32s;
-                background-color: rgba(255, 255, 255, 0.4);
-            }
-            .cuadrados li:nth-child(19) {
-                left: 59%;
-                width: 10px;
-                height: 10px;
-                -webkit-animation-delay: 8s;
-                -moz-animation-delay: 8s;
-                animation-delay: 8s;
-                -webkit-animation-duration: 15s;
-                -moz-animation-duration: 15s;
-                animation-duration: 15s;
-                background-color: rgba(255, 255, 255, 0.4);
-            }
-            .cuadrados li:nth-child(20) {
-                left: 5%;
-                width: 15px;
-                height: 15px;
-                -webkit-animation-delay: 3s;
-                -moz-animation-delay: 3s;
-                animation-delay: 3s;
-                -webkit-animation-duration: 10s;
-                -moz-animation-duration: 10s;
-                animation-duration: 10s;
-                background-color: rgba(255, 255, 255, 0.25);
-            }
+        <script type="text/javascript" src="../lib/jquery/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
-            /*
-            * Animaciones
-            */
-
-            @-webkit-keyframes square {
-                0% {
-                -webkit-transform: translateY(0);
-                transform: translateY(0);
-            }
-            100% {
-                -webkit-transform: translateY(-100%) rotate(600deg);
-                transform: translateY(-100%) rotate(600deg);
-            }
-            }
-            @-moz-keyframes square {
-                0% {
-                -moz-transform: translateY(0);
-                transform: translateY(0);
-            }
-            100% {
-                -moz-transform: translateY(-100%) rotate(600deg);
-                transform: translateY(-100%) rotate(600deg);
-            }
-            }
-            @keyframes square {
-                0% {
-                -webkit-transform: translateY(0);
-                transform: translateY(0);
-            }
-            100% {
-                -webkit-transform: translateY(-1500px) rotate(600deg);
-                transform: translateY(-1500px) rotate(600deg);
-            }
-            }
-        </style>
     </head>
     <body>
-        <section class="example2">
-            <ul class="cuadrados">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+        <header id="header">
+             <img  src="../img/logo.png" height="70" width="70" /> 
+            <img  src="../img/logoyovoy.png" height="90" width="90" /> 
+           
+
+        </header>
+        <ul class="cuadrados">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <section id="" class=" containerbox col-md-12 container">
+
+            <i class="  fas fa-utensils col-md-3 it slideDown"></i>
+            <i class="  fas fa-calculator  col-md-3 it slideLeft"></i>
+            <i class="  fas fa-shopping-cart  col-md-3 it slideRight"></i>
+            <i class="  fas fa-sliders-h  col-md-3 it slideUp"></i>
         </section>
+        <footer id="footer">
+            <p> <i class="fab fa-react fa-spin"></i><strong>Diseño y programación:</strong>Gabriel Quesada Sánchez </p>
+        </footer>
+
     </body>
 </html>

@@ -19,7 +19,7 @@
         <nav class="navbar navbar-inverse navbar-fixed-top slideDown navup">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <img src="../img/logo.png" width="45" height="45"/>
+                    <img class="pulse" src="../img/logo.png" width="45" height="45"/>
                     <button class="btn btn-default navbar-btn"><i class="fas fa-utensils"></i></button>
                     <button class="btn btn-primary navbar-btn"><i class="fas fa-calculator"></i></button>
                     <button class="btn btn-primary navbar-btn"><i class="fas fa-shopping-cart"></i></button>

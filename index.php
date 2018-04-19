@@ -46,7 +46,7 @@
 
                         </div> <!-- end login -->
                         <div id="logobox" class="logo">
-                            <img class="slideExpandUp  sobralogo" src="img/logo.png" width="170" height="170"/>
+                            <img class="slideExpandUp  sobralogo  " src="img/logo.png" width="170" height="170"/>
                             <div class="clearfix"></div>
                         </div>
 

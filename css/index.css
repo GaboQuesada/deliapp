@@ -2,14 +2,14 @@
 
 .main{
 
-    background: rgba(232,80,60,1);
-    background: -moz-radial-gradient(center, ellipse cover, rgba(232,80,60,1) 0%, rgba(222,89,40,1) 41%, rgba(242,54,8,1) 100%);
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(232,80,60,1)), color-stop(41%, rgba(222,89,40,1)), color-stop(100%, rgba(242,54,8,1)));
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(232,80,60,1) 0%, rgba(222,89,40,1) 41%, rgba(242,54,8,1) 100%);
-    background: -o-radial-gradient(center, ellipse cover, rgba(232,80,60,1) 0%, rgba(222,89,40,1) 41%, rgba(242,54,8,1) 100%);
-    background: -ms-radial-gradient(center, ellipse cover, rgba(232,80,60,1) 0%, rgba(222,89,40,1) 41%, rgba(242,54,8,1) 100%);
-    background: radial-gradient(ellipse at center, rgba(232,80,60,1) 0%, rgba(222,89,40,1) 41%, rgba(242,54,8,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8503c', endColorstr='#f23608', GradientType=1 );
+    background: rgba(255,175,75,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,175,75,1)), color-stop(100%, rgba(255,146,10,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a', GradientType=1 );
     height:calc(100vh);
     width:100%;
 }
@@ -174,32 +174,32 @@ fieldset{
 }
 
 @media screen and (max-width:480px) {
-    
+
     #logobox{
         display: none;
     }
-    
-    
+
+
     #header{
         margin-top: 25px;
         margin-bottom: auto;
         margin-left: auto;
         float: left;
         padding-left: 30%;
-        
+
     }
-    
+
     #logodeli{
         width: 60px;
         height: 60px;
         display: inline-block;
     }
-    
+
     #logoempresa{
-        
+
         width: 60px;
         height: 60px;
-     
-        
+
+
     }
 }
