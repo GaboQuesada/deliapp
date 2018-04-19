@@ -20,8 +20,10 @@
             <div class="container-fluid">
                 <div class="navbar-header">
                     <img src="../img/logo.png" width="45" height="45"/>
-                    <button class="btn btn-default navbar-btn">Ordenar</button>
-                    <button class="btn btn-primary navbar-btn">Facturar</button>
+                    <button class="btn btn-default navbar-btn"><i class="fas fa-utensils"></i></button>
+                    <button class="btn btn-primary navbar-btn"><i class="fas fa-calculator"></i></button>
+                    <button class="btn btn-primary navbar-btn"><i class="fas fa-shopping-cart"></i></button>
+                    <button class="btn btn-primary navbar-btn"><i class="fas fa-sliders-h"></i></button>
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -35,14 +37,6 @@
 
 
                     <ul class="nav navbar-nav">
-
-                        <li class="active">&numsp;</li>
-                        <li class="active"> <button class="btn btn-primary navbar-btn">Inventario</button></li>
-                        <li class="active">&numsp;</li>
-                        <li class="active"> <button class="btn btn-primary navbar-btn">Sistema</button></li>
-                        <li class="active">&numsp;</li>
-
-
 
                     </ul>
 
