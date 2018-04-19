@@ -10,8 +10,8 @@
         <link rel="stylesheet" href="../css/2.css">
         <link rel="stylesheet" href="../css/animation.css">
 
-        <script type="text/javascript" src="lib/jquery/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../lib/jquery/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
 
 
