@@ -169,7 +169,7 @@ fieldset{
     top:0;
 }
 
-@media screen and (max-width:640px) {
+@media screen and (max-width:360px) {
     
     #logobox{
         display: none;
@@ -181,8 +181,8 @@ fieldset{
     }
     #logoempresa{
         
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
      
         
     }
