@@ -7,15 +7,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" >
-
         <link rel="stylesheet" href="../css/navbar.css">
         <link rel="stylesheet" href="../css/animation.css">
-
         <script type="text/javascript" src="../lib/jquery/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="../lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-
-
-
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+        
     <body>
 
 
@@ -44,6 +41,7 @@
                         <li class="active">&numsp;</li>
                         <li class="active"> <button class="btn btn-primary navbar-btn">Sistema</button></li>
                         <li class="active">&numsp;</li>
+                        
 
 
                     </ul>
@@ -67,15 +65,19 @@
                             </form>
                         </li>
                         <li><img  src="../img/profil.jpg" width="45" height="45" class="img-rounded profileImage" /></li>
-                        <li class="dropdown"><a class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+                        <li class="dropdown"><a class="dropdown-toggle fas fa-cog " data-toggle="dropdown" href="#"></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Page 1-1</a></li>
-                                <li><a href="#">Page 1-2</a></li>
-                                <li><a href="#">Page 1-3</a></li>
+                                <li><a href="#">Perfil</a></li>
+                                <li><a href="#">Cambiar Contraseña</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Reportar Insidencia</a></li>
                             </ul>
                         </li>
-                        <li><a href="#"><span class="badge">10</span></a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                       
+                        <li><a href="#"><i class="fas fa-ambulance"></i></a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i><span class="badge">10</span></a></li>
+                         <li><a href="#"><i class="far fa-comment-alt"></i><span class="badge">3</span></a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
                         <li><img src="../img/logoyovoy.png" width="55" height="55" class="" /></li>
                     </ul>
                 </div>
