@@ -14,7 +14,10 @@
     <body>
 
         <div class="main">
+            <header id="header">
+                <img src="img/logoyovoy.png" height="90" width="90" /> 
 
+            </header>
 
             <div class="container">
                 <center>
@@ -25,8 +28,8 @@
 
                                 <fieldset class="clearfix">
 
-                                    <p ><span class="fa fa-user"></span><input type="text"  class="slideDown" Placeholder="Usuario" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
-                                    <p><span class="fa fa-lock"></span><input type="password" class="slideRight"  Placeholder="Contraseña" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+                                    <p ><span class="fa fa-user"></span><input type="text"  class="slideDown" Placeholder="Usuario" ></p> 
+                                    <p><span class="fa fa-lock"></span><input type="password" class="slideRight"  Placeholder="Contraseña" ></p> 
 
                                     <div>
                                         <span style="width:48%; text-align:left;  display: inline-block;"><a class="small-text slideUp" href="#">Recuperar contraseña?</a></span>
@@ -41,7 +44,7 @@
 
                         </div> <!-- end login -->
                         <div class="logo">
-                            <img class="slideExpandUp" src="img/logo.png" width="170" height="170"/>
+                            <img class="slideExpandUp  sobralogo" src="img/logo.png" width="170" height="170"/>
                             <div class="clearfix"></div>
                         </div>
 
@@ -49,6 +52,9 @@
                 </center>
             </div>
 
+            <footer id="footer">
+                <p> <i class="fab fa-react fa-spin"></i><strong>Diseño y programación:</strong>Gabriel Quesada Sánchez </p>
+            </footer>
         </div>
     </body>
 </html>
