@@ -28,6 +28,8 @@
                         <span class="icon-bar"></span> 
                     </button>
                     <img src="../img/logo.png" width="45" height="45" class="" />
+                    <button class="btn btn-default navbar-btn">Ordenar</button>
+                    <button class="btn btn-primary navbar-btn">Facturar</button>
                     
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
@@ -35,10 +37,7 @@
                    
                     
                     <ul class="nav navbar-nav">
-                        <li class="active">&numsp;</li>
-                        <li class="active"><button class="btn btn-default navbar-btn">Ordenar</button></li>
-                        <li class="active">&numsp;</li>
-                         <li class="active"> <button class="btn btn-primary navbar-btn">Facturar</button></li>
+                  
                          <li class="active">&numsp;</li>
                         <li class="active"> <button class="btn btn-primary navbar-btn">Inventario</button></li>
                          <li class="active">&numsp;</li>
@@ -74,6 +73,7 @@
                         </li>
                         <li><a href="#"><span class="badge">10</span></a></li>
                         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li>  <img src="../img/logoyovoy.png" width="55" height="55" class="" /></li>
                     </ul>
                 </div>
             </div>
