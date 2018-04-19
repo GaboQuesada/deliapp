@@ -15,7 +15,7 @@
 
         <div class="main">
             <header id="header">
-                <img src="img/logoyovoy.png" height="90" width="90" /> 
+                <img id="logoempresa" src="img/logoyovoy.png" height="90" width="90" /> 
 
             </header>
 
@@ -43,7 +43,7 @@
                             <div class="clearfix"></div>
 
                         </div> <!-- end login -->
-                        <div class="logo">
+                        <div id="logobox" class="logo">
                             <img class="slideExpandUp  sobralogo" src="img/logo.png" width="170" height="170"/>
                             <div class="clearfix"></div>
                         </div>
