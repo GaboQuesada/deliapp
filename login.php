@@ -20,8 +20,34 @@
 
         <header id="header">
             <img src="img/logoyovoy.png" height="90" width="90" /> 
-            
+
         </header>
+
+        <section class="centrarbox">
+            <section id="containerleft" class="col-md-6">
+
+                <img class="slideExpandUp " src="img/logo.png" width="170" height="170"/>
+            </section>
+            <section id="containerright" class="col-md-6">
+               
+                 <form action="javascript:void(0);" >
+
+
+
+                    <p><span class="fa fa-user"></span><input type="text"  class="slideDown" Placeholder="Usuario" ></p> 
+                    <p><span class="fa fa-lock"></span><input type="password" class="slideRight"  Placeholder="Contraseña" ></p> 
+
+                    <div>
+                        <span style="width:48%; text-align:left;  display: inline-block;"><a class="slideUp" href="#">Recuperar contraseña?</a></span>
+                        <span style="width:50%; text-align:right;  display: inline-block;"><input  class="slideUp"type="submit" value="Ingresar"></span>
+                    </div>
+
+
+
+                </form>
+            </section>
+
+        </section>
 
         <footer id="footer">
             <p> <i class="fab fa-react fa-spin"></i><strong>Diseño y programación:</strong>Gabriel Quesada Sánchez </p>

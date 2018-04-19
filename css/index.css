@@ -63,6 +63,10 @@ input {
 
 /* ---------- LOGIN ---------- */
 
+#logodeli{
+    display: none;
+}
+
 #login form{
     width: 250px;
 }
@@ -169,21 +173,24 @@ fieldset{
     top:0;
 }
 
-@media screen and (max-width:414px) {
-    
+@media screen and (max-width:480px) {
+
     #logobox{
         display: none;
     }
-    
-    
+
+
     #header{
-        float: left;
+        display: flex;
+        align-items: center;
     }
+
+   
+
     #logoempresa{
-        
-        width: 60px;
-        height: 60px;
-     
-        
+
+        margin: 0 auto;
+
+
     }
 }

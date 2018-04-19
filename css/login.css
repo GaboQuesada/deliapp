@@ -15,7 +15,7 @@ body{
 }
 
 #footer{
-    position: absolute;/* fijo en la pantalla */
+    position: absolute;
     bottom: 0;
     margin: 0 auto;
     padding-left: 15px;
@@ -23,10 +23,35 @@ body{
     color:#000;
 }
 
+
+#containerleft{
+    
+}
+
+#containerright{
+    
+}
+
+.centrarbox{
+    position: absolute;
+    
+   
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%); 
+    
+    
+}
+
 #header{
 
     padding-right: 15px;
     float: right;
     top:0;
+}
+
+@media screen and (max-width:480px) {
+
 }
 
