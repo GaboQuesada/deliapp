@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>DELIAPP YO VOY TECNOLOGIAS</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" >
@@ -26,7 +26,7 @@
                     <div class="middle">
                         <div id="login">
 
-                            <form action="javascript:void(0);" method="get">
+                            <form action="javascript:void(0);">
 
                                 <fieldset class="clearfix">
 

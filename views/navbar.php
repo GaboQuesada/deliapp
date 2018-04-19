@@ -61,6 +61,7 @@
                         <li><img  src="../img/profil.jpg" width="45" height="45" class="img-rounded profileImage" /></li>
                         <li class="dropdown"><a class="dropdown-toggle fas fa-cog " data-toggle="dropdown" href="#"></a>
                             <ul class="dropdown-menu">
+                                <li><a href="#"><i class="fas fa-user-circle"></i> Adriana Villanueva</a></li>
                                 <li><a href="#">Perfil</a></li>
                                 <li><a href="#">Cambiar Contraseña</a></li>
                                 <li class="divider"></li>
