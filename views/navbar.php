@@ -43,8 +43,7 @@
                          <li class="active">&numsp;</li>
                          <li class="active"> <button class="btn btn-primary navbar-btn">Sistema</button></li>
                          <li class="active">&numsp;</li>
-                         <li class="active"> <button class="btn btn-primary navbar-btn">Cuenta</button></li>
-                         <li class="active">&numsp;</li>
+
                        
                     </ul>
 
