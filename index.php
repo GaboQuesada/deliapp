@@ -16,7 +16,7 @@
         <div class="main">
             <header id="header">
                 <img id="logoempresa" src="img/logoyovoy.png" height="90" width="90" /> 
-                <img id="logodeli" src="img/logo.png"  /> 
+                <img id="logodeli" src="img/logo.png" height="90" width="90" /> 
 
             </header>
 
