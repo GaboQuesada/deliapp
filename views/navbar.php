@@ -6,10 +6,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" >
-        <link rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href="2.css">
-        <link rel="stylesheet" href="3.css">
+        <link rel="stylesheet" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" >
+        <link rel="stylesheet" href="../css/2.css">
+        <link rel="stylesheet" href="../css/animation.css">
+
         <script type="text/javascript" src="lib/jquery/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
@@ -18,15 +18,15 @@
     <body>
 
 
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
+        <nav class="navbar navbar-inverse navbar-fixed-top slideDown">
+            <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span> 
                     </button>
-                    <img src="img/logo.png" width="45" height="45" class="" />
+                    <img src="../img/logo.png" width="45" height="45" class="" />
                     
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
@@ -39,9 +39,12 @@
                         <li class="active">&numsp;</li>
                          <li class="active"> <button class="btn btn-primary navbar-btn">Facturar</button></li>
                          <li class="active">&numsp;</li>
-                        <li ><a href="#">SPV</a></li>
-                        <li><a href="#">INV</a></li>
-                        <li><a href="#">ADM</a></li> 
+                        <li class="active"> <button class="btn btn-primary navbar-btn">Inventario</button></li>
+                         <li class="active">&numsp;</li>
+                         <li class="active"> <button class="btn btn-primary navbar-btn">Sistema</button></li>
+                         <li class="active">&numsp;</li>
+                         <li class="active"> <button class="btn btn-primary navbar-btn">Cuenta</button></li>
+                         <li class="active">&numsp;</li>
                        
                     </ul>
 
