@@ -8,7 +8,9 @@
 
         <link rel="stylesheet" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" >
         <link rel="stylesheet" href="../css/navbar.css">
+        <link rel="stylesheet" href="../css/menuizquierdo.css">
         <link rel="stylesheet" href="../css/animation.css">
+
         <script type="text/javascript" src="../lib/jquery/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="../lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
@@ -82,40 +84,69 @@
             </div>
         </nav>
 
-        <!--
-                <div class="container-fluid containerbox">
-                   
-                        <div class="col-md-2  bloqueizquierdo">
-                            <div class="sidebar-nav">
-                                <div class="navbar navbar-default" role="navigation">
-                                    <div class="navbar-header">
-                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
-                                            <span class="sr-only">Toggle navigation</span>
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                        </button>
-                                        <span class="visible-xs navbar-brand">Sidebar menu</span>
-                                    </div>
-                                    <div class="navbar-collapse collapse sidebar-navbar-collapse">
-                                        <ul class="nav navbar-nav">
-                                            <li><a href="#">Menu Item 1</a></li>
-                                            <li><a href="#">Menu Item 2</a></li>
-                                            <li><a href="#">Menu Item 3</a></li>
-                                            <li><a href="#">Menu Item 4</a></li>
-                                            <li><a href="#">Reviews <span class="badge">1,118</span></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+
+        <div class="container-fluid containerboxmenu ">
+
+            <div class="col-md-2 slideRight ">
+                <div class="sidebar-nav">
+                    <div class="navbar navbar-default" role="navigation">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <span class="visible-xs navbar-brand">menu</span>
+                        </div>
+                        <div class="navbar-collapse collapse sidebar-navbar-collapse">
+                            <div class="panel panel-default panelbrand">
+                                <div class="panel-heading "> <p class="brandname">Jalapeño Restaurant </p></div>
+                                <div class="panel-body  "><img class="logocliente center-block"src="../img/restlogo.jpg" width="90" height="90"/></div>
+                            </div>
+                            <ul class="nav navbar-nav">
+
+                                <li><a href="#"> <i class="fas fa-user-circle"></i> Crear orden</a></li>
+                                <li><a href="#"> <i class="fas fa-user-circle"></i> Clientes </a></li>
+                                <li><a href="#"> <i class="fas fa-user-circle"></i> Reservar mesa</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 slideLeft"> 
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Ordenar</div>
+                    <div class="panel-body">
+
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#home">Mesas</a></li>
+                            <li><a data-toggle="tab" href="#menu1">Ordenes</a></li>
+                            <li><a data-toggle="tab" href="#menu2">Reservas</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div id="home" class="tab-pane fade in active">
+                                <h3>HOME</h3>
+                                <p>Some content.</p>
+                            </div>
+                            <div id="menu1" class="tab-pane fade">
+                                <h3>Menu 1</h3>
+                                <p>Some content in menu 1.</p>
+                            </div>
+                            <div id="menu2" class="tab-pane fade">
+                                <h3>Menu 2</h3>
+                                <p>Some content in menu 2.</p>
                             </div>
                         </div>
-                        <div class="col-md-10 bloquederecho"> 
-                          
-                           
-                        </div>
-                   
+                    </div>
                 </div>
-        
-        -->
+            </div>
+
+        </div>
+
+
     </body>
 </html>
