@@ -1,7 +1,8 @@
 <?php
 
-include './conexion.php';
-$conn = dbConnect();
+include '../../bd/connect.php';
+$conexion = new Connect();
+$conn = $conexion->conect();
 
 try {
     $stmt = $conn->prepare("CALL usuarioPassCheckCount(:us,:ps)");
