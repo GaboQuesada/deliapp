@@ -1,14 +1,22 @@
 
 
-function logIn(){
-    
-    
+
+
+function logIn() {
+
     var pus = $("#txtUs").val();
     var pps = $("#txtPs").val();
-    
-    
-    
-     $.ajax({
+
+    if (isEmptyText(pus) && isEmptyText(pps)) {
+        alert("Rellene la informacion")
+    } else if (isEmptyText(pus)) {
+        alert(" usuario esta vacido");
+    } else if (isEmptyText(pps)) {
+        alert("contraseña no indicada")
+    }
+
+
+    $.ajax({
         url: "appCore/model/user/usuarioPassCheckCount.php",
         type: 'POST',
         dataType: "json",
@@ -29,8 +37,19 @@ function logIn(){
         error: function () {
 
         }
-    }); 
-    
-    
+    });
+
+
 }
+;
+
+
+
+$(document).ready(function () {
+
+    $("#btnIngresar").click(function () {
+        logIn();
+    });
+
+});
 
