@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" >
         <link rel="stylesheet" href="../css/navbar.css">
         <link rel="stylesheet" href="../css/menuizquierdo.css">
+        <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="../css/animation.css">
 
         <script type="text/javascript" src="../lib/jquery/jquery-3.2.1.min.js"></script>
@@ -88,7 +89,7 @@
         <div class="container-fluid containerboxmenu ">
 
             <div class="col-md-2 slideRight ">
-                <div class="sidebar-nav">
+                <div class="sidebar-nav menuizquierdo">
                     <div class="navbar navbar-default" role="navigation">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
@@ -117,7 +118,7 @@
             </div>
             <div class="col-md-10 slideLeft"> 
 
-                <div class="panel panel-default">
+                <div class="panel panel-default panelmainbox">
                     <div class="panel-heading">Ordenar</div>
                     <div class="panel-body">
 
@@ -148,5 +149,64 @@
         </div>
 
 
+        <!-- -->
+        <div class="container-fluid">
+            <section style="height:80px;"></section>
+          
+            <!----------- Footer ------------>
+            <footer class="footer-bs">
+                <div class="row">
+                    <div class="col-md-3 footer-brand animated fadeInLeft">
+                        <h2>Logo</h2>
+                        <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem.</p>
+                        <p>© 2014 BS3 UI Kit, All rights reserved</p>
+                    </div>
+                    <div class="col-md-4 footer-nav animated fadeInUp">
+                        <h4>Menu —</h4>
+                        <div class="col-md-6">
+                            <ul class="pages">
+                                <li><a href="#">Travel</a></li>
+                                <li><a href="#">Nature</a></li>
+                                <li><a href="#">Explores</a></li>
+                                <li><a href="#">Science</a></li>
+                                <li><a href="#">Advice</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list">
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contacts</a></li>
+                                <li><a href="#">Terms & Condition</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 footer-social animated fadeInDown">
+                        <h4>Follow Us</h4>
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">RSS</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 footer-ns animated fadeInRight">
+                        <h4>Newsletter</h4>
+                        <p>A rover wearing a fuzzy suit doesn’t alarm the real penguins</p>
+                        <p>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
+                            </span>
+                        </div><!-- /input-group -->
+                        </p>
+                    </div>
+                </div>
+            </footer>
+            <section style="text-align:center; margin:10px auto;"> <p> <i class="fab fa-react fa-spin"></i><strong>Diseño y programación:</strong>Gabriel Quesada Sánchez </p></section>
+
+        </div>
+    
     </body>
 </html>
