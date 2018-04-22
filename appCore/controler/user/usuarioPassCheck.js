@@ -25,7 +25,7 @@ function logIn() {
         alertify.alert()
                 .setting({
                     'label': 'Entendido',
-                    'message': 'Se requiere que llene los campos ',
+                    'message': 'Por favor rellene el campo de usuario ',
                     'onok': function () {
                         alertify.success('Ahora si vamos a trabajar');
                     }
@@ -35,7 +35,7 @@ function logIn() {
         alertify.alert()
                 .setting({
                     'label': 'Entendido',
-                    'message': 'Se requiere que llene los campos ',
+                    'message': 'Por favor rellene el campo de contraseña ',
                     'onok': function () {
                         alertify.success('Ahora si vamos a trabajar');
                     }
@@ -50,8 +50,20 @@ function logIn() {
             data: {us: pus, ps: pps},
             beforeSend: function () {
 
+                $('#div_carga').show();
+
             },
             success: function (respuesta) {
+                $('#div_carga').hide();
+                var existe = respuesta.resultados;
+
+                if (existe == 0) {
+                 
+                    alert("fuera");
+                } else {
+                   
+                    location.href = "appDesing/view/lobby.php";
+                }
 
 
             },
