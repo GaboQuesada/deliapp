@@ -58,11 +58,37 @@ function logIn() {
                 var existe = respuesta.resultados;
 
                 if (existe == 0) {
-                 
-                    alert("fuera");
+                    alertify.error('Rellene la informacion');
+
+
+
+                    alertify.alert()
+                            .setting({
+                                'label': 'Entendido',
+                                'message': 'Contraseña o Usuario incorrectos ',
+                                'onok': function () {
+                                    alertify.success('Vuelva a intentarlo :)');
+                                }
+                            }).show();
                 } else {
-                   
-                    location.href = "appDesing/view/lobby.php";
+                    $.ajax({
+                        url: "appCore/model/user/usuarioPassCheck.php",
+                        type: 'POST',
+                        dataType: "json",
+                        data: {us: pus, ps: pps},
+                        beforeSend: function () {
+
+                        },
+                        success: function (respuesta) {
+                            $('#div_carga').hide();
+                            location.href = "appDesing/view/lobby.php";
+
+                        },
+                        error: function () {
+
+                        }
+                    });
+
                 }
 
 
@@ -82,6 +108,27 @@ $(document).ready(function () {
 
     $("#btnIngresar").click(function () {
         logIn();
+    });
+
+    $("#btnIngresar").keypress(function (e) {
+        var code = (e.keyCode ? e.keyCode : e.which);
+        if (code == 13) {
+            logIn();
+        }
+    });
+
+    $("#txtPs").keypress(function (e) {
+        var code = (e.keyCode ? e.keyCode : e.which);
+        if (code == 13) {
+            logIn();
+        }
+    });
+
+    $("#txtUs").keypress(function (e) {
+        var code = (e.keyCode ? e.keyCode : e.which);
+        if (code == 13) {
+            logIn();
+        }
     });
 
 });

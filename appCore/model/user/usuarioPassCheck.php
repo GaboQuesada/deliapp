@@ -1,7 +1,9 @@
 <?php
+
 session_start();
 include '../../bd/connect.php';
-$conn = dbConnect();
+$conexion = new Connect();
+$conn = $conexion->conect();
 
 try {
     $stmt = $conn->prepare("CALL usuarioPassCheck(:us,:ps)");
@@ -11,15 +13,19 @@ try {
     $respuesta['estado'] = "1";
     $respuesta['mensajelog'] = "Consulta Exitosa (getAll)";
     $respuesta['mensaje'] = "Consulta Exitosa.";
-    $respuesta['resultados'] = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    echo $respuesta['resultados']['us'];
-   // print json_encode($respuesta);
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    $respuesta['resultados'] = $user;
+    $id = $user['id'];
+    $nombre = $user['nombrefull'];
+    $_SESSION["id"] = $id;
+    $_SESSION["nb"] = $nombre;
+    print json_encode($respuesta);
 } catch (PDOException $e) {
 
     $respuesta['estado'] = "0";
     $respuesta['mensajelog'] = $e->getMessage();
     $respuesta['mensaje'] = "Ha ocurrido un error.";
-   // print json_encode($respuesta);
+     print json_encode($respuesta);
 }
     
 
