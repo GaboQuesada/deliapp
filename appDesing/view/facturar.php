@@ -12,7 +12,7 @@
     ?>
 <!DOCTYPE html>
 <html>
-    <title>ORDENAR  DELIAPP YO VOY TECNOLOGIAS</title>
+    <title>FACTURAR  DELIAPP YO VOY TECNOLOGIAS</title>
 
     <?php include_once '../../appDesing/view/components/callOnCss.php'; ?>
      <?php include_once '../../appDesing/view/components/callOnJs.php'; ?>
@@ -32,7 +32,7 @@
                 <div class="col-md-12"> 
 
                     <div class="panel panel-default panelmainbox ">
-                        <div class="panel-heading">Ordenar</div>
+                        <div class="panel-heading">Facturar</div>
                         <div class="panel-body">
 
                             <ul class="nav nav-tabs">

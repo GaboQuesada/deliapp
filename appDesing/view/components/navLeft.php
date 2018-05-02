@@ -2,9 +2,9 @@
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center slideRight">
     <!-- Avatar image in top left corner -->
     <img src="../img/restlogo.jpg"  class="logobuss">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <a href="../../appDesing/view/hall.php" class="w3-bar-item w3-button w3-padding-large w3-black">
         <i class="fa fa-home w3-xxlarge"></i>
-        <p>HOME</p>
+        <p>INICIO</p>
     </a>
     <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
         <i class="fa fa-user w3-xxlarge"></i>

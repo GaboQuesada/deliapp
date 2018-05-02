@@ -8,7 +8,7 @@
     }
     if (@$_GET["cerrar"]) {
         session_destroy();
-        header("location: id.php");
+        header("Location: ../../index.php");
     }
     ?>
 
@@ -20,7 +20,7 @@
 
         <script type="text/javascript" src="../../lib/jquery/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="../../lib/bootstrap3/js/bootstrap.js"></script>
-
+        <script type="text/javascript" src="../js/showtittleHall.js"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
     </head>
@@ -37,14 +37,22 @@
 
 
 
-            <section id="" class=" containerbox col-md-12 container">
+            <section id="" class=" containerboxmediun col-md-12 container">
 
-                <a href="navbar.php"> <i class=" slideDown fas fa-utensils col-md-3 it "> </i></a>
-                <a href="navbar.php"><i class=" slideLeft  fas fa-calculator  col-md-3 it "></i></a>
-                <a href="navbar.php"><i class=" slideRight  fas fa-shopping-cart  col-md-3 it "></i></a>
-                <a href="navbar.php"> <i class=" slideUp fas fa-sliders-h  col-md-3 it "></i></a>
+                <a href="ordenar.php" onmouseenter="setLabel('O')" onmouseout="RemoveLabel()"> <i class=" slideDown fas fa-utensils col-md-3 it "> </i></a>
+                <a href="facturar.php" onmouseenter="setLabel('F')" onmouseout="RemoveLabel()"><i class=" slideLeft  fas fa-calculator  col-md-3 it "></i></a>
+                <a href="inventario.php" onmouseenter="setLabel('I')" onmouseout="RemoveLabel()"><i class=" slideRight  fas fa-shopping-cart  col-md-3 it "></i></a>
+                <a href="sistema.php" onmouseenter="setLabel('S')" onmouseout="RemoveLabel()"> <i class=" slideUp fas fa-sliders-h  col-md-3 it "></i></a>
 
 
+
+
+            </section>
+
+            <section  class="containerboxdawn">
+
+
+                <center><p id="menutitle">INICIO</p></center>
 
             </section>
             <footer id="footer">

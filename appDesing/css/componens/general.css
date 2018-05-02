@@ -8,23 +8,28 @@ body{
     background: linear-gradient(to right, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff', GradientType=1 );  
     color:#fff!important;
-    background-color:#000!important
+    background-color:#000!important;
+    height:calc(100vh);
+
+    overflow: hidden;
 }
 
 .containerboxmenu{
-  
+
     margin-left: 122px;
     margin-top: 60px;    
 }
 
 .footercontentbox{
     margin-top: 3px;
-     margin-left: 122px;
+    margin-left: 122px;
 }
 
 
 #footer{
+    z-index: 4500;
     position: absolute;/* fijo en la pantalla */
+    display: inline-block;
     bottom: 0;
     margin: 0 auto;
     padding-left: 15px;
@@ -40,16 +45,29 @@ body{
 }
 
 @media (max-width: 600px) {
-.containerboxmenu{
-  
-    margin-left: 0px;
-    margin-top: 60px;    
-}
+    .containerboxmenu{
 
-.footercontentbox{
-    margin-top: 3px;
-     margin-left: 0px;
-}	
-    
-    
+        margin-left: 0px;
+        margin-top: 60px;    
+    }
+
+    .footercontentbox{
+        margin-top: 3px;
+        margin-left: 0px;
+
+
+    }	
+
+    #footer{
+        z-index: 4500;
+        position: absolute;/* fijo en la pantalla */
+        bottom: 0;
+        margin: 0 auto;
+        padding-left: 15px;
+        display: none;
+        font-size: 12px;
+        color:#000;
+    }
+
+
 }
