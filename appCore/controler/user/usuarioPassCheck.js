@@ -81,7 +81,7 @@ function logIn() {
                         },
                         success: function (respuesta) {
                             $('#div_carga').hide();
-                            location.href = "appDesing/view/lobby.php";
+                            location.href = "appDesing/view/hall.php";
 
                         },
                         error: function () {
