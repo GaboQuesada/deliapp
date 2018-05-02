@@ -13,6 +13,7 @@
     ?>
 
     <head>
+        <title>DELIAPP YO VOY TECNOLOGIAS</title>
         <link rel="stylesheet" href="../../lib/animation/css/animation.css">
         <link rel="stylesheet" href="../../lib/bootstrap3/css/bootstrap.min.css" >
         <link rel="stylesheet" href="../../appDesing/css/bodycontents/hall.css">
