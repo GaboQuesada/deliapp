@@ -6,10 +6,7 @@
     } else {
         header("Location: ../../index.php");
     }
-    if (@$_GET["cerrar"]) {
-        session_destroy();
-        header("Location: ../../index.php");
-    }
+   
     ?>
 
     <head>
@@ -22,20 +19,27 @@
         <script type="text/javascript" src="../../lib/bootstrap3/js/bootstrap.js"></script>
         <script type="text/javascript" src="../js/showtittleHall.js"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-
+        <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:200" rel="stylesheet">
     </head>
     <body>
 
 
-        <header id="header">
-            <img id="logoempresa" src="../../appDesing/img/logoyovoy.png" height="90" width="90" /> 
-            <img id="logodeli" src="../../appDesing/img/logo.png" height="90" width="90" /> 
-            <p><?php echo $_SESSION['nb'] ?></p>
+        <header id="headerhall">
+           
+            
+
         </header>
         <div class="main">
 
 
+           
+                
+                <div class="containerboxUser"> <p><img  src="../img/profil.jpg" width="45" height="45" class="img-rounded profileImage" /> &numsp;<i class="fas fa-user-circle"></i> <?php echo $_SESSION['nb'] ?> &numsp; </p></div>
+                <div class="containerboxLogo" ><img id="logodelihall" src="../../appDesing/img/logo.png" height="80" width="80" /> </div>
+                <div class="containerboxOut" ><a href="components/logout.php"><strong><i class="fas fa-sign-out-alt"></i>SALIR</strong></a></div>
 
+     
 
             <section id="" class=" containerboxmediun col-md-12 container">
 

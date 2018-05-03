@@ -71,27 +71,59 @@
     width: 50%;
     height: 50%;
 
-
-
-
 }
+
+#headerhall{
+    
+    
+    
+}
+#logodelihall{}
+#logoempresahall{}
+
 .containerboxdawn{
     left: 45%;
     position: fixed;
-    top: 40%;
-    
-    display: inline-block
+    top: 30%;
+    font-family: 'Titan One', cursive;
+    font-size: 25px;
+    display: inline-block;
+}
 
 
+.containerboxUser{
+    left:18%;
+    position: fixed;
+    top: 10%;
+    width: 45%;
+   font-family: 'Catamaran', sans-serif;
+    font-size: 14px;
+    display: inline;
+}
 
+.containerboxOut{
+    left:78%;
+    position: fixed;
+    top: 90%;
+    width: 45%;
+   font-family: 'Catamaran', sans-serif;
+    font-size: 14px;
+    display: inline;
+}
+.containerboxLogo{
+    left:78%;
+    position: fixed;
+    top: 7%;
+    width: 45%;
+   font-family: 'Catamaran', sans-serif;
+    font-size: 14px;
+    display: inline;
 }
 
 @media (max-width: 600px) {
     .containerboxdawn{
 
         display: none;
-
-
 
     }
 
