@@ -21,7 +21,7 @@
         <!-- navebar top -->
         <?php include_once '../../appDesing/view/components/navUp.php'; ?>
         <!-- navebar left -->
-        <?php include_once '../../appDesing/view/components/navLeft.php'; ?>
+        <?php include_once '../../appDesing/view/menusHorizontales/navLeftORDEN.php'; ?>
 
 
         <!-- Page Content -->
