@@ -6,23 +6,23 @@
         <i class="fa fa-home w3-xxlarge"></i>
         <p>Menu de Inicio</p>
     </a>
-    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <a href="#about" onclick="showPageVertical('P')" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
         <i class="fa fa-user w3-xxlarge"></i>
         <p>Personal</p>
     </a>
-    <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <a href="#photos" onclick="showPageVertical('D')" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
         <i class="fas fa-building w3-xxlarge"></i>
         <p>Datos del negocio</p>
     </a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <a href="#contact" onclick="showPageVertical('I')" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
         <i class="fas fa-laptop w3-xxlarge"></i>
         <p>Informacion del sistema</p>
     </a>
-     <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+     <a href="#contact" onclick="showPageVertical('M')" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
         <i class="fab fa-leanpub w3-xxlarge"></i>
         <p>Menus</p>
     </a>
- <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+ <a href="#contact" onclick="showPageVertical('C')" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
         <i class="fas fa-mobile-alt w3-xxlarge"></i>
         <p>Contabilidad</p>
     </a>
