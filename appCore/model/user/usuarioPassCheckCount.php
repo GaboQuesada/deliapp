@@ -5,9 +5,9 @@ $conexion = new Connect();
 $conn = $conexion->conect();
 
 try {
-    $stmt = $conn->prepare("CALL usuarioPassCheckCount(:us,:ps)");
+    $stmt = $conn->prepare("CALL usuarioUserEnable(:pa,:us)");
     $stmt->bindParam(':us', $_POST["us"]);
-    $stmt->bindParam(':ps', $_POST["ps"]);
+    $stmt->bindParam(':pa', $_POST["pa"]);
     $stmt->execute();
     $can = $stmt->fetchColumn();
     $respuesta['estado'] = "1";

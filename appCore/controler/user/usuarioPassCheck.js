@@ -47,7 +47,7 @@ function logIn() {
             url: "appCore/model/user/usuarioPassCheckCount.php",
             type: 'POST',
             dataType: "json",
-            data: {us: pus, ps: pps},
+            data: {us: pus, pa: pps},
             beforeSend: function () {
 
                 $('#div_carga').show();
@@ -60,6 +60,7 @@ function logIn() {
                 if (existe == 0) {
                     alertify.error('Rellene la informacion');
 
+                   
 
 
                     alertify.alert()

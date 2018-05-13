@@ -6,8 +6,8 @@ $conexion = new Connect();
 $conn = $conexion->conect();
 
 try {
-    $stmt = $conn->prepare("CALL usuarioPassCheck(:us,:ps)");
-    $stmt->bindParam(':us', $_POST["us"]);
+    $stmt = $conn->prepare("CALL usuarioPassCheck(:ps,:usr)");
+    $stmt->bindParam(':usr', $_POST["us"]);
     $stmt->bindParam(':ps', $_POST["ps"]);
     $stmt->execute();
     $respuesta['estado'] = "1";
@@ -16,7 +16,7 @@ try {
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
     $respuesta['resultados'] = $user;
     $id = $user['id'];
-    $nombre = $user['nombrefull'];
+    $nombre = $user['user'];
     $_SESSION["id"] = $id;
     $_SESSION["nb"] = $nombre;
     print json_encode($respuesta);
