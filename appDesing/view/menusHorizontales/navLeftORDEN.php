@@ -6,23 +6,23 @@
         <i class="fa fa-home w3-xxlarge"></i>
         <p>Menu de Inicio</p>
     </a>
-    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <a href="#about" onclick="showPageVertical('M')" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
        <i class="material-icons w3-xxlarge">local_dining</i>
         <p>Mesas</p>
     </a>
-    <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <a href="#photos" onclick="showPageVertical('O')" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
        <i class="material-icons w3-xxlarge">room_service</i>
         <p>Estado de ordenenes</p>
     </a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <a href="#contact" onclick="showPageVertical('R')" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
         <i class="material-icons w3-xxlarge">event_note</i>
         <p>reservar Mesa</p>
     </a>
-     <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+     <a href="#contact" onclick="showPageVertical('C')" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
       <i class="material-icons w3-xxlarge">insert_emoticon</i>
         <p>Clientes</p>
     </a>
- <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+ <a href="#contact"  onclick="showPageVertical('P')" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
         <i class="material-icons w3-xxlarge">place</i>
         <p>Mapa de mesas</p>
     </a>
