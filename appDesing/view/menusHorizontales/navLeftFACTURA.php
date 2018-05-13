@@ -1,11 +1,6 @@
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center slideRight">
-    <!-- Avatar image in top left corner -->
-    <img src="../img/restlogo.jpg"  class="logobuss">
-    <a href="../../appDesing/view/hall.php" class="w3-bar-item w3-button w3-padding-large w3-black">
-        <i class="fa fa-home w3-xxlarge"></i>
-        <p>Menu de Inicio</p>
-    </a>
+   
     <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
         <i class="fas fa-calculator w3-xxlarge"></i>
         <p>Facturar</p>
