@@ -1,23 +1,42 @@
 
-.opcionmenu{
-    background-color:black;
-    border-top-color:#252525;
-    border-top-style: solid;
-    border-top-width: thin;
-    font-size: 48px;
-    color: orange;
-    text-align: center;
+@media (min-width: 1200px) { 
+    .opcionmenu{
+        background-color:black;
+        border-top-color:#252525;
+        border-top-style: solid;
+        border-top-width: thin;
+        font-size: 48px;
+        color: orange;
+        text-align: center;
+    }
+    .opcionmenu:hover{
+        background-color:#252525;
+        border-top-color:#252525;
+        border-top-style: solid;
+        border-top-width: thin;
+        font-size: 48px;
+        color: orange;
+        text-align: center;}
 }
-.opcionmenu:hover{
-    background-color:#252525;
-    border-top-color:#252525;
-    border-top-style: solid;
-    border-top-width: thin;
-    font-size: 48px;
-    color: orange;
-    text-align: center;
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .opcionmenu{
+        background-color:black;
+        border-top-color:#252525;
+        border-top-style: solid;
+        border-top-width: thin;
+        font-size: 48px;
+        color: orange;
+        text-align: center;
+    }
+    .opcionmenu:hover{
+        background-color:#252525;
+        border-top-color:#252525;
+        border-top-style: solid;
+        border-top-width: thin;
+        font-size: 48px;
+        color: orange;
+        text-align: center;}
 }
-
 @media (min-width: 768px) and (max-width: 991.98px) { 
     .opcionmenu{
         background-color:black;
