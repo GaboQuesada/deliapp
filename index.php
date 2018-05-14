@@ -14,9 +14,9 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light fondo comfignav">
           
-            <img class="navbar-brand" src="appDesing/img/logo.png" width="40" height="45"/>
+            <img  src="appDesing/img/logo.png" width="45" height="45"/>
             
             <button onclick=" location.href = '../view/ordenar.php';" class="btn btn-default botonespeincipales"><i class="fas fa-utensils"></i></button>
             <button onclick=" location.href = '../view/facturar.php';" class="btn btn-primary botonespeincipales "><i class="fas fa-calculator"></i></button>
@@ -35,17 +35,18 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <input class="form-control mr-sm-2 form-control-sm" type="search" placeholder="Search" aria-label="Search">
+                    
                 </form>
+                
             </div>
 
         </nav>
 
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-1 col-md-12" style="background-color:black">
-                    <nav class="nav flex-lg-column " >
+                <div class="col-lg-1 col-md-12 boxcontent">
+                    <nav class="nav flex-lg-column contenedor" >
                         <a class="nav-link opcionmenu" href="#"><i class="fas fa-calculator "></i></a>
                         <a class="nav-link opcionmenu" href="#"><i class="fas fa-balance-scale"></i></a>
                         <a class="nav-link opcionmenu" href="#"><i class="fas fa-bed "></i></a>

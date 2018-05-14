@@ -1,6 +1,9 @@
 
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) { /*  mi compu */
     .opcionmenu{
+        width: 130px;
+        height:95px;
+        padding-top: 20px;
         background-color:black;
         border-top-color:#252525;
         border-top-style: solid;
@@ -8,8 +11,12 @@
         font-size: 36px;
         color: orange;
         text-align: center;
+
     }
     .opcionmenu:hover{
+        width: 130px;
+        height:95px;
+        padding-top: 20px;
         background-color:#252525;
         border-top-color:#252525;
         border-top-style: solid;
@@ -17,9 +24,23 @@
         font-size: 36px;
         color: orange;
         text-align: center;}
+
+    .contenedor{
+        margin-left: -15px;
+        padding-top: 90px;
+    }
+
+    .boxcontent{ 
+        width:15px;
+
+        background-color:black; 
+        height: 980px};
 }
 @media (min-width: 992px) and (max-width: 1199.98px) { 
     .opcionmenu{
+        width: 130px;
+        height:95px;
+        padding-top: 20px;
         background-color:black;
         border-top-color:#252525;
         border-top-style: solid;
@@ -29,6 +50,9 @@
         text-align: center;
     }
     .opcionmenu:hover{
+        width: 130px;
+        height:95px;
+        padding-top: 20px;
         background-color:#252525;
         border-top-color:#252525;
         border-top-style: solid;
@@ -36,9 +60,18 @@
         font-size: 36px;
         color: orange;
         text-align: center;}
+
+    .contenedor{
+        margin-left: -5px;
+
+        padding-top: 90px;
+        width: 30px;}
+
+    .boxcontent{ width: 30px; background-color: #004d40};
 }
-@media (min-width: 768px) and (max-width: 991.98px) { 
+@media (min-width: 768px) and (max-width: 991.98px) { /* primera horizontal*/
     .opcionmenu{
+      
         background-color:black;
         border-right-color:#252525;
         border-right-style: solid;
@@ -64,6 +97,7 @@
 @media (min-width: 576px) and (max-width: 767.98px) { 
 
     .opcionmenu{
+     
         background-color:black;
         border-right-color:#252525;
         border-right-style: solid;
