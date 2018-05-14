@@ -14,7 +14,7 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
           
             <img class="navbar-brand" src="appDesing/img/logo.png" width="40" height="45"/>
             
