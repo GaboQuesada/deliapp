@@ -8,56 +8,23 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-        <link rel="stylesheet" href="menuseccion.css" >
-        <link rel="stylesheet" href="menusuperior.css" >
+        <link rel="stylesheet" href="boxmodel.css" >
+
         <title>Hello, world!</title>
     </head>
     <body>
 
-        <nav class="navbar navbar-expand-sm navbar-light bg-light fondo comfignav">
-          
-            <img  src="appDesing/img/logo.png" width="45" height="45"/>
-            
-            <button onclick=" location.href = '../view/ordenar.php';" class="btn btn-default botonespeincipales"><i class="fas fa-utensils"></i></button>
-            <button onclick=" location.href = '../view/facturar.php';" class="btn btn-primary botonespeincipales "><i class="fas fa-calculator"></i></button>
-            <button onclick=" location.href = '../view/inventario.php';" class="btn btn-primary botonespeincipales "><i class="fas fa-shopping-cart"></i></button>
-            <button onclick=" location.href = '../view/sistema.php';"  class="btn btn-primary botonespeincipales"><i class="fas fa-sliders-h"></i></button>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <ul class="navbar-nav mr-auto">
-                  
-                    <li class="nav-item">
-                        
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2 form-control-sm" type="search" placeholder="Search" aria-label="Search">
-                    
-                </form>
-                
-            </div>
-
-        </nav>
 
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-1 col-md-12 boxcontent">
-                    <nav class="nav flex-lg-column contenedor" >
-                        <a class="nav-link opcionmenu" href="#"><i class="fas fa-calculator "></i></a>
-                        <a class="nav-link opcionmenu" href="#"><i class="fas fa-balance-scale"></i></a>
-                        <a class="nav-link opcionmenu" href="#"><i class="fas fa-bed "></i></a>
-                        <a class="nav-link opcionmenu" href="#"><i class="fas fa-archive"></i></a>
-                        <a class="nav-link opcionmenu" href="#"><i class="fas fa-band-aid "></i></a>
-                    </nav>
+            <div class="contenedorcentral">
+                <div class="caja1">
+
                 </div>
-                <div class="col-lg-11 col-md-12" style="background-color: #076064; height: 200px;"></div>
+                <div class="caja2">
+
+                </div>
             </div>
-
-
         </div>
 
 
