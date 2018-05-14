@@ -15,11 +15,11 @@
 
 @media (min-width: 576px) and (max-width: 767.98px) { 
 
-  .botonespeincipales{ margin-right: 1px;} 
+  .botonespeincipales{ margin-right: 0px;} 
 
 }
 
 @media (max-width: 575.98px) { 
-.botonespeincipales{ margin-right: 1px;}
+.botonespeincipales{ margin-right: 0px;}
     
 }

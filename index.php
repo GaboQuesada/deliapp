@@ -15,8 +15,8 @@
     <body>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-
+          
+            <img class="navbar-brand" src="appDesing/img/logo.png" width="40" height="45"/>
             
             <button onclick=" location.href = '../view/ordenar.php';" class="btn btn-default botonespeincipales"><i class="fas fa-utensils"></i></button>
             <button onclick=" location.href = '../view/facturar.php';" class="btn btn-primary botonespeincipales "><i class="fas fa-calculator"></i></button>
