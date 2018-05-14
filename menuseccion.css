@@ -1,0 +1,88 @@
+
+.opcionmenu{
+    background-color:black;
+    border-top-color:#252525;
+    border-top-style: solid;
+    border-top-width: thin;
+    font-size: 48px;
+    color: orange;
+    text-align: center;
+}
+.opcionmenu:hover{
+    background-color:#252525;
+    border-top-color:#252525;
+    border-top-style: solid;
+    border-top-width: thin;
+    font-size: 48px;
+    color: orange;
+    text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .opcionmenu{
+        background-color:black;
+        border-right-color:#252525;
+        border-right-style: solid;
+        border-right-width: thin;
+        font-size: 36px;
+        color: orange;
+        text-align: center;
+    }
+    .opcionmenu:hover{
+        background-color:#252525;
+        border-right-color:#252525;
+        border-right-style: solid;
+        border-right-width: thin;
+        font-size: 36px;
+        color: orange;
+        text-align: center;
+    }
+
+
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+
+    .opcionmenu{
+        background-color:black;
+        border-right-color:#252525;
+        border-right-style: solid;
+        border-right-width: thin;
+        font-size: 24px;
+        color: orange;
+        text-align: center;
+    }
+    .opcionmenu:hover{
+        background-color:#252525;
+        border-right-color:#252525;
+        border-right-style: solid;
+        border-right-width: thin;
+        font-size: 24px;
+        color: orange;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 575.98px) { 
+
+    .opcionmenu{
+        background-color:black;
+        border-right-color:#252525;
+        border-right-style: solid;
+        border-right-width: thin;
+        font-size: 18px;
+        color: orange;
+        text-align: center;
+    }
+    .opcionmenu:hover{
+        background-color:#252525;
+        border-right-color:#252525;
+        border-right-style: solid;
+        border-right-width: thin;
+        font-size: 18px;
+        color: orange;
+        text-align: center;
+    }
+}
