@@ -1,3 +1,25 @@
 
 
-.botonespeincipales{ margin-right: 4px;}
+
+
+@media (min-width: 1200px) { 
+ .botonespeincipales{ margin-right: 4px;}  
+}
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+   .botonespeincipales{ margin-right: 4px;} 
+}
+@media (min-width: 768px) and (max-width: 991.98px) { 
+  .botonespeincipales{ margin-right: 4px;}  
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+
+  .botonespeincipales{ margin-right: 1px;} 
+
+}
+
+@media (max-width: 575.98px) { 
+.botonespeincipales{ margin-right: 1px;}
+    
+}
