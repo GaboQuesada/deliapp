@@ -1,0 +1,128 @@
+
+
+@media (min-width: 1200px) {      /*  mi compu   lista*/
+    .contenedorcentral{
+
+
+    }
+    .caja1{
+
+        background-color:black;
+        height: 200px;
+        width: 80px;
+        position:fixed;
+        height: 100%;
+        display: inline-block;
+        -webkit-box-shadow: 3px -1px 15px -1px rgba(0,0,0,0.75);
+        -moz-box-shadow: 3px -1px 15px -1px rgba(0,0,0,0.75);
+        box-shadow: 3px -1px 15px -1px rgba(0,0,0,0.75);
+        z-index: 700;
+
+    }
+    .caja2{
+        background-image: url("img/fondo.jpg");
+        margin-left: 80px;
+        display: inline-block;
+        position: absolute;
+        height: 1100px;
+        width: 94.99%;
+
+
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .contenedorcentral{
+
+    }
+    .caja1{
+
+        background-color:black;
+        height: 200px;
+        width: 80px;
+        position:fixed;
+        height: 100%;
+        display: inline-block;
+        -webkit-box-shadow: 3px -1px 15px -1px rgba(0,0,0,0.75);
+        -moz-box-shadow: 3px -1px 15px -1px rgba(0,0,0,0.75);
+        box-shadow: 3px -1px 15px -1px rgba(0,0,0,0.75);
+        z-index: 700;
+
+    }
+    .caja2{
+        background-image: url("img/fondo.jpg");
+        margin-left: 80px;
+        display: inline-block;
+        position: absolute;
+        height: 1100px;
+        width: 94.99%;
+
+
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { /* primera horizontal*/
+    .contenedorcentral{
+
+    }
+    .caja1{
+
+        background-color:black;
+        height: 200px;
+        width: 80px;
+        position:fixed;
+        height: 100%;
+        display: inline-block;
+        -webkit-box-shadow: 3px -1px 15px -1px rgba(0,0,0,0.75);
+        -moz-box-shadow: 3px -1px 15px -1px rgba(0,0,0,0.75);
+        box-shadow: 3px -1px 15px -1px rgba(0,0,0,0.75);
+        z-index: 700;
+
+    }
+    .caja2{
+        background-image: url("img/fondo.jpg");
+        margin-left: 80px;
+        display: inline-block;
+        position: absolute;
+        height: 1100px;
+        width: 94.99%;
+
+
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .contenedorcentral{}
+    .caja1{
+
+        background-color:black;
+        height: auto;
+        width: 100%;
+        position:fixed;
+
+
+    }
+    .caja2{
+
+
+        background-image: url("img/fondo.jpg");
+        height: 900px;
+    }
+}
+
+@media (max-width: 575.98px) { 
+    .contenedorcentral{}
+    .caja1{
+
+
+        background-color:black;
+        height: auto;
+    }
+    .caja2{
+
+
+        background-image: url("img/fondo.jpg");
+        height: 900px;
+    }
+}
