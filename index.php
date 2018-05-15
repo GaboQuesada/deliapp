@@ -17,7 +17,7 @@
     </head>
     <body>
 
-        <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light fondo comfignav ">
+        <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light fondo comfignav ">
 
             <img  class="logoimg pulse" src="img/logo.png" />
 
