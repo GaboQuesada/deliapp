@@ -87,12 +87,6 @@
     }
 }
 @media (min-width: 768px) and (max-width: 991.98px) { 
-    .logoimg{
-        margin-right: 25px;
-        width: 45px;
-        height: 45px;
-
-    }
     
     .notifybox{
         padding-top: 10px;
@@ -101,13 +95,23 @@
 
     }
 
+    .logoimg{
+        margin-right: 25px;
+        width: 45px;
+        height: 45px;
+
+    }
+    
+ 
+
     .botonespeincipales{ 
         margin-right: 4px;
-        font-size: 12px;}  
-
+        font-size: 12px;} 
     .comfignav{
         height: 48px;
     }
+
+   
 
 }
 
@@ -129,9 +133,7 @@
     .botonespeincipales{
         margin-right: 4px;
         font-size: 12px;} 
-    .comfignav{
-        height: 48px;
-    }
+   
 
 }
 
