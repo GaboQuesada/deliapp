@@ -20,7 +20,7 @@
 
 <div class="centrado-porcentual">
             <div class="caja1 slideRight " id="caja1">
-<img class="mb-4" src="img/logo.png" alt="" width="200" height="200">
+<img class="mb-4 imgcl" src="img/logo.png" alt="" >
             </div>
             <div class="caja2 slideDown" id="caja2">
   <form class="form-signin">

@@ -29,8 +29,13 @@ body {
 
 
 }
+
+.imgcl{
+    width:200px; height:200px;
+}
+
 .caja2{
-  
+
     display: inline-block;
     height:200px;
     width: 300px;
@@ -85,5 +90,7 @@ body {
 }
 
 @media (max-width: 575.98px) { 
-
+.imgcl{
+    width:145px; height:145px;
+}
 }
