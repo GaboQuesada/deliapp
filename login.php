@@ -20,7 +20,7 @@
 
 <div class="centrado-porcentual">
             <div class="caja1 slideRight " id="caja1">
-<img class="mb-4 imgcl" src="img/logo.png" alt="" >
+<img class="mb-4 imgcl imcshadow" src="img/logo.png" alt="" >
             </div>
             <div class="caja2 slideDown" id="caja2">
   <form class="form-signin">
@@ -31,7 +31,7 @@
                 <div class="input-group-prepend">
                     <div class="input-group-text"><i class="fas fa-user-alt tamf"></i></div>
                 </div>
-                <input type="email" id="inputEmail" class="form-control colf " placeholder="Usuario" required autofocus>
+                <input type="email" id="inputEmail" class="form-control colf " placeholder="Usuario" autofocus>
             </div>
             <div class="input-group mb-4">
                 <div class="input-group-prepend">
