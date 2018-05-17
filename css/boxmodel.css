@@ -20,7 +20,8 @@
 
     }
     .caja2{
-        background-image: url("img/fondo.jpg");
+        padding-top: 65px;
+        background-image: url("../img/fondo.jpg");
         margin-left: 80px;
         display: inline-block;
         position: absolute;
@@ -50,7 +51,7 @@
 
     }
     .caja2{
-        background-image: url("img/fondo.jpg");
+        background-image: url("../img/fondo.jpg");
         margin-left: 80px;
         display: inline-block;
         position: absolute;
@@ -81,7 +82,7 @@
 
     }
     .caja2{
-        background-image: url("img/fondo.jpg");
+        background-image: url("../img/fondo.jpg");
         margin-left: 80px;
         display: inline-block;
         position: absolute;
@@ -106,7 +107,7 @@
     .caja2{
 
 
-        background-image: url("img/fondo.jpg");
+        background-image: url("../img/fondo.jpg");
         height: 900px;
     }
 }
@@ -122,7 +123,7 @@
     .caja2{
 
 
-        background-image: url("img/fondo.jpg");
+        background-image: url("../img/fondo.jpg");
         height: 900px;
     }
 }
