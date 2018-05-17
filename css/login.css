@@ -64,11 +64,7 @@ body {
     margin: 0 auto;
 }
 
-.btn{
-    background-color: black;
-    max-width: 150px;
-    float: right;
-}
+
 
 .form-control{
 
@@ -95,6 +91,11 @@ body {
     border-right-color:white;
 
 }
+.btn{
+    background-color: black;
+    max-width: 150px;
+    float: right;
+}
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) { 
@@ -109,6 +110,11 @@ body {
  
 
 }
+.btn{
+    background-color: black;
+    max-width: 150px;
+    float: right;
+}
 
 }
 
@@ -118,10 +124,14 @@ body {
     }
     
     .caja1{
-    height: 200px;
+    height: 180px;
     width: 300px;
     display: inline-block;
 
+
+}
+.btn{
+    background-color: black;
 
 }
 }
@@ -132,10 +142,14 @@ body {
     }
     
     .caja1{
-    height: 200px;
+    height: 160px;
     width: 300px;
     display: inline-block;
 
+
+}
+.btn{
+    background-color: black;
 
 }
 }
@@ -146,10 +160,14 @@ body {
     }
     
     .caja1{
-    height: 200px;
+    height: 150px;
     width: 300px;
     display: inline-block;
   
 
+}
+.btn{
+    background-color: black;
+   
 }
 }

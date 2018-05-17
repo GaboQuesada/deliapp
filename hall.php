@@ -8,6 +8,7 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="libx/animation/css/animation.css" >
         <link rel="stylesheet" href="css/hall.css" >
 
@@ -16,84 +17,37 @@
     </head>
     <body>
 
-        <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light fondo comfignav ">
-
-            <img  class="logoimg pulse" src="img/logo.png" />
-
-            <button onclick=" location.href = '../view/ordenar.php';" class="btn btn-default botonespeincipales"><i class="fas fa-utensils"></i></button>
-            <button onclick=" location.href = '../view/facturar.php';" class="btn btn-primary botonespeincipales "><i class="fas fa-calculator"></i></button>
-            <button onclick=" location.href = '../view/inventario.php';" class="btn btn-primary botonespeincipales "><i class="fas fa-shopping-cart"></i></button>
-            <button onclick=" location.href = '../view/sistema.php';"  class="btn btn-primary botonespeincipales"><i class="fas fa-sliders-h"></i></button>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <ul class="navbar-nav mr-auto">
-
-                    <li class="nav-item">
-
-                    </li>
-                </ul>
-                
-                <div class="dropdown">
-
-                    <i style="margin-right:10px;" class="fas fa-cog  " id="dropdownMenuButton" data-toggle="dropdown"></i> 
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#"><i class="fas fa-user-circle"></i> Adriana Villanueva</a>
-                        <a class="dropdown-item" href="#"><i class="fas fa-address-card"></i> Editar Perfil</a>
-                       
-                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Salir</a>
-                    </div>
-                </div>
-                
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2 form-control-sm" type="search" placeholder="Search" aria-label="Search">
-
-                </form>
-                
-                <h6><i class="fas fa-envelope notifybox"></i><span class="badge badge-info">0</span></h6>
-                <h6><i class="far fa-comment-alt notifybox"></i><span class="badge badge-warning">0</span></h6>
-                <img  src="img/profil.jpg" class="imgperfil " />
+        <div class=" centrado-porcentual">
+            <div class="col-md-12">
+                <div class="caja"><a href="ordenar.php" onmouseenter="setLabel('O')" onmouseout="RemoveLabel()"> <i class=" fas fa-utensils it "> </i></a></div>
+                <div class="caja"><a href="facturar.php" onmouseenter="setLabel('F')" onmouseout="RemoveLabel()"><i class="   fas fa-calculator  it "></i></a></div>
+                <div class="caja"><a href="inventario.php" onmouseenter="setLabel('I')" onmouseout="RemoveLabel()"><i class="   fas fa-shopping-cart it "></i></a></div>
+                <div class="caja"><a href="sistema.php" onmouseenter="setLabel('S')" onmouseout="RemoveLabel()"> <i class="  fas fa-sliders-h it "></i></a></div> 
 
             </div>
-
-        </nav>
-
-
-        <div class="contenedorcentral" id="contenedorcentral">
-            <div class="caja1 " id="caja1">
-                <div class=" boxcontent">
-                    <nav class="nav flex-lg-column contenedor" >
-                        <a class="nav-link opcionmenu" href="#"><i class="fas fa-calculator "></i></a>
-                        <a class="nav-link opcionmenu" href="#"><i class="fas fa-balance-scale"></i></a>
-                        <a class="nav-link opcionmenu" href="#"><i class="fas fa-bed "></i></a>
-                        <a class="nav-link opcionmenu" href="#"><i class="fas fa-archive"></i></a>
-                        <a class="nav-link opcionmenu" href="#"><i class="fas fa-band-aid "></i></a>
-                    </nav>
-                </div>
+            <div class="col-md-12">
+                <div class="caja"><a href="ordenar.php" onmouseenter="setLabel('O')" onmouseout="RemoveLabel()"> <i class="material-icons it">
+hourglass_full
+</i></a></div>
+                <div class="caja"><a href="facturar.php" onmouseenter="setLabel('F')" onmouseout="RemoveLabel()"><i class="material-icons it">
+book
+</i></a></div>
+                <div class="caja"><a href="inventario.php" onmouseenter="setLabel('I')" onmouseout="RemoveLabel()"><i class="material-icons it">
+local_bar
+</i></a></div>
+                <div class="caja"><a href="sistema.php" onmouseenter="setLabel('S')" onmouseout="RemoveLabel()"> <i class="material-icons it">
+kitchen
+</i></a></div>
             </div>
-            <div class="caja2" id="caja2">
-                <div class="col-lg-12">
-                    
-                    <div class="card">
-  <div class="card-header">
-    Featured
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-                    
-                    
-                </div>
+            <div class="col-md-12">
+                <div class="caja"><a href="ordenar.php" onmouseenter="setLabel('O')" onmouseout="RemoveLabel()"> <i class="material-icons it">
+help
+</i></a></div>
+                <div class="caja"><a href="facturar.php" onmouseenter="setLabel('F')" onmouseout="RemoveLabel()"><i class="material-icons it">settings</i></a></div>
+                <div class="caja"><a href="inventario.php" onmouseenter="setLabel('I')" onmouseout="RemoveLabel()"><i class="material-icons it">event</i></a></div>
+                <div class="caja"><a href="sistema.php" onmouseenter="setLabel('S')" onmouseout="RemoveLabel()"> <i class="material-icons it">language</i></a></div>
             </div>
         </div>
-
 
 
         <!-- Optional JavaScript -->

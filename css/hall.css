@@ -1,0 +1,73 @@
+body {
+    
+    background: rgba(255,175,75,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,175,75,1)), color-stop(100%, rgba(255,146,10,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a', GradientType=1 );
+    height:calc(100vh);
+    width:100%;
+
+}
+
+.it{
+    font-size:100px;
+    width: 167px;
+    height: 167px;
+    margin-right: 25px;
+    margin-top: 15px;
+    text-align: center;
+    padding: 22px;
+    background-color: #000000;
+    color: #ffffff;
+
+    -webkit-box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
+    -moz-box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
+    box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
+
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+    z-index: 3000;
+}
+
+.it:hover{
+
+    font-size:100px;
+    width: 167px;
+    height: 167px;
+    margin-right: 25px;
+    margin-top: 15px;
+    text-align: center;
+    padding: 22px;
+    background-color: orange;
+    color: #000;
+
+    -webkit-box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
+    -moz-box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
+    box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
+
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+    z-index: 3000;
+}
+
+.centrado-porcentual {
+    position: absolute;
+    left: 40%;
+    top: 15%;
+   
+}
+
+.caja{
+    
+    height: auto;
+    width: auto;
+    display: inline-block
+}
