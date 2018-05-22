@@ -1,5 +1,5 @@
 body {
-    
+
     background: rgba(255,175,75,1);
     background: -moz-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
     background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,175,75,1)), color-stop(100%, rgba(255,146,10,1)));
@@ -13,17 +13,54 @@ body {
 
 }
 
-.it{
-    font-size:100px;
-    width: 167px;
-    height: 167px;
-    margin-right: 25px;
+
+.logodesing{
+    -webkit-box-shadow: 8px 9px 14px -2px rgba(0,0,0,0.56);
+    -moz-box-shadow: 8px 9px 14px -2px rgba(0,0,0,0.56);
+    box-shadow: 8px 9px 14px -2px rgba(0,0,0,0.56);
+
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    border: 0px solid #000000; 
+}
+
+.userimg{
+    display: inline-block;
+    width:45px; height:45px;
+}
+.username{
+    color: white;
+    display: inline-block;
+    padding-left: 5px;
+}
+
+.showbox{
+
     margin-top: 15px;
-    text-align: center;
-    padding: 22px;
+    color: white;
+
+}
+
+
+
+.seccionheader{
+    border-left-color: white;
+    border-left-style:solid;
+    border-left-width: thin;
+    color: white;
+    position: absolute;
+    top: 45%;
+    left: 14%;
+    padding-left: 10px;
+
+}
+
+
+.itdesing{
+
     background-color: #000000;
     color: #ffffff;
-
     -webkit-box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
     -moz-box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
     box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
@@ -32,21 +69,15 @@ body {
     -moz-border-radius: 10px 10px 10px 10px;
     -webkit-border-radius: 10px 10px 10px 10px;
     border: 0px solid #000000;
-    z-index: 3000;
+    z-index: 3000; 
+
+
 }
 
-.it:hover{
+.itdesing:hover{
 
-    font-size:100px;
-    width: 167px;
-    height: 167px;
-    margin-right: 25px;
-    margin-top: 15px;
-    text-align: center;
-    padding: 22px;
     background-color: orange;
     color: #000;
-
     -webkit-box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
     -moz-box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
     box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
@@ -56,18 +87,200 @@ body {
     -webkit-border-radius: 10px 10px 10px 10px;
     border: 0px solid #000000;
     z-index: 3000;
+
+
 }
 
+
+#footer{
+    z-index: 4500;
+    position: absolute;/* fijo en la pantalla */
+    display: inline-block;
+    bottom: 0;
+    margin: 0 auto;
+    padding-left: 15px;
+    font-size: 12px;
+    color:#000;
+}
 .centrado-porcentual {
     position: absolute;
     left: 40%;
-    top: 15%;
-   
+    top: 5%;
+
 }
 
 .caja{
-    
+
     height: auto;
     width: auto;
-    display: inline-block
+    display: inline-block;
+    text-align: center;
+
+}
+
+@media (min-width: 1200px) {      /*  mi compu   lista*/
+    .it{
+        font-size:100px;
+        width: 135px;
+        height: 135px;
+        margin-right: 20px;
+        margin-top: 20px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .it:hover{
+
+        font-size:100px;
+        width: 135px;
+        height: 135px;
+        margin-right: 20px;
+        margin-top: 20px;
+        text-align: center;
+        padding: 20px;
+    }
+
+
+    .logo{
+        color: white;
+        height: 250px;
+        width: 250px;
+        position: absolute;
+        top: 5%;
+        left: 12%;
+    }
+
+
+}
+
+
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .it{
+        font-size:100px;
+        width: 120px;
+        height: 120px;
+        margin-right: 20px;
+        margin-bottom: 5px;
+        margin-top: 20px;
+        text-align: center;
+        padding:12px;
+    }
+
+    .it:hover{
+        font-size:100px;
+        width: 120px;
+        height: 120px;
+        margin-right: 20px;
+        margin-top: 20px;
+        text-align: center;
+        padding:12px;
+    }
+
+
+    .logo{
+        color: white;
+        height: 250px;
+        width: 250px;
+        position: absolute;
+        top: 5%;
+        left: 12%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { /* primera horizontal*/
+    .it{
+        font-size:60px;
+        width: 110px;
+        height: 110px;
+        margin-right: 20px;
+        margin-top: 20px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .it:hover{
+
+        font-size:60px;
+        width: 110px;
+        height: 110px;
+        margin-right: 20px;
+        margin-top: 20px;
+        text-align: center;
+        padding: 20px;
+    }
+
+
+    .boxheader{
+        visibility: visible;
+    }
+
+    .logo{
+        color: white;
+        height: 250px;
+        width: 250px;
+        position: absolute;
+        top: 5%;
+        left: 8%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .it{
+        font-size:30px;
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+        margin-top: 20px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .it:hover{
+
+        font-size:100px;
+        width: 140px;
+        height: 140px;
+        margin-right: 20px;
+        margin-top: 20px;
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 575.98px) { 
+    .it{
+       font-size:70px;
+        width: 90px;
+        height: 90px;
+        margin-right: 20px;
+        margin-top: 20px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .it:hover{
+
+         font-size:70px;
+        width: 90px;
+        height: 90px;
+        margin-right: 20px;
+        margin-top: 20px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .centrado-porcentual{
+
+        position: absolute;
+        left: 7%;
+        top: 5%;
+
+    }
+
+    .boxheader{
+        visibility: hidden;
+    }
+
 }

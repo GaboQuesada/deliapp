@@ -17,39 +17,192 @@
     </head>
     <body>
 
+        
+        <div class="boxheader">
+            
+            <img class="logo logodesing" src="img/logo.png"/>
+            <div class="seccionheader">
+                <p><i class="fas fa-home"></i> INICIO</p>
+                
+                <div>
+                    <img class="userimg" src="img/profil.jpg" />
+                    <p class="username">GaboCR07</p>
+                </div>
+                
+                <div class="showbox">
+                    
+                    <h6><i class="fas fa-envelope notifybox"></i> Notificaciones <span class="badge badge-info"> 0</span></h6>
+                </div>
+                
+                <div class="showbox">
+                    
+                  <h6><i class="far fa-comment-alt notifybox"></i> Mensajes <span class="badge badge-warning"> 0</span></h6>
+                </div>
+                
+                <div class="showbox">
+                    
+                  <h6><i class="fas fa-sign-out-alt"></i> Salir</h6>
+                </div>
+            </div>
+            
+        </div>
+        
+        
         <div class=" centrado-porcentual">
-            <div class="col-md-12">
-                <div class="caja"><a href="ordenar.php" onmouseenter="setLabel('O')" onmouseout="RemoveLabel()"> <i class=" fas fa-utensils it "> </i></a></div>
-                <div class="caja"><a href="facturar.php" onmouseenter="setLabel('F')" onmouseout="RemoveLabel()"><i class="   fas fa-calculator  it "></i></a></div>
-                <div class="caja"><a href="inventario.php" onmouseenter="setLabel('I')" onmouseout="RemoveLabel()"><i class="   fas fa-shopping-cart it "></i></a></div>
-                <div class="caja"><a href="sistema.php" onmouseenter="setLabel('S')" onmouseout="RemoveLabel()"> <i class="  fas fa-sliders-h it "></i></a></div> 
+            <div>
+                <div class="caja">
+                    <div class="cajita">
+                        <a href="ordenar.php" onmouseenter="setLabel('O')" onmouseout="RemoveLabel()"> <i class="material-icons it itdesing">restaurant_menu</i></a>
+                    </div>
+                    <div class="label">
+                       Restaurante
+                    </div> 
+                </div>
+                <div class="caja">
+                    <div class="cajita">
+                        <a href="facturar.php" onmouseenter="setLabel('F')" onmouseout="RemoveLabel()"><i class="material-icons it itdesing">hotel</i></a>
+                    </div>
+                    <div class="label">
+                        Hospedaje
+                    </div> 
+                </div>
+                <div class="caja">
+                    <div class="cajita">
+                        <a href="inventario.php" onmouseenter="setLabel('I')" onmouseout="RemoveLabel()"><i class="material-icons it itdesing">store_mall_directory</i></a>
+                    </div>
+                    <div class="label">
+                       Tienda
+                    </div> 
+                </div>
+                <div class="caja">
+                    <div class="cajita">
+                        <a href="sistema.php" onmouseenter="setLabel('S')" onmouseout="RemoveLabel()"><i class="material-icons it itdesing">business_center</i></a>
+                    </div>
+                    <div class="label">
+                        Negocio
+                    </div> 
+                </div>
 
             </div>
-            <div class="col-md-12">
-                <div class="caja"><a href="ordenar.php" onmouseenter="setLabel('O')" onmouseout="RemoveLabel()"> <i class="material-icons it">
-hourglass_full
-</i></a></div>
-                <div class="caja"><a href="facturar.php" onmouseenter="setLabel('F')" onmouseout="RemoveLabel()"><i class="material-icons it">
-book
-</i></a></div>
-                <div class="caja"><a href="inventario.php" onmouseenter="setLabel('I')" onmouseout="RemoveLabel()"><i class="material-icons it">
-local_bar
-</i></a></div>
-                <div class="caja"><a href="sistema.php" onmouseenter="setLabel('S')" onmouseout="RemoveLabel()"> <i class="material-icons it">
-kitchen
-</i></a></div>
+            <div>
+                <div class="caja">
+                    <div class="cajita">
+                        <a href="ordenar.php" onmouseenter="setLabel('O')" onmouseout="RemoveLabel()"> <i class="material-icons it itdesing">perm_contact_calendar</i></a>
+                    </div>
+                    <div class="label">
+                        Contactos
+                    </div> 
+                </div>
+                <div class="caja">
+                    <div class="cajita">
+                        <a href="facturar.php" onmouseenter="setLabel('F')" onmouseout="RemoveLabel()"><i class="material-icons it itdesing">wc</i></a>
+                    </div>
+                    <div class="label">
+                        Personal
+                    </div> 
+                </div>
+                <div class="caja">
+                    <div class="cajita">
+                        <a href="inventario.php" onmouseenter="setLabel('I')" onmouseout="RemoveLabel()"><i class="material-icons it itdesing">local_laundry_service</i></a>
+                    </div>
+                    <div class="label">
+                       Mantenimiento
+                    </div> 
+                </div>
+                <div class="caja">
+                    <div class="cajita">
+                       <a href="sistema.php" onmouseenter="setLabel('S')" onmouseout="RemoveLabel()"> <i class="material-icons it itdesing">local_parking</i></a>
+                    </div>
+                    <div class="label">
+                        Parqueo
+                    </div> 
+                </div>
+                
+                
+ 
             </div>
-            <div class="col-md-12">
-                <div class="caja"><a href="ordenar.php" onmouseenter="setLabel('O')" onmouseout="RemoveLabel()"> <i class="material-icons it">
-help
-</i></a></div>
-                <div class="caja"><a href="facturar.php" onmouseenter="setLabel('F')" onmouseout="RemoveLabel()"><i class="material-icons it">settings</i></a></div>
-                <div class="caja"><a href="inventario.php" onmouseenter="setLabel('I')" onmouseout="RemoveLabel()"><i class="material-icons it">event</i></a></div>
-                <div class="caja"><a href="sistema.php" onmouseenter="setLabel('S')" onmouseout="RemoveLabel()"> <i class="material-icons it">language</i></a></div>
+            <div>
+                
+                   <div class="caja">
+                    <div class="cajita">
+                        <a href="ordenar.php" onmouseenter="setLabel('O')" onmouseout="RemoveLabel()"> <i class="material-icons it itdesing">account_circle</i></a>
+                    </div>
+                    <div class="label">
+                       perfil
+                    </div> 
+                </div>
+                <div class="caja">
+                    <div class="cajita">
+                        <a href="facturar.php" onmouseenter="setLabel('F')" onmouseout="RemoveLabel()"><i class="material-icons it itdesing">local_hospital</i></a>
+                    </div>
+                    <div class="label">
+                        Soporte
+                    </div> 
+                </div>
+                <div class="caja">
+                    <div class="cajita">
+                        <a href="inventario.php" onmouseenter="setLabel('I')" onmouseout="RemoveLabel()"><i class="material-icons it itdesing">mail</i></a>
+                    </div>
+                    <div class="label">
+                       Mensajes
+                    </div> 
+                </div>
+                <div class="caja">
+                    <div class="cajita">
+                       <a href="sistema.php" onmouseenter="setLabel('S')" onmouseout="RemoveLabel()"> <i class="material-icons it itdesing">settings_system_daydream</i></a>
+                    </div>
+                    <div class="label">
+                       Sistema
+                    </div> 
+                </div>
+                
+                
+               
+            </div>
+            <div>
+                
+                
+                
+                   <div class="caja">
+                    <div class="cajita">
+                        <a href="ordenar.php" onmouseenter="setLabel('O')" onmouseout="RemoveLabel()"> <i class="material-icons it itdesing">settings</i></a>
+                    </div>
+                    <div class="label">
+                      Preferencias
+                    </div> 
+                </div>
+                <div class="caja">
+                    <div class="cajita">
+                       <a href="ordenar.php" onmouseenter="setLabel('O')" onmouseout="RemoveLabel()"> <i class="material-icons it itdesing">help</i></a>
+                    </div>
+                    <div class="label">
+                       Tutoriales
+                    </div> 
+                </div>
+                <div class="caja">
+                    <div class="cajita">
+                       <a href="inventario.php" onmouseenter="setLabel('I')" onmouseout="RemoveLabel()"><i class="material-icons it itdesing">event</i></a>
+                    </div>
+                    <div class="label">
+                       Mi horario
+                    </div> 
+                </div>
+                <div class="caja">
+                    <div class="cajita">
+                      <a href="sistema.php" onmouseenter="setLabel('S')" onmouseout="RemoveLabel()"> <i class="material-icons it itdesing">language</i></a>
+                    </div>
+                    <div class="label">
+                       Lenguaje
+                    </div> 
+                </div>
+                
+             
             </div>
         </div>
 
-
+        <footer id="footer">
+            <p> <i class="fab fa-react fa-spin"></i><strong>Diseño y programación:</strong> Gabriel Quesada Sánchez </p>
+        </footer>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
