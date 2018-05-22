@@ -284,3 +284,42 @@ body {
     }
 
 }
+
+@media (max-width: 321px) { 
+ .it{
+       font-size:40px;
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+        margin-top: 20px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .it:hover{
+
+         font-size:70px;
+        width: 90px;
+        height: 90px;
+        margin-right: 20px;
+        margin-top: 20px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .centrado-porcentual{
+
+        position: absolute;
+        left: 7%;
+        top: 20%;
+
+    }
+
+    .boxheader{
+        visibility: hidden;
+    }
+
+.label{font-size: 10px;}
+
+
+}
