@@ -25,7 +25,7 @@ function login() {
     }else{
         
          $.ajax({
-            url: "model/usuarioPassCheckCount.php",
+            url: "syModel/login/usuarioPassCheckCount.php",
             type: 'POST',
             dataType: "json",
             data: {us: $("#nb").val(), pa: $("#pb").val()},
@@ -51,7 +51,7 @@ function login() {
                             }).show();
                 } else {
                     $.ajax({
-                        url: "model/usuarioPassCheck.php",
+                        url: "syModel/login/usuarioPassCheck.php",
                         type: 'POST',
                         dataType: "json",
                         data: {us: $("#nb").val(), ps: $("#pb").val()},

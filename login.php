@@ -64,7 +64,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
         <script src="libx/animation/js/animation.js" ></script>
         <script src="js/validaciones.js" ></script>
-        <script src="controller/logIn.js" ></script>
+        <script src="syController/login/logIn.js" ></script>
         <script src="libx/alertifyjs/js/alertify.js" ></script>
         <script src="js/passanger.js"></script>
 

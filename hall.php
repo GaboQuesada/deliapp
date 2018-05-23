@@ -95,7 +95,7 @@
                 </div>
                 <div class="caja">
                     <div class="cajita">
-                        <a href="personal.php" onmouseenter="setLabel('F')" onmouseout="RemoveLabel()"><i class="material-icons it itdesing">wc</i></a>
+                        <a href="compPersonal/personal.php" onmouseenter="setLabel('F')" onmouseout="RemoveLabel()"><i class="material-icons it itdesing">wc</i></a>
                     </div>
                     <div class="label">
                         Personal

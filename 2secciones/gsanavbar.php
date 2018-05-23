@@ -1,7 +1,7 @@
 
 <nav class="navbar navbar-expand bg-success navbar-dark sticky-top navup container">
  
-    <img src="img/logo.png" class="navbar-brand" height="60" width="50" />
+    <img src="../img/logo.png" class="navbar-brand" height="60" width="50" />
     <ul class="navbar-nav  mr-auto">
      
     </ul>
