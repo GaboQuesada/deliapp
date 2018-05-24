@@ -98,7 +98,7 @@
                         <a href="compPersonal/personal.php" onmouseenter="setLabel('F')" onmouseout="RemoveLabel()"><i class="material-icons it itdesing">wc</i></a>
                     </div>
                     <div class="label">
-                        Personal
+                        Planilla
                     </div> 
                 </div>
                 <div class="caja">

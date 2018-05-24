@@ -313,7 +313,7 @@
 
 /*Cuerpo*/
 
-body{ background-image: url("../img/fondo.jpg");}
+body{ background-image: url("../../img/fondo.jpg");}
 
 @media (min-width: 1200px) {      /*  mi compu   lista*/
 

@@ -10,7 +10,7 @@
             &numsp;
         </li>
         <li class="nav-item">
-            <a class="btn btn-dark" href="hall.php"><i class="fas fa-home"></i>&numsp;Inicio</a>
+            <a class="btn btn-dark" href="../hall.php"><i class="fas fa-home"></i>&numsp;Inicio</a>
         </li>
         <li class="nav-item">
             &numsp;
