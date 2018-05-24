@@ -33,11 +33,9 @@
                     <label for="email">Activiad o cargo:</label>
                     <div class="input-group">
 
-                        <select class="custom-select" id="inputGroupSelect04">
-                            <option selected>Seleccione...</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                        <select class="custom-select" id="ca">
+                           
+                            
                         </select>
                         <div class="input-group-append">
                             <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#newCat" type="button">Agregar</button>
@@ -49,11 +47,8 @@
                     <label for="email">Departamento:</label>
                     <div class="input-group">
 
-                        <select class="custom-select" id="inputGroupSelect04">
-                            <option selected>Seleccione...</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                        <select class="custom-select" id="de">
+                          
                         </select>
                         <div class="input-group-append">
                             <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#newCat" type="button">Agregar</button>
@@ -105,25 +100,30 @@
                 <form id="frmFormulario" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="email">Nombre:</label>
-                        <input type="text"  class="form-control"  name="nb" id="nb">
+                        <input type="text"  class="form-control"  name="nb" id="aNb">
                         <p id="isAble" ></p>
                     </div>
 
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Descripción:</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea class="form-control" id="aDe" rows="3"></textarea>
                     </div>
 
-                    <input type="submit" id="btnUsuarioGuardar" value="Guardar" class="btn btn-primary">
+                    
 
-                </form>
+              
 
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" id="aCancelar" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <input type="button" id="aGuardar" value="Guardar" class="btn btn-primary">
+                  </form>
             </div>
         </div>
     </div>
 </div>
+
+  <script src="../syController/planilla/getActividades.js" ></script>
+  <script src="../syController/planilla/getDepartamentos.js" ></script>
+  <script src="../syController/planilla/insertActividades.js" ></script>
