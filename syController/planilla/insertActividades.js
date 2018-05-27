@@ -50,12 +50,15 @@ function insertActividades() {
                         dataType: "json",
                         data: {no: nombre, ca: descripcion},
                         beforeSend: function () {
-
+                            $('#div_cargax').show();
                         },
                         success: function (respuesta) {
-
+                            $('#div_cargax').hide();
                             showActividades(nombre);
+                           
                             $("#aCancelar").click();
+                            $("#aNb").val("");
+                            $("#aDe").val("");
                             alertify.error("La actividad a sido agregada.");
 
 

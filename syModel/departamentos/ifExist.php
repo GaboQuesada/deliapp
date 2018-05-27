@@ -5,8 +5,8 @@ $conexion = new Connect();
 $conn = $conexion->conect();
 
 try {
-    $stmt = $conn->prepare("CALL DEPARTAMENTOifExist(:nombre)");
-    $stmt->bindParam(':nombre', $_POST["nombre"]);
+    $stmt = $conn->prepare("CALL DEPARTAMENTOsiExiste(:no)");
+    $stmt->bindParam(':no', $_POST["no"]);
     $stmt->execute();
     $can = $stmt->fetchColumn();
     $respuesta['estado'] = "1";

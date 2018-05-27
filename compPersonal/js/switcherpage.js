@@ -9,6 +9,15 @@ $(document).ready(function () {
          switcher("A");
          
      });
+     
+     $("#B").click(function (){
+         switcher("B");
+         
+     });
+     
+     
+     
+     
     
     
     
@@ -22,6 +31,9 @@ function switcher(opt)
 
         case "A":
             $("#pagecontentbox").load("insertar.php");
+            break;
+        case "B":
+             $("#pagecontentbox").load("actividades.php");
             break;
     }
 

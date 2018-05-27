@@ -1,8 +1,10 @@
 
-function insertDepartamentos() {
 
-    var nombre = $("#dNb").val();
-    var descripcion = $("#dDe").val();
+function upDateActividades() {
+
+    var nombre = $("#acNb").val();
+    var descripcion = $("#acDe").val();
+    var id = $("#acId").val();
 
 
     var datos = new Array();
@@ -28,10 +30,10 @@ function insertDepartamentos() {
     } else {
 
         $.ajax({
-            url: "../syModel/departamentos/ifExist.php",
+            url: "../syModel/cargo/ifExist.php",
             type: 'POST',
             dataType: "json",
-            data: {no: nombre},
+            data: {nombre: $("#acNb").val()},
             beforeSend: function () {
 
             },
@@ -44,20 +46,25 @@ function insertDepartamentos() {
 
 
                     $.ajax({
-                        url: "../syModel/departamentos/insert.php",
+                        url: "../syModel/cargo/upDate.php",
                         type: 'POST',
                         dataType: "json",
-                        data: {no: nombre, de: descripcion},
-                        beforeSend: function () {
-
+                        data: {no: nombre, ca: descripcion, id:id},
+                         beforeSend: function () {
+                            $('#div_cargax').show();
                         },
                         success: function (respuesta) {
-
-                            showDepartamentos(nombre);
-                            $("#dCancelar").click();
-                            $("#dNb").val("");
-                            $("#dDe").val("");
+                            
+                          
+                            showActividadesbox(nombre);
+                            $("#acCancelar").click();
+                            $("#acNb").val("");
+                            $("#acDe").val("");
                             alertify.error("La actividad a sido agregada.");
+                            
+                            
+                             
+                             $('#div_cargax').hide();
 
 
                         },
@@ -96,12 +103,13 @@ function insertDepartamentos() {
 
 $(document).ready(function () {
 
-    $("#dGuardar").click(function () {
+    $("#acGuardar").click(function () {
 
-        insertDepartamentos();
+        insertActividades();
     });
 
 
 });
+
 
 

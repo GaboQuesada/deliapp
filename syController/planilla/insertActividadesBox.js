@@ -1,8 +1,9 @@
 
-function insertDepartamentos() {
 
-    var nombre = $("#dNb").val();
-    var descripcion = $("#dDe").val();
+function insertActividades() {
+
+    var nombre = $("#aNb").val();
+    var descripcion = $("#aDe").val();
 
 
     var datos = new Array();
@@ -28,10 +29,10 @@ function insertDepartamentos() {
     } else {
 
         $.ajax({
-            url: "../syModel/departamentos/ifExist.php",
+            url: "../syModel/cargo/ifExist.php",
             type: 'POST',
             dataType: "json",
-            data: {no: nombre},
+            data: {nombre: $("#aNb").val()},
             beforeSend: function () {
 
             },
@@ -44,20 +45,26 @@ function insertDepartamentos() {
 
 
                     $.ajax({
-                        url: "../syModel/departamentos/insert.php",
+                        url: "../syModel/cargo/insert.php",
                         type: 'POST',
                         dataType: "json",
-                        data: {no: nombre, de: descripcion},
+                        data: {no: nombre, ca: descripcion},
                         beforeSend: function () {
-
+                            $('#div_cargax').show();
                         },
                         success: function (respuesta) {
-
-                            showDepartamentos(nombre);
-                            $("#dCancelar").click();
-                            $("#dNb").val("");
-                            $("#dDe").val("");
+                            
+                          
+                            showActividadesbox(nombre);
+                            $("#aCancelar").click();
+                            $("#aNb").val("");
+                            $("#aDe").val("");
                             alertify.error("La actividad a sido agregada.");
+                            
+                            
+                             
+                             $('#div_cargax').hide();
+                        
 
 
                         },
@@ -96,9 +103,9 @@ function insertDepartamentos() {
 
 $(document).ready(function () {
 
-    $("#dGuardar").click(function () {
+    $("#aGuardar").click(function () {
 
-        insertDepartamentos();
+        insertActividades();
     });
 
 

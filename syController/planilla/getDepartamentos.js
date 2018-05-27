@@ -47,7 +47,7 @@ function showDepartamentos(pnombre) {
 
             $.each(datosrespuesta, function (i, item) {
 
-                if (pnombre === datosrespuesta[i].no) {
+                if (pnombre === datosrespuesta[i].nombre) {
 
                     $("#de").append('<option selected="true"  value="' + datosrespuesta[i].id + '">' + datosrespuesta[i].nombre + ' </option> ');
                 } else {

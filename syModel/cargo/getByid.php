@@ -5,8 +5,8 @@ $conn = $conexion->conect();
 
 
         try {
-            $stmt = $conn->prepare("CALL CARGOgetById(:id);");
-            $stmt->bindParam(':id',$_POST["id"]);
+            $stmt = $conn->prepare("CALL CARGOgetById(:ids);");
+            $stmt->bindParam(':ids',$_POST["id"]);
                 $stmt->execute();
                 $respuesta['estado'] = "1";
                 $respuesta['mensajelog'] = "Consulta Exitosa (getAll)";
