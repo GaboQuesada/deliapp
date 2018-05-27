@@ -9,22 +9,22 @@
             <li class="breadcrumb-item active" aria-current="page"><img src="../img/iconos/actividad.png">Actividades  &nbsp; <button  class="btn btn-primary  btn-sm" data-toggle="modal" data-target="#newCat" ><i class="fas fa-plus-square"></i> Agregar</button> </li> 
         </ol>
     </nav>
-    
-    
-    
+
+
+
 
 </div>
 
 
 <div class="col-12">
-    
 
-   <div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
-  </div>
-  <input type="text" class="form-control" placeholder="Buscar" aria-label="Username" aria-describedby="basic-addon1">
-</div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
+        </div>
+        <input type="text" class="form-control" placeholder="Buscar" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
 
 </div>
 
@@ -87,8 +87,13 @@
             </div>
             <div class="modal-footer">
                 <input type="hidden"  class="form-control"  name="nb" id="acId">
+
+
+                <div class="btn-group btn-group-sm" role="group" aria-label="...">
+                    <button  id="acModificarD" class="btn btn-primary" ><i class="far fa-edit"></i> Modificar descripción</button>
+                    <button  id="acGuardar" class="btn btn-primary" ><i class="far fa-edit"></i> Modificar todo</button>
+                </div>
                 <button  id="acCancelar" class="btn btn-secondary" data-dismiss="modal" ><i class="fas fa-broom"></i> Cancelar</button>
-                <button  id="acGuardar" class="btn btn-primary" > <i class="fas fa-archive"></i> Guardar</button>
 
             </div>
         </div>
@@ -99,3 +104,5 @@
 <script src="../syController/planilla/putInModalActividades.js" ></script>
 <script src="../syController/planilla/getActividadesBlock.js" ></script>
 <script src="../syController/planilla/insertActividadesBox.js" ></script>
+<script src="../syController/planilla/upDateActividades.js" ></script>
+<script src="../syController/planilla/deletedActividades.js" ></script>
