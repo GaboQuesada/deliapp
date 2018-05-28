@@ -2,8 +2,11 @@
 function putInModalActividades(id)
 {
 
+
+
+
     $.ajax({
-        url: "../syModel/cargo/getByid.php",
+        url: "../syModel/departamentos/getByid.php",
         type: 'POST',
         dataType: "json",
         data: {id: id},
@@ -17,9 +20,9 @@ function putInModalActividades(id)
 
             $.each(datosrespuesta, function (i, item) {
 
-                $("#acNb").val(datosrespuesta[i].no);
-                $("#tocompare").val(datosrespuesta[i].no);
-                $("#acDe").val(datosrespuesta[i].ca);
+                $("#acNb").val(datosrespuesta[i].nombre);
+                $("#tocompare").val(datosrespuesta[i].nombre);
+                $("#acDe").val(datosrespuesta[i].descripcion);
                 $("#acId").val(datosrespuesta[i].id);
 
             });

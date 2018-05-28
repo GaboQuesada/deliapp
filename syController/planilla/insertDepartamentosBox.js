@@ -1,12 +1,9 @@
 
 
-function upDateActividades() {
+function insertActividades() {
 
-
-    var nombre = $("#acNb").val();
-    var descripcion = $("#acDe").val();
-    var id = $("#acId").val();
-
+    var nombre = $("#aNb").val();
+    var descripcion = $("#aDe").val();
 
 
     var datos = new Array();
@@ -30,43 +27,12 @@ function upDateActividades() {
                 }).show();
 
     } else {
-        
-        if ($("#tocompare").val() === nombre) {
-           $.ajax({
-                        url: "../syModel/cargo/upDate.php",
-                        type: 'POST',
-                        dataType: "json",
-                        data: {no: nombre, ca: descripcion, id: id},
-                        beforeSend: function () {
-                            $('#div_cargax').show();
-                        },
-                        success: function (respuesta) {
 
-
-                            showActividadesbox(nombre);
-                            $("#acCancelar").click();
-                            $("#acNb").val("");
-                            $("#acDe").val("");
-                            alertify.success("La actividad a sido modificada.");
-
-
-
-                            $('#div_cargax').hide();
-
-
-                        },
-                        error: function () {
-
-                            alert("Ocurrio un error en la llamada Ajax Er:cod 255");
-                        }
-                    }); 
-        }else{
-            
-           $.ajax({
-            url: "../syModel/cargo/ifExist.php",
+        $.ajax({
+            url: "../syModel/departamentos/ifExist.php",
             type: 'POST',
             dataType: "json",
-            data: {nombre: $("#acNb").val()},
+            data: {no: $("#aNb").val()},
             beforeSend: function () {
 
             },
@@ -79,25 +45,26 @@ function upDateActividades() {
 
 
                     $.ajax({
-                        url: "../syModel/cargo/upDate.php",
+                        url: "../syModel/departamentos/insert.php",
                         type: 'POST',
                         dataType: "json",
-                        data: {no: nombre, ca: descripcion, id: id},
+                        data: {no: nombre, de: descripcion},
                         beforeSend: function () {
                             $('#div_cargax').show();
                         },
                         success: function (respuesta) {
-
-
+                            
+                          
                             showActividadesbox(nombre);
-                            $("#acCancelar").click();
-                            $("#acNb").val("");
-                            $("#acDe").val("");
-                            alertify.success("La actividad a sido modificada.");
-
-
-
-                            $('#div_cargax').hide();
+                            $("#aCancelar").click();
+                            $("#aNb").val("");
+                            $("#aDe").val("");
+                            alertify.success("El departamento a sido agregado.");
+                            
+                            
+                             
+                             $('#div_cargax').hide();
+                        
 
 
                         },
@@ -114,7 +81,7 @@ function upDateActividades() {
                     alertify.alert()
                             .setting({
                                 'label': 'Entendido',
-                                'message': 'Dos actividades no pueden tener el mismo nombre: ' + nombre,
+                                'message': 'Ya existe un registro ' + res.nombre,
                                 'onok': function () {
                                     alertify.success('Ahora si vamos a trabajar');
                                 }
@@ -128,11 +95,7 @@ function upDateActividades() {
 
                 alert("Ocurrio un error en la llamada Ajax Er:cod 255");
             }
-        }); 
-            
-        }
-
-        
+        });
     }
 }
 
@@ -140,13 +103,12 @@ function upDateActividades() {
 
 $(document).ready(function () {
 
-    $("#acGuardar").click(function () {
+    $("#aGuardar").click(function () {
 
-        upDateActividades();
+        insertActividades();
     });
-  
+
 
 });
-
 
 

@@ -1,3 +1,6 @@
+
+
+
 <?php
 include '../../bd/connect.php';
 $conexion = new Connect();
@@ -5,13 +8,16 @@ $conn = $conexion->conect();
 
 
         try {
-            $stmt = $conn->prepare("CALL DEPARTAMENTOgetById(:ids);");
-            $stmt->bindParam(':ids',$_POST["id"]);
+            $stmt = $conn->prepare("CALL PLANILLAgetByCargo(:cod)");
+            $stmt->bindParam(':cod',$_POST["id"]);
+
+        
                 $stmt->execute();
+                $can=$stmt->fetchColumn();
                 $respuesta['estado'] = "1";
                 $respuesta['mensajelog'] = "Consulta Exitosa (getAll)";
                 $respuesta['mensaje'] = "Consulta Exitosa.";
-                $respuesta['resultados'] = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $respuesta['resultados'] = $can;
                 print json_encode($respuesta);
             
             

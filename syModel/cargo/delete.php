@@ -5,8 +5,8 @@ $conn = $conexion->conect();
 
         try {
          
-            $stmt = $conn->prepare("CALL CARGOdelete(:id)");
-            $stmt->bindParam(':id',$_POST['id']);
+            $stmt = $conn->prepare("CALL CARGOdelete(:ids)");
+            $stmt->bindParam(':ids',$_POST['id']);
 
             $stmt->execute();
 

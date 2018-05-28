@@ -2,25 +2,28 @@
 
 $(document).ready(function () {
 
-    
-    
-    
-     $("#A").click(function (){
-         switcher("A");
-         
-     });
-     
-     $("#B").click(function (){
-         switcher("B");
-         
-     });
-     
-     
-     
-     
-    
-    
-    
+
+
+
+    $("#A").click(function () {
+        switcher("A");
+
+    });
+
+    $("#B").click(function () {
+        switcher("B");
+
+    });
+    $("#C").click(function () {
+        switcher("C");
+
+    });
+
+
+
+
+
+
 
 });
 
@@ -33,7 +36,10 @@ function switcher(opt)
             $("#pagecontentbox").load("insertar.php");
             break;
         case "B":
-             $("#pagecontentbox").load("actividades.php");
+            $("#pagecontentbox").load("actividades.php");
+            break;
+        case "C":
+            $("#pagecontentbox").load("departamentos.php");
             break;
     }
 

@@ -6,7 +6,7 @@
 <div class="col-12">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item active" aria-current="page"><img src="../img/iconos/actividad.png">Actividades  &nbsp; <button  class="btn btn-primary  btn-sm" data-toggle="modal" data-target="#newCat" ><i class="fas fa-plus-square"></i> Agregar</button> </li> 
+            <li class="breadcrumb-item active" aria-current="page"><img src="../img/iconos/departamento.png">Departamentos &nbsp; <button  class="btn btn-primary  btn-sm" data-toggle="modal" data-target="#newCat" ><i class="fas fa-plus-square"></i> Agregar</button> </li> 
         </ol>
     </nav>
 
@@ -38,8 +38,8 @@
 
             <div class="modal-body">
 
-                <center> <img src="../img/iconos/actividad.png"/></center>
-                <center><h6 class="modal-title" id="exampleModalLabel"><strong>Nuevo Cargo o actividad</strong></h6></center>
+                <center> <img src="../img/iconos/departamento.png"/></center>
+                <center><h6 class="modal-title" id="exampleModalLabel"><strong>Nuevo Departamento</strong></h6></center>
 
                 <div class="form-group">
                     <label for="email">Nombre:</label>
@@ -70,8 +70,8 @@
 
             <div class="modal-body">
 
-                <center> <img src="../img/iconos/actividad.png"/></center>
-                <center><h6 class="modal-title" id="exampleModalLabel"><strong>Actualizar Cargo o actividad</strong></h6></center>
+                <center> <img src="../img/iconos/departamento.png"/></center>
+                <center><h6 class="modal-title" id="exampleModalLabel"><strong>Actualizar Departamento</strong></h6></center>
 
                 <div class="form-group">
                     <label for="email">Nombre:</label>
@@ -90,7 +90,7 @@
 
 
 
-                <button  id="acGuardar" class="btn btn-primary" ><i class="far fa-edit"></i> Modificar todo</button>
+                <button  id="acGuardar" class="btn btn-primary" ><i class="far fa-edit"></i> Modificar</button>
 
                 <button  id="acCancelar" class="btn btn-secondary" data-dismiss="modal" ><i class="fas fa-broom"></i> Cancelar</button>
 
@@ -101,8 +101,8 @@
 
 <a id="iraAncla" href="#ancla"></a>
 <input type="hidden" id="tocompare">
-<script src="../syController/planilla/putInModalActividades.js" ></script>
-<script src="../syController/planilla/getActividadesBlock.js" ></script>
-<script src="../syController/planilla/insertActividadesBox.js" ></script>
-<script src="../syController/planilla/upDateActividades.js" ></script>
-<script src="../syController/planilla/deletedActividades.js" ></script>
+<script src="../syController/planilla/putInModalDepartamentos.js" ></script>
+<script src="../syController/planilla/getDepartamentosBlock.js" ></script>
+<script src="../syController/planilla/insertDepartamentosBox.js" ></script>
+<script src="../syController/planilla/upDateDepartamentos.js" ></script>
+<script src="../syController/planilla/deletedDepartamentos.js" ></script>

@@ -5,10 +5,10 @@ $conn = $conexion->conect();
 
         try {
          
-            $stmt = $conn->prepare("CALL DEPARTAMENTOupDate(:no,:de,:id)");
+            $stmt = $conn->prepare("CALL DEPARTAMENTOupDate(:no,:de,:ids)");
             $stmt->bindParam(':no',$_POST['no']);
             $stmt->bindParam(':de',$_POST['de']);
-            $stmt->bindParam(':id',$_POST['id']);
+            $stmt->bindParam(':ids',$_POST['id']);
 
             $stmt->execute();
 

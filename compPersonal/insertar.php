@@ -69,13 +69,18 @@
     </div></div>
 <div class="col-lg-8">
     <br><div class="card">
-        <div class="card-header"><i class="fas fa-users"></i>Personal</div>
+        <div class="card-header"><div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1"> <i class="fas fa-users"></i>Personal</span>
+        </div>
+        <input type="text" id="actsearch" class="form-control" placeholder="Buscar" aria-label="Username" aria-describedby="basic-addon1">
+    </div></div>
         <div class="card-body"><table class="table table-dark table-hover">
                 <thead >
                     <tr>
                         <th>Nombre</th>
-                        <th>Usuario</th>
-                        <th>Imagén</th>
+                        <th>Departamento</th>
+                        <th>Cargo</th>
                         <th>Opciones</th>
                     </tr>
                 </thead>
