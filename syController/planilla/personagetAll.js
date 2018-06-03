@@ -3,7 +3,7 @@
 
 function show(pini) {
     var boxsize = parseInt($("#cantbloques").val());
-
+    alert("PASO UNO SHOW");
     var cantidad;
     $.ajax({
         url: "../syModel/planilla/getCount.php",
@@ -13,7 +13,7 @@ function show(pini) {
 
         },
         success: function (respuesta) {
-            //alert("29");
+             alert("PASO 2SHOW");
             var bloques = 0;
             cantidad = respuesta.resultados;
             var resultado = cantidad / boxsize;
@@ -50,7 +50,7 @@ function show(pini) {
 
         },
         success: function (respuesta) {
-
+ alert("PASO 3 SHOW");
             var tam;
             var datosrespuesta = respuesta.resultados;
             $("#resultados").empty();
