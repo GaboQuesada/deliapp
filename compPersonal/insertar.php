@@ -1,11 +1,11 @@
 
 
 <div class="col-lg-4"><br><div class="card">
-        
+
         <div id="tituloUsuarios"class="card-header"><i class="fas fa-user-plus"></i> Agregar Persona</div>
         <div class="card-body">
 
-             
+
 
             <form id="frmFormulario" enctype="multipart/form-data">
                 <div class="form-group">
@@ -81,10 +81,10 @@
     <br><div class="card">
 
         <div class="card-body">
-            
-                  
-                <input type="text" id="actsearch" class="form-control form-control-sm" placeholder="Buscar por cédula , nombre o apellidos" aria-label="Username" aria-describedby="basic-addon1">
-                <br>
+
+
+            <input type="text" id="actsearch" class="form-control form-control-sm" placeholder="Buscar por cédula , nombre o apellidos" aria-label="Username" aria-describedby="basic-addon1">
+            <br>
 
             <div class="table-responsive">
                 <table class="table table-sm table-hover">
@@ -289,13 +289,12 @@
         </div>
     </div>
 
-
+    <script src="../syController/planilla/personagetAll.js" ></script>
     <script src="../syController/planilla/getActividades.js" ></script>
     <script src="../syController/planilla/getDepartamentos.js" ></script>
     <script src="../syController/planilla/insertActividades.js" ></script>
     <script src="../syController/planilla/insertDepartamentos.js" ></script>
     <script src="../syController/planilla/personaInsert.js" ></script>
-    <script src="../syController/planilla/personagetAll.js" ></script>
     <script src="../syController/planilla/putInModalUpDatePlanilla.js" ></script>
     <script src="../syController/planilla/personaModificar.js" ></script>
     <script src="../syController/planilla/personaEliminar.js" ></script>
@@ -304,9 +303,8 @@
 
         $(document).ready(function () {
 
-            $(function () {
-                $('[data-toggle="tooltip"]').tooltip();
-            });
+            show(0);
+
 
 
         });
