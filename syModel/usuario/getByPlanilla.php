@@ -5,13 +5,14 @@ $conn = $conexion->conect();
 
 
         try {
-            $stmt = $conn->prepare("CALL CARGOSgetById(:ids);");
-            $stmt->bindParam(':ids',$_POST["id"]);
-                $stmt->execute();
+            $stmt = $conn->prepare("CALL USUARIOSgetByPlanilla(:cod);");
+            $stmt->bindParam(':cod' , $_POST['cod']);
+               $stmt->execute();
+                $can=$stmt->fetchColumn();
                 $respuesta['estado'] = "1";
                 $respuesta['mensajelog'] = "Consulta Exitosa (getAll)";
                 $respuesta['mensaje'] = "Consulta Exitosa.";
-                $respuesta['resultados'] = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $respuesta['resultados'] = $can;
                 print json_encode($respuesta);
             
             

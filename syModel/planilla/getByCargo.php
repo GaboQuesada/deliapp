@@ -8,7 +8,7 @@ $conn = $conexion->conect();
 
 
         try {
-            $stmt = $conn->prepare("CALL PLANILLAgetByCargo(:cod)");
+            $stmt = $conn->prepare("CALL PLANILLASgetByCargo(:cod)");
             $stmt->bindParam(':cod',$_POST["id"]);
 
         

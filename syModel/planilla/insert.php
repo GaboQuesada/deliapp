@@ -6,10 +6,14 @@ $conn = $conexion->conect();
 
 try {
 
-    $stmt = $conn->prepare("CALL PLANILLAinsert(:no,:ap1,:ap2, :fn, :ca, :de, :ce)");
-    $stmt->bindParam(':no', $_POST['no']);
-    $stmt->bindParam(':ap1', $_POST['ap1']);
-    $stmt->bindParam(':ap2', $_POST['ap2']);
+    $nom =$_POST['no'];
+    $ap1 =$_POST['ap1'];
+    $ap2 =$_POST['ap2'];
+    
+    $stmt = $conn->prepare("CALL PLANILLASinsert(:no,:ap1,:ap2, :fn, :ca, :de, :ce)");
+    $stmt->bindParam(':no', $nom );
+    $stmt->bindParam(':ap1',$ap1);
+    $stmt->bindParam(':ap2',$ap2);
     $stmt->bindParam(':fn', $_POST['fn']);
     $stmt->bindParam(':ca', $_POST['ca']);
     $stmt->bindParam(':de', $_POST['de']);

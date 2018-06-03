@@ -17,10 +17,10 @@ function putInModalActividades(id)
 
             $.each(datosrespuesta, function (i, item) {
 
-                $("#acNb").val(datosrespuesta[i].no);
-                $("#tocompare").val(datosrespuesta[i].no);
-                $("#acDe").val(datosrespuesta[i].ca);
-                $("#acId").val(datosrespuesta[i].id);
+                $("#acNb").val(datosrespuesta[i].car_no);
+                $("#tocompare").val(datosrespuesta[i].car_no);
+                $("#acDe").val(datosrespuesta[i].car_ca);
+                $("#acId").val(datosrespuesta[i].car_id);
 
             });
         },

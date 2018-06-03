@@ -20,10 +20,10 @@ function putInModalActividades(id)
 
             $.each(datosrespuesta, function (i, item) {
 
-                $("#acNb").val(datosrespuesta[i].nombre);
-                $("#tocompare").val(datosrespuesta[i].nombre);
-                $("#acDe").val(datosrespuesta[i].descripcion);
-                $("#acId").val(datosrespuesta[i].id);
+                $("#acNb").val(datosrespuesta[i].dep_no);
+                $("#tocompare").val(datosrespuesta[i].dep_no);
+                $("#acDe").val(datosrespuesta[i].dep_des);
+                $("#acId").val(datosrespuesta[i].dep_id);
 
             });
         },

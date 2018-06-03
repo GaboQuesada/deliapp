@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="../css/menuseccion.css" >
         <link rel="stylesheet" href="../css/personal.css" >
 
-        <title>Hello, world!</title>
+        <title>DEli App - SISTEMA</title>
     </head>
     <body>
 
@@ -74,12 +74,12 @@
             <div class="caja1 " id="caja1">
                 <div class=" boxcontent">
                     <nav class="nav flex-lg-column contenedor" >
-                        <a id="A" class="nav-link opcionmenu" title="Planilla" href="#"><img src="../img/iconos/planilla.png"></a>
-                        <a id="B" class="nav-link opcionmenu" title="Actividad" href="#"><img src="../img/iconos/actividad.png"></a>
-                        <a id="C" class="nav-link opcionmenu" title="Departamento" href="#"><img src="../img/iconos/departamento.png"></a>
+                        <a id="A" class="nav-link opcionmenu" title="Usuarios" href="#"><img src="../img/iconos/usuarios.png"></a>
+                        <a id="B" class="nav-link opcionmenu" title="Roles" href="#"><img src="../img/iconos/roles.png"></a>
+                        <a id="C" class="nav-link opcionmenu" title="Modulos" href="#"><img src="../img/iconos/modulos.png"></a>
 
-                        <a class="nav-link opcionmenu" title="Horarios" href="#"><img src="../img/iconos/horario.png"></a>
-                        <a class="nav-link opcionmenu" title="Información" href="#"><img src="../img/iconos/infodelempleado.png"></a>
+                        <a class="nav-link opcionmenu" title="identidad" href="#"><img src="../img/iconos/identidad.png"></a>
+                        <a class="nav-link opcionmenu" title="Información" href="#"><img src="../img/iconos/notificaciones.png"></a>
 
                     </nav>
                 </div>

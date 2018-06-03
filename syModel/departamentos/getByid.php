@@ -5,7 +5,7 @@ $conn = $conexion->conect();
 
 
         try {
-            $stmt = $conn->prepare("CALL DEPARTAMENTOgetById(:ids);");
+            $stmt = $conn->prepare("CALL DEPARTAMENTOSgetById(:ids);");
             $stmt->bindParam(':ids',$_POST["id"]);
                 $stmt->execute();
                 $respuesta['estado'] = "1";

@@ -5,7 +5,7 @@ $conn = $conexion->conect();
 
 
         try {
-            $stmt = $conn->prepare("CALL PLANILLAgetById(:ce);");
+            $stmt = $conn->prepare("CALL PLANILLASgetById(:ce);");
             $stmt->bindParam(':ce',$_POST["ce"]);
                 $stmt->execute();
                 $respuesta['estado'] = "1";

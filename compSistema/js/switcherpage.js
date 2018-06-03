@@ -1,5 +1,32 @@
 
 
+$(document).ready(function () {
+
+
+
+
+    $("#A").click(function () {
+        switcher("A");
+
+    });
+
+    $("#B").click(function () {
+        switcher("B");
+
+    });
+    $("#C").click(function () {
+        switcher("C");
+
+    });
+
+
+
+
+
+
+
+});
+
 function switcher(opt)
 {
 
@@ -18,26 +45,3 @@ function switcher(opt)
 
 
 }
-
-
-
-
-$("#A").click(function () {
-    switcher("A");
-
-});
-
-$("#B").click(function () {
-    switcher("B");
-
-});
-$("#C").click(function () {
-    switcher("C");
-
-});
-
-$(document).ready(function () {
-
-    switcher("A");
-
-});

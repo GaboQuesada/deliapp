@@ -5,8 +5,8 @@ $conexion = new Connect();
 $conn = $conexion->conect();
 
 try {
-    $stmt = $conn->prepare("CALL PLANILLAifExist(:ce)");
-    $stmt->bindParam(':ce', $_POST["ce"]);
+    $stmt = $conn->prepare("CALL PLANILLASifExist(:ces)");
+    $stmt->bindParam(':ces', $_POST["ce"]);
     $stmt->execute();
     $can = $stmt->fetchColumn();
     $respuesta['estado'] = "1";

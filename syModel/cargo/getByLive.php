@@ -5,7 +5,7 @@ $conn = $conexion->conect();
 
 
         try {
-            $stmt = $conn->prepare("CALL CARGOgetLiveSearch(:nombre);");
+            $stmt = $conn->prepare("CALL CARGOSgetLiveSearch(:nombre);");
             $stmt->bindParam(':nombre',$_POST["no"]);
                 $stmt->execute();
                 $respuesta['estado'] = "1";

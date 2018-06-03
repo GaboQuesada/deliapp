@@ -5,7 +5,7 @@ $conn = $conexion->conect();
 
 
         try {
-            $stmt = $conn->prepare("CALL PLANILLAgetCount()");
+            $stmt = $conn->prepare("CALL PLANILLASgetCount()");
             
 
         

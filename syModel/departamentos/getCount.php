@@ -5,7 +5,7 @@ $conn = $conexion->conect();
 
 
         try {
-            $stmt = $conn->prepare("CALL DEPARTAMENTOgetCount()");
+            $stmt = $conn->prepare("CALL DEPARTAMENTOSgetCount()");
             
 
         

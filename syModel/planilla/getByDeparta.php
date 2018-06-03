@@ -7,7 +7,7 @@ $conn = $conexion->conect();
 
 
         try {
-            $stmt = $conn->prepare("CALL PLANILLAgetByDeparta(:cods)");
+            $stmt = $conn->prepare("CALL PLANILLASgetByDeparta(:cods)");
             $stmt->bindParam(':cods',$_POST["id"]);
 
         

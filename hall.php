@@ -149,7 +149,7 @@
                 </div>
                 <div class="caja">
                     <div class="cajita">
-                       <a href="sistema.php" onmouseenter="setLabel('S')" onmouseout="RemoveLabel()"> <i class="material-icons it itdesing">settings_system_daydream</i></a>
+                        <a href="compSistema/sistema.php" onmouseenter="setLabel('S')" onmouseout="RemoveLabel()"> <i class="material-icons it itdesing">settings_system_daydream</i></a>
                     </div>
                     <div class="label">
                        Sistema

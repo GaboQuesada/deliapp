@@ -4,7 +4,7 @@ $conexion = new Connect();
 $conn = $conexion->conect();
 
         try {
-            $stmt = $conn->prepare("CALL DEPARTAMENTOgetAll();");
+            $stmt = $conn->prepare("CALL DEPARTAMENTOSgetAll();");
 
            
                 $stmt->execute();

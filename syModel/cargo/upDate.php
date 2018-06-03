@@ -5,7 +5,7 @@ $conn = $conexion->conect();
 
         try {
          
-            $stmt = $conn->prepare("CALL CARGOupDate(:nos,:cas,:ids)");
+            $stmt = $conn->prepare("CALL CARGOSupDate(:nos,:cas,:ids)");
             $stmt->bindParam(':nos',$_POST['no']);
             $stmt->bindParam(':cas',$_POST['ca']);
             $stmt->bindParam(':ids',$_POST['id']);

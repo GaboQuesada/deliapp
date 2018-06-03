@@ -4,7 +4,7 @@ $conexion = new Connect();
 $conn = $conexion->conect();
 
         try {
-            $stmt = $conn->prepare("CALL CARGOgetAll();");
+            $stmt = $conn->prepare("CALL CARGOSgetAll();");
 
            
                 $stmt->execute();

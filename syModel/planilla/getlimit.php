@@ -1,3 +1,5 @@
+
+
 <?php
 include '../../bd/connect.php';
 $conexion = new Connect();
@@ -5,8 +7,10 @@ $conn = $conexion->conect();
 
 
         try {
-            $stmt = $conn->prepare("CALL CARGOSgetById(:ids);");
-            $stmt->bindParam(':ids',$_POST["id"]);
+            $stmt = $conn->prepare("CALL PLANILLASgetLimit(:ini , :fin)");
+            $stmt->bindParam(':ini',$_POST["ini"]);
+            $stmt->bindParam(':fin',$_POST["fin"]);
+
                 $stmt->execute();
                 $respuesta['estado'] = "1";
                 $respuesta['mensajelog'] = "Consulta Exitosa (getAll)";

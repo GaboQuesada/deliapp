@@ -5,7 +5,7 @@ $conn = $conexion->conect();
 
         try {
          
-            $stmt = $conn->prepare("CALL DEPARTAMENTOdelete(:ids)");
+            $stmt = $conn->prepare("CALL DEPARTAMENTOSdelete(:ids)");
             $stmt->bindParam(':ids',$_POST['id']);
 
             $stmt->execute();

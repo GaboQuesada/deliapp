@@ -6,7 +6,7 @@ $conn = $conexion->conect();
 
 
         try {
-            $stmt = $conn->prepare("CALL DEPARTAMENTOgetLiveSearch(:pnombre);");
+            $stmt = $conn->prepare("CALL DEPARTAMENTOSgetLiveSearch(:pnombre);");
             $stmt->bindParam(':pnombre',$_POST["no"]);
                 $stmt->execute();
                 $respuesta['estado'] = "1";

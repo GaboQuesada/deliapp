@@ -5,7 +5,7 @@ $conn = $conexion->conect();
 
         try {
          
-            $stmt = $conn->prepare("CALL DEPARTAMENTOinsert(:no,:de)");
+            $stmt = $conn->prepare("CALL DEPARTAMENTOSinsert(:no,:de)");
             $stmt->bindParam(':no',$_POST['no']);
             $stmt->bindParam(':de',$_POST['de']);
 

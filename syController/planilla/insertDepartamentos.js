@@ -53,11 +53,11 @@ function insertDepartamentos() {
                         },
                         success: function (respuesta) {
 
-                            showDepartamentos(nombre);
+                            showDepartamentos(nombre,"de");
                             $("#dCancelar").click();
                             $("#dNb").val("");
                             $("#dDe").val("");
-                            alertify.error("La actividad a sido agregada.");
+                            alertify.success("El departamento a sido agregado.");
 
 
                         },

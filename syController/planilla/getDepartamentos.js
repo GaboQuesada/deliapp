@@ -14,11 +14,11 @@ function getDepartamentos() {
 
             var datosrespuesta = respuesta.resultados;
             $("#de").empty();
-            $("#de").append('<option  selected="true"  value=""> Selecionar... </option> ');
+            $("#de").append('<option  selected="true"  value="pnull"> Seleccionar... </option> ');
             $.each(datosrespuesta, function (i, item) {
 
 
-                $("#de").append('<option   value="' + datosrespuesta[i].id + '">' + datosrespuesta[i].nombre + ' </option> ');
+                $("#de").append('<option   value="' + datosrespuesta[i].dep_id + '">' + datosrespuesta[i].dep_no + ' </option> ');
 
             });
         },
@@ -30,7 +30,7 @@ function getDepartamentos() {
 }
 
 
-function showDepartamentos(pnombre) {
+function showDepartamentos(pnombre, pitem) {
 
     $.ajax({
         url: "../syModel/departamentos/getAll.php",
@@ -43,15 +43,15 @@ function showDepartamentos(pnombre) {
 
 
             var datosrespuesta = respuesta.resultados;
-            $("#de").empty();
+            $("#"+pitem).empty();
 
             $.each(datosrespuesta, function (i, item) {
 
-                if (pnombre === datosrespuesta[i].nombre) {
+                if (pnombre === datosrespuesta[i].dep_no) {
 
-                    $("#de").append('<option selected="true"  value="' + datosrespuesta[i].id + '">' + datosrespuesta[i].nombre + ' </option> ');
+                    $("#"+pitem).append('<option selected="true"  value="' + datosrespuesta[i].dep_id + '">' + datosrespuesta[i].dep_no + ' </option> ');
                 } else {
-                    $("#de").append('<option   value="' + datosrespuesta[i].id + '">' + datosrespuesta[i].nombre + ' </option> ');
+                    $("#"+pitem).append('<option   value="' + datosrespuesta[i].dep_id + '">' + datosrespuesta[i].dep_no + ' </option> ');
                 }
 
 

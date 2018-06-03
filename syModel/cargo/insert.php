@@ -5,7 +5,7 @@ $conn = $conexion->conect();
 
         try {
          
-            $stmt = $conn->prepare("CALL CARGOinsert(:no,:ca)");
+            $stmt = $conn->prepare("CALL CARGOSinsert(:no,:ca)");
             $stmt->bindParam(':no',$_POST['no']);
             $stmt->bindParam(':ca',$_POST['ca']);
 

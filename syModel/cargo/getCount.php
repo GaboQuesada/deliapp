@@ -5,7 +5,7 @@ $conn = $conexion->conect();
 
 
         try {
-            $stmt = $conn->prepare("CALL CARGOgetCount()");
+            $stmt = $conn->prepare("CALL CARGOSgetCount()");
             
 
         

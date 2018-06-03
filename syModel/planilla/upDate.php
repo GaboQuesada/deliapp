@@ -6,7 +6,7 @@ $conn = $conexion->conect();
 
 try {
 
-    $stmt = $conn->prepare("CALL PLANILLAupDate(:no,:ap1,:ap2, :fn, :ca, :de, :ce)");
+    $stmt = $conn->prepare("CALL PLANILLASupDate(:no,:ap1,:ap2, :fn, :ca, :de, :ce)");
     $stmt->bindParam(':no', $_POST['no']);
     $stmt->bindParam(':ap1', $_POST['ap1']);
     $stmt->bindParam(':ap2', $_POST['ap2']);

@@ -54,12 +54,12 @@ function insertActividades() {
                         },
                         success: function (respuesta) {
                             $('#div_cargax').hide();
-                            showActividades(nombre);
+                            showActividades(nombre, "ca");
                            
                             $("#aCancelar").click();
                             $("#aNb").val("");
                             $("#aDe").val("");
-                            alertify.error("La actividad a sido agregada.");
+                            alertify.success("La actividad a sido agregada.");
 
 
                         },

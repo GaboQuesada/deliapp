@@ -5,7 +5,7 @@ $conexion = new Connect();
 $conn = $conexion->conect();
 
 try {
-    $stmt = $conn->prepare("CALL CARGOifExist(:nombre)");
+    $stmt = $conn->prepare("CALL CARGOSifExist(:nombre)");
     $stmt->bindParam(':nombre', $_POST["nombre"]);
     $stmt->execute();
     $can = $stmt->fetchColumn();

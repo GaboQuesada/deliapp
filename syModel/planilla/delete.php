@@ -5,7 +5,7 @@ $conn = $conexion->conect();
 
         try {
          
-            $stmt = $conn->prepare("CALL PLANILLAdelete(:ce)");
+            $stmt = $conn->prepare("CALL PLANILLASdelete(:ce)");
             $stmt->bindParam(':ce',$_POST['ce']);
            
 
