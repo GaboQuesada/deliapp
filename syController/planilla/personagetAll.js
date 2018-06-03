@@ -2,6 +2,7 @@
 
 
 function show(pini) {
+    alert("PASO CERO SHOW");
     var boxsize = parseInt($("#cantbloques").val());
     alert("PASO UNO SHOW");
     var cantidad;
@@ -129,6 +130,7 @@ $("#actsearch").keyup(function () {
 });
 
 $(document).ready(function () {
+    alert("PASO ANTES DE CERO SHOW");
     show(0);
 
     $("#cantbloques").change(function () {
