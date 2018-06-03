@@ -36,7 +36,7 @@ function switcher(opt)
             $("#pagecontentbox").load("insertar.php");
             break;
         case "B":
-            $("#pagecontentbox").load("actividades.php");
+            $("#pagecontentbox").load("roles.php");
             break;
         case "C":
             $("#pagecontentbox").load("departamentos.php");

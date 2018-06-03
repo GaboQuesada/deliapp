@@ -85,10 +85,10 @@
                 </div>
             </div>
             <div class="caja2" id="caja2">
-                <div class="container"><div class="col-lg-12">
+                <div class="container"><div class="col-lg-11">
                         <div class="row" id="pagecontentbox">
-
                            
+
 
 
                         </div>
