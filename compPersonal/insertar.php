@@ -289,25 +289,25 @@
         </div>
     </div>
 
-    <script src="../syController/planilla/personagetAll.js" ></script>
     <script src="../syController/planilla/getActividades.js" ></script>
     <script src="../syController/planilla/getDepartamentos.js" ></script>
     <script src="../syController/planilla/insertActividades.js" ></script>
     <script src="../syController/planilla/insertDepartamentos.js" ></script>
-    <script src="../syController/planilla/personaInsert.js" ></script>
+    <script src="../syController/planilla/personagetAll.js" ></script>
+        <script src="../syController/planilla/personaInsert.js" ></script>
     <script src="../syController/planilla/putInModalUpDatePlanilla.js" ></script>
     <script src="../syController/planilla/personaModificar.js" ></script>
     <script src="../syController/planilla/personaEliminar.js" ></script>
+   <script type="text/javascript" >
 
-    <script type="text/javascript" >
+                       $(document).ready(function () {
 
-        $(document).ready(function () {
-
-            show(0);
-
+                           show(0);
 
 
-        });
+
+                       });
 
 
-    </script>
+        </script>
+   
