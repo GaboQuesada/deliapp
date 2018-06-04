@@ -7,7 +7,7 @@ function show(pini) {
     alert("PASO UNO SHOW");
     var cantidad;
     $.ajax({
-        url: "../syModel/planilla/getCount.php",
+        url: "syModel/planilla/getCount.php",
         type: 'POST',
         dataType: "json",
         beforeSend: function () {
@@ -43,7 +43,7 @@ function show(pini) {
         }
     });
     $.ajax({
-        url: "../syModel/planilla/getLimit.php",
+        url: "syModel/planilla/getLimit.php",
         type: 'POST',
         dataType: "json",
         data: {ini: pini, fin: boxsize},
@@ -83,7 +83,7 @@ function show(pini) {
 function getLiveSearch() {
 
     $.ajax({
-        url: "../syModel/planilla/getByLive.php",
+        url: "syModel/planilla/getByLive.php",
         type: 'POST',
         dataType: "json",
         data: {no: $("#actsearch").val()},
