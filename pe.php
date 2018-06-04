@@ -283,15 +283,7 @@
             <script src="libx/alertifyjs/js/alertify.js" ></script>
             <script src="js/index.js" ></script>
             <script src="js/validaciones.js" ></script>
-            <script src="syController/planilla/getActividades.js" ></script>
-            <script src="syController/planilla/getDepartamentos.js" ></script>
-            <script src="syController/planilla/insertActividades.js" ></script>
-            <script src="syController/planilla/insertDepartamentos.js" ></script>
-            <script src="syController/planilla/personagetAll.js" ></script>
-            <script src="syController/planilla/personaInsert.js" ></script>
-            <script src="syController/planilla/putInModalUpDatePlanilla.js" ></script>
-            <script src="syController/planilla/personaModificar.js" ></script>
-            <script src="syController/planilla/personaEliminar.js" ></script>
+         
             <script type="text/javascript" >
 
                 $(document).ready(function () {
