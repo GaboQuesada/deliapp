@@ -1,52 +1,16 @@
 
 
 
-function show(pini) {
+function show(pini,fini) {
 
-    var boxsize = parseInt($("#cantbloques").val());
+   
     
-    var cantidad;
-    $.ajax({
-        url: "syModel/planilla/getCount.php",
-        type: 'POST',
-        dataType: "json",
-        beforeSend: function () {
-
-        },
-        success: function (respuesta) {
-             
-            var bloques = 0;
-            cantidad = respuesta.resultados;
-            var resultado = cantidad / boxsize;
-            if (cantidad <= boxsize)
-            {
-                bloques = 1;
-            } else if (cantidad > boxsize && cantidad < boxsize * 2) {
-                bloques = 2;
-            } else {
-                bloques = Math.trunc(resultado) + 1;
-            }
-            $("#bloques").empty();
-            $("#total").html('<p>Total registros:' + cantidad + ' </p>');
-            var desde = 0;
-            var hasta = boxsize;
-            var contador = 0;
-            for (var i = 0; i < bloques; i++) {
-                contador = contador + boxsize;
-                $("#bloques").append('<li onclick="show(' + desde + ')" class="page-item"><a class="page-link" href="#">' + contador + '</a></li>');
-                desde = desde + boxsize;
-            }
-
-        },
-        error: function () {
-
-        }
-    });
+   
     $.ajax({
         url: "syModel/planilla/getLimit.php",
         type: 'POST',
         dataType: "json",
-        data: {ini: pini, fin: boxsize},
+        data: {ini: pini, fin: fini},
         beforeSend: function () {
 
         },
@@ -132,7 +96,7 @@ $("#actsearch").keyup(function () {
 
     $("#cantbloques").change(function () {
 
-        show(0);
+        show(0,10);
 
     });
     
@@ -140,6 +104,6 @@ $("#actsearch").keyup(function () {
     $(document).ready(function (){
         
         show(0);
-         alert("PASO 3 SHOW jaja");
+         alert("PASO 4 SHOW jaja");
     })
 
