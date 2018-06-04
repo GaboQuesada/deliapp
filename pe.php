@@ -25,63 +25,13 @@
             <img id="cargadorx" src="img/gifcarga.gif"/>
         </div>
 
-        <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light fondo comfignav ">
-
-            <img  class="logoimg pulse" onclick=" location.href = 'hall.php';"  src="img/logo.png" />
-
-            <button onclick=" location.href = 'hall.php';" class="btn btn-default botonespeincipales"><i class="fas fa-home"></i></button>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <ul class="navbar-nav mr-auto">
-
-                    <li class="nav-item">
-
-                    </li>
-                </ul>
-
-                <div class="dropdown">
-
-                    <i style="margin-right:10px;" class="fas fa-cog  " id="dropdownMenuButton" data-toggle="dropdown"></i> 
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#"><i class="fas fa-user-circle"></i> Adriana Villanueva</a>
-                        <a class="dropdown-item" href="#"><i class="fas fa-address-card"></i> Editar Perfil</a>
-
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Salir</a>
-                    </div>
-                </div>
-
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2 form-control-sm" type="search" placeholder="Search" aria-label="Search">
-
-                </form>
-
-                <h6><i class="fas fa-envelope notifybox"></i><span class="badge badge-info">0</span></h6>
-                <h6><i class="far fa-comment-alt notifybox"></i><span class="badge badge-warning">0</span></h6>
-                <img  src="../img/profil.jpg" class="imgperfil " />
-
-            </div>
-
-        </nav>
+       
 
 
         <div class="contenedorcentral" id="contenedorcentral">
             <div class="caja1 " id="caja1">
                 <div class=" boxcontent">
-                    <nav class="nav flex-lg-column contenedor" >
-                        <a id="A" class="nav-link opcionmenu" title="Planilla" href="#"><img src="img/iconos/planilla.png"></a>
-                        <a id="B" class="nav-link opcionmenu" title="Actividad" href="#"><img src="img/iconos/actividad.png"></a>
-                        <a id="C" class="nav-link opcionmenu" title="Departamento" href="#"><img src="img/iconos/departamento.png"></a>
-
-                        <a class="nav-link opcionmenu" title="Horarios" href="#"><img src="img/iconos/horario.png"></a>
-                        <a class="nav-link opcionmenu" title="Información" href="#"><img src="img/iconos/infodelempleado.png"></a>
-
-                    </nav>
+                    
                 </div>
             </div>
             <div class="caja2" id="caja2">
@@ -95,74 +45,6 @@
                                     <div class="card-body">
 
 
-
-                                        <form id="frmFormulario" enctype="multipart/form-data">
-                                            <div class="form-group">
-                                                <label class="labelsi" for="email"><i class="fas fa-users"></i> Cédula :</label>
-                                                <input type="text"  class="form-control form-control-sm"   id="ce">
-                                                <p id="isAble" ></p>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="labelsi" for="email"><i class="fas fa-users"></i> Nombre:</label>
-                                                <input type="text"  class="form-control form-control-sm"  id="no">
-                                                <p id="isAble" ></p>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label class="labelsi" for="email"><i class="fas fa-address-card"></i> Primer apellido:</label>
-                                                <input type="text"  class="form-control form-control-sm"   id="ap1">
-                                                <p id="isAble" ></p>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label class="labelsi" for="email"><i class="fas fa-address-card"></i> Segundo apellido:</label>
-                                                <input type="text"  class="form-control form-control-sm"   id="ap2">
-                                                <p id="isAble" ></p>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label class="labelsi" for="email"><i class="fas fa-calendar-alt"></i> Fecha Nacimiento:</label>
-                                                <input type="date"  class="form-control form-control-sm"   id="fn">
-                                                <p id="isAble" ></p>
-                                            </div>
-
-
-
-                                            <div class="form-group ">
-                                                <label class="labelsi" for="email"><i class="fas fa-building"></i> Departamento:</label>
-                                                <div class="input-group">
-
-                                                    <select class="custom-select  form-control-sm" id="de">
-
-                                                    </select>
-                                                    <div class="input-group-append">
-                                                        <button class="btn btn-outline-secondary btn-sm " title="Agregar" data-toggle="modal" data-target="#newDep" type="button"><i class="fas fa-plus-square"></i></button>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label class="labelsi" for="email"><i class="fas fa-paint-brush"></i> Activiad o cargo:</label>
-                                                <div class="input-group">
-
-                                                    <select class="custom-select form-control-sm" id="ca">
-
-
-                                                    </select>
-                                                    <div class="input-group-append">
-                                                        <button class="btn btn-outline-secondary btn-sm" title="Agregar" data-toggle="modal" data-target="#newCat" type="button"><i class="fas fa-plus-square"></i></button>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-
-
-
-
-                                            <button id="btnGuardaPla" class="btn btn-primary btn-sm"><i class="fas fa-archive"></i> Guardar</button>
-
-                                        </form>
                                     </div> 
 
                                 </div></div>
