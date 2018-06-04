@@ -294,7 +294,7 @@
     <script src="../syController/planilla/insertActividades.js" ></script>
     <script src="../syController/planilla/insertDepartamentos.js" ></script>
     <script src="../syController/planilla/personagetAll.js" ></script>
-        <script src="../syController/planilla/personaInsert.js" ></script>
+    <script src="../syController/planilla/personaInsert.js" ></script>
     <script src="../syController/planilla/putInModalUpDatePlanilla.js" ></script>
     <script src="../syController/planilla/personaModificar.js" ></script>
     <script src="../syController/planilla/personaEliminar.js" ></script>
