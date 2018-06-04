@@ -283,7 +283,7 @@
             <script src="libx/alertifyjs/js/alertify.js" ></script>
             <script src="js/index.js" ></script>
             <script src="js/validaciones.js" ></script>
-            <script src="personagetAll.js" ></script>
+            <script src="persona.js" ></script>
          
           
 
