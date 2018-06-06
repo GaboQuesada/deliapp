@@ -7,7 +7,7 @@ function showr(pini,fini) {
     
    
     $.ajax({
-        url: "syModel/planilla/getLimit.php",
+        url: "getLimit.php",
         type: 'POST',
         dataType: "json",
         data: {ini: pini, fin: fini},
@@ -20,22 +20,14 @@ function showr(pini,fini) {
             var datosrespuesta = respuesta.resultados;
             $("#resultados").empty();
             $.each(datosrespuesta, function (i, item) {
+                
                 tam = tam + 1;
                 $("#resultados").append('<tr><td scope="col">' + datosrespuesta[i].pla_ce + '</td>\n\
 <td scope="col">' + datosrespuesta[i].pla_no + ' ' + datosrespuesta[i].pla_ap1 + ' ' + datosrespuesta[i].pla_ap2 + '</td>\n\
 <td scope="col">' + datosrespuesta[i].dep_no + '</td>\n\
 <td scope="col">' + datosrespuesta[i].car_no + '</td>\n\
 <td scope="col">\n\
-<div class="dropdown">\n\
-  <button class="btn btn-dark dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\n\
-  </button>\n\
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">\n\
-    <a class="dropdown-item" href="#" onclick="showInModal(' + datosrespuesta[i].pla_ce + ')" title="Modificar" data-toggle="modal" data-target="#ipdatePlanilla"><i class="fas fa-edit"></i> Modificar</a>\n\
-    <a class="dropdown-item" href="#" onclick="deletepersona(' + datosrespuesta[i].pla_ce + ')" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fas fa-trash-alt"></i>Eliminar </a>\n\
-    <a class="dropdown-item" href="#" onclick="setUsuario(' + datosrespuesta[i].pla_ce + ')" data-toggle="tooltip" data-placement="top" title="Asignar Usuario"><i class="fas fa-user-plus"> Asignar Usuario</i></a>\n\
-  </div>\n\
-</div>\n\
-</td></tr>');
+</tr>');
             });
         },
         error: function () {
