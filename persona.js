@@ -16,17 +16,17 @@ function showr(pini,fini) {
         },
         success: function (respuesta) {
 
-            var tam;
             var datosrespuesta = respuesta.resultados;
             $("#resultados").empty();
             $.each(datosrespuesta, function (i, item) {
                 
-                tam = tam + 1;
-                $("#resultados").append('<tr><td scope="col">' + datosrespuesta[i].pla_ce + '</td>\n\
+    
+                $("#resultados").append('\
+<tr>\n\
+<td scope="col">' + datosrespuesta[i].pla_ce + '</td>\n\
 <td scope="col">' + datosrespuesta[i].pla_no + ' ' + datosrespuesta[i].pla_ap1 + ' ' + datosrespuesta[i].pla_ap2 + '</td>\n\
 <td scope="col">' + datosrespuesta[i].dep_no + '</td>\n\
 <td scope="col">' + datosrespuesta[i].car_no + '</td>\n\
-<td scope="col">\n\
 </tr>');
             });
         },
@@ -42,6 +42,6 @@ function showr(pini,fini) {
     $(document).ready(function (){
         
         showr(0,10);
-         alert("PASO 5 SHOW jaja");
-    })
+         alert("PASO 6 SHOW jaja");
+    });
 
