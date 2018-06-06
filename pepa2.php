@@ -30,7 +30,7 @@
 
                                           
             <script src="libx/jquery/jquery-3.2.1.min.js" ></script>
-            <script src="persona.js" ></script>
+            <script src="persona2.js" ></script>
          
           
 

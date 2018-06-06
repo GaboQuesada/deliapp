@@ -42,6 +42,6 @@ function showr(pini,fini) {
     $(document).ready(function (){
         
         showr(0,10);
-         alert("PASO 6 SHOW jaja");
+         alert("PASO 8 SHOW jaja");
     });
 
