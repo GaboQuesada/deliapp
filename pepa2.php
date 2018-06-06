@@ -13,11 +13,9 @@
                                             <table class="table table-sm table-hover">
                                                 <thead>
                                                     <tr>
-                                                        <th scope="col">Cédula</th>
+                                                        <th scope="col">value</th>
                                                         <th scope="col">Nombre</th>
-                                                        <th scope="col">Departamento</th>
-                                                        <th scope="col">Cargo</th>
-                                                        <th scope="col">Opc</th>
+                                               
                                                     </tr>
 
                                                 </thead>
