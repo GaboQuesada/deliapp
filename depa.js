@@ -8,7 +8,7 @@ function getDepartamentos() {
 
         },
         success: function (respuesta) {
-
+            alert("bien bien")
 
             var datosrespuesta = respuesta.resultados;
             $("#resultados").empty();
@@ -31,4 +31,5 @@ $(document).ready(function (){
     
     alert("hello world");
     
-})
+    getDepartamentos();
+});
