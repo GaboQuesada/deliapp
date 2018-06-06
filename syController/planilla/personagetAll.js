@@ -2,9 +2,9 @@
 
 
 function show(pini) {
-    alert("PASO CERO SHOW XXX");
+
     var boxsize = parseInt($("#cantbloques").val());
-    alert("PASO UNO SHOW");
+
     var cantidad;
     $.ajax({
         url: "syModel/planilla/getCount.php",
@@ -14,7 +14,7 @@ function show(pini) {
 
         },
         success: function (respuesta) {
-             alert("PASO 2SHOW");
+
             var bloques = 0;
             cantidad = respuesta.resultados;
             var resultado = cantidad / boxsize;
@@ -51,7 +51,7 @@ function show(pini) {
 
         },
         success: function (respuesta) {
- alert("PASO 3 SHOW");
+            alert("PASO 3 SHOW");
             var tam;
             var datosrespuesta = respuesta.resultados;
             $("#resultados").empty();
@@ -93,7 +93,7 @@ function getLiveSearch() {
         success: function (respuesta) {
 
 
-          
+
             var tam;
             var datosrespuesta = respuesta.resultados;
             $("#resultados").empty();
@@ -130,9 +130,16 @@ $("#actsearch").keyup(function () {
 });
 
 
-    $("#cantbloques").change(function () {
+$("#cantbloques").change(function () {
 
-        show(0);
+    show(0);
 
-    });
+});
+
+$(document).ready(function (){
+    
+    show(0);
+});
+
+
 
