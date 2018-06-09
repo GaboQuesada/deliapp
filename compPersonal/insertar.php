@@ -288,7 +288,8 @@
             </div>
         </div>
     </div>
-  <script src="../syController/planilla/personagetAll.js" ></script>
+    <script src="../syController/planilla/personagetAll.js" ></script>
+    <script src="../syController/planilla/personaGetBySearch.js" ></script>
     <script src="../syController/planilla/getActividades.js" ></script>
     <script src="../syController/planilla/getDepartamentos.js" ></script>
     <script src="../syController/planilla/insertActividades.js" ></script>
@@ -297,5 +298,4 @@
     <script src="../syController/planilla/putInModalUpDatePlanilla.js" ></script>
     <script src="../syController/planilla/personaModificar.js" ></script>
     <script src="../syController/planilla/personaEliminar.js" ></script>
-  
-   
+

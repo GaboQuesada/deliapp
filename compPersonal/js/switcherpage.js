@@ -14,6 +14,9 @@ function switcher(opt)
         case "C":
             $("#pagecontentbox").load("departamentos.php");
             break;
+        case "D":
+            $("#pagecontentbox").load("planilla.php");
+            break;
     }
 
 
@@ -35,9 +38,13 @@ $("#C").click(function () {
     switcher("C");
 
 });
+$("#D").click(function () {
+    switcher("D");
+
+});
 
 $(document).ready(function () {
 
-    switcher("A");
+    switcher("D");
 
 });

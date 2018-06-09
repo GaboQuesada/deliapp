@@ -28,7 +28,7 @@
 
 </div>
 
-<div id="actividadesBox"></div>
+<div class="col-12" id="actividadesBox"></div>
 
 
 <!--  MODAL INSERT ACTIVIDAD O CARGO -->

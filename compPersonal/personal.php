@@ -14,7 +14,8 @@
         <link rel="stylesheet" href="../css/menusuperior.css" >
         <link rel="stylesheet" href="../css/boxmodel.css" >
         <link rel="stylesheet" href="../css/menuseccion.css" >
-        <link rel="stylesheet" href="../css/personal.css" >
+         <link rel="stylesheet" href="../css/personal.css" >
+        
 
         <title>Hello, world!</title>
     </head>
@@ -78,7 +79,7 @@
                         <a id="B" class="nav-link opcionmenu" title="Actividad" href="#"><img src="../img/iconos/actividad.png"></a>
                         <a id="C" class="nav-link opcionmenu" title="Departamento" href="#"><img src="../img/iconos/departamento.png"></a>
 
-                        <a class="nav-link opcionmenu" title="Horarios" href="#"><img src="../img/iconos/horario.png"></a>
+                        <a id="D" class="nav-link opcionmenu" title="Horarios" href="#"><img src="../img/iconos/horario.png"></a>
                         <a class="nav-link opcionmenu" title="Información" href="#"><img src="../img/iconos/infodelempleado.png"></a>
 
                     </nav>
@@ -110,6 +111,7 @@
             <script src="../js/index.js" ></script>
             <script src="../js/validaciones.js" ></script>
             <script src="js/switcherpage.js" ></script>
+           
           
 
 
