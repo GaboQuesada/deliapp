@@ -39,7 +39,7 @@ function switcher(opt)
             $("#pagecontentbox").load("roles.php");
             break;
         case "C":
-            $("#pagecontentbox").load("departamentos.php");
+            $("#pagecontentbox").load("modulos.php");
             break;
     }
 

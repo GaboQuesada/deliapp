@@ -37,9 +37,10 @@ function  show(pini) {
 // aqui
 
  $.ajax({
-        url: "../syModel/planilla/getAll.php",
+        url: "../syModel/planilla/getlimit.php",
         type: 'POST',
         dataType: "json",
+        data: {ini: pini ,fin:boxsize},
         beforeSend: function () {
 
         },
@@ -64,9 +65,9 @@ function  show(pini) {
         </div> \
         <div class="col-lg align-self-center "> \
             <div class="btn-group btn-group-sm" role="group" > \
-                <button type="button" class="btn btn-warning btn-sm">Modificar</button> \
-                <button type="button" class="btn btn-danger btn-sm">Eliminar</button> \
-                <button type="button" class="btn btn-dark btn-sm"> Usuario</button> \
+                <button type="button" class="btn btn-warning btn-sm" onclick="showInModal(' + datosrespuesta[i].pla_ce + ')"  data-toggle="modal" data-target="#ipdatePlanilla"><i class="fas fa-pen-square"></i> Modificar</button> \
+                <button type="button" class="btn btn-danger btn-sm" onclick="deletepersona(' + datosrespuesta[i].pla_ce + ')"  ><i class="fas fa-trash-alt"></i> Eliminar</button> \
+                <button type="button" class="btn btn-dark btn-sm"><i class="fas fa-user-plus"></i> Usuario</button> \
             </div>   \
         </div>   \
     </div>');

@@ -122,6 +122,7 @@ function insert() {
                                 getActividades();
                                 getDepartamentos();
                                 $('#div_cargax').hide();
+                                $('#aCancelar').click();
 
 
                             },

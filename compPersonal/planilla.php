@@ -1,23 +1,5 @@
 
-<style type="text/css">
-    .personalinfo{
 
-        margin: 0px;
-        padding: 0px;
-
-    } 
-
-    .boxinfo{
-        padding: 5px;
-        background-color: #edebe6;
-        border-radius: 10px 10px 10px 10px;
-        -moz-border-radius: 10px 10px 10px 10px;
-        -webkit-border-radius: 10px 10px 10px 10px;
-        border: 1px solid #000000;
-        margin-bottom: 2px;
-    }
-
-</style>
 
 
 
@@ -232,7 +214,95 @@
     </div>
 </div>
 
+ <!-- Modal -->
+    <div class="modal fade" id="ipdatePlanilla" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+
+                    <center> <img src="../img/iconos/planilla.png"/></center>
+                    <center><h6 class="modal-title" id="exampleModalLabel"><strong>Actualizar Planilla</strong></h6></center>
+
+                    <center>
+                        <form id="frmFormulario" class="col-md-11" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label class="labelsi" style="float: left" for="email"><i class="fas fa-users"></i> Cédula :</label>
+                                <input type="text"  class="form-control form-control-sm"   id="ceu">
+                                <p id="isAble" ></p>
+                            </div>
+                            <div class="form-group">
+                                <label class="labelsi" style="float: left" for="email"><i class="fas fa-users"></i> Nombre:</label>
+                                <input type="text"  class="form-control form-control-sm"  id="nou">
+                                <p id="isAble" ></p>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="labelsi" style="float: left" for="email"><i class="fas fa-address-card"></i> Primer apellido:</label>
+                                <input type="text"  class="form-control form-control-sm"   id="ap1u">
+                                <p id="isAble" ></p>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="labelsi" style="float: left" for="email"><i class="fas fa-address-card"></i> Segundo apellido:</label>
+                                <input type="text"  class="form-control form-control-sm"   id="ap2u">
+                                <p id="isAble" ></p>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="labelsi" style="float: left" for="email"><i class="fas fa-calendar-alt"></i> Fecha Nacimiento:</label>
+                                <input type="date"  class="form-control form-control-sm"   id="fnu">
+                                <p id="isAble" ></p>
+                            </div>
+
+
+
+                            <div class="form-group ">
+                                <label class="labelsi"style="float: left" for="email"><i class="fas fa-building"></i> Departamento:</label>
+
+
+                                <select class="custom-select form-control-sm " id="deu">
+
+                                </select>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label class="labelsi" style="float: left" for="email"><i class="fas fa-paint-brush"></i> Activiad o cargo:</label>
+
+
+                                <select class="custom-select form-control-sm" id="cau">
+
+
+                                </select>
+
+                            </div>
+
+                        </form>
+                    </center>
+                </div>
+                <div class="modal-footer">
+                    <input type="hidden"  class="form-control"  name="nb" id="acIdu">
+
+
+
+                    <button  id="acGuardarurr" class="btn btn-primary btn-sm" ><i class="far fa-edit"></i> Modificar</button>
+
+                    <button  id="acCancelarurr" class="btn btn-secondary btn-sm" data-dismiss="modal" ><i class="fas fa-broom"></i> Cancelar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 <a id="iraAncla" href="#ancla"></a>
 <input type="hidden" id="tocompare">
 <script src="../syController/planilla/personasgetAllFull.js" ></script>
+<script src="../syController/planilla/putInModalUpDatePlanilla.js" ></script>
+<script src="../syController/planilla/personaModificar.js" ></script>
+<script src="../syController/planilla/getActividades.js" ></script>
+<script src="../syController/planilla/getDepartamentos.js" ></script>
+<script src="../syController/planilla/personaEliminar.js" ></script>
+<script src="../syController/planilla/personaInsert.js" ></script>
+<script src="../syController/planilla/personaGetBySearch.js" ></script>
 

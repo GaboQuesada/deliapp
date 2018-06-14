@@ -1,7 +1,9 @@
+
+
 function getLiveSearch() {
 
     $.ajax({
-        url: "syModel/planilla/getByLive.php",
+        url: "../syModel/planilla/getByLive.php",
         type: 'POST',
         dataType: "json",
         data: {no: $("#actsearch").val()},
@@ -11,27 +13,35 @@ function getLiveSearch() {
         success: function (respuesta) {
 
 
-
-            var tam;
             var datosrespuesta = respuesta.resultados;
-            $("#resultados").empty();
+            $("#actividadesBox").empty();
+
             $.each(datosrespuesta, function (i, item) {
-                tam = tam + 1;
-                $("#resultados").append('<tr><td scope="col">' + datosrespuesta[i].pla_ce + '</td>\n\
-<td scope="col">' + datosrespuesta[i].pla_no + ' ' + datosrespuesta[i].pla_ap1 + ' ' + datosrespuesta[i].pla_ap2 + '</td>\n\
-<td scope="col">' + datosrespuesta[i].dep_no + '</td>\n\
-<td scope="col">' + datosrespuesta[i].car_no + '</td>\n\
-<td scope="col">\n\
-<div class="dropdown">\n\
-  <button class="btn btn-dark dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\n\
-  </button>\n\
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">\n\
-    <a class="dropdown-item" href="#" onclick="showInModal(' + datosrespuesta[i].pla_ce + ')" title="Modificar" data-toggle="modal" data-target="#ipdatePlanilla"><i class="fas fa-edit"></i> Modificar</a>\n\
-    <a class="dropdown-item" href="#" onclick="deletepersona(' + datosrespuesta[i].pla_ce + ')" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fas fa-trash-alt"></i>Eliminar </a>\n\
-    <a class="dropdown-item" href="#" onclick="setUsuario(' + datosrespuesta[i].pla_ce + ')" data-toggle="tooltip" data-placement="top" title="Asignar Usuario"><i class="fas fa-user-plus"> Asignar Usuario</i></a>\n\
-  </div>\n\
-</div>\n\
-</td></tr>');
+
+                $("#actividadesBox").append(' \
+                <div class="row boxinfo">\
+       <div class="col-lg "> \
+            <p class="personalinfo "><strong class="text-primary">Nombre: </strong>' + datosrespuesta[i].pla_no + ' ' + datosrespuesta[i].pla_ap1 + ' ' + datosrespuesta[i].pla_ap2 + '</p> \
+            <p class="personalinfo"><strong class="text-primary">Cédula: </strong>' + datosrespuesta[i].pla_ce + '</p> \
+            <p class="personalinfo"><strong class="text-primary">Fecha Nacimiento: </strong>' + datosrespuesta[i].pla_fn + '</p> \
+        </div> \
+        <div class="col-lg align-self-center "> \
+            <p class="personalinfo "><strong class="text-primary">Departamento: </strong>' + datosrespuesta[i].dep_no + '</p> \
+            <p class="personalinfo"><strong class="text-primary">Cargo: </strong>' + datosrespuesta[i].car_no + '</p> \
+        </div> \
+        <div class="col-lg align-self-center "> \
+            <div class="btn-group btn-group-sm" role="group" > \
+                <button type="button" class="btn btn-warning btn-sm" onclick="showInModal(' + datosrespuesta[i].pla_ce + ')"  title="Modificar" data-toggle="modal" data-target="#ipdatePlanilla">Modificar</button> \
+                <button type="button" class="btn btn-danger btn-sm" onclick="deletepersona(' + datosrespuesta[i].pla_ce + ')"  title="Modificar">Eliminar</button> \
+                <button type="button" class="btn btn-dark btn-sm"> Usuario</button> \
+            </div>   \
+        </div>   \
+    </div>');
+
+
+
+
+
             });
         },
         error: function () {
@@ -40,6 +50,7 @@ function getLiveSearch() {
         }
     });
 }
+
 
 
 $("#actsearch").keyup(function () {

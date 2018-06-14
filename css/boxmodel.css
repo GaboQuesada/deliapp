@@ -23,6 +23,44 @@
 
 #actividadesBox{width: 100%}
 
+
+
+
+.boxinfo{
+    padding: 5px;
+    background-color: white;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: #555;
+    margin-bottom: 2px;
+
+}
+
+.boxinfo:hover{
+    padding: 5px;
+    background-color:#555;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 1px solid #000000;
+    margin-bottom: 2px;
+
+}
+
+
+
+.personalinfo{
+
+    margin: 0px;
+    padding: 0px;
+
+} 
+
+
+.labelsi{
+    font-size: 14px;
+}
+
 .boxcar{
     display: inline-block;
     height: 250px;
@@ -76,6 +114,14 @@
 
 }
 
+body{
+   
+
+        background-image: url("../img/fondo.jpg");
+        height: auto;
+       
+}
+
 @media (min-width: 1200px) {      /*  mi compu   lista*/
     .contenedorcentral{
 
@@ -101,7 +147,7 @@
         margin-left: 80px;
         display: inline-block;
         position: absolute;
-        height: 100%;
+        height: auto;
         width: 94.99%;
 
 
