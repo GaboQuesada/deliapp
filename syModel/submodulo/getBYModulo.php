@@ -4,7 +4,8 @@ $conexion = new Connect();
 $conn = $conexion->conect();
 
         try {
-            $stmt = $conn->prepare("CALL MODULOSgetAll();");
+            $stmt = $conn->prepare("CALL SUBMODULOSgetByModulo(:pmo);");
+             $stmt->bindParam(':pmo',$_POST["pmo"]);
 
            
                 $stmt->execute();
