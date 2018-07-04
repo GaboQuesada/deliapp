@@ -53,50 +53,13 @@
             <div id="boxinfoshowrole">
                 
                 <div style="margin-bottom: 10px;">Editando accesos para: <spam><strong id="labelrol"></strong></spam> &numsp;<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#norol">
-                Ver o Editar Role
+                Ver info del Role
             </button></div>
                  <p>Para editar un acceso seleciona el modulo, y da clcik sobre el submodulo</p>
             <div id="accordion">
                 
                 
-                <div class="card">
-                    <div class="card-header" id="headingOne" >
-                        <h5 class="mb-0">
-                            <div  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                               <a class=" mibox row  "  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            <div class="col-lg" style="padding-left: 45px;">
-                                <i class="material-icons" style="font-size: 60px;">business_center</i>
-                            </div>
-                            <div class="col-lg align-self-center">
-                                Negocios
-                            </div>
-                            <div class="col-lg">
-                             
-                            </div>
-                        </a>
-                            </div>
-                        </h5>
-                    </div>
-
-                    <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
-                        <div class="card-body">
-                            <div class="btn-group btn-group-sm" role="group" style="margin-bottom: 5px;" aria-label="...">
-                                <button type="button" class="btn btn-outline-dark"><i class="fas fa-check-circle"></i> Conceder todos los accesos</button>
-                                <button type="button" class="btn btn-outline-dark"><i class="fas fa-ban" ></i> Rebocar todos los accesos</button>
-                            </div>
-                            <br>
-                            <ul class="list-group" id="showrolesd">
-                                <li class="list-group-item miitem" >
-                                    <div class="col-lg-7" style="display: inline-block; "><img src="../img/iconos/actividad.png" width="50" height="50" />Facturar</div>
-                                    <div class="col-lg-4" style="display: inline-block"> Estado:    <i class="fas fa-check-circle" style="font-size: 30px; color: green;"></i> </div></li>
-                                <li class="list-group-item miitem">
-                                    <div class="col-lg-7" style="display: inline-block; "><img src="../img/iconos/identidad.png" width="50" height="50" >Pedidos</div>
-                                    <div class="col-lg-4" style="display: inline-block"> Estado:     <i class="fas fa-ban"  style="font-size: 30px; color: red;"></i> </div></li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+               
 
             </div>
             </div>
@@ -134,14 +97,18 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary btn-sm">Guardar</button>
+                <button  type="button" id="upromh" class="btn btn-secondary btn-sm" data-dismiss="modal">Cerrar</button>
+               <!-- <button type="button" id="saveroldata" class="btn btn-primary btn-sm">Guardar</button> -->
             </div>
         </div>
     </div>
 </div>
 
+<input type="hidden" id="rolid" />
 <script src="../syController/sistema/rolInsert.js" ></script>
 <script src="../syController/sistema/rolgetAll.js" ></script>
 <script src="../syController/sistema/rolsetInfo.js"></script>
+<script src="../syController/sistema/subModulosGet.js"></script>
+<script src="../syController/sistema/acceset.js"></script>
+<script src="../syController/sistema/rolesUpdate.js"></script>
 

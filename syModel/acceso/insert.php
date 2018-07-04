@@ -5,9 +5,9 @@ $conn = $conexion->conect();
 
         try {
          
-            $stmt = $conn->prepare("CALL ACCESOSinsert(:mo,:ro)");
-            $stmt->bindParam(':mo',$_POST['mo']);
-            $stmt->bindParam(':ro',$_POST['ro']);
+            $stmt = $conn->prepare("CALL ACCESOSinsert(:psm,:pro)");
+            $stmt->bindParam(':psm',$_POST['sm']);
+            $stmt->bindParam(':pro',$_POST['ro']);
 
             $stmt->execute();
 

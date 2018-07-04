@@ -5,8 +5,9 @@ $conn = $conexion->conect();
 
         try {
          
-            $stmt = $conn->prepare("CALL ACCESOSdelete(:id)");
-            $stmt->bindParam(':id',$_POST['id']);
+            $stmt = $conn->prepare("CALL ACCESOSdelete(:psm,:pro)");
+            $stmt->bindParam(':psm',$_POST['sm']);
+            $stmt->bindParam(':pro',$_POST['ro']);
 
             $stmt->execute();
 
@@ -23,3 +24,6 @@ $conn = $conexion->conect();
         }
     
 ?>
+
+
+
