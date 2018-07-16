@@ -5,9 +5,10 @@ $conexion = new Connect();
 $conn = $conexion->conect();
 
 try {
-    $stmt = $conn->prepare("CALL usuarioUserEnable(:pa,:us)");
-    $stmt->bindParam(':us', $_POST["us"]);
-    $stmt->bindParam(':pa', $_POST["pa"]);
+    $stmt = $conn->prepare("CALL USUARIOSgetloginexist(:us , :pa)");
+    $stmt->bindParam(':us' , $_POST['us']);
+    $stmt->bindParam(':pa' , $_POST['pa']);
+
     $stmt->execute();
     $can = $stmt->fetchColumn();
     $respuesta['estado'] = "1";
@@ -22,7 +23,3 @@ try {
     $respuesta['mensaje'] = "Ha ocurrido un error.";
     print json_encode($respuesta);
 }
-    
-// nos damos cuenta si el usuario esta habilitado
-// Puede ser que no exista
-// Que no este habilitado

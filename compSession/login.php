@@ -17,6 +17,8 @@
         <title>Hello, world!</title>
     </head>
     <body class="text-center">
+        
+       
 
         <div id="div_carga">
             <img id="cargador" src="../img/gifcarga.gif"/>
@@ -66,7 +68,7 @@
         <script src="../lib/alertifyjs/js/alertify.js" ></script>
         <script src="../lib/animation/js/animation.js" ></script>
         <script src="../js/validaciones.js" ></script>
-        <script src="controler/logIn.js" ></script>
+        <script src="controler/ifexist.js" ></script>
         
     
 
