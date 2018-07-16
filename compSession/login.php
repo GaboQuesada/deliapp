@@ -69,6 +69,7 @@
         <script src="../lib/animation/js/animation.js" ></script>
         <script src="../js/validaciones.js" ></script>
         <script src="controler/ifexist.js" ></script>
+        <script src="controler/usuariopass.js" ></script>
         
     
 

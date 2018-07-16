@@ -24,14 +24,14 @@ function login() {
 
     } else {
 
-  $.ajax({
+        $.ajax({
             url: "model/Exist.php",
             type: 'POST',
             dataType: "json",
             data: {us: $("#nb").val(), pa: $("#pb").val()},
             beforeSend: function () {
 
-
+                $('#div_carga').show();
 
             },
             success: function (respuesta) {
@@ -39,7 +39,7 @@ function login() {
                 var existe = respuesta.resultados;
 
                 if (existe == 0) {
-
+                    $('#div_carga').hide();
                     alertify.error('Rellene la informacion');
 
                     alertify.alert()
@@ -52,7 +52,7 @@ function login() {
                             }).show();
                 } else {
 
-                   
+                    pass($("#nb").val(), $("#pb").val());
                 }
             },
             error: function () {
