@@ -1,5 +1,7 @@
 <?php
 
+include_once '../../dbApp/connectctrl.php';
+
 class Connect {
 
     private $servername;
@@ -10,12 +12,13 @@ class Connect {
 
     function __construct() {
 
+       $outco = new bdconect();
 
 
-        $this->servername = "sql135.main-hosting.eu." ;
-        $this->username = "u868864184_deli";
-        $this->password = "toakGQtckRz0FHUecM";
-        $this->dbname = "u868864184_deli";
+        $this->servername = $outco->getServername();
+        $this->username = $outco->getUsername();
+        $this->password = $outco->getPassword();
+        $this->dbname = $outco->getDbname();
     }
 
     public function conect() {
