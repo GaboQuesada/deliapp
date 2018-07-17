@@ -10,8 +10,8 @@ $conn = $conexion->conect();
 
 try {
     $stmt = $conn->prepare("CALL USUARIOSlogin(:us , :pa)");
-    $usp=  "adri";
-    $pap = "adri";
+    $usp=  "";
+    $pap = "";
     $stmt->bindParam(':us' , $usp);
     $stmt->bindParam(':pa' , $usp);
     $stmt->execute();
