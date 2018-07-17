@@ -1,0 +1,213 @@
+
+@media (min-width: 1200px) { /*  mi compu */
+    .opcionmenu{
+        width: 80px;
+        height:95px;
+        padding-top: 20px;
+        background-color:black;
+        border-top-color:#252525;
+        border-top-style: solid;
+        border-top-width: thin;
+        font-size: 36px;
+        color: white;
+        text-align: center;
+
+    }
+    .opcionmenu:hover{
+        width: 80px;
+        height:95px;
+        padding-top: 20px;
+        background-color:#252525;
+        border-top-color:#252525;
+        border-top-style: solid;
+        border-top-width: thin;
+        font-size: 36px;
+        color: black;
+        text-align: center;
+
+        background-image: url("img/fondo.jpg");
+        background: rgba(5,5,5,1);
+        background: -moz-linear-gradient(left, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(5,5,5,1)), color-stop(1%, rgba(5,5,5,1)), color-stop(96%, rgba(255,255,255,0.94)), color-stop(100%, rgba(255,255,255,0.94)));
+        background: -webkit-linear-gradient(left, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        background: -o-linear-gradient(left, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        background: -ms-linear-gradient(left, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        background: linear-gradient(to right, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#050505', endColorstr='#ffffff', GradientType=1 );
+
+    }
+
+    .contenedor{
+
+        padding-top: 90px;
+    }
+
+
+}
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+ .opcionmenu{
+        width: 80px;
+        height:95px;
+        padding-top: 20px;
+        background-color:black;
+        border-top-color:#252525;
+        border-top-style: solid;
+        border-top-width: thin;
+        font-size: 36px;
+        color: white;
+        text-align: center;
+
+    }
+    .opcionmenu:hover{
+        width: 80px;
+        height:95px;
+        padding-top: 20px;
+        background-color:#252525;
+        border-top-color:#252525;
+        border-top-style: solid;
+        border-top-width: thin;
+        font-size: 36px;
+        color: black;
+        text-align: center;
+
+        background-image: url("img/fondo.jpg");
+        background: rgba(5,5,5,1);
+        background: -moz-linear-gradient(left, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(5,5,5,1)), color-stop(1%, rgba(5,5,5,1)), color-stop(96%, rgba(255,255,255,0.94)), color-stop(100%, rgba(255,255,255,0.94)));
+        background: -webkit-linear-gradient(left, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        background: -o-linear-gradient(left, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        background: -ms-linear-gradient(left, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        background: linear-gradient(to right, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#050505', endColorstr='#ffffff', GradientType=1 );
+
+    }
+
+    .contenedor{
+
+        padding-top: 90px;
+    }
+
+}
+@media (min-width: 768px) and (max-width: 991.98px) { /* primera horizontal*/
+     .opcionmenu{
+        width: 80px;
+        height:65px;
+        padding-top: 7px;
+        background-color:black;
+        border-top-color:#252525;
+        border-top-style: solid;
+        border-top-width: thin;
+        font-size: 36px;
+        color: white;
+        text-align: center;
+
+    }
+    .opcionmenu:hover{
+        width: 80px;
+        height:65px;
+        padding-top: 7px;
+        background-color:#252525;
+        border-top-color:#252525;
+        border-top-style: solid;
+        border-top-width: thin;
+        font-size: 36px;
+        color: black;
+        text-align: center;
+
+        background-image: url("img/fondo.jpg");
+        background: rgba(5,5,5,1);
+        background: -moz-linear-gradient(left, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(5,5,5,1)), color-stop(1%, rgba(5,5,5,1)), color-stop(96%, rgba(255,255,255,0.94)), color-stop(100%, rgba(255,255,255,0.94)));
+        background: -webkit-linear-gradient(left, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        background: -o-linear-gradient(left, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        background: -ms-linear-gradient(left, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        background: linear-gradient(to right, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#050505', endColorstr='#ffffff', GradientType=1 );
+
+    }
+
+    .contenedor{
+
+        padding-top: 70px;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+
+    .opcionmenu{
+
+        background-color:black;
+        border-right-color:#252525;
+        border-right-style: solid;
+        border-right-width: thin;
+        font-size: 26px;
+        color: white;
+        padding-right: 10px;
+        padding-left:  10px;
+        width: 20%;
+        text-align: center;
+    }
+    .opcionmenu:hover{
+        background-image: url("img/fondo.jpg");
+        background: rgba(5,5,5,1);
+        background: -moz-linear-gradient(left, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(5,5,5,1)), color-stop(1%, rgba(5,5,5,1)), color-stop(96%, rgba(255,255,255,0.94)), color-stop(100%, rgba(255,255,255,0.94)));
+        background: -webkit-linear-gradient(left, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        background: -o-linear-gradient(left, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        background: -ms-linear-gradient(left, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        background: linear-gradient(to right, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#050505', endColorstr='#ffffff', GradientType=1 );
+        border-right-color:#252525;
+        border-right-style: solid;
+        border-right-width: thin;
+        font-size: 26px;
+        color: orange;
+        text-align: center;
+    }
+    
+    .contenedor{
+
+        padding-top: 60px;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 575.98px) { 
+
+    .opcionmenu{
+       background-color:black;
+        border-right-color:#252525;
+        border-right-style: solid;
+        border-right-width: thin;
+        font-size: 20px;
+        color: white;
+        padding-right: 10px;
+        padding-left:  10px;
+        width: 20%;
+        text-align: center;
+    }
+    .opcionmenu:hover{
+         background-image: url("img/fondo.jpg");
+        background: rgba(5,5,5,1);
+        background: -moz-linear-gradient(left, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(5,5,5,1)), color-stop(1%, rgba(5,5,5,1)), color-stop(96%, rgba(255,255,255,0.94)), color-stop(100%, rgba(255,255,255,0.94)));
+        background: -webkit-linear-gradient(left, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        background: -o-linear-gradient(left, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        background: -ms-linear-gradient(left, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        background: linear-gradient(to right, rgba(5,5,5,1) 0%, rgba(5,5,5,1) 1%, rgba(255,255,255,0.94) 96%, rgba(255,255,255,0.94) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#050505', endColorstr='#ffffff', GradientType=1 );
+        border-right-color:#252525;
+        border-right-style: solid;
+        border-right-width: thin;
+        font-size: 20px;
+        color: black;
+        text-align: center;
+    }
+    
+    .contenedor{
+
+        padding-top: 60px;
+    }
+}

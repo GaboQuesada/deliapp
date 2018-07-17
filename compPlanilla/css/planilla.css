@@ -1,0 +1,29 @@
+
+
+.personalinfo{
+
+    margin: 0px;
+    padding: 0px;
+
+} 
+
+.boxinfo{
+    padding: 5px;
+    background-color: white;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: #555;
+    margin-bottom: 2px;
+
+}
+
+.boxinfo:hover{
+    padding: 5px;
+    background-color:#555;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 1px solid #000000;
+    margin-bottom: 2px;
+
+}

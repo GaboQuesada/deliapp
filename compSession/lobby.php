@@ -1,7 +1,10 @@
 <?php
 @session_start();
+include '../bd/connect.php';
+$conexion = new Connect();
+$conn = $conexion->conect();
 
-if (!empty($_SESSION["usuarioid"] )) {
+if (!empty($_SESSION["usuarioid"])) {
     
 } else {
     header("Location: ../index.php");
@@ -64,55 +67,46 @@ if (!empty($_SESSION["usuarioid"] )) {
 
         <div class="container" >
 
+            <?php
+            try {
+                $stmt = $conn->prepare("CALL MODULOSget();");
 
+                $stmt->execute();
+                $respuesta = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $tam = count($respuesta);
 
-
-            <div class="boxmenu card">
-                <div class="card-body ">
-                    <a class="linkm" href="../index.php">
-                        <div class="col-sm align-self-center">
-                            <div class="row justify-content-center">
-                                <div>
-                                    <div class="col-sm align-self-center"> <i style="font-size: 48px; " class=" itebox material-icons it itdesing">restaurant_menu</i></div>
-
-
+                for ($i = 0; $i < $tam; $i++) {
+                    ?>
+                    <div class="boxmenu card">
+                        <div class="card-body ">
+                            <a class="linkm" href="../<?php echo $respuesta[$i]['url']; ?>">
+                                <div class="col-sm align-self-center">
+                                    <div class="row justify-content-center">
+                                        <div>
+                                            <div class="col-sm align-self-center"> <i style="font-size: 48px; " class=" itebox material-icons it itdesing"><?php echo $respuesta[$i]['ses_im']; ?></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div>
+                                            <div class="col-sm align-self-center"> <p><?php echo $respuesta[$i]['ses_no']; ?></p></div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row justify-content-center">
-                                <div>
-
-                                    <div class="col-sm align-self-center"> <p>Restaurante</p></div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-
-
-
-            <div class="boxmenu card">
-                <div class="card-body ">
-                    <div class="col-sm align-self-center">
-                        <div class="row justify-content-center">
-                            <div>
-                                <div class="col-sm align-self-center"> <a href="inventario.php" onmouseenter="setLabel('I')" onmouseout="RemoveLabel()"><i style="font-size: 48px; " class=" itebox material-icons it itdesing">hotel</i></a></div>
-
-
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div>
-
-                                <div class="col-sm align-self-center"> <p>Hotel</p></div>
-
-                            </div>
+                            </a>
                         </div>
                     </div>
-                </div>
-            </div>
+
+                    <?php
+                }
+            } catch (PDOException $e) {
+
+
+                $respuesta['mensajelog'] = $e->getMessage();
+
+                print json_encode($respuesta);
+            }
+            ?>
+
 
 
 

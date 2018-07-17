@@ -1,10 +1,11 @@
 function  show(pini) {
+    
     var boxsize = parseInt($("#cantbloques").val());
     var resuorder = $("#order").val();
 
     var cantidad;
     $.ajax({
-        url: "../syModel/planilla/getCount.php",
+        url: "model/getCount.php",
         type: 'POST',
         dataType: "json",
         beforeSend: function () {
@@ -14,6 +15,7 @@ function  show(pini) {
 
             var bloques = 0;
             cantidad = respuesta.resultados;
+         
             var resultado = cantidad / boxsize;
             if (cantidad <= boxsize)
             {
@@ -37,7 +39,7 @@ function  show(pini) {
 // aqui
 
  $.ajax({
-        url: "../syModel/planilla/getlimit.php",
+        url: "model/getlimit.php",
         type: 'POST',
         dataType: "json",
         data: {ini: pini ,fin:boxsize},
@@ -99,6 +101,9 @@ $("#cantbloques").change(function () {
 });
 
 $(document).ready(function () {
+
+  
+
 
     show(0);
 });

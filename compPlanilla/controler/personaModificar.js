@@ -37,7 +37,7 @@ function modificar() {
     } else {
 
         $.ajax({
-            url: "../syModel/planilla/upDate.php",
+            url: "Model/upDate.php",
             type: 'POST',
             dataType: "json",
             data: {no: nom, ap1: ape1, ap2: ape2, fn: fen, ca: car, de: dep, ce: ced},

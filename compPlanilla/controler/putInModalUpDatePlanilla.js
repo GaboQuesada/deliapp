@@ -1,7 +1,7 @@
 function showInModal(pid) {
 
     $.ajax({
-        url: "../syModel/planilla/getByid.php",
+        url: "model/getByid.php",
         type: 'POST',
         dataType: "json",
         data: {ce: pid},
