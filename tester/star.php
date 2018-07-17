@@ -2,14 +2,16 @@
 
 session_start();
 
-include '../../bd/connect.php';
+include '../bd/connect.php';
 $conexion = new Connect();
 $conn = $conexion->conect();
 
 try {
     $stmt = $conn->prepare("CALL USUARIOSlogin(:us , :pa)");
-    $stmt->bindParam(':us' , $_POST['us']);
-    $stmt->bindParam(':pa' , $_POST['pa']);
+    $usp=  "adri";
+    $pap = "adri";
+    $stmt->bindParam(':us' , $usp);
+    $stmt->bindParam(':pa' , $usp);
     $stmt->execute();
     $respuesta['estado'] = "1";
     $respuesta['mensajelog'] = "Consulta Exitosa (getAll)";
@@ -36,7 +38,7 @@ try {
     $_SESSION["departamento"] = $departamento;
     $_SESSION["cargo"] = $cargo;
     
-    
+    echo "LOG IN<BR>";
     print json_encode($respuesta);
 } catch (PDOException $e) {
 

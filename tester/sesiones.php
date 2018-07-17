@@ -1,11 +1,18 @@
 <?php
-
-echo $_SESSION["usuarioid"] = $usuarioid;
-echo $_SESSION["usuario"] = $usuario;
-echo $_SESSION["usuarioIMG"] = $usuarioIMG;
-echo $_SESSION["nombre"] = $nombre;
-echo $_SESSION["rolid"] = $rolid;
-echo $_SESSION["ronombre"] = $ronombre;
-echo $_SESSION["departamento"] = $departamento;
-echo $_SESSION["cargo"] = $cargo;
+session_start();
+echo $_SESSION["usuarioid"];
+echo "<BR>";
+echo $_SESSION["usuario"];
+echo "<BR>";
+echo $_SESSION["usuarioIMG"];
+echo "<BR>";
+echo $_SESSION["nombre"];
+echo "<BR>";
+echo $_SESSION["rolid"];
+echo "<BR>";
+echo $_SESSION["ronombre"];
+echo "<BR>";
+echo $_SESSION["departamento"];
+echo "<BR>";
+echo $_SESSION["cargo"];
 ?>
