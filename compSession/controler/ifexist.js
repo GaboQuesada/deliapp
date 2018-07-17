@@ -66,7 +66,7 @@ function login() {
 }
 
 $(document).ready(function () {
-
+alert("condicionZ");
     $("#btnEntrar").click(function (event) {
         event.preventDefault();
         login();
