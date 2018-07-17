@@ -1,24 +1,21 @@
 
+function pass(nb, pb) {
 
-function pass() {
 
- 
  
     $.ajax({
-        url: "starService.php",
+         url: "starService.php",
         type: 'POST',
         dataType: "json",
-         data: {us:"adri", pa:"adri"},
+        data: {us: nb, pa: pb},
         beforeSend: function () {
 
 
 
         },
         success: function (respuesta) {
-             
-             
-              location.href = "sesiones.php";
-           
+            
+                   location.href = "sesiones.php";
 
         },
         error: function () {
@@ -28,14 +25,6 @@ function pass() {
    
 }
 
-$(document).ready(function (){
-    
 
-    
-    $("#btnconec").click(function (){
-        
-        pass();
-        
-    })
-    
-})
+
+
