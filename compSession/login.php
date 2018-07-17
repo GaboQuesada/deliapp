@@ -27,6 +27,7 @@
 
         <div class="centrado-porcentual">
             <div class="caja1 slideRight " id="caja1">
+                
                 <img class="mb-4 imgcl imcshadow" src="../img/logo.png" alt="" >
             </div>
             <div class="caja2 slideDown" id="caja2">
