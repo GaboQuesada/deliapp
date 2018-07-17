@@ -2,6 +2,8 @@
 
 function pass(nb, pb) {
 
+
+ 
     $.ajax({
         url: "model/obtpase.php",
         type: 'POST',

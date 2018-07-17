@@ -53,11 +53,11 @@ if (!empty($_SESSION["usuarioid"])) {
 
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
-                        <img src="userImg/nnn.jpg" width="35" height="35" class="rounded" alt="">
+                        <img src="userImg/<?php echo $_SESSION["usuarioIMG"] ?>" width="35" height="35" class="rounded" alt="">
                         &numsp;
-                        <span> Gabriel Quesada Sanchez</span>
+                        <span><?php echo $_SESSION["nombre"] ?></span>
                         <a class="nav-item nav-link" href="Perfil.php"><i class="fas fa-cog"></i></a>
-                        <a class="nav-item nav-link " href="modelGeneral/salir.php"><i class="fas fa-sign-out-alt"></i></a>
+                        <a class="nav-item nav-link " href="../salir.php"><i class="fas fa-sign-out-alt"></i></a>
 
                     </form>
                 </div>

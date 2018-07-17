@@ -39,7 +39,7 @@ function login() {
                 var existe = respuesta.resultados;
 
                 if (existe == 0) {
-                    alert("cond 0:"+existe);
+                   
                     $('#div_carga').hide();
                     alertify.error('Rellene la informacion');
 
@@ -52,7 +52,7 @@ function login() {
                                 }
                             }).show();
                 } else {
- alert("cond !0:"+existe);
+
                     pass($("#nb").val(), $("#pb").val());
                 }
             },
@@ -66,7 +66,7 @@ function login() {
 }
 
 $(document).ready(function () {
-alert("condicionZ");
+
     $("#btnEntrar").click(function (event) {
         event.preventDefault();
         login();
