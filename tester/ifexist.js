@@ -36,7 +36,7 @@ function login() {
                     alert("incorrectos")
                 } else {
 
-                    pass($("#nb").val(), $("#pb").val());
+                   // pass($("#nb").val(), $("#pb").val());
                 }
             },
             error: function () {
