@@ -1,7 +1,7 @@
 
 <?php 
 
-// header("Location: compSession/login.php");
-header("Location:prueba.php");
+ header("Location: compuprueba/login.php");
+
 
 ?>
