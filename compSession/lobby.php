@@ -4,11 +4,11 @@ include '../bd/connect.php';
 $conexion = new Connect();
 $conn = $conexion->conect();
 
-//if (!empty($_SESSION["usuarioid"])) {
+if (!empty($_SESSION["usuarioid"])) {
     
-//} else {
-   // header("Location: ../index.php");
-//}
+} else {
+    header("Location: ../index.php");
+}
 ?>
 
 
