@@ -48,7 +48,7 @@ if (!empty($_SESSION["usuarioid"])) {
 
                       
                         <li class="nav-item active">
-                            <a class="nav-link" href="../compSession/lobby.php"><i class="fas fa-home"></i></a>
+                            <a class="nav-link" href="../compSessiones/lobby.php"><i class="fas fa-home"></i></a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="#"><i class="fas fa-envelope notifybox"></i><span class="badge badge-info"> 0</span></a>

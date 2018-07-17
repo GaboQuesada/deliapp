@@ -13,9 +13,9 @@ if (!empty($_SESSION["usuarioid"])) {
 
 <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light fondo comfignav ">
 
-    <a href="../compSession/lobby.php"><img  class="logoimg pulse" src="../img/logo.png" /></a>
+    <a href="../compSessiones/lobby.php"><img  class="logoimg pulse" src="../img/logo.png" /></a>
 
-    <a href="../compSession/lobby.php" class="btn btn-light btn-sm "><i class="fas fa-home"></i></a>
+    <a href="../compSessiones/lobby.php" class="btn btn-light btn-sm "><i class="fas fa-home"></i></a>
     &numsp;
     <a href="#" class="btn btn-info btn-sm "><i class="fas fa-calculator"></i></a>
     &numsp;
