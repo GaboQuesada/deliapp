@@ -1,6 +1,8 @@
 <?php
 @session_start();
-
+include '../bd/connect.php';
+$conexion = new Connect();
+$conn = $conexion->conect();
 
 
 if (!empty($_SESSION["usuarioid"])) {
@@ -14,11 +16,31 @@ if (!empty($_SESSION["usuarioid"])) {
 
 <div class=" boxcontent">
     <nav class="nav flex-lg-column contenedor" >
-        <a class="nav-link opcionmenu" title="Planilla" href="#"><img src="../img/iconos/planilla.png"></a>
-        <a class="nav-link opcionmenu" title="Actividad" href="#"><img src="../img/iconos/actividad.png"></a>
-        <a class="nav-link opcionmenu" title="Departamento" href="#"><img src="../img/iconos/departamento.png"></a>
-        <a class="nav-link opcionmenu" title="Horarios" href="#"><img src="../img/iconos/horario.png"></a>
-        <a class="nav-link opcionmenu" title="Información" href="#"><img src="../img/iconos/infodelempleado.png"></a>
+        <?php
+        try {
+            $stmt = $conn->prepare("CALL ACCESOSGetRutas(:rol, :modu);");
+            $stmt->bindParam(':rol',$_SESSION["rolid"]);
+            $modulo = "Planilla";
+            $stmt->bindParam(':modu',$modulo);
 
+
+            $stmt->execute();
+            $respuesta = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $tam = count($respuesta);
+
+            for ($i = 0; $i < $tam; $i++) {
+                ?>
+        <a class="nav-link opcionmenu" title="Planilla" href="<?php echo $respuesta[$i]['sbm_ur']; ?>"><img src="iconos/<?php echo $respuesta[$i]['sbm_im']; ?>"></a>
+
+                    <?php
+                }
+            } catch (PDOException $e) {
+
+
+                $respuesta['mensajelog'] = $e->getMessage();
+
+                print json_encode($respuesta);
+            }
+            ?>
     </nav>
 </div>

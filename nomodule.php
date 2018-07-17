@@ -11,6 +11,8 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>NO tienes contratado este modulo</div>
+        <div>NO puedes acceder a este modulo por alguna de estas causas:</div>
+        <div>NO tines contratado este modulo en tu plan</div>
+        <div>NO tines incluido este modulo en tus permisos de rol</div>
     </body>
 </html>

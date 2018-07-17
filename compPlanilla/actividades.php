@@ -3,10 +3,10 @@
 
 
 
-if (!empty($_SESSION["usuarioid"])) {
+if (!empty($_SESSION["usuarioid"]) && $_SESSION["Actividades"] == 1 ) {
     
 } else {
-    header("Location: ../index.php");
+    header("Location: ../nomodule.php");
 }
 ?>
 
