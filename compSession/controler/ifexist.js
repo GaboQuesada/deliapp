@@ -67,6 +67,8 @@ function login() {
 
 $(document).ready(function () {
 
+    alert("JJ");
+
     $("#btnEntrar").click(function (event) {
         event.preventDefault();
         login();
