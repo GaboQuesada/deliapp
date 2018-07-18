@@ -2,9 +2,7 @@
 
 function login() {
     
-    
-    
-
+ 
         $.ajax({
             url: "Exist.php",
             type: 'POST',
@@ -38,7 +36,7 @@ function login() {
 
 $(document).ready(function () {
 
- 
+    alert("2");
 
     $("#btnconec").click(function () {
    
