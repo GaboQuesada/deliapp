@@ -2,8 +2,6 @@
 
 function login() {
 
-   
-
         $.ajax({
             url: "Exist.php",
             type: 'POST',
@@ -23,7 +21,7 @@ function login() {
                     alert("incorrectos")
                 } else {
 
-                   // pass($("#nb").val(), $("#pb").val());
+                   
                 }
             },
             error: function () {

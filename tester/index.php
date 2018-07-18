@@ -31,8 +31,8 @@
 
         <script src="../lib/jquery/jquery-3.2.1.min.js"></script> 
         <script src="../lib/alertifyjs/js/alertify.min.js"></script>
-        <script src="../js/validaciones.js"></script>
+
         <script src="ifexist.js"></script>
-        <script src="usuariopass.js"></script>
+       
     </body>
 </html>
