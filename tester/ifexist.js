@@ -1,6 +1,9 @@
 
 
 function login() {
+    
+    
+    
 
         $.ajax({
             url: "Exist.php",
@@ -18,7 +21,7 @@ function login() {
 
                 if (existe == 0) {
                    
-                    alert("incorrectos")
+                    alert("incorrectos");
                 } else {
 
                    
