@@ -2,20 +2,7 @@
 
 function login() {
 
-    var datos = new Array();
-    var nb = new objPrm("Nombre", $("#nb").val());
-    datos.push(nb);
-    var pb = new objPrm("Contraseña", $("#pb").val());
-    datos.push(pb);
-
-    var res = new objRes();
-    res = validarEsVacido(datos);
-
-    if (res.est === "ko") {
-        
-        alert("vacios");
-
-    } else {
+   
 
         $.ajax({
             url: "Exist.php",
@@ -46,7 +33,7 @@ function login() {
 
 
     }
-}
+
 
 $(document).ready(function () {
 
