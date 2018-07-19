@@ -10,7 +10,7 @@ $(document).ready(function () {
 
     getExist();
     
-    $("#").click(function (){
+    $("#btnEntrar").click(function (){
         
         alert("dentro");
         
