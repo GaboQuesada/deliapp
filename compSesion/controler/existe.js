@@ -2,17 +2,25 @@
 
 
 function getExist() {
-    alert("Exist1");
+   
+        alertify.alert()
+                .setting({
+                    'label': 'Entendido',
+                    'message': 'Por favor rellene el campo que falta. ',
+                    'onok': function () {
+                        alertify.success('Ahora si vamos a trabajar');
+                    }
+                }).show();
 }
 
 
 $(document).ready(function () {
 
-    getExist();
     
-    $("#btnEntrar").click(function (){
-        
-        alert("dentro");
+    
+    $("#btnEntrar").click(function (event){
+        event.preventDefault();
+        getExist();
         
     })
 
