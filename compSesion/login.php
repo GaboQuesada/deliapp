@@ -49,7 +49,7 @@
                     </div>
 
 
-                    <button id="btnEntrar" class="btn btn btn-dark btn-block" type="button"><i class="fas fa-unlock"></i> Entrar</button>
+                    <button id="btnEntrar" class="btn btn btn-dark btn-block" ><i class="fas fa-unlock"></i> Entrar</button>
 
                 </form>
             </div>
