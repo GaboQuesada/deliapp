@@ -1,7 +1,7 @@
 
 <?php 
 
- header("Location: compSesion/index2.php");
+ header("Location: compSesion/index3.php");
 
 
 ?>
