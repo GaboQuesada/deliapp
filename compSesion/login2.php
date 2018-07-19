@@ -70,7 +70,7 @@
         <script src="../lib/alertifyjs/js/alertify.js" ></script>
         <script src="../lib/animation/js/animation.js" ></script>
         <script src="../js/validaciones.js" ></script>
-        <script src="controler/existe.js" ></script>
+        <script src="controler/nuevo.js" ></script>
      
         
     

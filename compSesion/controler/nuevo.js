@@ -1,7 +1,6 @@
 
 
-
-function getExist() {
+function getExist2() {
    
         alertify.alert()
                 .setting({
@@ -20,7 +19,7 @@ $(document).ready(function () {
     
     $("#btnEntrar").click(function (event){
         event.preventDefault();
-        getExist();
+        getExist2();
         
     })
 
