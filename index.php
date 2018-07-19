@@ -1,7 +1,7 @@
 
 <?php 
 
- header("Location: compSessiones/login.php");
+ header("Location: compSesion/login.php");
 
 
 ?>
