@@ -9,5 +9,11 @@ function getExist() {
 $(document).ready(function () {
 
     getExist();
+    
+    $("#").click(function (){
+        
+        alert("dentro");
+        
+    })
 
 });
