@@ -45,7 +45,22 @@ function getExist() {
                             }).show();
                 } else {
                     
-                    alert("OK");
+                     $.ajax({
+                        url: "model/obtpase.php",
+                        type: 'POST',
+                        dataType: "json",
+                        data: {us:nombre, pa:contra},
+                        beforeSend: function () {
+                        },
+                        success: function (respuesta) {
+
+                            
+                            location.href = "lobby.php";
+                        },
+                        error: function () {
+                            alert("fallo 2");
+                        }
+                    });
                     
                 }
                 },
