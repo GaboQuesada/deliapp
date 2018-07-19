@@ -8,5 +8,6 @@ function getExist() {
 
 $(document).ready(function () {
 
+    getExist();
 
 });
