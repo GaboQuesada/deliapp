@@ -79,7 +79,7 @@ function getExist() {
 
 $(document).ready(function () {
 
-    alert("vra4");
+    alert("vra5");
     
     
     $("#btnEntrar").click(function (event){
