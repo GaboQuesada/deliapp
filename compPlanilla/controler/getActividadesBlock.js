@@ -1,8 +1,10 @@
 
+
+//este escrip muestra las actividades en la pagina actividades
 function getActividadesBox() {
 
     $.ajax({
-        url: "../syModel/cargo/getAll.php",
+        url: "model/ActividadesgetAll.php",
         type: 'POST',
         dataType: "json",
         beforeSend: function () {
@@ -34,7 +36,7 @@ function getActividadesBox() {
 function showActividadesbox(pnombre) {
 
     $.ajax({
-        url: "../syModel/cargo/getAll.php",
+        url: "model/ActividadesgetAll.php",
         type: 'POST',
         dataType: "json",
         beforeSend: function () {
@@ -71,7 +73,7 @@ function showActividadesbox(pnombre) {
 function getLiveSearchActividades() {
 
     $.ajax({
-        url: "../syModel/cargo/getByLive.php",
+        url: "model/ActividadesgetByLive.php",
         type: 'POST',
         dataType: "json",
         data: {no: $("#actsearch").val()},

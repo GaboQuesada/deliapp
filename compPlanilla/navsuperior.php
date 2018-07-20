@@ -13,17 +13,11 @@ if (!empty($_SESSION["usuarioid"])) {
 
 <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light fondo comfignav ">
 
-    <a href="../compSessiones/lobby.php"><img  class="logoimg pulse" src="../img/logo.png" /></a>
+    <a href="../compSesion/lobby.php"><img  class="logoimg pulse" src="../img/logo.png" /></a>
 
-    <a href="../compSessiones/lobby.php" class="btn btn-light btn-sm "><i class="fas fa-home"></i></a>
+    <a href="../compSesion/lobby.php" class="btn btn-light btn-sm "><i class="fas fa-home"></i></a>
     &numsp;
-    <a href="#" class="btn btn-info btn-sm "><i class="fas fa-calculator"></i></a>
-    &numsp;
-    <a href="#"  class="btn btn-info btn-sm "><i class="fas fa-shopping-cart"></i></a>
-    &numsp;
-    <a href="#"  class="btn btn-info btn-sm "><i class="fas fa-home"></i></a>
-    &numsp;
-    <a href="#"  class="btn btn-info btn-sm "><i class="fas fa-sliders-h"></i></a>
+
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -44,7 +38,7 @@ if (!empty($_SESSION["usuarioid"])) {
             <input class="form-control mr-sm-2 form-control-sm" type="search" placeholder="Buscar" aria-label="Search">
 
         </form>
-        <img  src="../compSession/userImg/<?php echo $_SESSION["usuarioIMG"]; ?>" width="30" height="30" class="rounded-circle" />
+        <img  src="../compSesion/userImg/<?php echo $_SESSION["usuarioIMG"] ?>" width="30" height="30" class="rounded-circle" />
          &numsp;
         <span><?php echo $_SESSION["nombre"]; ?></span>
         <a class="nav-item nav-link navlinks" href="Perfil.php"><i class="fas fa-cog"></i></a>

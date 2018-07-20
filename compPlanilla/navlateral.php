@@ -14,8 +14,8 @@ if (!empty($_SESSION["usuarioid"])) {
 
 
 
-<div class=" boxcontent">
-    <nav class="nav flex-lg-column contenedor" >
+<div class=" boxcontent" style="z-index: 4500">
+    <nav class="nav flex-lg-column contenedor" style="z-index: 4500" >
         <?php
         try {
             $stmt = $conn->prepare("CALL ACCESOSGetRutas(:rol, :modu);");
@@ -30,7 +30,7 @@ if (!empty($_SESSION["usuarioid"])) {
 
             for ($i = 0; $i < $tam; $i++) {
                 ?>
-        <a class="nav-link opcionmenu" title="Planilla" href="<?php echo $respuesta[$i]['sbm_ur']; ?>"><img src="iconos/<?php echo $respuesta[$i]['sbm_im']; ?>"></a>
+        <a class="nav-link opcionmenu" onmousemove="showmsg('<?php echo $respuesta[$i]['sbm_no']; ?>')" onmouseout="hidemsg()"  onmouseenter="showmsg('<?php echo $respuesta[$i]['sbm_no']; ?>')"  href="<?php echo $respuesta[$i]['sbm_ur']; ?>"><img src="iconos/<?php echo $respuesta[$i]['sbm_im']; ?>"></a>
 
                     <?php
                 }

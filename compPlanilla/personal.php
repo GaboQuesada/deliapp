@@ -38,7 +38,7 @@ if (!empty($_SESSION["usuarioid"])) {
             <div class="caja1 " id="caja1">
                 <?php include './navlateral.php'; ?>
             </div>
-            <div class="caja2" id="caja2">
+            <div class="caja2 container" id="caja2">
                 <div class="col-lg-12">
                     <!-- Cuerpo -->
 

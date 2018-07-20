@@ -1,4 +1,8 @@
 
+/* este influye en la maquetacion del cuerpo dividiendo entre barra lateral caja 1 , cuerpo caja 2 */
+/* cuenta con la imagen del fondo del body y con los css para la carga*/
+
+
 #div_carga{
     position:absolute;
     top:0;
