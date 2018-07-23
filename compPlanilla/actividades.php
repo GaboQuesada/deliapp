@@ -156,6 +156,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Actividades"] == 1) {
         <script src="controler/getActividadesBlock.js" ></script>
         <script src="controler/insertActividadesBox.js" ></script>
         <script src="controler/upDateActividades.js" ></script>
+        <script src="controler/deletedActividades.js" ></script>
 
 
     </body>
