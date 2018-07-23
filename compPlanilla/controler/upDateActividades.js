@@ -33,7 +33,7 @@ function upDateActividades() {
         
         if ($("#tocompare").val() === nombre) {
            $.ajax({
-                        url: "../syModel/cargo/upDate.php",
+                        url: "model/ActividadesupDate.php",
                         type: 'POST',
                         dataType: "json",
                         data: {no: nombre, ca: descripcion, id: id},
@@ -63,7 +63,7 @@ function upDateActividades() {
         }else{
             
            $.ajax({
-            url: "../syModel/cargo/ifExist.php",
+            url: "model/ActividadesifExist.php",
             type: 'POST',
             dataType: "json",
             data: {nombre: $("#acNb").val()},
@@ -79,7 +79,7 @@ function upDateActividades() {
 
 
                     $.ajax({
-                        url: "../syModel/cargo/upDate.php",
+                        url: "model/ActividadesupDate.php",
                         type: 'POST',
                         dataType: "json",
                         data: {no: nombre, ca: descripcion, id: id},

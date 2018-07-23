@@ -3,7 +3,7 @@ function putInModalActividades(id)
 {
 
     $.ajax({
-        url: "../syModel/cargo/getByid.php",
+        url: "model/ActividadesgetByid.php",
         type: 'POST',
         dataType: "json",
         data: {id: id},

@@ -1,7 +1,7 @@
 
 
 function insertActividades() {
-    alert("hola");
+   
     var nombre = $("#aNb").val();
     var descripcion = $("#aDe").val();
 

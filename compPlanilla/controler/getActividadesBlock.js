@@ -14,7 +14,7 @@ function getActividadesBox() {
 
 
             var datosrespuesta = respuesta.resultados;
-             $("#actividadesBox").empty();
+            $("#actividadesBox").empty();
 
             $.each(datosrespuesta, function (i, item) {
 
@@ -60,9 +60,26 @@ function showActividadesbox(pnombre) {
 
                 if (pnombre === datosrespuesta[i].car_no) {
 
-                    $("#actividadesBox").append('<div id="ancla" class=" boxcarnew card " ><div class="card-body"><h5 class="card-title"><strong>' + datosrespuesta[i].car_no + '</strong></h5><p class=" boxcarcontent card-text">' + datosrespuesta[i].car_ca + '.</p> <button  onclick="putInModalActividades(' + datosrespuesta[i].car_id + ')" class="btn btn-warning  btn-sm" data-toggle="modal" data-target="#upDateCat"><i class="fas fa-pen-square"></i> Modificar</button>&nbsp;<button onclick="deleteActividades(' + datosrespuesta[i].car_id + ')" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Eliminar</button> </div></div>');
+
+                    $("#actividadesBox").append(' <a id="ancla" class="CERBox CERBoxStyleNEW"> \n\
+                                <div> \n\
+                                    <div class="card-body" > \n\
+                                    <h5 class="card-title" ><strong>' + datosrespuesta[i].car_no + '</strong></h5> \n\
+                                    <p class=" boxcarcontent card-text">' + datosrespuesta[i].car_ca + '</p> \n\
+                                    <button  onclick="putInModalActividades(' + datosrespuesta[i].car_id + ')" class="btn btn-warning  btn-sm" data-toggle="modal" data-target="#upDateCat"><i class="fas fa-pen-square"></i> Modificar</button>\n\
+                                    &nbsp; \n\
+                                    <button onclick="deleteActividades(' + datosrespuesta[i].car_id + ')" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Eliminar</button> \n\
+                                </div></div></a>');
                 } else {
-                    $("#actividadesBox").append('<div  class=" boxcar card " ><div class="card-body"><h5 class="card-title"><strong>' + datosrespuesta[i].car_no + '</strong></h5><p class=" boxcarcontent card-text">' + datosrespuesta[i].car_ca + '.</p> <button  onclick="putInModalActividades(' + datosrespuesta[i].car_id + ')" class="btn btn-warning  btn-sm" data-toggle="modal" data-target="#upDateCat"><i class="fas fa-pen-square"></i> Modificar</button>&nbsp;<button onclick="deleteActividades(' + datosrespuesta[i].car_id + ')" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Eliminar</button> </div></div>');
+                    $("#actividadesBox").append(' <a class="CERBox CERBoxStyle"> \n\
+                                <div> \n\
+                                    <div class="card-body" > \n\
+                                    <h5 class="card-title" ><strong>' + datosrespuesta[i].car_no + '</strong></h5> \n\
+                                    <p class=" boxcarcontent card-text">' + datosrespuesta[i].car_ca + '</p> \n\
+                                    <button  onclick="putInModalActividades(' + datosrespuesta[i].car_id + ')" class="btn btn-warning  btn-sm" data-toggle="modal" data-target="#upDateCat"><i class="fas fa-pen-square"></i> Modificar</button>\n\
+                                    &nbsp; \n\
+                                    <button onclick="deleteActividades(' + datosrespuesta[i].car_id + ')" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Eliminar</button> \n\
+                                </div></div></a>');
                 }
 
 
@@ -96,7 +113,15 @@ function getLiveSearchActividades() {
 
             $.each(datosrespuesta, function (i, item) {
 
-                $("#actividadesBox").append('<div class=" boxcar card " ><div class="card-body"><h5 class="card-title"><strong>' + datosrespuesta[i].car_no + '</strong></h5><p class=" boxcarcontent card-text">' + datosrespuesta[i].car_ca + '.</p> <button  onclick="putInModalActividades(' + datosrespuesta[i].car_id + ')" class="btn btn-warning  btn-sm" data-toggle="modal" data-target="#upDateCat"><i class="fas fa-pen-square"></i> Modificar</button>&nbsp;<button onclick="deleteActividades(' + datosrespuesta[i].car_id + ')" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Eliminar</button></div></div>');
+                $("#actividadesBox").append(' <a class="CERBox CERBoxStyle"> \n\
+                                <div> \n\
+                                    <div class="card-body" > \n\
+                                    <h5 class="card-title" ><strong>' + datosrespuesta[i].car_no + '</strong></h5> \n\
+                                    <p class=" boxcarcontent card-text">' + datosrespuesta[i].car_ca + '</p> \n\
+                                    <button  onclick="putInModalActividades(' + datosrespuesta[i].car_id + ')" class="btn btn-warning  btn-sm" data-toggle="modal" data-target="#upDateCat"><i class="fas fa-pen-square"></i> Modificar</button>\n\
+                                    &nbsp; \n\
+                                    <button onclick="deleteActividades(' + datosrespuesta[i].car_id + ')" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Eliminar</button> \n\
+                                </div></div></a>');
 
 
 
