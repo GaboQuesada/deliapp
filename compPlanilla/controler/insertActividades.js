@@ -29,7 +29,7 @@ function insertActividades() {
     } else {
 
         $.ajax({
-            url: "../syModel/cargo/ifExist.php",
+            url: "model/ActividadesifExist.php",
             type: 'POST',
             dataType: "json",
             data: {nombre: $("#aNb").val()},
@@ -45,7 +45,7 @@ function insertActividades() {
 
 
                     $.ajax({
-                        url: "../syModel/cargo/insert.php",
+                        url: "model/Actividadesinsert.php",
                         type: 'POST',
                         dataType: "json",
                         data: {no: nombre, ca: descripcion},
