@@ -6,7 +6,7 @@ function putInModalActividades(id)
 
 
     $.ajax({
-        url: "../syModel/departamentos/getByid.php",
+        url: "model/DepagetByid.php",
         type: 'POST',
         dataType: "json",
         data: {id: id},

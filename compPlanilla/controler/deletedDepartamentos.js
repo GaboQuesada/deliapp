@@ -7,7 +7,7 @@ function deleteActividades(pid) {
     alertify.confirm('Desea eliminar la actividad?', 'Sera eliminado permanentemente', function () {
 
         $.ajax({
-            url: "../syModel/planilla/getByDeparta.php",
+            url: "model/getByDeparta.php",
             type: 'POST',
             dataType: "json",
             data: {id: pid},
@@ -23,7 +23,7 @@ function deleteActividades(pid) {
 
 
                     $.ajax({
-                        url: "../syModel/departamentos/delete.php",
+                        url: "model/Depadelete.php",
                         type: 'POST',
                         dataType: "json",
                         data: {id: pid},

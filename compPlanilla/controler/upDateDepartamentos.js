@@ -32,7 +32,7 @@ function upDateActividades() {
         if ($("#tocompare").val() === nombre) {
 
             $.ajax({
-                url: "../syModel/departamentos/upDate.php",
+                url: "model/DepaupDate.php",
                 type: 'POST',
                 dataType: "json",
                 data: {no: nombre, de: descripcion, id: id},
@@ -62,7 +62,7 @@ function upDateActividades() {
 
         } else {
             $.ajax({
-                url: "../syModel/departamentos/ifExist.php",
+                url: "model/DepaifExist.php",
                 type: 'POST',
                 dataType: "json",
                 data: {no: $("#acNb").val()},
@@ -78,7 +78,7 @@ function upDateActividades() {
 
 
                         $.ajax({
-                            url: "../syModel/departamentos/upDate.php",
+                            url: "model/DepaupDate.php",
                             type: 'POST',
                             dataType: "json",
                             data: {no: nombre, de: descripcion, id: id},
