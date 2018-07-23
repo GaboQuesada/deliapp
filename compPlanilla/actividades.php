@@ -1,12 +1,10 @@
 <?php
 @session_start();
 
-
-
 if (!empty($_SESSION["usuarioid"]) && $_SESSION["Actividades"] == 1) {
     
 } else {
-    header("Location: ../nomodule.php");
+    header("Location: ../comps/nomodule.php");
 }
 ?>
 
@@ -17,7 +15,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Actividades"] == 1) {
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
+        <link rel="stylesheet" href="css/planilla.css" >
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
         <link rel="stylesheet" href="../lib/animation/css/animation.css" >
@@ -26,16 +24,16 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Actividades"] == 1) {
         <link rel="stylesheet" href="css/menusuperior.css" >
         <link rel="stylesheet" href="css/menuseccion.css" >
         <link rel="stylesheet" href="css/boxcuerpo.css" >
-        <link rel="stylesheet" href="css/planilla.css" >
         <link rel="stylesheet" href="css/showinfo.css" >
 
         <title>Hello, world!</title>
     </head>
     <body>
         <?php include_once './ShowInfo.php'; ?>
+        <?php include './navsuperior.php'; ?>
         <a id="iraAncla" href="#ancla"></a>
         <input type="hidden" id="tocompare">
-        <?php include './navsuperior.php'; ?>
+        
 
 
         <div class="contenedorcentral" id="contenedorcentral">
@@ -46,7 +44,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Actividades"] == 1) {
 
                 <div id="cuerpobox" class="container">
 
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 ">
                         <!-- Cuerpo -->
 
 
@@ -63,7 +61,8 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Actividades"] == 1) {
 
 
 
-                        <div id="actividadesBox" style="margin-top: 15px; background-color: white;">
+                        <div id="actividadesBox" class="mainshowbox mainshowboxStyle">
+
 
                         </div>
 
@@ -149,8 +148,10 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Actividades"] == 1) {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
         <script src="../lib/animation/js/animation.js" ></script>
+        <script src="../js/validaciones.js"></script>
         <script src="js/showinfo.js" ></script>
         <script src="controler/getActividadesBlock.js" ></script>
+        <script src="controler/insertActividadesBox.js" ></script>
 
 
     </body>

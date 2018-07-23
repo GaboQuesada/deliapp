@@ -1,29 +1,122 @@
 
+/*Actividades*/
 
-.personalinfo{
 
-    margin: 0px;
-    padding: 0px;
+.CERBoxStyle{
 
-} 
+    border-style: solid;
+    border-color: #555;
+    border-width: 1px;
 
-.boxinfo{
-    padding: 5px;
-    background-color: white;
-    border-bottom-style: solid;
-    border-bottom-width: thin;
-    border-bottom-color: #555;
-    margin-bottom: 2px;
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+
+
+
+    -webkit-box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
+    margin-right: 5px;
+    margin-bottom: 5px;
+
+    background-color:white;
 
 }
 
-.boxinfo:hover{
-    padding: 5px;
-    background-color:#555;
-    border-radius: 10px 10px 10px 10px;
-    -moz-border-radius: 10px 10px 10px 10px;
-    -webkit-border-radius: 10px 10px 10px 10px;
-    border: 1px solid #000000;
-    margin-bottom: 2px;
+.CERBoxStyle:hover{
+
+    border-style: solid;
+    border-color: #555;
+    border-width: 1px;
+
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+
+
+
+    -webkit-box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
+    margin-right: 5px;
+    margin-bottom: 5px;
+
+    background-color:#F4F4F4;
+
+}
+
+.mainshowboxStyle{
+
+    background-color: white;
+    border-style: solid;
+    border-color: #252525;
+    border-width: 1px;
+
+}
+
+
+
+
+@media (min-width: 1200px) {      
+
+    .mainshowbox{ /*Cuadro total de resultados*/
+        margin-top: 15px;
+        padding-top:10px; 
+        padding-left: 19px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        width: 100%;
+        position: relative;
+    }
+
+    /*Cuadro especifico de resultados*/
+
+    .CERBox{
+
+        position: relative;
+        width: 24%;
+        height: 165px;
+        display: inline-block;
+
+
+
+
+
+    }
+
+
+
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .mainshowbox{
+        margin-top: 15px;
+        background-color: white;
+        padding-top:10px; 
+        padding-left: 10px;
+        padding-right: 10px;
+        border-style: solid;
+        border-color: #252525;
+        border-width: 1px;
+        padding-bottom: 10px;
+    };
+
+    .boxcardiShow{
+
+        width: 22%;
+    };
+
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { /* primera horizontal*/
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+
+}
+
+@media (max-width: 575.98px) { 
 
 }

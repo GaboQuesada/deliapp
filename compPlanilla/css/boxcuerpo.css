@@ -7,7 +7,8 @@ establece el estilo para lo que se encinetr a dentro de la caja 2 y del titulo d
 
 .cajaEncabezado{
 
-    background-color: black; padding-top: 10px; padding-bottom: 10px; color: white; 
+    background-color: black; padding-top: 3px; padding-bottom: 3px; color: white; 
+    
     border-radius: 10px 10px 31px 10px;
     -moz-border-radius: 10px 10px 31px 10px;
     -webkit-border-radius: 10px 10px 31px 10px;
