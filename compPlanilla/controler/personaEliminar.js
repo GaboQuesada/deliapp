@@ -7,7 +7,7 @@ function deletepersona(pid) {
     alertify.confirm('Desea eliminar el Registro?', 'Sera eliminado permanentemente', function () {
 
         $.ajax({
-            url: "../syModel/usuario/getByPlanilla.php",
+            url: "model/getByPlanilla.php",
             type: 'POST',
             dataType: "json",
             data: {cod: pid},
@@ -23,7 +23,7 @@ function deletepersona(pid) {
 
 
                     $.ajax({
-                        url: "../syModel/planilla/delete.php",
+                        url: "model/Personadelete.php",
                         type: 'POST',
                         dataType: "json",
                         data: {ce: pid},

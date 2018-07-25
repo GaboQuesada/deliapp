@@ -2,7 +2,7 @@
 function getActividades() {
 
     $.ajax({
-        url: "../syModel/cargo/getAll.php",
+        url: "model/ActividadesgetAll.php",
         type: 'POST',
         dataType: "json",
         beforeSend: function () {
@@ -31,7 +31,7 @@ function getActividades() {
 function showActividades(pnombre, pitem) {
 
     $.ajax({
-        url: "../syModel/cargo/getAll.php",
+        url: "model/ActividadesgetAll.php",
         type: 'POST',
         dataType: "json",
         beforeSend: function () {

@@ -3,7 +3,7 @@
 function getLiveSearch() {
 
     $.ajax({
-        url: "../syModel/planilla/getByLive.php",
+        url: "model/PersonagetByLive.php",
         type: 'POST',
         dataType: "json",
         data: {no: $("#actsearch").val()},

@@ -85,7 +85,7 @@ function insert() {
 
 
             $.ajax({
-                url: "../syModel/planilla/ifExist.php",
+                url: "model/PersonaifExist.php",
                 type: 'POST',
                 dataType: "json",
                 data: {ce: ced},
@@ -101,7 +101,7 @@ function insert() {
 
 
                         $.ajax({
-                            url: "../syModel/planilla/insert.php",
+                            url: "model/Personainsert.php",
                             type: 'POST',
                             dataType: "json",
                             data: {no: nom, ap1: ape1, ap2: ape2, fn: fen, ca: car, de: dep, ce: ced},

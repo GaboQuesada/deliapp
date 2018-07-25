@@ -3,7 +3,7 @@
 function getDepartamentos() {
 
     $.ajax({
-        url: "../syModel/departamentos/getAll.php",
+        url: "model/DepagetAll.php",
         type: 'POST',
         dataType: "json",
         beforeSend: function () {
@@ -33,7 +33,7 @@ function getDepartamentos() {
 function showDepartamentos(pnombre, pitem) {
 
     $.ajax({
-        url: "../syModel/departamentos/getAll.php",
+        url: "model/DepagetAll.php",
         type: 'POST',
         dataType: "json",
         beforeSend: function () {
@@ -66,6 +66,6 @@ function showDepartamentos(pnombre, pitem) {
 }
 
 $(document).ready(function () {
-
+    
     getDepartamentos();
 });
