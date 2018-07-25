@@ -148,7 +148,28 @@ $("#actsearch").keyup(function () {
     getLiveSearchActividades();
 });
 
-$(document).ready(function () {
 
-    getActividadesBox();
+function proof(){
+    
+    alertify.alert()
+                .setting({
+                    'label': 'Entendido',
+                    'message': 'Por favor rellene el campo de ' + res.nombre,
+                    'onok': function () {
+                        alertify.success('Ahora si vamos a trabajar');
+                    }
+                }).show();
+}
+
+$(document).ready(function () {
+    
+    $("#caca").click(function (){
+        
+       $("#caca").click(); 
+    })
+    
+    
+
+  //  getActividadesBox();
+
 });

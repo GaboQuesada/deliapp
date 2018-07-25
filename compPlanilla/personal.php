@@ -94,6 +94,8 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Agregar a Planilla"] == 1) {
 
                         </div>
                     </div>
+                    <hr>
+                    <p id="contador"></p>
 
 
 
@@ -359,6 +361,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Agregar a Planilla"] == 1) {
         <script src="controler/personaEliminar.js"></script>
         <script src="controler/personaInsert.js"></script>
         <script src="controler/personaGetBySearch.js"></script>
+        <script src="controler/insertActividades.js"></script>
 
     </body>
 </html>
