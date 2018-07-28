@@ -18,7 +18,7 @@ function getLiveSearch() {
 
             $.each(datosrespuesta, function (i, item) {
 
-                 $("#actividadesBox").append('<div class="perinfobox"><div class="row"> <div class="col-lg "> \
+                $("#actividadesBox").append('<div class="perinfobox"><div class="row"> <div class="col-lg "> \
             <p class="personalinfo "><strong class="text-primary">Nombre: </strong>' + datosrespuesta[i].pla_no + ' ' + datosrespuesta[i].pla_ap1 + ' ' + datosrespuesta[i].pla_ap2 + '</p> \
             <p class="personalinfo"><strong class="text-primary">Cédula: </strong>' + datosrespuesta[i].pla_ce + '</p> \
             <p class="personalinfo"><strong class="text-primary">Fecha Nacimiento: </strong>' + datosrespuesta[i].pla_fn + '</p> \
