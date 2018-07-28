@@ -1,0 +1,66 @@
+
+/* es el css del index para cada seccion y el menu de la misma*/
+
+body {
+
+    background: rgba(255,175,75,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,175,75,1)), color-stop(100%, rgba(255,146,10,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a', GradientType=1 );
+    height:calc(100vh);
+    width:100%;
+
+}
+
+.boxmenu{
+    -webkit-box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
+    -moz-box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
+    box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
+    color: white;
+    display: inline-block; width: 13rem;
+    background-color:#000000;
+
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+    
+    margin-bottom: 15px;
+      margin-right: 10px;
+
+}
+
+.itebox{color: white;}
+.itebox:hover{ color: #000;}
+
+.linkm{
+    text-decoration:none;
+    color: white;
+}
+
+.linkm:hover{
+    text-decoration:none;
+    color: #000;
+}
+
+.boxmenu:hover{
+    -webkit-box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
+    -moz-box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
+    box-shadow: 6px 6px 18px 2px rgba(0,0,0,0.74);
+    background-color: orange;
+    color: #000;
+
+    display: inline-block; width: 13rem;
+
+
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+    margin-right: 10px;
+margin-bottom: 15px;
+}
