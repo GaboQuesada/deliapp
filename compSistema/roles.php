@@ -44,78 +44,88 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Departamentos"] == 1) {
                 <div id="cuerpobox" class="container">
                     <div class="col-lg-12 ">
 
-                        <div class="col-lg-4">
-
-                            <div class="card">
-
-                                <div id="tituloUsuarios"class="card-header"> Agregar Role</div>
-                                <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm">
 
 
+                                    <div class="card">
 
-                                    <form id="frmFormulario" enctype="multipart/form-data">
-                                        <div class="form-group">
-
-                                            <input type="text"  class="form-control form-control-sm"   id="rnb" placeholder="Nombre">
-                                            <p id="isAble" ></p>
-                                        </div>
-                                        <div class="form-group">
-
-                                            <input type="text"  class="form-control form-control-sm"  id="rde" placeholder="Descripción">
-                                            <p id="isAble" ></p>
-                                        </div>
+                                        <div id="tituloUsuarios"class="card-header"> Agregar Role</div>
+                                        <div class="card-body">
 
 
-                                        <button id="btnGuaradarRoll" class="btn btn-primary btn-sm"><i class="fas fa-archive"></i> Guardar</button>
 
-                                    </form>
-                                </div> 
+                                            <form id="frmFormulario" enctype="multipart/form-data">
+                                                <div class="form-group">
 
-                            </div>
-                            <br>
-                            <div class="card">
+                                                    <input type="text"  class="form-control form-control-sm"   id="rnb" placeholder="Nombre">
+                                                    <p id="isAble" ></p>
+                                                </div>
+                                                <div class="form-group">
 
-                                <div id="tituloUsuarios"class="card-header">Lita de Roles</div>
-                                <div class="card-body">
-                                    <ul class="list-group" id="showroles">
-
-                                    </ul>
-                                </div> 
-
-                            </div>
-
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="card">
-
-                                <div id="tituloUsuarios"class="card-header"> Permisos del Role </div>
-                                <div class="card-body">
+                                                    <input type="text"  class="form-control form-control-sm"  id="rde" placeholder="Descripción">
+                                                    <p id="isAble" ></p>
+                                                </div>
 
 
-                                    <div id="boxalert" class="alert alert-success" role="alert">
-                                        Seleciona un Role de la <strong>lista de Roles </strong>, luego seleciona los <strong>modulos</strong> y edita los permisos de acceso.
+                                                <button id="btnGuaradarRoll" class="btn btn-primary btn-sm"><i class="fas fa-archive"></i> Guardar</button>
+
+                                            </form>
+                                        </div> 
+
                                     </div>
+                                    <br>
+                                    <div class="card">
 
-                                    <div id="boxinfoshowrole">
+                                        <div id="tituloUsuarios"class="card-header">Lita de Roles</div>
+                                        <div class="card-body">
+                                            <ul class="list-group" id="showroles">
 
-                                        <div style="margin-bottom: 10px;">Editando accesos para: <spam><strong id="labelrol"></strong></spam> &numsp;<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#norol">
-                                                Ver info del Role
-                                            </button></div>
-                                        <p>Para editar un acceso seleciona el modulo, y da clcik sobre el submodulo</p>
-                                        <div id="accordion">
+                                            </ul>
+                                        </div> 
 
-
-
-
-                                        </div>
                                     </div>
 
 
+                                </div>
+                                <div class="col-sm">
 
-                                </div> 
+                                    <div class="card">
+
+                                        <div id="tituloUsuarios"class="card-header"> Permisos del Role </div>
+                                        <div class="card-body">
+
+
+                                            <div id="boxalert" class="alert alert-success" role="alert">
+                                                Seleciona un Role de la <strong>lista de Roles </strong>, luego seleciona los <strong>modulos</strong> y edita los permisos de acceso.
+                                            </div>
+
+                                            <div id="boxinfoshowrole">
+
+                                                <div style="margin-bottom: 10px;">Editando accesos para: <spam><strong id="labelrol"></strong></spam> &numsp;<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#norol">
+                                                        Ver info del Role
+                                                    </button></div>
+                                                <p>Para editar un acceso seleciona el modulo, y da clcik sobre el submodulo</p>
+                                                <div id="accordion">
+
+
+
+
+                                                </div>
+                                            </div>
+
+
+
+                                        </div> 
+
+                                    </div>
+
+                                </div>
 
                             </div>
                         </div>
+
 
 
 
