@@ -1,122 +1,105 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<div class="col-lg-4">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="../lib/alertifyjs/css/alertify.css" >
-        <link rel="stylesheet" href="../lib/alertifyjs/css/themes/semantic.css" >
-        <link rel="stylesheet" href="../lib/animation/css/animation.css" >
-        <link rel="stylesheet" href="../css/menusuperior.css" >
-        <link rel="stylesheet" href="../css/boxmodel.css" >
-        <link rel="stylesheet" href="../css/menuseccion.css" >
-        <link rel="stylesheet" href="../css/sistema.css" >
+    <div class="card">
 
-        <title>DEli App - SISTEMA</title>
-    </head>
-    <body>
+        <div id="tituloUsuarios"class="card-header"> Agregar Role</div>
+        <div class="card-body">
 
 
-        <div id="div_cargax">
-            <img id="cargadorx" src="../img/gifcarga.gif"/>
-        </div>
 
-        <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light fondo comfignav ">
+            <form id="frmFormulario" enctype="multipart/form-data">
+                <div class="form-group">
 
-            <img  class="logoimg pulse" onclick=" location.href = '../hall.php';"  src="../img/logo.png" />
+                    <input type="text"  class="form-control form-control-sm"   id="rnb" placeholder="Nombre">
+                    <p id="isAble" ></p>
+                </div>
+                <div class="form-group">
 
-            <button onclick=" location.href = '../hall.php';" class="btn btn-default botonespeincipales"><i class="fas fa-home"></i></button>
+                    <input type="text"  class="form-control form-control-sm"  id="rde" placeholder="Descripción">
+                    <p id="isAble" ></p>
+                </div>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <button id="btnGuaradarRoll" class="btn btn-primary btn-sm"><i class="fas fa-archive"></i> Guardar</button>
 
-                <ul class="navbar-nav mr-auto">
+            </form>
+        </div> 
 
-                    <li class="nav-item">
+    </div>
+    <br>
+    <div class="card">
 
-                    </li>
-                </ul>
+        <div id="tituloUsuarios"class="card-header">Lita de Roles</div>
+        <div class="card-body">
+            <ul class="list-group" id="showroles">
 
-                <div class="dropdown">
+            </ul>
+        </div> 
 
-                    <i style="margin-right:10px;" class="fas fa-cog  " id="dropdownMenuButton" data-toggle="dropdown"></i> 
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#"><i class="fas fa-user-circle"></i> Adriana Villanueva</a>
-                        <a class="dropdown-item" href="#"><i class="fas fa-address-card"></i> Editar Perfil</a>
+    </div>
 
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Salir</a>
+</div>
+<div class="col-lg-8">
+    <div class="card">
+
+        <div id="tituloUsuarios"class="card-header"> Permisos del Role </div>
+        <div class="card-body">
+
+
+            <div id="boxalert" class="alert alert-success" role="alert">
+                Seleciona un Role de la <strong>lista de Roles </strong>, luego seleciona los <strong>modulos</strong> y edita los permisos de acceso.
+            </div>
+           
+            <div id="boxinfoshowrole">
+                
+                <div style="margin-bottom: 10px;">Editando accesos para: <spam><strong id="labelrol"></strong></spam> &numsp;<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#norol">
+                Ver info del Role
+            </button></div>
+                 <p>Para editar un acceso seleciona el modulo, y da clcik sobre el submodulo</p>
+            <div id="accordion">
+                
+                
+               
+
+            </div>
+            </div>
+            
+            
+
+        </div> 
+
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="norol" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Info del role</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+
+                        <input type="email" class="form-control" id="rolsetnb" aria-describedby="emailHelp" placeholder="Nombre">
+
                     </div>
-                </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="rolsetde" rows="3"></textarea>
+                    </div>
 
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2 form-control-sm" type="search" placeholder="Search" aria-label="Search">
-
+                 
                 </form>
-
-                <h6><i class="fas fa-envelope notifybox"></i><span class="badge badge-info">0</span></h6>
-                <h6><i class="far fa-comment-alt notifybox"></i><span class="badge badge-warning">0</span></h6>
-                <img  src="../img/profil.jpg" class="imgperfil " />
-
             </div>
-
-        </nav>
-
-
-        <div class="contenedorcentral" id="contenedorcentral">
-            <div class="caja1 " id="caja1">
-                <div class=" boxcontent">
-                    <nav class="nav flex-lg-column contenedor" >
-                        <a id="A" class="nav-link opcionmenu" title="Usuarios" href="#"><img src="../img/iconos/usuarios.png"></a>
-                        <a id="B" class="nav-link opcionmenu" title="Roles" href="#"><img src="../img/iconos/roles.png"></a>
-                        <a id="C" class="nav-link opcionmenu" title="Modulos" href="#"><img src="../img/iconos/modulos.png"></a>
-
-                        <a class="nav-link opcionmenu" title="identidad" href="#"><img src="../img/iconos/identidad.png"></a>
-                        <a class="nav-link opcionmenu" title="Información" href="#"><img src="../img/iconos/notificaciones.png"></a>
-
-                    </nav>
-                </div>
-            </div>
-            <div class="caja2" id="caja2">
-                <div class="container"><div class="col-lg-11">
-                        <div class="row" id="pagecontentbox">
-                           
-
-
-
-                        </div>
-
-
-                    </div></div>
-
+            <div class="modal-footer">
+                <button  type="button" id="upromh" class="btn btn-secondary btn-sm" data-dismiss="modal">Cerrar</button>
+               <!-- <button type="button" id="saveroldata" class="btn btn-primary btn-sm">Guardar</button> -->
             </div>
         </div>
-
-
-
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="../lib/jquery/jquery-3.2.1.min.js" ></script>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-        <script src="libx/animation/js/animation.js" ></script>
-        <script src="../lib/alertifyjs/js/alertify.js" ></script>
-        <script src="../js/index.js" ></script>
-        <script src="../js/validaciones.js" ></script>
-        <script src="js/switcherpage.js" ></script>
-
-
-
-
-    </body>
-</body>
-</html>
+    </div>
+</div>

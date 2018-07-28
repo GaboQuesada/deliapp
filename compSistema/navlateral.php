@@ -20,7 +20,7 @@ if (!empty($_SESSION["usuarioid"])) {
         try {
             $stmt = $conn->prepare("CALL ACCESOSGetRutas(:rol, :modu);");
             $stmt->bindParam(':rol',$_SESSION["rolid"]);
-            $modulo = "Planilla";
+             $modulo = "Sistema";
             $stmt->bindParam(':modu',$modulo);
 
 
