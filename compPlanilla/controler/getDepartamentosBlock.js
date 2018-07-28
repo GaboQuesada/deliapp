@@ -20,7 +20,7 @@ function getActividadesBox() {
                                 <div> \n\
                                     <div class="card-body" > \n\
                                     <h5 class="card-title" ><strong>' + datosrespuesta[i].dep_no + '</strong></h5> \n\
-                                    <p class=" boxcarcontent card-text">' + datosrespuesta[i].dep_des + '</p> \n\
+                                    <p class=" boxcarcontent card-text">:' + datosrespuesta[i].dep_des + '</p> \n\
                                     <button  onclick="putInModalActividades(' + datosrespuesta[i].dep_id + ')" class="btn btn-warning  btn-sm" data-toggle="modal" data-target="#upDateCat"><i class="fas fa-pen-square"></i> Modificar</button>\n\
                                     &nbsp; \n\
                                     <button onclick="deleteActividades(' + datosrespuesta[i].dep_id + ')" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Eliminar</button> \n\
@@ -61,7 +61,7 @@ function showActividadesbox(pnombre) {
                                 <div> \n\
                                     <div class="card-body" > \n\
                                     <h5 class="card-title" ><strong>' + datosrespuesta[i].dep_no + '</strong></h5> \n\
-                                    <p class=" boxcarcontent card-text">' + datosrespuesta[i].dep_des + '</p> \n\
+                                    <p class=" boxcarcontent card-text">:' + datosrespuesta[i].dep_des + '</p> \n\
                                     <button  onclick="putInModalActividades(' + datosrespuesta[i].dep_id + ')" class="btn btn-warning  btn-sm" data-toggle="modal" data-target="#upDateCat"><i class="fas fa-pen-square"></i> Modificar</button>\n\
                                     &nbsp; \n\
                                     <button onclick="deleteActividades(' + datosrespuesta[i].dep_id + ')" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Eliminar</button> \n\
@@ -72,7 +72,7 @@ function showActividadesbox(pnombre) {
                                 <div> \n\
                                     <div class="card-body" > \n\
                                     <h5 class="card-title" ><strong>' + datosrespuesta[i].dep_no + '</strong></h5> \n\
-                                    <p class=" boxcarcontent card-text">' + datosrespuesta[i].dep_des + '</p> \n\
+                                    <p class=" boxcarcontent card-text">:' + datosrespuesta[i].dep_des + '</p> \n\
                                     <button  onclick="putInModalActividades(' + datosrespuesta[i].dep_id + ')" class="btn btn-warning  btn-sm" data-toggle="modal" data-target="#upDateCat"><i class="fas fa-pen-square"></i> Modificar</button>\n\
                                     &nbsp; \n\
                                     <button onclick="deleteActividades(' + datosrespuesta[i].dep_id + ')" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Eliminar</button> \n\
@@ -115,7 +115,7 @@ function getLiveSearchActividades() {
                                 <div> \n\
                                     <div class="card-body" > \n\
                                     <h5 class="card-title" ><strong>' + datosrespuesta[i].dep_no + '</strong></h5> \n\
-                                    <p class=" boxcarcontent card-text">' + datosrespuesta[i].dep_des + '</p> \n\
+                                    <p class=" boxcarcontent card-text">:' + datosrespuesta[i].dep_des + '</p> \n\
                                     <button  onclick="putInModalActividades(' + datosrespuesta[i].dep_id + ')" class="btn btn-warning  btn-sm" data-toggle="modal" data-target="#upDateCat"><i class="fas fa-pen-square"></i> Modificar</button>\n\
                                     &nbsp; \n\
                                     <button onclick="deleteActividades(' + datosrespuesta[i].dep_id + ')" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Eliminar</button> \n\

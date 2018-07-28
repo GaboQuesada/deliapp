@@ -23,11 +23,13 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Actividades"] == 1) {
         <link rel="stylesheet" href="../lib/alertifyjs/css/themes/semantic.css" >
         <link rel="stylesheet" href="css/boxmodel.css" >
         <link rel="stylesheet" href="css/menusuperior.css" >
+        <link rel="shortcut icon" href="../img/favicon.ico">
+
         <link rel="stylesheet" href="css/menuseccion.css" >
         <link rel="stylesheet" href="css/boxcuerpo.css" >
         <link rel="stylesheet" href="css/showinfo.css" >
 
-        <title>Hello, world!</title>
+        <title>Actividades</title>
     </head>
     <body>
         <?php include_once './ShowInfo.php'; ?>
@@ -39,7 +41,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Actividades"] == 1) {
 
         <div class="contenedorcentral" id="contenedorcentral">
             <div class="caja1 " id="caja1">
-                <?php include './navlateral.php'; ?>
+              <?php include './navlateral.php'; ?>
             </div>
             <div class="caja2" id="caja2">
 
@@ -54,7 +56,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Actividades"] == 1) {
                             <div class="col-2 align-self-center columEncabezado" ><img src="../img/iconos/actividad.png">Actividades</div>
                             <div class="col-5 align-self-center columEncabezado" > <input type="text" id="actsearch" class="form-control form-control-sm" placeholder="Buscar" aria-label="Username" aria-describedby="basic-addon1"></div>
                             <div class="col-4 align-self-center columEncabezado" ><button  class="btn btn-primary  btn-sm" data-toggle="modal" data-target="#newCat" ><i class="fas fa-plus-square"></i> Agregar</button> 
-                                <button id="caca"  class="btn btn-primary  btn-sm" ><i class="fas fa-plus-square"></i> kjh</button> </div>
+                             </div>
                         </div>
 
 
@@ -92,8 +94,9 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Actividades"] == 1) {
                                     </div>
                                     <div class="modal-footer">
 
-                                        <button  id="aCancelar" class="btn btn-secondary" data-dismiss="modal" ><i class="fas fa-broom"></i> Cancelar</button>
-                                        <button  id="aGuardar" class="btn btn-primary" > <i class="fas fa-archive"></i> Guardar</button>
+                                        
+                                        <button  id="aGuardar" class="btn btn-primary btn-sm" > <i class="fas fa-archive"></i> Guardar</button>
+                                        <button  id="aCancelar" class="btn btn-secondary btn-sm" data-dismiss="modal" ><i class="fas fa-broom"></i> Cancelar</button>
 
                                     </div>
                                 </div>
@@ -127,9 +130,9 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Actividades"] == 1) {
 
 
 
-                                        <button  id="acGuardar" class="btn btn-primary" ><i class="far fa-edit"></i> Modificar todo</button>
+                                        <button  id="acGuardar" class="btn btn-primary btn-sm" ><i class="far fa-edit"></i> Modificar </button>
 
-                                        <button  id="acCancelar" class="btn btn-secondary" data-dismiss="modal" ><i class="fas fa-broom"></i> Cancelar</button>
+                                        <button  id="acCancelar" class="btn btn-secondary btn-sm" data-dismiss="modal" ><i class="fas fa-broom"></i> Cancelar</button>
 
                                     </div>
                                 </div>
@@ -152,11 +155,12 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Actividades"] == 1) {
         <script src="../lib/alertifyjs/js/alertify.js" ></script>
         <script src="js/validaciones.js"></script>
         <script src="js/showinfo.js" ></script>
-        <script src="controler/putInModalActividades.js" ></script>
-        <script src="controler/getActividadesBlock.js" ></script>
         <script src="controler/insertActividadesBox.js" ></script>
-        <script src="controler/upDateActividades.js" ></script>
+        <script src="controler/getActividadesBlock.js" ></script>
         <script src="controler/deletedActividades.js" ></script>
+        <script src="controler/putInModalActividades.js" ></script>
+        <script src="controler/upDateActividades.js" ></script>
+        
 
 
     </body>

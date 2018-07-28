@@ -18,9 +18,7 @@ function getLiveSearch() {
 
             $.each(datosrespuesta, function (i, item) {
 
-                $("#actividadesBox").append(' \
-                <div class="row boxinfo">\
-       <div class="col-lg "> \
+                 $("#actividadesBox").append('<div class="perinfobox"><div class="row"> <div class="col-lg "> \
             <p class="personalinfo "><strong class="text-primary">Nombre: </strong>' + datosrespuesta[i].pla_no + ' ' + datosrespuesta[i].pla_ap1 + ' ' + datosrespuesta[i].pla_ap2 + '</p> \
             <p class="personalinfo"><strong class="text-primary">Cédula: </strong>' + datosrespuesta[i].pla_ce + '</p> \
             <p class="personalinfo"><strong class="text-primary">Fecha Nacimiento: </strong>' + datosrespuesta[i].pla_fn + '</p> \
@@ -31,12 +29,12 @@ function getLiveSearch() {
         </div> \
         <div class="col-lg align-self-center "> \
             <div class="btn-group btn-group-sm" role="group" > \
-                <button type="button" class="btn btn-warning btn-sm" onclick="showInModal(' + datosrespuesta[i].pla_ce + ')"  title="Modificar" data-toggle="modal" data-target="#ipdatePlanilla">Modificar</button> \
-                <button type="button" class="btn btn-danger btn-sm" onclick="deletepersona(' + datosrespuesta[i].pla_ce + ')"  title="Modificar">Eliminar</button> \
-                <button type="button" class="btn btn-dark btn-sm"> Usuario</button> \
+                <button type="button" class="btn btn-warning btn-sm" onclick="showInModal(' + datosrespuesta[i].pla_ce + ')"  data-toggle="modal" data-target="#UpdatePlanilla"><i class="fas fa-pen-square"></i> Modificar</button> \
+                <button type="button" class="btn btn-danger btn-sm" onclick="deletepersona(' + datosrespuesta[i].pla_ce + ')"  ><i class="fas fa-trash-alt"></i> Eliminar</button> \
+                   <button type="button" class="btn btn-info btn-sm" onclick="moreinfo(' + datosrespuesta[i].pla_ce + ')" ><i class="fas fa-info-circle"></i> Más info</button> \
             </div>   \
-        </div>   \
-    </div>');
+        </div>   \</div></div>');
+
 
 
 

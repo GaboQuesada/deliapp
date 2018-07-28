@@ -12,8 +12,7 @@ function upDateActividades() {
     var datos = new Array();
     var nb = new objPrm("Nombre", nombre);
     datos.push(nb);
-    var pb = new objPrm("Descripción", descripcion);
-    datos.push(pb);
+  
 
     var res = new objRes();
     res = validarEsVacido(datos);

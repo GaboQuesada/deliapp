@@ -22,7 +22,7 @@ function getActividadesBox() {
                                 <div> \n\
                                     <div class="card-body" > \n\
                                     <h5 class="card-title" ><strong>' + datosrespuesta[i].car_no + '</strong></h5> \n\
-                                    <p class=" boxcarcontent card-text">' + datosrespuesta[i].car_ca + '</p> \n\
+                                    <p class=" boxcarcontent card-text">:' + datosrespuesta[i].car_ca + '</p> \n\
                                     <button  onclick="putInModalActividades(' + datosrespuesta[i].car_id + ')" class="btn btn-warning  btn-sm" data-toggle="modal" data-target="#upDateCat"><i class="fas fa-pen-square"></i> Modificar</button>\n\
                                     &nbsp; \n\
                                     <button onclick="deleteActividades(' + datosrespuesta[i].car_id + ')" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Eliminar</button> \n\
@@ -65,7 +65,7 @@ function showActividadesbox(pnombre) {
                                 <div> \n\
                                     <div class="card-body" > \n\
                                     <h5 class="card-title" ><strong>' + datosrespuesta[i].car_no + '</strong></h5> \n\
-                                    <p class=" boxcarcontent card-text">' + datosrespuesta[i].car_ca + '</p> \n\
+                                    <p class=" boxcarcontent card-text">:' + datosrespuesta[i].car_ca + '</p> \n\
                                     <button  onclick="putInModalActividades(' + datosrespuesta[i].car_id + ')" class="btn btn-warning  btn-sm" data-toggle="modal" data-target="#upDateCat"><i class="fas fa-pen-square"></i> Modificar</button>\n\
                                     &nbsp; \n\
                                     <button onclick="deleteActividades(' + datosrespuesta[i].car_id + ')" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Eliminar</button> \n\
@@ -75,7 +75,7 @@ function showActividadesbox(pnombre) {
                                 <div> \n\
                                     <div class="card-body" > \n\
                                     <h5 class="card-title" ><strong>' + datosrespuesta[i].car_no + '</strong></h5> \n\
-                                    <p class=" boxcarcontent card-text">' + datosrespuesta[i].car_ca + '</p> \n\
+                                    <p class=" boxcarcontent card-text">:' + datosrespuesta[i].car_ca + '</p> \n\
                                     <button  onclick="putInModalActividades(' + datosrespuesta[i].car_id + ')" class="btn btn-warning  btn-sm" data-toggle="modal" data-target="#upDateCat"><i class="fas fa-pen-square"></i> Modificar</button>\n\
                                     &nbsp; \n\
                                     <button onclick="deleteActividades(' + datosrespuesta[i].car_id + ')" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Eliminar</button> \n\
@@ -117,7 +117,7 @@ function getLiveSearchActividades() {
                                 <div> \n\
                                     <div class="card-body" > \n\
                                     <h5 class="card-title" ><strong>' + datosrespuesta[i].car_no + '</strong></h5> \n\
-                                    <p class=" boxcarcontent card-text">' + datosrespuesta[i].car_ca + '</p> \n\
+                                    <p class=" boxcarcontent card-text">:' + datosrespuesta[i].car_ca + '</p> \n\
                                     <button  onclick="putInModalActividades(' + datosrespuesta[i].car_id + ')" class="btn btn-warning  btn-sm" data-toggle="modal" data-target="#upDateCat"><i class="fas fa-pen-square"></i> Modificar</button>\n\
                                     &nbsp; \n\
                                     <button onclick="deleteActividades(' + datosrespuesta[i].car_id + ')" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Eliminar</button> \n\
@@ -149,27 +149,10 @@ $("#actsearch").keyup(function () {
 });
 
 
-function proof(){
-    
-    alertify.alert()
-                .setting({
-                    'label': 'Entendido',
-                    'message': 'Por favor rellene el campo de ' + res.nombre,
-                    'onok': function () {
-                        alertify.success('Ahora si vamos a trabajar');
-                    }
-                }).show();
-}
 
 $(document).ready(function () {
-    
-    $("#caca").click(function (){
-        
-       $("#caca").click(); 
-    })
-    
-    
+   
 
-  //  getActividadesBox();
+   getActividadesBox();
 
 });

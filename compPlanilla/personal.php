@@ -152,7 +152,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Agregar a Planilla"] == 1) {
 
                                                         </select>
                                                         <div class="input-group-append">
-                                                            <button class="btn btn-outline-secondary btn-sm " title="Agregar" data-toggle="modal" data-target="#NuevoDepartamento" type="button"><i class="fas fa-plus-square"></i></button>
+                                                            
                                                         </div>
                                                     </div>
                                                 </div>
@@ -166,7 +166,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Agregar a Planilla"] == 1) {
 
                                                         </select>
                                                         <div class="input-group-append">
-                                                            <button class="btn btn-outline-secondary btn-sm" title="Agregar" data-toggle="modal" data-target="#NuevaActividad" type="button"><i class="fas fa-plus-square"></i></button>
+                                                            
                                                         </div>
                                                     </div>
                                                 </div>
@@ -189,42 +189,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Agregar a Planilla"] == 1) {
                         </div>
                     </div>
 
-                    <!--  MODAL NuevoDepartamento -->
-                    <div class="modal fade" id="NuevoDepartamento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-
-                                <div class="modal-body">
-
-                                    <center> <img src="../img/iconos/departamento.png"/></center>
-                                    <center><h6 class="modal-title" id="exampleModalLabel"><strong>Actualizar Departamento</strong></h6></center>
-
-                                    <div class="form-group">
-                                        <label for="email">Nombre:</label>
-                                        <input type="text"  class="form-control"  name="nb" id="acNb">
-                                        <p id="isAble" ></p>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="exampleFormControlTextarea1">Descripción:</label>
-                                        <textarea class="form-control" id="acDe" rows="3"></textarea>
-                                    </div>
-
-                                </div>
-                                <div class="modal-footer">
-                                    <input type="hidden"  class="form-control"  name="nb" id="acId">
-
-
-
-                                    <button  id="acGuardar" class="btn btn-primary" ><i class="far fa-edit"></i> Modificar</button>
-
-                                    <button  id="acCancelar" class="btn btn-secondary" data-dismiss="modal" ><i class="fas fa-broom"></i> Cancelar</button>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                   
                     <!-- Actualizar Planilla -->
                     <div class="modal fade" id="UpdatePlanilla" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                         <div class="modal-dialog" role="document">
@@ -305,39 +270,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Agregar a Planilla"] == 1) {
                             </div>
                         </div>
                     </div>
-                     
-                     <!--NUEVA ACTIVIDAD -->
-                        <div class="modal fade" id="NuevaActividad" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-
-                                    <div class="modal-body">
-
-                                        <center> <img src="../img/iconos/actividad.png"/></center>
-                                        <center><h6 class="modal-title" id="exampleModalLabel"><strong>Nuevo Cargo o actividad</strong></h6></center>
-
-                                        <div class="form-group">
-                                            <label for="email">Nombre:</label>
-                                            <input type="text"  class="form-control"  name="nb" id="aNb">
-                                            <p id="isAble" ></p>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="exampleFormControlTextarea1">Descripción:</label>
-                                            <textarea class="form-control" id="aDe" rows="3"></textarea>
-                                        </div>
-
-                                    </div>
-                                    <div class="modal-footer">
-
-                                        <button  id="aCancelar" class="btn btn-secondary" data-dismiss="modal" ><i class="fas fa-broom"></i> Cancelar</button>
-                                        <button  id="aGuardar" class="btn btn-primary" > <i class="fas fa-archive"></i> Guardar</button>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                 
                 </div>
             </div>
         </div>
@@ -361,7 +294,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Agregar a Planilla"] == 1) {
         <script src="controler/personaEliminar.js"></script>
         <script src="controler/personaInsert.js"></script>
         <script src="controler/personaGetBySearch.js"></script>
-        <script src="controler/insertActividades.js"></script>
+
 
     </body>
 </html>

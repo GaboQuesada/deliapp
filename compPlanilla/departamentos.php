@@ -26,6 +26,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Departamentos"] == 1) {
         <link rel="stylesheet" href="css/boxcuerpo.css" >
         <link rel="stylesheet" href="css/menuseccion.css" >
         <link rel="stylesheet" href="css/planilla.css" >
+        <link rel="shortcut icon" href="../img/favicon.ico">
 
         <title>Hello, world!</title>
     </head>
@@ -83,8 +84,9 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Departamentos"] == 1) {
                                     </div>
                                     <div class="modal-footer">
 
-                                        <button  id="aCancelar" class="btn btn-secondary" data-dismiss="modal" ><i class="fas fa-broom"></i> Cancelar</button>
-                                        <button  id="aGuardar" class="btn btn-primary" > <i class="fas fa-archive"></i> Guardar</button>
+                                        
+                                        <button  id="aGuardar" class="btn btn-primary btn-sm" > <i class="fas fa-archive"></i> Guardar</button>
+                                        <button  id="aCancelar" class="btn btn-secondary btn-sm" data-dismiss="modal" ><i class="fas fa-broom"></i> Cancelar</button>
 
                                     </div>
                                 </div>
@@ -118,9 +120,9 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Departamentos"] == 1) {
 
 
 
-                                        <button  id="acGuardar" class="btn btn-primary" ><i class="far fa-edit"></i> Modificar</button>
+                                        <button  id="acGuardar" class="btn btn-primary btn-sm" ><i class="far fa-edit"></i> Modificar</button>
 
-                                        <button  id="acCancelar" class="btn btn-secondary" data-dismiss="modal" ><i class="fas fa-broom"></i> Cancelar</button>
+                                        <button  id="acCancelar" class="btn btn-secondary btn-sm" data-dismiss="modal" ><i class="fas fa-broom"></i> Cancelar</button>
 
                                     </div>
                                 </div>
