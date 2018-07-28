@@ -189,11 +189,5 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Departamentos"] == 1) {
 
 
 
-<input type="hidden" id="rolid" />
-<script src="../syController/sistema/rolInsert.js" ></script>
-<script src="../syController/sistema/rolgetAll.js" ></script>
-<script src="../syController/sistema/rolsetInfo.js"></script>
-<script src="../syController/sistema/subModulosGet.js"></script>
-<script src="../syController/sistema/acceset.js"></script>
-<script src="../syController/sistema/rolesUpdate.js"></script>
+
 
