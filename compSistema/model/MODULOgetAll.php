@@ -1,5 +1,5 @@
 <?php
-include '../../bd/connect.php';
+include_once'../../bd/connect.php';
 $conexion = new Connect();
 $conn = $conexion->conect();
 

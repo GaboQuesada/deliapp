@@ -1,7 +1,7 @@
 <?php
 @session_start();
 
-if (!empty($_SESSION["usuarioid"]) && $_SESSION["Departamentos"] == 1) {
+if (!empty($_SESSION["usuarioid"]) && $_SESSION["Modulos"] == 1) {
     
 } else {
     header("Location: ../comps/nomodule.php");
@@ -18,6 +18,9 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Departamentos"] == 1) {
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Rasa" rel="stylesheet">
         <link rel="stylesheet" href="../lib/animation/css/animation.css" >
         <link rel="stylesheet" href="../lib/alertifyjs/css/alertify.css" >
         <link rel="stylesheet" href="../lib/alertifyjs/css/themes/semantic.min.css" >
@@ -25,10 +28,10 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Departamentos"] == 1) {
         <link rel="stylesheet" href="css/boxmodel.css" >
         <link rel="stylesheet" href="css/boxcuerpo.css" >
         <link rel="stylesheet" href="css/menuseccion.css" >
-        <link rel="stylesheet" href="css/planilla.css" >
+        <link rel="stylesheet" href="css/modulos.css" >
         <link rel="shortcut icon" href="../img/favicon.ico">
 
-        <title>Hello, world!</title>
+        <title>Modulos</title>
     </head>
     <body>
         <a id="iraAncla" href="#ancla"></a>
@@ -44,66 +47,104 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Departamentos"] == 1) {
                 <div id="cuerpobox" class="container">
                     <div class="col-lg-12 ">
 
-
+                        <div></div>
 
 
 
                         <div class="container-fluid" id="getbox" style="margin-bottom: 9px;">
-
-
-
+                            <div>
+                                <img style="display: inline-block" src="../img/logo.png" width="40" height="40">
+                                &numsp;
+                                <p style="display: inline-block; font-size: 18px; font-family: 'Permanent Marker',  cursive;"> Deliapp tiene muchas cosas para ti!</p></div>
+                            <p style="display: inline-block; font-size: 16px; font-family: 'Rasa', serif;">Siempre estamos trabajando en nuevas cosas, puede
+                                ser que te llegue una notificacion de una mejora en un modulo ya contratado , o que este a tu dispocion una nueva modalidad para agregar.</p>
                         </div>
 
+                        <div class="container-fluid" >
+                            <div class="boxmall">
+                                <div class="container headermbox"><p>Modulos disponibles:</p><hr></div>
 
 
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <ul class="list-group" id="lista">
-                                            <li class="list-group-item">
-                                                <div class="col-lg-12">
-                                                    <div class="col-lg-2" style="display: inline-block; ">
-                                                        <img src="../img/iconos/actividad.png" />
+                                <?php
+                                try {
+                                    $stmt = $conn->prepare("CALL MODULOSgetAll();");
+
+                                    $stmt->execute();
+                                    $respuesta = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                    $tam = count($respuesta);
+
+                                    for ($i = 0; $i < $tam; $i++) {
+                                        ?>
+
+
+
+                                        <div style="display: inline-block">
+                                            <div class="media border p-1" style="width: 325px; background-color: orange">
+                               <?php if ($respuesta[$i]['ses_et'] == 'ct') { ?> 
+                                                <i  class="mr-3 mt-3 rounded-circle material-icons " style="width:60px; padding-top: 4%;  font-size: 45px;"><?php echo $respuesta[$i]['ses_im']; ?></i>  <?php }  else { ?>
+                               <i  class="mr-3 mt-3 rounded-circle material-icons pulse" style="width:60px; color:olivedrab; padding-top: 4%;  font-size: 45px;"><?php echo $respuesta[$i]['ses_im']; ?></i>
+                                                           <?php } ?>
+                                        
+                                                <div class="media-body">
+                                                    <h6><strong><?php echo $respuesta[$i]['ses_no']; ?></strong></h6>
+                                                    <?php if ($respuesta[$i]['ses_et'] == 'ct') { ?> <p>Contratado</p> <?php } else { ?> <p class="pulse">Disponible</p> <?php } ?>
+
+                                                    <div class="btn-group btn-group-sm" role="group" aria-label="...">
+                                                        <?php if ($respuesta[$i]['ses_et'] == 'ct') { ?>
+                                                        <button onclick="showinf('<?php echo $respuesta[$i]['ses_no']; ?>','<?php echo $respuesta[$i]['ses_de']; ?>')" type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModalLong">Descripcion</button><?php } 
+                                                        else { ?> <button onclick="showinf('<?php echo $respuesta[$i]['ses_no']; ?>'.<?php echo $respuesta[$i]['ses_de']; ?>)"  type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModalLong">Descripcion</button>
+                                                            <button type="button" class="btn btn-secondary btn-sm">Contratar</button> <?php } ?>
+
                                                     </div>
-                                                    <div class="col-lg-2" style="display: inline-block; ">Actividades</div>
                                                 </div>
-                                                <div class="col-lg-12">
-                                                    <div class="col-lg-11" style="display: inline-block; "> Se pueden agregar nuevas actividades</div>
-                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php
+                                    }
+                                } catch (PDOException $e) {
+
+
+                                    $respuesta['mensajelog'] = $e->getMessage();
+
+                                    print json_encode($respuesta);
+                                }
+                                ?>
 
 
 
-                                            </li>
-                                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                                            <li class="list-group-item">Morbi leo risus</li>
-                                            <li class="list-group-item">Porta ac consectetur ac</li>
-                                            <li class="list-group-item">Vestibulum at eros</li>
-                                        </ul>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
 
-                                    </div>
-                                </div>
                             </div>
                         </div>
-
-
 
 
                     </div>
                 </div>
             </div>
         </div>
+        
+        
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <label><strong>Descripción del modulo:</strong></label>
+          <p id="modes"></p>
+          <label><strong>Sub Modulos:</strong></label>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Listo!</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
 
 
         <script src="../lib/jquery/jquery-3.2.1.min.js"></script>
@@ -112,7 +153,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Departamentos"] == 1) {
         <script src="../lib/animation/js/animation.js" ></script>
         <script src="../lib/alertifyjs/js/alertify.js" ></script>
 
-        <script src="../syController/sistema/modulosGetAll.js" ></script>
+        <script src="controler/MODULOSGetAll.js" ></script>
 
 
 
