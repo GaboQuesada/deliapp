@@ -54,7 +54,7 @@ function getPermiso(img, nb, smid, idul , forclick) {
 
 
             if (datosrespuesta == 1) {
-                $("#" + idul).append(' <li onclick="setAcces(\'' + smid + '\',\'' + forclick + '\')" class="list-group-item miitem" > \n\
+                $("#" + idul).append(' <li style="cursor:pointer;" onclick="setAcces(\'' + smid + '\',\'' + forclick + '\')" class="list-group-item miitem" > \n\
                                     <div class="col-lg-7" style="display: inline-block; "><img src="../img/iconos/' + img + '" width="50" height="50" />' + nb + '</div> \n\
                                     <div class="col-lg-4" style="display: inline-block"> Estado:    <i class="fas fa-check-circle" style="font-size: 30px; color: green;"></i> </div></li> \n\
                                 ');

@@ -26,14 +26,16 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Roles"] == 1) {
         <link rel="stylesheet" href="css/boxmodel.css" >
         <link rel="stylesheet" href="css/boxcuerpo.css" >
         <link rel="stylesheet" href="css/menuseccion.css" >
-        <link rel="stylesheet" href="css/planilla.css" >
+        <link rel="stylesheet" href="css/roles.css" >
         <link rel="shortcut icon" href="../img/favicon.ico">
+         <link rel="stylesheet" href="css/showinfo.css" >
 
         <title>ROLES</title>
     </head>
     <body>
         <a id="iraAncla" href="#ancla"></a>
         <input type="hidden" id="tocompare">
+         <?php include_once './ShowInfo.php'; ?>
         <?php include './navsuperior.php'; ?>
 
 
@@ -185,6 +187,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Roles"] == 1) {
         <script src="controler/subModulosGet.js"></script>
         <script src="controler/acceset.js"></script>
         <script src="controler/rolesUpdate.js"></script>
+          <script src="js/showinfo.js" ></script>
 
 
     </body>

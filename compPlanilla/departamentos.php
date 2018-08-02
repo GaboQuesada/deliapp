@@ -27,12 +27,14 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Departamentos"] == 1) {
         <link rel="stylesheet" href="css/menuseccion.css" >
         <link rel="stylesheet" href="css/planilla.css" >
         <link rel="shortcut icon" href="../img/favicon.ico">
+        <link rel="stylesheet" href="css/showinfo.css" >
 
         <title>Hello, world!</title>
     </head>
     <body>
         <a id="iraAncla" href="#ancla"></a>
         <input type="hidden" id="tocompare">
+        <?php include_once './ShowInfo.php'; ?>
         <?php include './navsuperior.php'; ?>
 
 
@@ -47,7 +49,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Departamentos"] == 1) {
 
                         <div class="col-12 cajaEncabezado" >
 
-                            <div class="col-3 align-self-center columEncabezado" ><img src="../img/iconos/departamento.png">Departamentos</div>
+                            <div class="col-3 align-self-center columEncabezado" ><img src="iconos/pla_Departamento.png">Departamentos</div>
                             <div class="col-5 align-self-center columEncabezado" > <input type="text" id="actsearch" class="form-control form-control-sm" placeholder="Buscar" aria-label="Username" aria-describedby="basic-addon1"></div>
                             <div class="col-3 align-self-center columEncabezado" ><button  class="btn btn-primary  btn-sm" data-toggle="modal" data-target="#newCat" ><i class="fas fa-plus-square"></i> Agregar</button> </div>
 
@@ -84,7 +86,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Departamentos"] == 1) {
                                     </div>
                                     <div class="modal-footer">
 
-                                        
+
                                         <button  id="aGuardar" class="btn btn-primary btn-sm" > <i class="fas fa-archive"></i> Guardar</button>
                                         <button  id="aCancelar" class="btn btn-secondary btn-sm" data-dismiss="modal" ><i class="fas fa-broom"></i> Cancelar</button>
 
@@ -141,13 +143,15 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Departamentos"] == 1) {
         <script src="../lib/animation/js/animation.js" ></script>
         <script src="../lib/alertifyjs/js/alertify.js" ></script>
         <script src="js/validaciones.js" ></script>
+         <script src="js/showinfo.js" ></script>
         <script src="controler/insertDepartamentosBox.js" ></script>
         <script src="controler/getDepartamentosBlock.js" ></script>
         <script src="controler/deletedDepartamentos.js" ></script>
         <script src="controler/putInModalDepartamentos.js" ></script>
         <script src="controler/upDateDepartamentos.js" ></script>
-
        
+
+
 
     </body>
 </html>

@@ -53,7 +53,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Actividades"] == 1) {
 
                         <div class="col-12 cajaEncabezado" >
 
-                            <div class="col-2 align-self-center columEncabezado" ><img src="../img/iconos/actividad.png">Actividades</div>
+                            <div class="col-2 align-self-center columEncabezado" ><img src="iconos/pla_Actividad.png">Actividades</div>
                             <div class="col-5 align-self-center columEncabezado" > <input type="text" id="actsearch" class="form-control form-control-sm" placeholder="Buscar" aria-label="Username" aria-describedby="basic-addon1"></div>
                             <div class="col-4 align-self-center columEncabezado" ><button  class="btn btn-primary  btn-sm" data-toggle="modal" data-target="#newCat" ><i class="fas fa-plus-square"></i> Agregar</button> 
                              </div>

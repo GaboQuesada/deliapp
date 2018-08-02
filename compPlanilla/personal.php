@@ -26,12 +26,14 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Agregar a Planilla"] == 1) {
         <link rel="stylesheet" href="css/boxcuerpo.css" >
         <link rel="stylesheet" href="css/menuseccion.css" >
         <link rel="stylesheet" href="css/planilla.css" >
+         <link rel="stylesheet" href="css/showinfo.css" >
 
         <title>Hello, world!</title>
     </head>
     <body>
         <a id="iraAncla" href="#ancla"></a>
         <input type="hidden" id="tocompare">
+        <?php include_once './ShowInfo.php'; ?>
         <?php include './navsuperior.php'; ?>
 
 
@@ -294,6 +296,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Agregar a Planilla"] == 1) {
         <script src="controler/personaEliminar.js"></script>
         <script src="controler/personaInsert.js"></script>
         <script src="controler/personaGetBySearch.js"></script>
+         <script src="js/showinfo.js" ></script>
 
 
     </body>
