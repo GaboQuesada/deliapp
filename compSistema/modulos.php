@@ -81,19 +81,19 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Modulos"] == 1) {
 
                                         <div style="display: inline-block">
                                             <div class="media border p-1" style="width: 325px; background-color: orange">
-                               <?php if ($respuesta[$i]['ses_et'] == 'ct') { ?> 
-                                                <i  class="mr-3 mt-3 rounded-circle material-icons " style="width:60px; padding-top: 4%;  font-size: 45px;"><?php echo $respuesta[$i]['ses_im']; ?></i>  <?php }  else { ?>
-                               <i  class="mr-3 mt-3 rounded-circle material-icons pulse" style="width:60px; color:olivedrab; padding-top: 4%;  font-size: 45px;"><?php echo $respuesta[$i]['ses_im']; ?></i>
-                                                           <?php } ?>
-                                        
+                                                <?php if ($respuesta[$i]['ses_et'] == 'ct') { ?> 
+                                                    <i  class="mr-3 mt-3 rounded-circle material-icons " style="width:60px; padding-top: 4%;  font-size: 45px;"><?php echo $respuesta[$i]['ses_im']; ?></i>  <?php } else { ?>
+                                                    <i  class="mr-3 mt-3 rounded-circle material-icons pulse" style="width:60px; color:olivedrab; padding-top: 4%;  font-size: 45px;"><?php echo $respuesta[$i]['ses_im']; ?></i>
+                                                <?php } ?>
+
                                                 <div class="media-body">
                                                     <h6><strong><?php echo $respuesta[$i]['ses_no']; ?></strong></h6>
                                                     <?php if ($respuesta[$i]['ses_et'] == 'ct') { ?> <p>Contratado</p> <?php } else { ?> <p class="pulse">Disponible</p> <?php } ?>
 
                                                     <div class="btn-group btn-group-sm" role="group" aria-label="...">
                                                         <?php if ($respuesta[$i]['ses_et'] == 'ct') { ?>
-                                                        <button onclick="showinf('<?php echo $respuesta[$i]['ses_no']; ?>','<?php echo $respuesta[$i]['ses_de']; ?>')" type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModalLong">Descripcion</button><?php } 
-                                                        else { ?> <button onclick="showinf('<?php echo $respuesta[$i]['ses_no']; ?>'.<?php echo $respuesta[$i]['ses_de']; ?>)"  type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModalLong">Descripcion</button>
+                                                            <button onclick="showinf('<?php echo $respuesta[$i]['ses_no']; ?>', '<?php echo $respuesta[$i]['ses_de']; ?>')" type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModalLong">Descripcion</button><?php } else {
+                                                            ?> <button onclick="showinf('<?php echo $respuesta[$i]['ses_no']; ?>',<?php echo $respuesta[$i]['ses_de']; ?>)"  type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModalLong">Descripcion</button>
                                                             <button type="button" class="btn btn-secondary btn-sm">Contratar</button> <?php } ?>
 
                                                     </div>
@@ -122,29 +122,32 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Modulos"] == 1) {
                 </div>
             </div>
         </div>
-        
-        
+
+
         <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-          <label><strong>Descripción del modulo:</strong></label>
-          <p id="modes"></p>
-          <label><strong>Sub Modulos:</strong></label>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Listo!</button>
-       
-      </div>
-    </div>
-  </div>
-</div>
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <label><strong>Descripción del modulo:</strong></label>
+                        <p id="modes"></p>
+                        <label><strong>Sub Modulos:</strong></label>
+                        <ul id="listsubmodulos" class="list-group" style="text-decoration:none; list-style:none;">
+                          
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Listo!</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <script src="../lib/jquery/jquery-3.2.1.min.js"></script>
