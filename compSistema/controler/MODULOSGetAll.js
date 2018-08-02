@@ -24,15 +24,15 @@ function showinf(nb,des){
                                 <div class="container">\
                                     <div class="row">\
                                         <div class="col-sm-2">\
-                                            <img src="../'+ datosrespuesta[i].rol_no +'/iconos/'+ datosrespuesta[i].rol_no +'" width="30" height="30">\
+                                            <img src="../'+ datosrespuesta[i].comp +'/iconos/'+ datosrespuesta[i].sbm_im +'" width="30" height="30">\
                                         </div>\
                                         <div class="col-sm-9">\
-                                            <strong><span>'+ datosrespuesta[i].rol_no +'</span></strong>\
+                                            <strong><span>'+ datosrespuesta[i].sbm_no +'</span></strong>\
                                         </div>\
                                     </div>\
                                     <div class="row">\
                                         <div class="col-sm">\
-                                            <span>'+ datosrespuesta[i].rol_no +'</span>\
+                                            <span>'+ datosrespuesta[i].sbm_de +'</span>\
                                         </div>\
                                     </div>\
                                 </div>\
