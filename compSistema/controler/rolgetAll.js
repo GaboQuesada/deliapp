@@ -2,7 +2,7 @@
 function getRoles() {
 
     $.ajax({
-        url: "../syModel/roles/getAll.php",
+        url: "model/ROLgetAll.php",
         type: 'POST',
         dataType: "json",
         beforeSend: function () {
@@ -27,7 +27,7 @@ function getRoles() {
         },
         error: function () {
 
-            alert("Ocurrio un error en la llamada Ajax Er:cod 255");
+            alert("Ocurrio un error en la llamada Ajax Er:cod 255 - rga");
         }
     });
 }

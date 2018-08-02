@@ -4,12 +4,12 @@ function setAcces(sid, itid) {
 
 
     $.ajax({
-        url: "../syModel/submodulo/getByPermisoRolSub.php",
+        url: "model/SUBMODULOgetByPermisoRolSub.php",
         type: 'POST',
         dataType: "json",
         data: {sp: sid, rp: $("#rolid").val()},
         beforeSend: function () {
-//$('#div_cargax').show();
+
         },
         success: function (respuesta) {
 
@@ -24,7 +24,7 @@ function setAcces(sid, itid) {
 
 
                     $.ajax({
-                        url: "../syModel/acceso/delete.php",
+                        url: "model/ACCESOdelete.php",
                         type: 'POST',
                         dataType: "json",
                         data: {sm: sid, ro: $("#rolid").val()},
@@ -66,7 +66,7 @@ function setAcces(sid, itid) {
                 alertify.confirm('Desea Otorgar el acceso?', 'El Role  tendra control sobre este modulo', function () {
 
                     $.ajax({
-                        url: "../syModel/acceso/insert.php",
+                        url: "model/ACCESOinsert.php",
                         type: 'POST',
                         dataType: "json",
                         data: {sm: sid, ro: $("#rolid").val()},
@@ -104,7 +104,7 @@ function setAcces(sid, itid) {
             }
 
 
-            // $('#div_cargax').hide();
+           
 
         },
         error: function () {

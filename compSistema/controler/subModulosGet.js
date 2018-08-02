@@ -7,7 +7,7 @@ function getSubModulosByModulo(nr, id , paraclick) {
 
 
     $.ajax({
-        url: "../syModel/submodulo/getBYModulo.php",
+        url: "model/SUBMODULOgetBYModulo.php",
         type: 'POST',
         dataType: "json",
         data: {pmo: nr},
@@ -39,7 +39,7 @@ function getSubModulosByModulo(nr, id , paraclick) {
 function getPermiso(img, nb, smid, idul , forclick) {
 
     $.ajax({
-        url: "../syModel/submodulo/getByPermisoRolSub.php",
+        url: "model/SUBMODULOgetByPermisoRolSub.php",
         type: 'POST',
         dataType: "json",
         data: {sp: smid, rp: $("#rolid").val()},

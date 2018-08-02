@@ -1,7 +1,7 @@
 <?php
 @session_start();
 
-if (!empty($_SESSION["usuarioid"]) && $_SESSION["Departamentos"] == 1) {
+if (!empty($_SESSION["usuarioid"]) && $_SESSION["Roles"] == 1) {
     
 } else {
     header("Location: ../comps/nomodule.php");
@@ -21,6 +21,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Departamentos"] == 1) {
         <link rel="stylesheet" href="../lib/animation/css/animation.css" >
         <link rel="stylesheet" href="../lib/alertifyjs/css/alertify.css" >
         <link rel="stylesheet" href="../lib/alertifyjs/css/themes/semantic.min.css" >
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="css/menusuperior.css" >
         <link rel="stylesheet" href="css/boxmodel.css" >
         <link rel="stylesheet" href="css/boxcuerpo.css" >
@@ -28,7 +29,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Departamentos"] == 1) {
         <link rel="stylesheet" href="css/planilla.css" >
         <link rel="shortcut icon" href="../img/favicon.ico">
 
-        <title>Hello, world!</title>
+        <title>ROLES</title>
     </head>
     <body>
         <a id="iraAncla" href="#ancla"></a>
@@ -36,7 +37,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Departamentos"] == 1) {
         <?php include './navsuperior.php'; ?>
 
 
-        <div class="contenedorcentral" id="contenedorcentral">
+        <div class="contenedorcentral" id="contenedorcentral" style="margin-bottom: 25px;">
             <div class="caja1 " id="caja1">
                 <?php include './navlateral.php'; ?>
             </div>
@@ -108,6 +109,8 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Departamentos"] == 1) {
                                                     </button></div>
                                                 <p>Para editar un acceso seleciona el modulo, y da clcik sobre el submodulo</p>
                                                 <div id="accordion">
+                                                    
+                                                    
 
 
 
@@ -175,12 +178,13 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Departamentos"] == 1) {
         <script src="../lib/animation/js/animation.js" ></script>
         <script src="../lib/alertifyjs/js/alertify.js" ></script>
         <input type="hidden" id="rolid" />
-        <script src="../syController/sistema/rolInsert.js" ></script>
-        <script src="../syController/sistema/rolgetAll.js" ></script>
-        <script src="../syController/sistema/rolsetInfo.js"></script>
-        <script src="../syController/sistema/subModulosGet.js"></script>
-        <script src="../syController/sistema/acceset.js"></script>
-        <script src="../syController/sistema/rolesUpdate.js"></script>
+        <script src="js/validaciones.js" ></script>
+        <script src="controler/rolInsert.js" ></script>
+        <script src="controler/rolgetAll.js" ></script>
+        <script src="controler/rolsetInfo.js"></script>
+        <script src="controler/subModulosGet.js"></script>
+        <script src="controler/acceset.js"></script>
+        <script src="controler/rolesUpdate.js"></script>
 
 
     </body>

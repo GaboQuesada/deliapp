@@ -30,7 +30,7 @@ function updateRoll() {
     } else {
 
         $.ajax({
-            url: "../syModel/roles/ifExist.php",
+            url: "model/RolifExist.php",
             type: 'POST',
             dataType: "json",
             data: {no: $("#rolsetnb").val()},
@@ -46,7 +46,7 @@ function updateRoll() {
 
 
                     $.ajax({
-                        url: "../syModel/roles/upDate.php",
+                        url: "model/ROLupDate.php",
                         type: 'POST',
                         dataType: "json",
                         data: {no: nombre, de: descripcion, id:$("#rolid").val()},

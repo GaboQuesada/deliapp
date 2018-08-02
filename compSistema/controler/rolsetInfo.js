@@ -11,7 +11,7 @@ function setRoleInfo(nb, de, rid) {
     $("#boxalert").hide();
 
     $.ajax({
-        url: "../syModel/modulo/getAll.php",
+        url: "model/MODULOgetAll.php",
         type: 'POST',
         dataType: "json",
         beforeSend: function () {
