@@ -6,10 +6,10 @@ function showinf(nb,des){
     $("#exampleModalLongTitle").text(nb);
     $("#modes").text(des);
        $.ajax({
-        url: "../syModel/submodulo/getBYModulo.php",
+        url: "model/SUBMODULOgetBYModulo.php",
         type: 'POST',
         dataType: "json",
-        data: {pmo: nr},
+        data: {pmo: nb},
         beforeSend: function () {
 
         },
@@ -17,10 +17,10 @@ function showinf(nb,des){
 
 
             var datosrespuesta = respuesta.resultados;
-            
+            $("#listsubmodulos").empty();
             $.each(datosrespuesta, function (i, item) {
 
-                getPermiso(datosrespuesta[i].sbm_im, datosrespuesta[i].sbm_no, datosrespuesta[i].sbm_id, id, paraclick);
+                $("#listsubmodulos").empty();
 
 
             });
