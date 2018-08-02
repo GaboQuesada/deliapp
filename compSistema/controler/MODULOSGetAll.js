@@ -1,7 +1,8 @@
 
 
 function showinf(nb,des){
-    
+    $("#exampleModalLongTitle").text("");
+    $("#modes").text("");
     
     $("#exampleModalLongTitle").text(nb);
     $("#modes").text(des);
