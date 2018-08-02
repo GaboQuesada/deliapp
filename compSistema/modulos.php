@@ -158,7 +158,6 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Modulos"] == 1) {
         <script src="../lib/animation/js/animation.js" ></script>
         <script src="../lib/alertifyjs/js/alertify.js" ></script>
 
-        <script src="controler/MODULOSGetAll.js" ></script>
           <script src="js/showinfo.js" ></script>
 
 
