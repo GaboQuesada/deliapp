@@ -44,7 +44,7 @@ function getPermiso(ruta,img, nb, smid, idul , forclick) {
         dataType: "json",
         data: {sp: smid, rp: $("#rolid").val()},
         beforeSend: function () {
-//$('#div_cargax').show();
+
         },
         success: function (respuesta) {
 
@@ -67,7 +67,7 @@ function getPermiso(ruta,img, nb, smid, idul , forclick) {
             }
 
 
-            // $('#div_cargax').hide();
+       
 
         },
         error: function () {
