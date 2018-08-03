@@ -21,7 +21,7 @@ function getSubModulosByModulo(nr, id , paraclick) {
             $("#" + id).empty();
             $.each(datosrespuesta, function (i, item) {
 
-                getPermiso(datosrespuesta[i].sbm_im, datosrespuesta[i].sbm_no, datosrespuesta[i].sbm_id, id, paraclick);
+                getPermiso(datosrespuesta[i].comp,datosrespuesta[i].sbm_im, datosrespuesta[i].sbm_no, datosrespuesta[i].sbm_id, id, paraclick);
 
 
             });
@@ -36,7 +36,7 @@ function getSubModulosByModulo(nr, id , paraclick) {
 
 
 
-function getPermiso(img, nb, smid, idul , forclick) {
+function getPermiso(ruta,img, nb, smid, idul , forclick) {
 
     $.ajax({
         url: "model/SUBMODULOgetByPermisoRolSub.php",
@@ -55,7 +55,7 @@ function getPermiso(img, nb, smid, idul , forclick) {
 
             if (datosrespuesta == 1) {
                 $("#" + idul).append(' <li style="cursor:pointer;" onclick="setAcces(\'' + smid + '\',\'' + forclick + '\')" class="list-group-item miitem" > \n\
-                                    <div class="col-lg-7" style="display: inline-block; "><img src="../img/iconos/' + img + '" width="50" height="50" />' + nb + '</div> \n\
+                                    <div class="col-lg-7" style="display: inline-block; "><img src="../' + ruta + '/iconos/' + img + '" width="50" height="50" />' + nb + '</div> \n\
                                     <div class="col-lg-4" style="display: inline-block"> Estado:    <i class="fas fa-check-circle" style="font-size: 30px; color: green;"></i> </div></li> \n\
                                 ');
             } else {
