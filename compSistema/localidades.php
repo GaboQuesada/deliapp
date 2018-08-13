@@ -116,23 +116,34 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Localidades"] == 1) {
     </tr>
   </thead>
   <tbody>
+        <?php
+                                try {
+                                    $stmt = $conn->prepare("CALL LOCALIDADESgetall();");
+
+                                    $stmt->execute();
+                                    $respuesta = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                    $tam = count($respuesta);
+
+                                    for ($i = 0; $i < $tam; $i++) {
+                                        ?>
+      
+      
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+        <th scope="row"><?php echo $i+1;?></th>
+      <td><?php echo $respuesta[$i]['loc_nb']; ?></td>
+      <td><?php echo $respuesta[$i]['til_nb']; ?></td>
+      <td><button type="button" class="btn btn-info btn-sm">Info</button></td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+      <?php
+                                    }
+                                } catch (PDOException $e) {
+
+
+                                    $respuesta['mensajelog'] = $e->getMessage();
+
+                                    print json_encode($respuesta);
+                                }
+                                ?>
   </tbody>
 </table>
                             </div>
