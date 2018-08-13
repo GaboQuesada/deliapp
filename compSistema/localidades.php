@@ -132,7 +132,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Localidades"] == 1) {
         <th scope="row"><?php echo $i+1;?></th>
       <td><?php echo $respuesta[$i]['loc_nb']; ?></td>
       <td><?php echo $respuesta[$i]['til_nb']; ?></td>
-      <td><button type="button" class="btn btn-info btn-sm">Info</button></td>
+      <td><button type="button" onclick="morinfo('<?php echo $respuesta[$i]['loc_id']; ?>')" class="btn btn-info btn-sm">Info</button></td>
     </tr>
       <?php
                                     }
