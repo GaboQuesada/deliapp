@@ -52,7 +52,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Localidades"] == 1) {
                                 <hr>
                                 <input class="form-control form-control-sm" type="text" placeholder="Nombre">
                                 <br>
-                                 <input class="form-control form-control-sm" type="text" placeholder="Cédula jurídica/Física">
+                                <input class="form-control form-control-sm" type="text" placeholder="Cédula jurídica/Física">
                                 <br>
                                 <select class="custom-select custom-select-sm mr-sm-2 " id="inlineFormCustomSelect">
                                     <option selected>Tipo de localidad...</option>
@@ -83,69 +83,69 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Localidades"] == 1) {
                                     ?>
                                 </select>
                                 <br>
-                                 <br>
-                                 <textarea class="form-control form-control-sm" placeholder="Descripción" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                 <br>
-                                 <label>Logo:</label>
-                                 <input class="form-control form-control-sm" type="file" placeholder="Logo">
-                                  <br>
-                                 <textarea class="form-control form-control-sm" placeholder="Dirección" id="exampleFormControlTextarea1" rows="3"></textarea>
                                 <br>
-                                 <input class="form-control form-control-sm" type="text" placeholder="Sitio Web">
+                                <textarea class="form-control form-control-sm" placeholder="Descripción" id="exampleFormControlTextarea1" rows="3"></textarea>
                                 <br>
-                               
+                                <label>Logo:</label>
+                                <input class="form-control form-control-sm" type="file" placeholder="Logo">
+                                <br>
+                                <textarea class="form-control form-control-sm" placeholder="Dirección" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <br>
+                                <input class="form-control form-control-sm" type="text" placeholder="Sitio Web">
+                                <br>
+
                                 <input class="form-control form-control-sm" type="email" placeholder="Correo">
                                 <br>
-                              
-                                 <input class="form-control form-control-sm" type="text" placeholder="Facebook">
+
+                                <input class="form-control form-control-sm" type="text" placeholder="Facebook">
                                 <br>
-                                 
+
                                 <input class="form-control form-control-sm" type="number" placeholder="Teléfono ">
                                 <br>
                                 <button type="button" class="btn btn-primary btn-sm btn-block">Agregar</button>
 
                             </div>
                             <div class="col-sm" style="background-color: white; padding-top: 10px;">
-                              <table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Tipo</th>
-      <th scope="col">Opciones</th>
-    </tr>
-  </thead>
-  <tbody>
-        <?php
-                                try {
-                                    $stmt = $conn->prepare("CALL LOCALIDADESgetall();");
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Tipo</th>
+                                            <th scope="col">Opciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        try {
+                                            $stmt = $conn->prepare("CALL LOCALIDADESgetall();");
 
-                                    $stmt->execute();
-                                    $respuesta = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                                    $tam = count($respuesta);
+                                            $stmt->execute();
+                                            $respuesta = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                            $tam = count($respuesta);
 
-                                    for ($i = 0; $i < $tam; $i++) {
+                                            for ($i = 0; $i < $tam; $i++) {
+                                                ?>
+
+
+                                                <tr>
+                                                    <th scope="row"><?php echo $i + 1; ?></th>
+                                                    <td><?php echo $respuesta[$i]['loc_nb']; ?></td>
+                                                    <td><?php echo $respuesta[$i]['til_nb']; ?></td>
+                                                    <td><button type="button" onclick="morinfo('<?php echo $respuesta[$i]['loc_id']; ?>')" class="btn btn-info btn-sm">Info</button></td>
+                                                </tr>
+                                                <?php
+                                            }
+                                        } catch (PDOException $e) {
+
+
+                                            $respuesta['mensajelog'] = $e->getMessage();
+
+                                            print json_encode($respuesta);
+                                        }
                                         ?>
-      
-      
-    <tr>
-        <th scope="row"><?php echo $i+1;?></th>
-      <td><?php echo $respuesta[$i]['loc_nb']; ?></td>
-      <td><?php echo $respuesta[$i]['til_nb']; ?></td>
-      <td><button type="button" onclick="morinfo('<?php echo $respuesta[$i]['loc_id']; ?>')" class="btn btn-info btn-sm">Info</button></td>
-    </tr>
-      <?php
-                                    }
-                                } catch (PDOException $e) {
-
-
-                                    $respuesta['mensajelog'] = $e->getMessage();
-
-                                    print json_encode($respuesta);
-                                }
-                                ?>
-  </tbody>
-</table>
+                                    </tbody>
+                                </table>
                             </div>
 
                         </div>
