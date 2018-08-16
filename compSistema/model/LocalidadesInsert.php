@@ -5,7 +5,6 @@ include '../../bd/connect.php';
 $conexion = new Connect();
 $conn = $conexion->conect();
 
-
 try {
 
 
@@ -23,9 +22,9 @@ try {
 
 
 
-    $sourcePath = $_FILES['pim']['tmp_name']; // Storing source path of the file in a variable
-    $targetPath = "../logoslocal/" . $_FILES['pim']["name"]; // Target path where file is to be stored
-    move_uploaded_file($sourcePath, $targetPath); // Moving Uploaded file
+    $sourcePath = $_FILES['pim']['tmp_name'];
+    $targetPath = "../logoslocal/" . $_FILES['pim']["name"]; 
+    move_uploaded_file($sourcePath, $targetPath); 
 
 
 
