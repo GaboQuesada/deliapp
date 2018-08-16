@@ -21,12 +21,12 @@ try {
     $stmt->bindParam(':fa', $_POST['pfa']);
     $stmt->bindParam(':ce', $_POST['pce']);
 
-    if ($_POST['pim']['name'] != "") {
 
-        $sourcePath = $_FILES['pim']["name"]; // Storing source path of the file in a variable
-        $targetPath = "../logoslocal/".$_FILES['pim']["name"]; // Target path where file is to be stored
-        move_uploaded_file($sourcePath, $targetPath); // Moving Uploaded file
-    }
+
+    $sourcePath = $_FILES['pim']["name"]; // Storing source path of the file in a variable
+    $targetPath = "../logoslocal/" . $_FILES['pim']["name"]; // Target path where file is to be stored
+    move_uploaded_file($sourcePath, $targetPath); // Moving Uploaded file
+
 
 
     $stmt->execute();
