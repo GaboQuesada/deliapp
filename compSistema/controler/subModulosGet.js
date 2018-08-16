@@ -61,7 +61,7 @@ function getPermiso(ruta,img, nb, smid, idul , forclick) {
             } else {
                 $("#" + idul).append(' \n\
                                 <li onclick="setAcces(\'' + smid + '\',\'' + forclick + '\')" class="list-group-item miitem"> \n\
-                                    <div class="col-lg-7" style="display: inline-block; "><img src="../img/iconos/' + img + '" width="50" height="50" >' + nb + '</div> \n\
+                                    <div class="col-lg-7" style="display: inline-block; "><img src="../' + ruta + '/iconos/' + img + '" width="50" height="50" />' + nb + '</div> \n\
                                     <div class="col-lg-4" style="display: inline-block"> Estado:     <i class="fas fa-ban"  style="font-size: 30px; color: red;"></i> </div></li>');
 
             }
