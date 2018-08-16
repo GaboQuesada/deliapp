@@ -50,11 +50,12 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Localidades"] == 1) {
                             <div class="col-sm">
                                 <strong><h5>Nueva Localidad</h5></strong>
                                 <hr>
-                                <input class="form-control form-control-sm" type="text" placeholder="Nombre">
+                                <form enctype="multipart/form-data" method="post" name="fileinfo" id="fileinfo"</form>
+                                <input class="form-control form-control-sm" name="pnb" id="pnb"  type="text" placeholder="Nombre">
                                 <br>
-                                <input class="form-control form-control-sm" type="text" placeholder="Cédula jurídica/Física">
+                                <input class="form-control form-control-sm" name="pce" id="pce" type="text" placeholder="Cédula jurídica/Física">
                                 <br>
-                                <select class="custom-select custom-select-sm mr-sm-2 " id="inlineFormCustomSelect">
+                                <select class="custom-select custom-select-sm mr-sm-2 " name="ptl" id="ptl">
                                     <option selected>Tipo de localidad...</option>
 
 
@@ -84,26 +85,27 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Localidades"] == 1) {
                                 </select>
                                 <br>
                                 <br>
-                                <textarea class="form-control form-control-sm" placeholder="Descripción" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea class="form-control form-control-sm" placeholder="Descripción" name="pde" id="pde" rows="3"></textarea>
                                 <br>
                                 <label>Logo:</label>
-                                <input class="form-control form-control-sm" type="file" placeholder="Logo">
+                                <input class="form-control form-control-sm" name="pim" id="pim"  type="file" placeholder="Logo">
                                 <br>
-                                <textarea class="form-control form-control-sm" placeholder="Dirección" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea class="form-control form-control-sm" placeholder="Dirección" name="pdir" id="pdir"  rows="3"></textarea>
                                 <br>
-                                <input class="form-control form-control-sm" type="text" placeholder="Sitio Web">
-                                <br>
-
-                                <input class="form-control form-control-sm" type="email" placeholder="Correo">
+                                <input class="form-control form-control-sm" type="text" name="pweb" id="pweb" placeholder="Sitio Web">
                                 <br>
 
-                                <input class="form-control form-control-sm" type="text" placeholder="Facebook">
+                                <input class="form-control form-control-sm" name="pco" id="pco" type="email" placeholder="Correo">
                                 <br>
 
-                                <input class="form-control form-control-sm" type="number" placeholder="Teléfono ">
+                                <input class="form-control form-control-sm" name="pfa" id="pfa" type="text" placeholder="Facebook">
                                 <br>
-                                <button type="button" class="btn btn-primary btn-sm btn-block">Agregar</button>
 
+                                <input class="form-control form-control-sm" type="number" name="ptel" id="ptel" placeholder="Teléfono ">
+                                <br>
+                              
+                                 <input type="submit" class="btn btn-primary btn-sm btn-block" value="Agregar" />
+                                </form>
                             </div>
                             <div class="col-sm" style="background-color: white; padding-top: 10px;">
                                 <table class="table table-hover">
@@ -160,9 +162,8 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Localidades"] == 1) {
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
         <script src="../lib/animation/js/animation.js" ></script>
         <script src="../lib/alertifyjs/js/alertify.js" ></script>
-        <input type="hidden" id="rolid" />
         <script src="js/validaciones.js" ></script>
-
+        <script src="controler/LOCALIDADinsert.js" ></script>
         <script src="js/showinfo.js" ></script>
 
 
