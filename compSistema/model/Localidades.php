@@ -7,9 +7,14 @@ $conn = $conexion->conect();
 
 
 try {
+    
+    
+    
+    
+    
     $stmt = $conn->prepare("CALL LOCALIDADESinsert(:nb ,:ce , :tl , :de, :im, :dir, :web , :co , :fa , :tel )");
     $stmt->bindParam(':nb', $_POST['pnb']);
-    $stmt->bindParam(':im', $_POST['pim']);
+    $stmt->bindParam(':im', $_FILES['pim']["name"]);
     $stmt->bindParam(':de', $_POST['pde']);
     $stmt->bindParam(':tl', $_POST['ptl']);
     $stmt->bindParam(':web', $_POST['pweb']);
@@ -18,6 +23,9 @@ try {
     $stmt->bindParam(':co', $_POST['pco']);
     $stmt->bindParam(':fa', $_POST['pfa']);
     $stmt->bindParam(':ce', $_POST['pce']);
+    
+    
+    
 
 
     $stmt->execute();
