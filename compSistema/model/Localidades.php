@@ -7,11 +7,8 @@ $conn = $conexion->conect();
 
 
 try {
-    
-    
-    
-    
-    
+
+
     $stmt = $conn->prepare("CALL LOCALIDADESinsert(:nb ,:ce , :tl , :de, :im, :dir, :web , :co , :fa , :tel )");
     $stmt->bindParam(':nb', $_POST['pnb']);
     $stmt->bindParam(':im', $_FILES['pim']["name"]);
@@ -23,9 +20,13 @@ try {
     $stmt->bindParam(':co', $_POST['pco']);
     $stmt->bindParam(':fa', $_POST['pfa']);
     $stmt->bindParam(':ce', $_POST['pce']);
-    
-    
-    
+
+    if ($_POST['pim']['name'] == "") {
+
+        $sourcePath = $_FILES['pim']["name"]; // Storing source path of the file in a variable
+        $targetPath = "../logoslocal/".$_FILES['pim']["name"]; // Target path where file is to be stored
+        move_uploaded_file($sourcePath, $targetPath); // Moving Uploaded file
+    }
 
 
     $stmt->execute();
