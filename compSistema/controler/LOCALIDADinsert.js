@@ -7,13 +7,13 @@ $(document).ready(function () {
     $("#fileinfo").submit(function (e) {
         e.preventDefault();
 
-        alert("k");
+       
         var objform = $("#fileinfo");
         var datos = new FormData(document.getElementById("fileinfo"));
         datos.append("action", "insert");
 
         $.ajax({
-            url: "model/Localidades.php",
+            url: "model/LocalidadesInsert.php",
             type: "POST",
             data: datos,
             dataType: "json",
