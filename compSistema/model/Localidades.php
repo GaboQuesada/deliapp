@@ -23,7 +23,7 @@ try {
 
 
 
-    $sourcePath = $_FILES['pim']["name"]; // Storing source path of the file in a variable
+    $sourcePath = $_FILES['pim']['tmp_name'];; // Storing source path of the file in a variable
     $targetPath = "../logoslocal/" . $_FILES['pim']["name"]; // Target path where file is to be stored
     move_uploaded_file($sourcePath, $targetPath); // Moving Uploaded file
 
