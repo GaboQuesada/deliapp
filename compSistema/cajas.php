@@ -53,11 +53,11 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Cajas"] == 1) {
                                     <div class="card-body">
 
 
-                                        <form>
+                                         <form enctype="multipart/form-data" method="post" name="newcashbox" id="newcashbox"</form>
 
                                             <div class="form-group">
                                                 <label for="disabledTextInput">Nueva Caja</label>
-                                                <input type="text" id="disabledTextInput" class="form-control" placeholder="Nombre">
+                                                <input type="text" id="pnb" name="pnb" class="form-control" placeholder="Nombre">
                                             </div>
 
 
