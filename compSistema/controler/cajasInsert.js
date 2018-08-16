@@ -12,7 +12,7 @@ $(document).ready(function () {
             alertify.alert()
                     .setting({
                         'label': 'Entendido',
-                        'message': 'El nombrees obligatorio.',
+                        'message': 'El nombre es obligatorio.',
                         'onok': function () {
                             alertify.success('Ahora si vamos a trabajar');
                         }
@@ -30,7 +30,7 @@ $(document).ready(function () {
                         
 
                             $.ajax({
-                                url: "model/LocalidadesInsert.php",
+                                url: "model/cajainsert.php",
                                 type: "POST",
                                 data: datos,
                                 dataType: "json",

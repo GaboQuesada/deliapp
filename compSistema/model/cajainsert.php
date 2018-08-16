@@ -1,17 +1,26 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        // put your code here
-        ?>
-    </body>
-</html>
+<?php
+include '../../bd/connect.php';
+$conexion = new Connect();
+$conn = $conexion->conect();
+
+        try {
+         
+            $stmt = $conn->prepare("CALL CAJASinsert(:nb)");
+            $stmt->bindParam(':nb',$_POST['pnb']);
+
+
+            $stmt->execute();
+
+            $respuesta['estado'] = "1";
+            $respuesta['mensajelog'] = "Consulta Exitosa (insert)";
+            $respuesta['mensaje'] = "Se ha insertado el resgistro con exito";
+            print json_encode($respuesta);
+        } catch (PDOException $e) {
+
+            $respuesta['estado'] = "0";
+            $respuesta['mensajelog'] = $e->getMessage();
+            $respuesta['mensaje'] = "Ha ocurrido un error.";
+            print json_encode($respuesta);
+        }
+    
+?>

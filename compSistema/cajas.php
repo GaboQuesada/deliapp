@@ -26,7 +26,6 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Cajas"] == 1) {
         <link rel="stylesheet" href="css/boxmodel.css" >
         <link rel="stylesheet" href="css/boxcuerpo.css" >
         <link rel="stylesheet" href="css/menuseccion.css" >
-        <link rel="stylesheet" href="css/localidades.css" >
         <link rel="shortcut icon" href="../img/favicon.ico">
         <link rel="stylesheet" href="css/showinfo.css" >
 
@@ -115,9 +114,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Cajas"] == 1) {
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
         <script src="../lib/animation/js/animation.js" ></script>
         <script src="../lib/alertifyjs/js/alertify.js" ></script>
-        <script src="js/validaciones.js" ></script>
-        <script src="controler/LOCALIDADinsert.js" ></script>
-        <script src="controler/LocalidadesgetById.js" ></script>
+        <script src="controler/cajasInsert.js" ></script>
         <script src="js/showinfo.js" ></script>
 
 
