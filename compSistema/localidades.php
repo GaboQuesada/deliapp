@@ -56,7 +56,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Localidades"] == 1) {
                                 <input class="form-control form-control-sm" name="pce" id="pce" type="text" placeholder="Cédula jurídica/Física">
                                 <br>
                                 <select class="custom-select custom-select-sm mr-sm-2 " name="ptl" id="ptl">
-                                    <option selected>Tipo de localidad...</option>
+                                    <option value="0" selected>Tipo de localidad...</option>
 
 
                                     <?php
@@ -103,8 +103,8 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Localidades"] == 1) {
 
                                 <input class="form-control form-control-sm" type="number" name="ptel" id="ptel" placeholder="Teléfono ">
                                 <br>
-                              
-                                 <input type="submit" class="btn btn-primary btn-sm btn-block" value="Agregar" />
+
+                                <input type="submit" class="btn btn-primary btn-sm btn-block" value="Agregar" />
                                 </form>
                             </div>
                             <div class="col-sm" style="background-color: white; padding-top: 10px;">
@@ -134,7 +134,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Localidades"] == 1) {
                                                     <th scope="row"><?php echo $i + 1; ?></th>
                                                     <td><?php echo $respuesta[$i]['loc_nb']; ?></td>
                                                     <td><?php echo $respuesta[$i]['til_nb']; ?></td>
-                                                    <td><button type="button" onclick="morinfo('<?php echo $respuesta[$i]['loc_id']; ?>')" class="btn btn-info btn-sm">Info</button></td>
+                                                    <td><button type="button" onclick="morinfo('<?php echo $respuesta[$i]['loc_id']; ?>')" data-toggle="modal" data-target="#exampleModal" class="btn btn-info btn-sm">Info</button></td>
                                                 </tr>
                                                 <?php
                                             }
@@ -156,6 +156,42 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Localidades"] == 1) {
             </div>
         </div>
 
+        <!-- Modal info -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="minfo" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Info</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <p><strong>Nombre:</strong>&numsp;<span id="nb"></span></p>
+                        <p><strong>Cédula:</strong>&numsp;<span id="ce"></span></p>
+                        <p><strong>Tipo:</strong>&numsp;<span id="tl"></span></p>
+                        <p><strong>Descripción:</strong>&numsp;<span id="de"></span></p>
+                        <p><strong>Direcciób:</strong>&numsp;<span id="di"></span></p>
+                        <p><strong>Web:</strong>&numsp;<span id="web"></span></p>
+                        <p><strong>Correo:</strong>&numsp;<span id="co"></span></p>
+                        <p><strong>Facebook:</strong>&numsp;<span id="fb"></span></p>
+                        <p><strong>Teléfono:</strong>&numsp;<span id="tel"></span></p>
+                        
+                        <center>
+                            <div  id="imgp"></div>
+                           
+                        </center>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src="../lib/jquery/jquery-3.2.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -164,14 +200,9 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Localidades"] == 1) {
         <script src="../lib/alertifyjs/js/alertify.js" ></script>
         <script src="js/validaciones.js" ></script>
         <script src="controler/LOCALIDADinsert.js" ></script>
+        <script src="controler/LocalidadesgetById.js" ></script>
         <script src="js/showinfo.js" ></script>
 
 
     </body>
 </html>
-
-
-
-
-
-
