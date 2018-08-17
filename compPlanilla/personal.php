@@ -33,8 +33,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Agregar a Planilla"] == 1) {
     <body>
         <a id="iraAncla" href="#ancla"></a>
         <input type="hidden" id="tocompare">
-        <input type="hidden" id="touse" value="
-        <?php
+        <input type="hidden" id="touse" value="<?php
         if (isset($_SESSION["agru"])) {
             if ($_SESSION["agru"] == 1) {
                 echo "on";
@@ -317,6 +316,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Agregar a Planilla"] == 1) {
         <script src="controler/personaEliminar.js"></script>
         <script src="controler/personaInsert.js"></script>
         <script src="controler/personaGetBySearch.js"></script>
+        <script src="../compSistema/controler/usuariogetfrompersona.js"></script>
         <script src="js/showinfo.js" ></script>
 
 
