@@ -51,7 +51,16 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Agregar a Planilla"] == 1) {
 
         <div class="contenedorcentral" id="contenedorcentral">
             <div class="caja1 " id="caja1">
-<?php include './navlateral.php'; ?>
+
+                <?php
+        if (isset($_SESSION["agru"])) {
+            if ($_SESSION["agru"] == 1) {
+                echo "on";
+            } else {
+              include './navlateral.php'; 
+            }
+        }else{include './navlateral.php'; }
+        ?>
             </div>
             <div class="caja2" id="caja2">
                 <div id="cuerpobox" class="container">
