@@ -47,6 +47,7 @@ if (!empty($_SESSION["usuarioid"])) {
                 $stmt->execute();
                 $respuesta = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 $tam = count($respuesta);
+                $_SESSION["agru"] = 0;
 
                 for ($i = 0; $i < $tam; $i++) {
                     

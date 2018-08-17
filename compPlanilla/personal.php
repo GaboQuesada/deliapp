@@ -26,22 +26,34 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Agregar a Planilla"] == 1) {
         <link rel="stylesheet" href="css/boxcuerpo.css" >
         <link rel="stylesheet" href="css/menuseccion.css" >
         <link rel="stylesheet" href="css/planilla.css" >
-         <link rel="stylesheet" href="css/showinfo.css" >
+        <link rel="stylesheet" href="css/showinfo.css" >
 
         <title>Hello, world!</title>
     </head>
     <body>
         <a id="iraAncla" href="#ancla"></a>
         <input type="hidden" id="tocompare">
-        <?php include_once './ShowInfo.php'; ?>
-        <?php include './navsuperior.php'; ?>
+        <input type="hidden" id="touse" value="
+        <?php
+        if (isset($_SESSION["agru"])) {
+            if ($_SESSION["agru"] == 1) {
+                echo "on";
+            } else {
+                echo "off";
+            }
+        }else{echo "off";}
+        ?>">
+
+
+<?php include_once './ShowInfo.php'; ?>
+                <?php include './navsuperior.php'; ?>
 
 
         <div class="contenedorcentral" id="contenedorcentral">
             <div class="caja1 " id="caja1">
-                <?php include './navlateral.php'; ?>
+<?php include './navlateral.php'; ?>
             </div>
-           <div class="caja2" id="caja2">
+            <div class="caja2" id="caja2">
                 <div id="cuerpobox" class="container">
                     <div class="col-lg-12 ">
                         <!-- Cuerpo -->
@@ -154,7 +166,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Agregar a Planilla"] == 1) {
 
                                                         </select>
                                                         <div class="input-group-append">
-                                                            
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -168,7 +180,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Agregar a Planilla"] == 1) {
 
                                                         </select>
                                                         <div class="input-group-append">
-                                                            
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -191,7 +203,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Agregar a Planilla"] == 1) {
                         </div>
                     </div>
 
-                   
+
                     <!-- Actualizar Planilla -->
                     <div class="modal fade" id="UpdatePlanilla" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                         <div class="modal-dialog" role="document">
@@ -272,13 +284,13 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Agregar a Planilla"] == 1) {
                             </div>
                         </div>
                     </div>
-                 
+
                 </div>
             </div>
         </div>
-        
-        
-                       
+
+
+
 
 
         <script src="../lib/jquery/jquery-3.2.1.min.js"></script>
@@ -296,7 +308,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Agregar a Planilla"] == 1) {
         <script src="controler/personaEliminar.js"></script>
         <script src="controler/personaInsert.js"></script>
         <script src="controler/personaGetBySearch.js"></script>
-         <script src="js/showinfo.js" ></script>
+        <script src="js/showinfo.js" ></script>
 
 
     </body>

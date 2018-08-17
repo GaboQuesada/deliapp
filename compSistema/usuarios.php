@@ -1,6 +1,9 @@
 <?php
 @session_start();
 
+$_SESSION["Agregar a Planilla"] = 1;
+$_SESSION["agru"] = 1;
+
 if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
     
 } else {
@@ -52,11 +55,63 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
                                     <div class="card-body">
 
 
-                                        <form enctype="multipart/form-data" method="post" name="newcashbox" id="newcashbox"</form>
+                                        
+                                        <h6>Nuevo usuario</h6>
+                                        <hr>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Nombre Colaborador" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <form method="post" action="../compPlanilla/personal.php" >
+                                                <input class="btn btn-outline-secondary" type="submit" value="Planilla"/>
+                                                </form>
+
+                                            </div>
+                                        </div>
+                             <form enctype="multipart/form-data" method="post" name="newcashbox" id="newcashbox">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="inputGroupSelect01">Role</label>
+                                            </div>
+                                            <select class="custom-select" id="inputGroupSelect01">
+                                                <option selected>Choose...</option>
+                                                <?php
+                                                try {
+                                                    $stmt = $conn->prepare("CALL ROLESgetAll();");
+
+                                                    $stmt->execute();
+                                                    $respuesta = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                                    $tam = count($respuesta);
+
+                                                    for ($i = 0; $i < $tam; $i++) {
+                                                        ?>
+                                                        <option value="<?php echo $respuesta[$i]['rol_id']; ?>"><?php echo $respuesta[$i]['rol_no']; ?> - <?php echo $respuesta[$i]['rol_de']; ?> </option>
+
+                                                        <?php
+                                                    }
+                                                } catch (PDOException $e) {
+
+
+                                                    $respuesta['mensajelog'] = $e->getMessage();
+
+                                                    print json_encode($respuesta);
+                                                }
+                                                ?>
+                                            </select>
+                                        </div>
 
                                         <div class="form-group">
-                                            <label for="disabledTextInput">Nueva Caja</label>
-                                            <input type="text" id="pnb" name="pnb" class="form-control" placeholder="Nombre">
+                                            <label for="disabledTextInput">Foto perfil</label>
+                                            <input type="file" id="pnb" name="pnb" class="form-control" >
+                                        </div>
+
+                                        <div class="form-group">
+
+                                            <input type="text" id="pnb" name="pnb" class="form-control" placeholder="Usuario" >
+                                        </div>
+
+                                        <div class="form-group">
+
+                                            <input type="text" id="pnb" name="pnb" class="form-control" placeholder="Contraseña" >
                                         </div>
 
 
@@ -85,8 +140,8 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
                                             <img class="card-img-top" src="../compSesion/userImg/adri.jpg" alt="Card image cap">
                                             <div class="card-body">
                                                 <h6 class="card-title"><strong><?php echo $respuesta[$i]['pla_no']; ?>&numsp;
-                                                    <?php echo $respuesta[$i]['pla_ap1']; ?>&numsp;
-                                                    <?php echo $respuesta[$i]['pla_ap2']; ?></strong></h6>
+                                                        <?php echo $respuesta[$i]['pla_ap1']; ?>&numsp;
+                                                        <?php echo $respuesta[$i]['pla_ap2']; ?></strong></h6>
                                                 <div>
                                                     <img style="display: inline-block" src="../compPlanilla/iconos/pla_Departamento.png" width="30" height="30"/>
                                                     <p style="display: inline-block"><?php echo $respuesta[$i]['dep_no']; ?></p>
@@ -100,7 +155,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
                                                     <p style="display: inline-block"><?php echo $respuesta[$i]['rol_no']; ?></p>
                                                 </div>
                                                 <div>
-                                                    <i class="fas fa-user" style="display: inline-block"></i>
+                                                    <img style="display: inline-block" src="../compSistema/iconos/sis_Usuario.png" width="30" height="30"/>
                                                     <p style="display: inline-block"><?php echo $respuesta[$i]['usr_us']; ?></p>
                                                 </div>
                                                 <center><a href="#" class="btn btn-primary">Desabilitar</a></center>
