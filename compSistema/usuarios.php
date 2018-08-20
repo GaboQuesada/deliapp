@@ -48,13 +48,11 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
             <div class="caja2" id="caja2" style="margin-bottom:30px; padding-bottom: 30px;">
                 <div id="cuerpobox" class="container-fluid"  style="margin-bottom:30px; padding-bottom: 30px;">
 
-                    <div class="container-fluid">
+                    <div class="container-fluid" >
                         <div class="row">
-                            <div class="col-lg-3">
+                            <div class="col-lg-3" >
                                 <div class="card">
                                     <div class="card-body">
-
-
 
                                         <h6>Nuevo usuario</h6>
                                         <hr>
@@ -64,7 +62,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
 
                                                 echo $_SESSION["usertoaddname"];
                                             } else {
-                                               echo "no"; 
+                                               echo "Escoger desde Planilla"; 
                                             }
                                             ?>" placeholder="Nombre Colaborador" aria-label="Recipient's username" aria-describedby="basic-addon2">
                                             <div class="input-group-append">
@@ -75,12 +73,20 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
                                             </div>
                                         </div>
                                         <form enctype="multipart/form-data" method="post" name="newcashbox" id="newcashbox">
+                                            <input type="hidden"  value="<?php
+                                            if (isset($_SESSION["usertoaddid"])) {
+
+                                                echo $_SESSION["usertoaddid"];
+                                            } else {
+                                               echo "0"; 
+                                            }
+                                            ?>" name="idup" id="idup" />
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
                                                     <label class="input-group-text" for="inputGroupSelect01">Role</label>
                                                 </div>
-                                                <select class="custom-select" id="inputGroupSelect01">
-                                                    <option selected>Seleccionar </option>
+                                                <select class="custom-select" id="rolid" name="rolid">
+                                                    <option value="0" selected>Seleccionar </option>
                                                     <?php
                                                     try {
                                                         $stmt = $conn->prepare("CALL ROLESgetAll();");
@@ -108,21 +114,21 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
 
                                             <div class="form-group">
                                                 <label for="disabledTextInput">Foto perfil</label>
-                                                <input type="file" id="pnb" name="pnb" class="form-control" >
+                                                <input type="file" id="pimu" name="pimu" onchange="readURLModificaU(this);"  class="form-control" >
                                             </div>
                                             
                                              <div class="form-group">
-                                                 <center><img src="../img/imagen.png" width="180" height="180"></center>
+                                                 <center><img id="pimuv" name="pimuv" src="../img/imagen.png" width="220" height="180"></center>
                                             </div>
 
                                             <div class="form-group">
 
-                                                <input type="text" id="pnb" name="pnb" class="form-control" placeholder="Usuario" >
+                                                <input type="text" id="pnus" name="pnus" class="form-control" placeholder="Usuario" >
                                             </div>
 
                                             <div class="form-group">
 
-                                                <input type="text" id="pnb" name="pnb" class="form-control" placeholder="Contraseña" >
+                                                <input type="text" id="pnupa" name="pnupa" class="form-control" placeholder="Contraseña" >
                                             </div>
 
 
@@ -155,6 +161,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
         <script src="../lib/animation/js/animation.js" ></script>
         <script src="../lib/alertifyjs/js/alertify.js" ></script>
         <script src="controler/usuariogetall.js" ></script>
+        <script src="controler/usuarioInsert.js" ></script>
         <script src="js/showinfo.js" ></script>
 
 
