@@ -110,6 +110,10 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
                                                 <label for="disabledTextInput">Foto perfil</label>
                                                 <input type="file" id="pnb" name="pnb" class="form-control" >
                                             </div>
+                                            
+                                             <div class="form-group">
+                                                 <center><img src="../img/imagen.png" width="180" height="180"></center>
+                                            </div>
 
                                             <div class="form-group">
 
@@ -130,57 +134,10 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
                                 </div>
                             </div>
                             <div class="col-lg-8">
-                                <?php
-                                try {
-                                    $stmt = $conn->prepare("CALL USUARIOSgetAll;");
-
-                                    $stmt->execute();
-                                    $respuesta = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                                    $tam = count($respuesta);
-
-                                    for ($i = 0; $i < $tam; $i++) {
-                                        ?>
-
-
-
-                                        <div class="card" style="width: 18rem;">
-                                            <img class="card-img-top" src="../compSesion/userImg/adri.jpg" alt="Card image cap">
-                                            <div class="card-body">
-                                                <h6 class="card-title"><strong><?php echo $respuesta[$i]['pla_no']; ?>&numsp;
-        <?php echo $respuesta[$i]['pla_ap1']; ?>&numsp;
-        <?php echo $respuesta[$i]['pla_ap2']; ?></strong></h6>
-                                                <div>
-                                                    <img style="display: inline-block" src="../compPlanilla/iconos/pla_Departamento.png" width="30" height="30"/>
-                                                    <p style="display: inline-block"><?php echo $respuesta[$i]['dep_no']; ?></p>
-                                                </div>
-                                                <div>
-                                                    <img style="display: inline-block" src="../compPlanilla/iconos/pla_Actividad.png" width="30" height="30"/>
-                                                    <p style="display: inline-block"><?php echo $respuesta[$i]['car_no']; ?></p>
-                                                </div>
-                                                <div>
-                                                    <img style="display: inline-block" src="../compSistema/iconos/sis_Role.png" width="30" height="30"/>
-                                                    <p style="display: inline-block"><?php echo $respuesta[$i]['rol_no']; ?></p>
-                                                </div>
-                                                <div>
-                                                    <img style="display: inline-block" src="../compSistema/iconos/sis_Usuario.png" width="30" height="30"/>
-                                                    <p style="display: inline-block"><?php echo $respuesta[$i]['usr_us']; ?></p>
-                                                </div>
-                                                <center><a href="#" class="btn btn-primary">Desabilitar</a></center>
-                                            </div>
-                                        </div>
-
-
-
-                                        <?php
-                                    }
-                                } catch (PDOException $e) {
-
-
-                                    $respuesta['mensajelog'] = $e->getMessage();
-
-                                    print json_encode($respuesta);
-                                }
-                                ?>
+                                <div id="listausuarios">
+                                    
+                                </div>
+                                
                             </div>
 
                         </div>
@@ -197,7 +154,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
         <script src="../lib/animation/js/animation.js" ></script>
         <script src="../lib/alertifyjs/js/alertify.js" ></script>
-        <script src="controler/cajasInsert.js" ></script>
+        <script src="controler/usuariogetall.js" ></script>
         <script src="js/showinfo.js" ></script>
 
 
