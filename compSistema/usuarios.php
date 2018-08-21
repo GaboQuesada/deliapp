@@ -50,100 +50,111 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
 
                     <div class="container-fluid" >
                         <div class="row">
-                            <div class="col-lg-3" >
-                                <div class="card">
-                                    <div class="card-body">
+                            <div class="col-lg-3" style="margin-right: 15px;" >
 
-                                        <h6>Nuevo usuario</h6>
-                                        <hr>
-                                        <div class="input-group mb-3">
-                                            <input type="text" class="form-control" value="<?php
-                                            if (isset($_SESSION["usertoaddname"])) {
 
-                                                echo $_SESSION["usertoaddname"];
-                                            } else {
-                                               echo "Escoger desde Planilla"; 
-                                            }
-                                            ?>" placeholder="Nombre Colaborador" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                            <div class="input-group-append">
-                                                <form method="post" action="../compPlanilla/personal.php" >
-                                                    <input class="btn btn-outline-secondary" type="submit" value="Planilla"/>
-                                                </form>
+                                <div style="position: fixed; width:350px; margin-right:20px; ">
+                                    <div class="card">
+                                        <div class="card-body">
 
-                                            </div>
-                                        </div>
-                                        <form enctype="multipart/form-data" method="post" name="newcashbox" id="newcashbox">
-                                            <input type="hidden"  value="<?php
-                                            if (isset($_SESSION["usertoaddid"])) {
-
-                                                echo $_SESSION["usertoaddid"];
-                                            } else {
-                                               echo "0"; 
-                                            }
-                                            ?>" name="idup" id="idup" />
+                                            <h6>Nuevo usuario</h6>
+                                            <hr>
                                             <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <label class="input-group-text" for="inputGroupSelect01">Role</label>
+                                                <input type="text" id="nombtok" class="form-control" value="<?php
+                                                if (isset($_SESSION["usertoaddname"])) {
+
+                                                    echo $_SESSION["usertoaddname"];
+                                                } else {
+                                                    echo "Escoger desde Planilla";
+                                                }
+                                                ?>" placeholder="Nombre Colaborador" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                                <div class="input-group-append">
+                                                    <form method="post" action="../compPlanilla/personal.php" >
+                                                        <input class="btn btn-outline-secondary" type="submit" value="Planilla"/>
+                                                    </form>
+
                                                 </div>
-                                                <select class="custom-select" id="rolid" name="rolid">
-                                                    <option value="0" selected>Seleccionar </option>
-                                                    <?php
-                                                    try {
-                                                        $stmt = $conn->prepare("CALL ROLESgetAll();");
+                                            </div>
+                                            <form enctype="multipart/form-data" method="post" name="newcashbox" id="newcashbox">
+                                                <input type="hidden"  value="<?php
+                                                if (isset($_SESSION["usertoaddid"])) {
 
-                                                        $stmt->execute();
-                                                        $respuesta = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                                                        $tam = count($respuesta);
+                                                    echo $_SESSION["usertoaddid"];
+                                                } else {
+                                                    echo "0";
+                                                }
+                                                ?>" name="idup" id="idup" />
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="inputGroupSelect01">Role</label>
+                                                    </div>
+                                                    <select class="custom-select" id="rolid" name="rolid">
+                                                        <option value="0" selected>Seleccionar </option>
+                                                        <?php
+                                                        try {
+                                                            $stmt = $conn->prepare("CALL ROLESgetAll();");
 
-                                                        for ($i = 0; $i < $tam; $i++) {
-                                                            ?>
-                                                            <option value="<?php echo $respuesta[$i]['rol_id']; ?>"><?php echo $respuesta[$i]['rol_no']; ?> - <?php echo $respuesta[$i]['rol_de']; ?> </option>
+                                                            $stmt->execute();
+                                                            $respuesta = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                                            $tam = count($respuesta);
 
-                                                            <?php
+                                                            for ($i = 0; $i < $tam; $i++) {
+                                                                ?>
+                                                                <option value="<?php echo $respuesta[$i]['rol_id']; ?>"><?php echo $respuesta[$i]['rol_no']; ?> - <?php echo $respuesta[$i]['rol_de']; ?> </option>
+
+                                                                <?php
+                                                            }
+                                                        } catch (PDOException $e) {
+
+
+                                                            $respuesta['mensajelog'] = $e->getMessage();
+
+                                                            print json_encode($respuesta);
                                                         }
-                                                    } catch (PDOException $e) {
+                                                        ?>
+                                                    </select>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="disabledTextInput">Foto perfil</label>
+                                                    <input type="file" id="pimu" name="pimu" onchange="readURLModificaU(this);"  class="form-control" >
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <center><img id="pimuv" name="pimuv" src="../img/imagen.png" width="80%" height="180"></center>
+                                                </div>
+
+                                                <div class="form-group">
+
+                                                    <input type="text" id="pnus" name="pnus" class="form-control" placeholder="Usuario" >
+                                                </div>
+
+                                                <div class="form-group">
+
+                                                    <input type="text" id="pnupa" name="pnupa" class="form-control" placeholder="Contraseña" >
+                                                </div>
 
 
-                                                        $respuesta['mensajelog'] = $e->getMessage();
+                                                <button type="submit" class="btn btn-primary btn-block">Agregar</button>
 
-                                                        print json_encode($respuesta);
-                                                    }
-                                                    ?>
-                                                </select>
-                                            </div>
+                                            </form>
 
-                                            <div class="form-group">
-                                                <label for="disabledTextInput">Foto perfil</label>
-                                                <input type="file" id="pimu" name="pimu" onchange="readURLModificaU(this);"  class="form-control" >
-                                            </div>
-                                            
-                                             <div class="form-group">
-                                                 <center><img id="pimuv" name="pimuv" src="../img/imagen.png" width="220" height="180"></center>
-                                            </div>
-
-                                            <div class="form-group">
-
-                                                <input type="text" id="pnus" name="pnus" class="form-control" placeholder="Usuario" >
-                                            </div>
-
-                                            <div class="form-group">
-
-                                                <input type="text" id="pnupa" name="pnupa" class="form-control" placeholder="Contraseña" >
-                                            </div>
-
-
-                                            <button type="submit" class="btn btn-primary btn-block">Agregar</button>
-
-                                        </form>
-
+                                        </div>
                                     </div>
+
                                 </div>
                             </div>
                             <div class="col-lg-8">
-                                <div id="listausuarios">
-                                    
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1">  <i class="fas fa-search"></i></span>
+                                    </div>
+                                    <input type="text" id="no" class="form-control" placeholder="Por nombre, cédula o usuario" aria-label="Por nombre, cédula o usuario" aria-describedby="basic-addon1">
                                 </div>
-                                
+                                <div id="listausuarios">
+
+                                </div>
+
                             </div>
 
                         </div>
@@ -160,8 +171,11 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
         <script src="../lib/animation/js/animation.js" ></script>
         <script src="../lib/alertifyjs/js/alertify.js" ></script>
+        <script src="controler/usuarioHD.js" ></script>
         <script src="controler/usuariogetall.js" ></script>
         <script src="controler/usuarioInsert.js" ></script>
+        <script src="controler/usuarioSearch.js" ></script>
+        
         <script src="js/showinfo.js" ></script>
 
 

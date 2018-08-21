@@ -1,6 +1,11 @@
 
 <?php
 
+session_start();
+
+unset($_SESSION['usertoaddid']);
+unset($_SESSION['usertoaddname']);
+
 include '../../bd/connect.php';
 $conexion = new Connect();
 $conn = $conexion->conect();
@@ -8,21 +13,28 @@ $conn = $conexion->conect();
 try {
 
 
-    $stmt = $conn->prepare("CALL LOCALIDADESinsert(:id,:us,:pa, :es, :fe, :im, :ro )");
-   $stmt->bindParam(':id' , $_POST['idup']);
-$stmt->bindParam(':us' , $_POST['pnus']);
-$stmt->bindParam(':pa' , $_POST['pnupa']);
-$stmt->bindParam(':es' ,'1');
-$stmt->bindParam(':fe' , $_POST['fe']);
-$stmt->bindParam(':im' , $_POST['im']);
-$stmt->bindParam(':ro' , $_POST['ro']);
+    date_default_timezone_set('America/Costa_Rica');
+    $fei =  date("Y-m-d ");
+    $nullimg= "user.png";
+
+    $stmt = $conn->prepare("CALL USUARIOSinsert(:id,:us,:pa,:fe, :im, :ro )");
+    $stmt->bindParam(':id', $_POST['idup']);
+    $stmt->bindParam(':us', $_POST['pnus']);
+    $stmt->bindParam(':pa', $_POST['pnupa']);
+    $stmt->bindParam(':fe', $fei);
+    if($_FILES['pimu']["name"] == ""){
+        $stmt->bindParam(':im',$nullimg);
+    }else{
+        $stmt->bindParam(':im', $_FILES['pimu']["name"]);
+    }
+    $stmt->bindParam(':ro', $_POST['rolid']);
 
 
 
 
-    $sourcePath = $_FILES['pim']['tmp_name'];
-    $targetPath = "../logoslocal/" . $_FILES['pim']["name"]; 
-    move_uploaded_file($sourcePath, $targetPath); 
+    $sourcePath = $_FILES['pimu']['tmp_name'];
+    $targetPath = "../../compSesion/userImg/" . $_FILES['pimu']["name"];
+    move_uploaded_file($sourcePath, $targetPath);
 
 
 

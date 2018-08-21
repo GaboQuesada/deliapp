@@ -4,7 +4,7 @@ function readURLModificaU(input) {
         reader.onload = function (e) {
             $('#pimuv')
                     .attr('src', e.target.result)
-                    .width(220)
+                    .width(250)
                     .height(180);
         };
         reader.readAsDataURL(input.files[0]);
@@ -16,8 +16,6 @@ $(document).ready(function () {
     $("#newcashbox").submit(function (e) {
         e.preventDefault();
 
-        url = "modelMaster/usuarioInsert.php";
-        var parametros = new FormData($(this)[0]);
 
         if ($("#idup").val() === "0") // si no existe el colaborador
         {
@@ -92,24 +90,34 @@ $(document).ready(function () {
 
                                         if (tam == 0)
                                         {
-                                            $.ajax({
-                                                type: "POST",
-                                                url: url,
-                                                data: parametros,
-                                                contentType: false,
-                                                processData: false,
-                                                beforeSend: function () {
 
+                                            var objform = $("#newcashbox");
+                                            var datos = new FormData(document.getElementById("newcashbox"));
+
+
+                                            $.ajax({
+                                                url: "model/usuarioInsert.php",
+                                                type: "POST",
+                                                data: datos,
+                                                dataType: "json",
+                                                processData: false,
+                                                contentType: false,
+                                                beforeSend: function () {
 
                                                 },
                                                 success: function (data) {
+
+                                                    $("#rolid").val('0');
+                                                    $("#nombtok").val("Escoger desde Planilla");
+                                                    $("#idup").val("0");
+                                                    getAllUser();
 
 
 
                                                 },
                                                 error: function () {
 
-                                                    alert("Error del servidor  bbv");
+                                                    alert("Error del servidor ert");
                                                 }
                                             });
 
@@ -167,4 +175,10 @@ $(document).ready(function () {
 
 
 });
+
+
+$(document).ready(function () {
+    //$("#nombtok").val("Escoger desde Planilla");
+   // $("#idup").val("0");
+})
 
