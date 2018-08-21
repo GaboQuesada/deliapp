@@ -15,6 +15,14 @@ function getLiveSearchUsuarios() {
             var datosrespuesta = respuesta.resultados;
             $("#listausuarios").empty();
             $.each(datosrespuesta, function (i, item) {
+                $msgbtn = "Desabilitar";
+
+                if (datosrespuesta[i].usr_es === "A") {
+                    $msgbtn = "Desabilitar";
+                } else {
+                    $msgbtn = "habilitar";
+                }
+
 
                 $("#listausuarios").append('<div class="card" style="width: 18rem; display: inline-block; margin-right:10px; margin-left: 10px; margin-bottom: 5px;">\n\
                                             <img class="card-img-top" width="100%" height="180" src="../compSesion/userImg/' + datosrespuesta[i].usr_im + '" alt="Card image cap">\n\
@@ -30,7 +38,11 @@ function getLiveSearchUsuarios() {
                                             <p style="display: inline-block">' + datosrespuesta[i].rol_no + '</p></div><div>\n\
                                             <img style="display: inline-block" src="../compSistema/iconos/sis_Usuario.png" width="30" height="30"/>\n\
                                             <p style="display: inline-block">' + datosrespuesta[i].usr_us + '</p></div><center>\n\
-                                            <input type="button" value="Desabilitar" onclick="" class="btn btn-primary">\n\
+                                            <form method="post" action="hdusuarios.php" style="display: inline-block">\n\
+                                            <input type="hidden" value="' + datosrespuesta[i].usr_id + '" name="iduss"/>\n\
+                                            <input type="hidden" value="' + $msgbtn + '" name="nbuss"/>\n\
+                                            <input type="submit" value="' + $msgbtn + '" class="btn btn-primary" />\n\
+                                            </form>\n\
                                             <input type="button" value="Editar" onclick="" class="btn btn-primary"></center></div></div>');
             });
         },

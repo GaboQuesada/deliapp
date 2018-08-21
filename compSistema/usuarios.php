@@ -151,6 +151,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
                                     </div>
                                     <input type="text" id="no" class="form-control" placeholder="Por nombre, cédula o usuario" aria-label="Por nombre, cédula o usuario" aria-describedby="basic-addon1">
                                 </div>
+
                                 <div id="listausuarios">
 
                                 </div>
@@ -165,6 +166,26 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
         </div>
 
 
+        <div class="modal fade" id="modeleu" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <script src="../lib/jquery/jquery-3.2.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -175,7 +196,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
         <script src="controler/usuariogetall.js" ></script>
         <script src="controler/usuarioInsert.js" ></script>
         <script src="controler/usuarioSearch.js" ></script>
-        
+
         <script src="js/showinfo.js" ></script>
 
 

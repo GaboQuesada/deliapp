@@ -38,8 +38,12 @@ function getAllUser() {
                                             <p style="display: inline-block">' + datosrespuesta[i].rol_no + '</p></div><div>\n\
                                             <img style="display: inline-block" src="../compSistema/iconos/sis_Usuario.png" width="30" height="30"/>\n\
                                             <p style="display: inline-block">' + datosrespuesta[i].usr_us + '</p></div><center>\n\
-                                            <input type="button" value="'+ $msgbtn +'" onclick="DH(\' ' + datosrespuesta[i].usr_id + '\')" class="btn btn-primary">\n\
-                                            <input type="button" value="Editar" onclick="" class="btn btn-primary"></center></div></div>');
+\n\                                         <form method="post" action="hdusuarios.php" style="display: inline-block">\n\
+                                            <input type="hidden" value="' + datosrespuesta[i].usr_id + '" name="iduss"/>\n\
+                                            <input type="hidden" value="'+ $msgbtn +'" name="nbuss"/>\n\
+                                            <input type="submit" value="'+ $msgbtn +'" class="btn btn-primary" />\n\
+                                            </form>\n\
+                                            <input type="button" data-toggle="modal" data-target="#modeleu" value="Editar" onclick="" class="btn btn-primary"></center></div></div>');
             });
         },
         error: function () {
