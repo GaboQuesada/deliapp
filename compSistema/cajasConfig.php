@@ -45,68 +45,13 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Cajas"] == 1) {
             <div class="caja2" id="caja2" style="margin-bottom:30px; padding-bottom: 30px;">
                 <div id="cuerpobox" class="container"  style="margin-bottom:30px; padding-bottom: 30px;">
 
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="card">
-                                    <div class="card-body">
-
-
-                                        <form enctype="multipart/form-data" method="post" name="newcashbox" id="newcashbox"</form>
-
-                                        <div class="form-group">
-                                            <label for="disabledTextInput"><strong>Nueva Caja</strong></label>
-                                            <input type="text" id="pnb" name="pnb" class="form-control" placeholder="Nombre">
-                                        </div>
-
-                                        <select class="custom-select" id="loid" name="loid">
-
-                                            <option value="0" selected>Seleccionar Localidad </option>
-                                            <?php
-                                            try {
-                                                $stmt = $conn->prepare("CALL LOCALIDADESgetall();");
-
-                                                $stmt->execute();
-                                                $respuesta = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                                                $tam = count($respuesta);
-
-                                                for ($i = 0; $i < $tam; $i++) {
-                                                    ?>
-                                                    <option value="<?php echo $respuesta[$i]['loc_id']; ?>"><?php echo $respuesta[$i]['loc_nb']; ?>  </option>
-
-                                                    <?php
-                                                }
-                                            } catch (PDOException $e) {
-
-
-                                                $respuesta['mensajelog'] = $e->getMessage();
-
-                                                print json_encode($respuesta);
-                                            }
-                                            ?>
-                                        </select>
-                                        <br><br>
-
-
-                                        <button type="submit" class="btn btn-primary btn-block">Agregar</button>
-
-                                        </form>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-7">
-                                <div id="listacajas"></div>
-                            </div>
-
-                        </div>
-                    </div>
+                 
 
                 </div>
             </div>
         </div>
 
-        
+
 
         <script src="../lib/jquery/jquery-3.2.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

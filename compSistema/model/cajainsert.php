@@ -5,9 +5,11 @@ $conn = $conexion->conect();
 
         try {
          
-            $stmt = $conn->prepare("CALL CAJASinsert(:nb)");
-            $stmt->bindParam(':nb',$_POST['pnb']);
-
+            $nb = ucfirst(strtolower($_POST['pnb']));
+            
+            $stmt = $conn->prepare("CALL CAJASinsert(:nb,:lo)");
+            $stmt->bindParam(':nb',$nb);
+            $stmt->bindParam(':lo',$_POST['loid']);
 
             $stmt->execute();
 
