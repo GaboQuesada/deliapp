@@ -21,7 +21,7 @@ function setintobox(pid) {
                 $("#midk").val(d[i].usr_id);
 
                 $("#listausuariosmd").append('<div class="card" style="width:100%; margin-bottom: 5px;">\n\
-                                            <img class="card-img-top" width="80%" height="180" src="../compSesion/userImg/' + d[i].usr_im + '" alt="Card image cap">\n\
+                                            <img class="card-img-top" id="imgshow" width="80%" height="180" src="../compSesion/userImg/' + d[i].usr_im + '" alt="Card image cap">\n\
                                             <div class="card-body">\n\
                                             <h6 class="card-title"><strong>' + d[i].pla_no + '&numsp;\n\
                                             ' + d[i].pla_ap1 + '&numsp;\n\

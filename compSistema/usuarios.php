@@ -179,7 +179,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
 
                         <div id="listausuariosmd"></div>
                         <p><strong>Modificar si es necesario.</strong></p>
-                        <form enctype="multipart/form-data" method="post" action="model/usuarioUpdate.php" name="mnewcashbox" id="mnewcashbox">
+                        <form enctype="multipart/form-data" method="post" name="mnewcashbox" id="mnewcashbox">
                         <select class="custom-select" id="mrolidmd" name="mrolidmd">
                           
                             <option value="0" selected>Seleccionar Role </option>
@@ -208,14 +208,14 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
                         </select>
                         <div class="form-group">
                             <label for="disabledTextInput">Foto perfil</label>
-                            <input type="file" id="mpimu" name="mpimu"  class="form-control" >
+                            <input type="file" id="mpimu" onchange="readURLModificaUMD(this);" name="mpimu"  class="form-control" >
                         </div>
                     </div>
                     <div class="modal-footer">
                         <input type="hidden" name="mimgk" id="mimgk"/>
                         <input type="hidden" name="mrolk" id="mrolk"/>
                         <input type="hidden" name="midk" id="midk"/>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="button" id="mdmucl" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                         <button type="submit" class="btn btn-primary">Modificar</button>
                     </div>
                     </form>
@@ -234,6 +234,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
         <script src="controler/usuarioInsert.js" ></script>
         <script src="controler/usuarioSearch.js" ></script>
         <script src="controler/usuarioGetById.js" ></script>
+        <script src="controler/usuarioUpdate.js" ></script>
         <script src="js/showinfo.js" ></script>
 
 

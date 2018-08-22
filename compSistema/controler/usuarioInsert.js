@@ -177,8 +177,4 @@ $(document).ready(function () {
 });
 
 
-$(document).ready(function () {
-    //$("#nombtok").val("Escoger desde Planilla");
-   // $("#idup").val("0");
-})
 
