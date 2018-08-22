@@ -170,18 +170,55 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="mnb">Modificar</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        ...
+
+                        <div id="listausuariosmd"></div>
+                        <p><strong>Modificar si es necesario.</strong></p>
+                        <form enctype="multipart/form-data" method="post" action="model/usuarioUpdate.php" name="mnewcashbox" id="mnewcashbox">
+                        <select class="custom-select" id="mrolidmd" name="mrolidmd">
+                          
+                            <option value="0" selected>Seleccionar Role </option>
+                            <?php
+                            try {
+                                $stmt = $conn->prepare("CALL ROLESgetAll();");
+
+                                $stmt->execute();
+                                $respuesta = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                $tam = count($respuesta);
+
+                                for ($i = 0; $i < $tam; $i++) {
+                                    ?>
+                                    <option value="<?php echo $respuesta[$i]['rol_id']; ?>"><?php echo $respuesta[$i]['rol_no']; ?> - <?php echo $respuesta[$i]['rol_de']; ?> </option>
+
+                                    <?php
+                                }
+                            } catch (PDOException $e) {
+
+
+                                $respuesta['mensajelog'] = $e->getMessage();
+
+                                print json_encode($respuesta);
+                            }
+                            ?>
+                        </select>
+                        <div class="form-group">
+                            <label for="disabledTextInput">Foto perfil</label>
+                            <input type="file" id="mpimu" name="mpimu"  class="form-control" >
+                        </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <input type="hidden" name="mimgk" id="mimgk"/>
+                        <input type="hidden" name="mrolk" id="mrolk"/>
+                        <input type="hidden" name="midk" id="midk"/>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Modificar</button>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -196,7 +233,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
         <script src="controler/usuariogetall.js" ></script>
         <script src="controler/usuarioInsert.js" ></script>
         <script src="controler/usuarioSearch.js" ></script>
-
+        <script src="controler/usuarioGetById.js" ></script>
         <script src="js/showinfo.js" ></script>
 
 

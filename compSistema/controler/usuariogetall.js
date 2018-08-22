@@ -43,7 +43,7 @@ function getAllUser() {
                                             <input type="hidden" value="'+ $msgbtn +'" name="nbuss"/>\n\
                                             <input type="submit" value="'+ $msgbtn +'" class="btn btn-primary" />\n\
                                             </form>\n\
-                                            <input type="button" data-toggle="modal" data-target="#modeleu" value="Editar" onclick="" class="btn btn-primary"></center></div></div>');
+                                            <input type="button" data-toggle="modal" data-target="#modeleu" value="Editar" onclick="setintobox(\'' + datosrespuesta[i].usr_id + '\')" class="btn btn-primary"></center></div></div>');
             });
         },
         error: function () {
