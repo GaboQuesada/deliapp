@@ -1,0 +1,46 @@
+
+
+
+.boxcontenthi{
+    margin-top: 2%; 
+    width:100%; 
+    min-height: 550px;
+    height:auto; 
+    background-color: #252525;
+
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+
+    -webkit-box-shadow: 0px 0px 29px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 29px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 29px 5px rgba(0,0,0,0.75);
+
+
+}
+
+.itembox{
+    color: #CCC; 
+    list-style:none;
+    text-align: left;
+}
+
+.imgboxcon{
+    margin-top: 25px; 
+    margin-bottom: 15px;
+    padding-top: 15px;
+}
+
+.boxtitle{
+    background-color: #CCC; 
+    background-image: url("../../img/fondo.jpg");
+    margin-bottom: 15px; 
+    padding-left: 45px; 
+    padding-top: 10px; 
+    padding-bottom: 10px;
+    
+    -webkit-box-shadow: 0px 0px 29px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 29px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 29px 5px rgba(0,0,0,0.75);
+}
