@@ -264,7 +264,7 @@ cjid
                                         <th scope="col"><i class="fas fa-sliders-h"></i> Opciones</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="cajasAccesos">
                                     <tr>
                                         <th scope="row">1</th>
                                         <td>Lunes</td>
