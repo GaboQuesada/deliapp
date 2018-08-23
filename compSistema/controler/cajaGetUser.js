@@ -1,12 +1,18 @@
-(document).ready(function () {
+$(document).ready(function () {
 
     $("#userSearchre").hide();
+    $("#userSearchre").empty();
 
 
 
     $("#userSearch").keyup(function () {
+        $("#userSearchre").hide();
+        $("#userSearchre").empty();
 
-        alert("hola");
+        if ($("#userSearch").val() === "") {
+            $("#userSearchre").hide();
+            $("#userSearchre").empty();
+        } else {
             $.ajax({
                 url: "model/cajaUsuarioLike.php",
                 type: 'POST',
@@ -31,7 +37,7 @@
                                                     ' + d[i].pla_no + ' ' + d[i].pla_ap1 + ' ' + d[i].pla_ap2 + '\n\
                                                 </div>\n\
                                                 <div class="col-sm-3">\n\
-                                                    <button type="button" onclick="setinfo(\'' + d[i].us_im + '\',  \'' + nombre + '\', \'' + d[i].us_id + '\')" data-toggle="modal" data-target="#Modalmsg" class="btn btn-primary btn-sm">Enviar Mensaje</button>\n\
+                                                    <button type="button" onclick="settobox(\'' + d[i].usr_id + '\', \'' + nombre + '\')" data-toggle="modal" data-target="#Modalmsg" class="btn btn-primary btn-sm">Selecionar</button>\n\
                                                 </div>\n\
                                             </div>\n\
                                         </div>\n\
@@ -42,7 +48,21 @@
 
                 }
             });
-        
+        }
     });
 
+});
+
+function settobox(id, nb)
+{
+    $("#userSearchre").hide();
+    $("#userSearchre").empty();
+    $("#userSearch").val(nb);
+    $("#userSearchh").val(id);
+
+}
+
+$("#userSearch").click(function (){
+  $("#userSearch").val("");  
+    
 });

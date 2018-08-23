@@ -3,7 +3,7 @@ include_once'../../bd/connect.php';
 $conexion = new Connect();
 $conn = $conexion->conect();
         try {
-            $stmt = $conn->prepare("CALL CAJASgetAll();");
+            $stmt = $conn->prepare("CALL LOCALIDADESgetall();");
                 $stmt->execute();
                 $respuesta['estado'] = "1";
                 $respuesta['mensajelog'] = "Consulta Exitosa (getAll)";
