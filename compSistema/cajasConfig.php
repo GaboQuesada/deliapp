@@ -146,7 +146,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Cajas"] == 1) {
                                         </div>
                                         <input type="text" id="userSearch" name="userSearch" class="form-control" placeholder="Buscar por nombre , cedula , rol, Actividad o departamento" aria-label="Username" aria-describedby="basic-addon1">
                                     </div>
-                                     <div class="searchbox msgshowbox" style="position: absolute; left: 55px; top: 130px; z-index: 3950; width: 80%;">
+                                     <div class="searchbox msgshowbox" style="position: absolute; left: 55px; top: 145px; z-index: 3950; width: 80%;">
                                             <ul id="userSearchre" class=" cuadroresult list-group list-group-flush cuadroresult" >
 
                                             </ul>
@@ -300,6 +300,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Cajas"] == 1) {
         <script src="../lib/alertifyjs/js/alertify.js" ></script>
         <script src="controler/cajasInsert.js" ></script>
         <script src="controler/cajasGetAll.js" ></script>
+        <script src="controler/cajaGetUser.js" ></script>
         <script src="js/showinfo.js" ></script>
 
 
