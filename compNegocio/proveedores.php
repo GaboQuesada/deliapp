@@ -29,20 +29,20 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Proveedores"] == 1) {
         <link rel="stylesheet" href="css/boxcuerpo.css" >
         <link rel="stylesheet" href="css/menuseccion.css" >
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <link rel="stylesheet" href="css/showinfo.css" >
+        <link rel="stylesheet" href="../comps/css/showinfo.css" >
 
         <title>Proveedores</title>
     </head>
     <body>
         <a id="iraAncla" href="#ancla"></a>
         <input type="hidden" id="tocompare">
-        <?php include_once './ShowInfo.php'; ?>
+        <?php include '../comps/ShowInfo.php'; ?>
         <?php include './navsuperior.php'; ?>
 
 
         <div class="contenedorcentral" id="contenedorcentral">
             <div class="caja1 " id="caja1">
-                <?php include './navlateral.php'; ?>
+               <?php include '../comps/navlateral.php'; ?>
             </div>
             <div class="caja2" id="caja2">
                 <?php include './navlateralbar.php'; ?>
@@ -61,7 +61,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Proveedores"] == 1) {
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
         <script src="../lib/animation/js/animation.js" ></script>
         <script src="../lib/alertifyjs/js/alertify.js" ></script>
-        <script src="js/showinfo.js" ></script>
+        <script src="../comps/js/showinfo.js" ></script>
 
 
 
