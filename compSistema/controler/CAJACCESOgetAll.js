@@ -20,20 +20,20 @@ function getAllUserByCaja() {
                 $dayf = rDay(datosrespuesta[i].dia_fin);
                 $hoi = rhora(datosrespuesta[i].hora_ini);
                 $hof = rhora(datosrespuesta[i].hora_fin);
-                $nom = datosrespuesta[i].pla_no+" "+datosrespuesta[i].pla_ap1+""+datosrespuesta[i].pla_ap2;
+                $nom = datosrespuesta[i].pla_no + " " + datosrespuesta[i].pla_ap1 + "" + datosrespuesta[i].pla_ap2;
                 $("#cajasAccesos").append('<tr>\n\
                                         <th scope="row">' + $tam + '</th>\n\
                                         <td>' + $dayi + '</td>\n\
                                         <td>' + $hoi + '</td>\n\
                                         <td>' + $dayf + '</td>\n\
-                                        <td>' + $hof +'</td>\n\
-                                        <td>' + $nom +'</td>\n\
-                                        <td>'+datosrespuesta[i].dep_no+'</td>\n\
-                                        <td>'+datosrespuesta[i].car_no+'</td>\n\
-                                        <td>'+datosrespuesta[i].rol_no+'</td>\n\
+                                        <td>' + $hof + '</td>\n\
+                                        <td>' + $nom + '</td>\n\
+                                        <td>' + datosrespuesta[i].dep_no + '</td>\n\
+                                        <td>' + datosrespuesta[i].car_no + '</td>\n\
+                                        <td>' + datosrespuesta[i].rol_no + '</td>\n\
                                         <td>\n\
                                             <div class="btn-group btn-group-sm" role="group" aria-label="...">\n\
-                                                <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Eliminar</button>\n\
+                                                <button type="button" onclick="eliminarcajaac(\''+ datosrespuesta[i].id_cac +'\')" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Eliminar</button>\n\
                                                 <button type="button" class="btn btn-warning"><i class="fas fa-edit"></i> Modificar</button>\n\
                                             </div>\n\
                                         </td>\n\
@@ -92,7 +92,7 @@ function rhora(hour) {
     var tamn = hour.length;
 
     if (tamn >= 3) {
-   
+
         var res = hour.split(".");
 
         if (res[0] > 12) {
@@ -113,5 +113,37 @@ function rhora(hour) {
         }
 
     }
+
+}
+
+
+function eliminarcajaac(pid) {
+    alertify.confirm('el acceso se Eliminara', 'Recuerde que sin un horario asiganado la persona no podra acceder.', function () {
+
+
+        $.ajax({
+            url: "model/CAJAACCESOeliminar.php",
+            type: 'POST',
+            dataType: "json",
+            data: {id:pid},
+            beforeSend: function () {
+
+            },
+            success: function (respuesta) {
+                alertify.success('Eliminado correctamente');
+                getAllUserByCaja();
+
+            },
+            error: function () {
+
+            }
+        });
+
+    }
+    , function () {
+        alertify.error('Cancel')
+    });
+
+
 
 }
