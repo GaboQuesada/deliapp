@@ -36,7 +36,11 @@ $(document).ready(function () {
             
             if($("#pcdi").val() === $("#pcdf").val()){
                 
-                    alert("Son iguales");
+                    if( sumh() === "t"){
+                        alert("Es menor");
+                    }else{
+                        alert("Es mayor");
+                    }
                 
             }else{
                 alertify.confirm('el acceso se dara de alta', 'Recuerde que fuera de este rango la caja no podra ser accedida', function () {
@@ -77,16 +81,16 @@ $(document).ready(function () {
 
 function sumh() {
 
-    var hi = $("#pchi").val();
-    var hf = $("#pchf").val();
+    var hi = $("#pchi").val(); // hora inicio
+    var hf = $("#pchf").val(); // hora final
 
-    var his = rhora(hi);
-    var hfs = rhora(hf);
+    var his = rhora(hi);       // obteniendo solo el numero h.inicio
+    var hfs = rhora(hf);       // obteniendo solo el numero h.fin
 
     if (his <= hfs) {
-        return 'f';
+        return 't';            // la hora de inicio es menor a la del fin 
     } else {
-        return 't';
+        return 'f';            // la hora de inicio es mayor a la del fin 
     }
 
 }
