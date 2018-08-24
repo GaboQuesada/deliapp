@@ -440,9 +440,9 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Cajas"] == 1) {
                        
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="button" id="off" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                         <input type="hidden" name="mcid" id="mcid" />
-                        <button type="submit" class="btn btn-primary">Modificar</button>
+                        <button type="button" id="btnchm" name="btnchm" class="btn btn-primary">Modificar</button>
                     </div>
                 </div>
             </div>

@@ -51,6 +51,7 @@ $(document).ready(function () {
                                 success: function (respuesta) {
                                     alertify.success('Modificado');
                                     getAllUserByCaja();
+                                    $("#off").click();
 
                                 },
                                 error: function () {
@@ -89,6 +90,7 @@ $(document).ready(function () {
                             success: function (respuesta) {
                                 alertify.success('Modificado');
                                 getAllUserByCaja();
+                                $("#off").click();
 
                             },
                             error: function () {
