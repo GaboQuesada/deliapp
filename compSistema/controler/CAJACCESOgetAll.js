@@ -34,7 +34,7 @@ function getAllUserByCaja() {
                                         <td>\n\
                                             <div class="btn-group btn-group-sm" role="group" aria-label="...">\n\
                                                 <button type="button" onclick="eliminarcajaac(\''+ datosrespuesta[i].id_cac +'\')" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Eliminar</button>\n\
-                                                <button type="button" class="btn btn-warning"><i class="fas fa-edit"></i> Modificar</button>\n\
+                                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#cjm"><i class="fas fa-edit"></i> Modificar</button>\n\
                                             </div>\n\
                                         </td>\n\
                                     </tr>');
