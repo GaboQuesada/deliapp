@@ -219,7 +219,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Agregar a Planilla"] == 1) {
 
                                 <div class="modal-body">
 
-                                    <center> <img src="../img/iconos/planilla.png"/></center>
+                                    <center> <img src="iconos/pla_Agregar.png"/></center>
                                     <center><h6 class="modal-title" id="exampleModalLabel"><strong>Actualizar Planilla</strong></h6></center>
 
                                     <center>
