@@ -3,7 +3,7 @@ $(document).ready(function () {
     $("#newcashbox").submit(function (e) {
         e.preventDefault();
 
-        if ($("#pcdi").val() === "nd" || $("#pcdf").val() === "nd" || $("#pchi").val() === "nd" || $("#pchf").val() === "nd") {
+        if ($("#pcdi").val() === "nd" || $("#pcdf").val() === "nd" || $("#pchi").val() === "nd" || $("#pchf").val() === "nd" || $("#userSearchh").val() === "nd") {
 
 
             alertify.error("Faltan datos");
