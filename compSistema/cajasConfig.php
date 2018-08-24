@@ -281,7 +281,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Cajas"] == 1) {
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Modificar día y hora de asignación.</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -437,21 +437,12 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Cajas"] == 1) {
 
                             </select>
                         </div>
-                        <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i>Usuario</span>
-                                            </div>
-                                            <input type="text" id="userSearchm" name="userSearch" class="form-control" placeholder="Buscar por nombre , cedula , rol, Actividad o departamento"  aria-describedby="basic-addon1">
-                                            <input type="hidden" id="userSearchhm" name="userSearchh" />
-                                        </div>
-                        <div class="searchbox msgshowbox" style="position: absolute; left: 55px; top: 145px; z-index: 3950; width: 80%;">
-                        <ul id="userSearchrem" class=" cuadroresult list-group list-group-flush cuadroresult" >
-                        </ul>
-                        </div>
+                       
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <input type="hidden" name="mcid" id="mcid" />
+                        <button type="submit" class="btn btn-primary">Modificar</button>
                     </div>
                 </div>
             </div>
@@ -464,7 +455,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Cajas"] == 1) {
         <script src="../lib/alertifyjs/js/alertify.js" ></script>
 
         <script src="controler/cajaGetUser.js" ></script>
-        <script src="controler/cajaGetUserm.js" ></script>
+        <script src="controler/CAJAACCESOupdate.js" ></script>
         <script src="controler/CAJAACCESOinsert.js" ></script>
         <script src="controler/CAJACCESOgetAll.js" ></script>
         <script src="js/showinfo.js" ></script>

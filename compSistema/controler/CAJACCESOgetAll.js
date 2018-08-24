@@ -11,16 +11,16 @@ function getAllUserByCaja() {
         success: function (respuesta) {
 
 
-            var datosrespuesta = respuesta.resultados;
+            var d = respuesta.resultados;
             $("#cajasAccesos").empty();
             $tam = 0;
-            $.each(datosrespuesta, function (i, item) {
+            $.each(d, function (i, item) {
                 $tam++;
-                $dayi = rDay(datosrespuesta[i].dia_ini);
-                $dayf = rDay(datosrespuesta[i].dia_fin);
-                $hoi = rhora(datosrespuesta[i].hora_ini);
-                $hof = rhora(datosrespuesta[i].hora_fin);
-                $nom = datosrespuesta[i].pla_no + " " + datosrespuesta[i].pla_ap1 + "" + datosrespuesta[i].pla_ap2;
+                $dayi = rDay(d[i].dia_ini);
+                $dayf = rDay(d[i].dia_fin);
+                $hoi = rhora(d[i].hora_ini);
+                $hof = rhora(d[i].hora_fin);
+                $nom = d[i].pla_no + " " + d[i].pla_ap1 + "" + d[i].pla_ap2;
                 $("#cajasAccesos").append('<tr>\n\
                                         <th scope="row">' + $tam + '</th>\n\
                                         <td>' + $dayi + '</td>\n\
@@ -28,13 +28,13 @@ function getAllUserByCaja() {
                                         <td>' + $dayf + '</td>\n\
                                         <td>' + $hof + '</td>\n\
                                         <td>' + $nom + '</td>\n\
-                                        <td>' + datosrespuesta[i].dep_no + '</td>\n\
-                                        <td>' + datosrespuesta[i].car_no + '</td>\n\
-                                        <td>' + datosrespuesta[i].rol_no + '</td>\n\
+                                        <td>' + d[i].dep_no + '</td>\n\
+                                        <td>' + d[i].car_no + '</td>\n\
+                                        <td>' + d[i].rol_no + '</td>\n\
                                         <td>\n\
                                             <div class="btn-group btn-group-sm" role="group" aria-label="...">\n\
-                                                <button type="button" onclick="eliminarcajaac(\''+ datosrespuesta[i].id_cac +'\')" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Eliminar</button>\n\
-                                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#cjm"><i class="fas fa-edit"></i> Modificar</button>\n\
+                                                <button type="button" onclick="eliminarcajaac(\''+ d[i].id_cac +'\')" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Eliminar</button>\n\
+                                                <button type="button" onclick="putinModal(\''+ d[i].id_cac +'\',\''+ d[i].dia_ini +'\',\''+ d[i].dia_fin +'\',\''+ d[i].hora_ini +'\',\''+ d[i].hora_fin +'\')"class="btn btn-warning" data-toggle="modal" data-target="#cjm"><i class="fas fa-edit"></i> Modificar</button>\n\
                                             </div>\n\
                                         </td>\n\
                                     </tr>');
@@ -53,8 +53,6 @@ $(document).ready(function () {
     getAllUserByCaja();
 
 });
-
-
 
 function rDay(day) {
 
@@ -116,7 +114,6 @@ function rhora(hour) {
 
 }
 
-
 function eliminarcajaac(pid) {
     alertify.confirm('el acceso se Eliminara', 'Recuerde que sin un horario asiganado la persona no podra acceder.', function () {
 
@@ -147,3 +144,15 @@ function eliminarcajaac(pid) {
 
 
 }
+
+function putinModal(cid,di,df,hi,hf){
+    
+    $("#mpcdi").val(di);
+    $("#mpchi").val(hi);
+    $("#mpcdf").val(df);
+    $("#mpchf").val(hf);
+    $("#mcid").val(cid);
+    
+}
+
+
