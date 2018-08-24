@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     $("#btnchm").click(function () {
 
-        if ($("#pcdi").val() === "nd" || $("#pcdf").val() === "nd" || $("#pchi").val() === "nd" || $("#pchf").val() === "nd" || $("#userSearch").val() === "") {
+        if ($("#mpcdi").val() === "nd" || $("#mpcdf").val() === "nd" || $("#mpchi").val() === "nd" || $("#mpchf").val() === "nd") {
 
 
             alertify.error("Faltan datos");
@@ -19,7 +19,7 @@ $(document).ready(function () {
 
         } else {
 
-            if ($("#pcdf").val() !== "0" && $("#pcdi").val() > $("#pcdf").val()) {
+            if ($("#mpcdf").val() !== "0" && $("#mpcdi").val() > $("#mpcdf").val()) {
 
                 alertify.error("Datos incorrectos");
                 alertify.alert()
@@ -34,22 +34,22 @@ $(document).ready(function () {
 
             } else {
 
-                if ($("#pcdi").val() === $("#pcdf").val()) {
+                if ($("#mpcdi").val() === $("#mpcdf").val()) {
 
                     if (sumh() === "t") {
                         alertify.confirm('el acceso se dara de alta', 'Recuerde que fuera de este rango la caja no podra ser accedida', function () {
 
 
                             $.ajax({
-                                url: "model/CAJAACCESOinsert.php",
+                                url: "model/CAJAACCESOupdate.php",
                                 type: 'POST',
                                 dataType: "json",
-                                data: {cjid: $("#cjid").val(), userSearchh: $("#userSearchh").val(), pcdi: $("#pcdi").val(), pcdf: $("#pcdf").val(), pchi: $("#pchi").val(), pchf: $("#pchf").val()},
+                                data: {id: $("#mcid").val(), di: $("#mpcdi").val(), df: $("#mpcdf").val(), hi: $("#mpchi").val(), hf: $("#mpchf").val()},
                                 beforeSend: function () {
 
                                 },
                                 success: function (respuesta) {
-                                    alertify.success('Agregado');
+                                    alertify.success('Modificado');
                                     getAllUserByCaja();
 
                                 },
@@ -118,8 +118,8 @@ $(document).ready(function () {
 
 function sumh() {
 
-    var hi = $("#pchi").val(); // hora inicio
-    var hf = $("#pchf").val(); // hora final
+    var hi = $("#mpchi").val(); // hora inicio
+    var hf = $("#mpchf").val(); // hora final
 
     var his = rhora(hi);       // obteniendo solo el numero h.inicio
     var hfs = rhora(hf);       // obteniendo solo el numero h.fin
