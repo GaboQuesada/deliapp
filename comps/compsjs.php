@@ -4,3 +4,4 @@
 <script src="../lib/animation/js/animation.js" ></script>
 <script src="../lib/alertifyjs/js/alertify.js" ></script>
 <script src="../comps/js/showinfo.js" ></script>
+<script src="../comps/js/validaciones.js" ></script>
