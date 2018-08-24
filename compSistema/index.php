@@ -5,7 +5,7 @@ $conexion = new Connect();
 $conn = $conexion->conect();
 
 if (!empty($_SESSION["usuarioid"])) {
-    
+    $_SESSION["modu"]= "Sistema";
 } else {
     header("Location: ../index.php");
 }
@@ -41,9 +41,8 @@ if (!empty($_SESSION["usuarioid"])) {
             <?php
             try {
                 $stmt = $conn->prepare("CALL ACCESOSGetRutas(:rol, :modu);");
-                $stmt->bindParam(':rol', $_SESSION["rolid"]);
-                $modulo = "Sistema";
-                $stmt->bindParam(':modu', $modulo);
+                $stmt->bindParam(':rol', $_SESSION["rolid"]);  
+                $stmt->bindParam(':modu',$_SESSION["modu"]);
                 $stmt->execute();
                 $respuesta = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 $tam = count($respuesta);
@@ -52,7 +51,7 @@ if (!empty($_SESSION["usuarioid"])) {
                     
                    
                     $nomse= $respuesta[$i]['sbm_no'];
-                     $_SESSION[$nomse] = 1;
+                    $_SESSION[$nomse] = 1;
                     ?>
                     <div class="boxmenu card">
                         <div class="card-body ">

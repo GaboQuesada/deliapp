@@ -44,35 +44,10 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Proveedores"] == 1) {
             <div class="caja1 " id="caja1">
                 <?php include './navlateral.php'; ?>
             </div>
-            <div class="caja2" id="caja2" style="margin-bottom:30px; padding-bottom: 30px;">
+            <div class="caja2" id="caja2">
+                <?php include './navlateralbar.php'; ?>
                 <div  class="container"  style="margin-bottom:30px; padding-bottom: 30px;">
-                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                        <a class="navbar-brand" href="#">
-                            <img src="iconos/proovedores.png" width="30" height="30" class="d-inline-block align-top" alt="">
-                            Proveedores
-                        </a>
-
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <form class="form-inline my-2 my-lg-0">
-                                <button type="button" class="btn btn-light btn-sm"><i class="fas fa-eye"></i> Ver lista</button>
-                                &numsp;
-                                <button type="button" class="btn btn-light btn-sm"><i class="fas fa-plus-circle"></i> Agregar</button>
-                                &numsp;
-                                <button type="button" class="btn btn-light btn-sm"><i class="fas fa-history"></i> Historial de facturas</button>
-                            </form>
-                            <ul class="navbar-nav mr-auto">
-
-                            </ul>
-                            <form class="form-inline my-2 my-lg-0">
-                                <input class="form-control mr-sm-2 form-control-sm" type="search" placeholder="Buscar" aria-label="Search">
-                                <button class="btn btn-outline-success my-2 my-sm-0 btn-sm" type="submit"><i class="fas fa-search"></i> Buscar</button>
-                            </form>
-                        </div>
-                    </nav> 
+                
                 </div>
             </div>
         </div>

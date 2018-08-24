@@ -33,20 +33,20 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Cajas"] == 1) {
         <link rel="stylesheet" href="css/setcingigcaja.css" >
         <link rel="stylesheet" href="css/boxsearchCajaUser.css" >
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <link rel="stylesheet" href="css/showinfo.css" >
+        <link rel="stylesheet" href="../comps/css/showinfo.css" >
 
         <title>Localidades</title>
     </head>
     <body>
         <a id="iraAncla" href="#ancla"></a>
         <input type="hidden" id="tocompare">
-        <?php include_once './ShowInfo.php'; ?>
+       <?php include '../comps/ShowInfo.php'; ?>
         <?php include './navsuperior.php'; ?>
 
         cjid
         <div class="contenedorcentral" id="contenedorcentral" style="margin-bottom: 25px;">
             <div class="caja1 " id="caja1">
-                <?php include './navlateral.php'; ?>
+                <?php include '../comps/navlateral.php'; ?>
             </div>
             <div class="caja2" id="caja2" style="margin-bottom:30px; padding-bottom: 30px;">
                 <div id="cuerpobox" class="container"  style="margin-bottom:30px; padding-bottom: 30px;">
@@ -458,7 +458,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Cajas"] == 1) {
         <script src="controler/CAJAACCESOupdate.js" ></script>
         <script src="controler/CAJAACCESOinsert.js" ></script>
         <script src="controler/CAJACCESOgetAll.js" ></script>
-        <script src="js/showinfo.js" ></script>
+         <script src="../comps/js/showinfo.js" ></script>
 
 
     </body>
