@@ -20,16 +20,17 @@ function getAllUserByCaja() {
                 $dayf = rDay(datosrespuesta[i].dia_fin);
                 $hoi = rhora(datosrespuesta[i].hora_ini);
                 $hof = rhora(datosrespuesta[i].hora_fin);
+                $nom = datosrespuesta[i].pla_no+" "+datosrespuesta[i].pla_ap1+""+datosrespuesta[i].pla_ap2;
                 $("#cajasAccesos").append('<tr>\n\
                                         <th scope="row">' + $tam + '</th>\n\
                                         <td>' + $dayi + '</td>\n\
                                         <td>' + $hoi + '</td>\n\
                                         <td>' + $dayf + '</td>\n\
                                         <td>' + $hof +'</td>\n\
-                                        <td>Gabriel Quesada Sanchez</td>\n\
-                                        <td>Sistema</td>\n\
-                                        <td>Sistema</td>\n\
-                                        <td>Sistema</td>\n\
+                                        <td>' + $nom +'</td>\n\
+                                        <td>'+datosrespuesta[i].dep_no+'</td>\n\
+                                        <td>'+datosrespuesta[i].car_no+'</td>\n\
+                                        <td>'+datosrespuesta[i].rol_no+'</td>\n\
                                         <td>\n\
                                             <div class="btn-group btn-group-sm" role="group" aria-label="...">\n\
                                                 <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Eliminar</button>\n\
