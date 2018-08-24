@@ -3,7 +3,7 @@ include_once'../../bd/connect.php';
 $conexion = new Connect();
 $conn = $conexion->conect();
         try {
-            $stmt = $conn->prepare("CALL CAJAACCESOgetAccesosByCaja();");
+            $stmt = $conn->prepare("CALL CAJAACCESOgetAccesosByCaja(:ca)");
             $stmt->bindParam(':ca', $_POST["ca"]);
                 $stmt->execute();
                 $respuesta['estado'] = "1";

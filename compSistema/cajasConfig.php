@@ -265,23 +265,7 @@ cjid
                                     </tr>
                                 </thead>
                                 <tbody id="cajasAccesos">
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Lunes</td>
-                                        <td>8:00 </td>
-                                        <td>Martes</td>
-                                        <td>16:00</td>
-                                        <td>Gabriel Quesada Sanchez</td>
-                                        <td>Sistema</td>
-                                        <td>Sistema</td>
-                                        <td>Sistema</td>
-                                        <td>
-                                            <div class="btn-group btn-group-sm" role="group" aria-label="...">
-                                                <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Eliminar</button>
-                                                <button type="button" class="btn btn-warning"><i class="fas fa-edit"></i> Modificar</button>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                    
 
                                 </tbody>
                             </table>
@@ -303,6 +287,7 @@ cjid
 
         <script src="controler/cajaGetUser.js" ></script>
         <script src="controler/CAJAACCESOinsert.js" ></script>
+        <script src="controler/CAJACCESOgetAll.js" ></script>
         <script src="js/showinfo.js" ></script>
 
 

@@ -4,37 +4,39 @@ function getAllUserByCaja() {
         url: "model/CAJAACCESOgetAll.php",
         type: 'POST',
         dataType: "json",
-          data: {ca: $("#cjid").val()},
+        data: {ca: $("#cjid").val()},
         beforeSend: function () {
 
         },
         success: function (respuesta) {
 
+
             var datosrespuesta = respuesta.resultados;
-            $("#listausuarios").empty();
+            $("#cajasAccesos").empty();
+            $tam = 0;
             $.each(datosrespuesta, function (i, item) {
-            
-                
-                $("#listausuarios").append('<div class="card" style="width: 18rem; display: inline-block; margin-right:10px; margin-left: 10px; margin-bottom: 5px;">\n\
-                                            <img class="card-img-top" width="100%" height="180" src="../compSesion/userImg/' + datosrespuesta[i].usr_im +  '" alt="Card image cap">\n\
-                                            <div class="card-body">\n\
-                                            <h6 class="card-title"><strong>' + datosrespuesta[i].pla_no +  '&numsp;\n\
-                                            ' + datosrespuesta[i].pla_ap1 + '&numsp;\n\
-                                            ' + datosrespuesta[i].pla_ap2 + '</strong></h6><div>\n\
-                                            <img style="display: inline-block" src="../compPlanilla/iconos/pla_Departamento.png" width="30" height="30"/>\n\
-                                            <p style="display: inline-block">' + datosrespuesta[i].dep_no + '</p></div><div>\n\
-                                            <img style="display: inline-block" src="../compPlanilla/iconos/pla_Actividad.png" width="30" height="30"/>\n\
-                                            <p style="display: inline-block">' + datosrespuesta[i].car_no + '</p></div><div>\n\
-                                            <img style="display: inline-block" src="../compSistema/iconos/sis_Role.png" width="30" height="30"/>\n\
-                                            <p style="display: inline-block">' + datosrespuesta[i].rol_no + '</p></div><div>\n\
-                                            <img style="display: inline-block" src="../compSistema/iconos/sis_Usuario.png" width="30" height="30"/>\n\
-                                            <p style="display: inline-block">' + datosrespuesta[i].usr_us + '</p></div><center>\n\
-\n\                                         <form method="post" action="hdusuarios.php" style="display: inline-block">\n\
-                                            <input type="hidden" value="' + datosrespuesta[i].usr_id + '" name="iduss"/>\n\
-                                            <input type="hidden" value="'+ $msgbtn +'" name="nbuss"/>\n\
-                                            <input type="submit" value="'+ $msgbtn +'" class="btn btn-primary" />\n\
-                                            </form>\n\
-                                            <input type="button" data-toggle="modal" data-target="#modeleu" value="Editar" onclick="setintobox(\'' + datosrespuesta[i].usr_id + '\')" class="btn btn-primary"></center></div></div>');
+                $tam++;
+                $dayi = rDay(datosrespuesta[i].dia_ini);
+                $dayf = rDay(datosrespuesta[i].dia_fin);
+                $hoi = rhora(datosrespuesta[i].hora_ini);
+                $hof = rhora(datosrespuesta[i].hora_fin);
+                $("#cajasAccesos").append('<tr>\n\
+                                        <th scope="row">' + $tam + '</th>\n\
+                                        <td>' + $dayi + '</td>\n\
+                                        <td>' + $hoi + '</td>\n\
+                                        <td>' + $dayf + '</td>\n\
+                                        <td>' + $hof +'</td>\n\
+                                        <td>Gabriel Quesada Sanchez</td>\n\
+                                        <td>Sistema</td>\n\
+                                        <td>Sistema</td>\n\
+                                        <td>Sistema</td>\n\
+                                        <td>\n\
+                                            <div class="btn-group btn-group-sm" role="group" aria-label="...">\n\
+                                                <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Eliminar</button>\n\
+                                                <button type="button" class="btn btn-warning"><i class="fas fa-edit"></i> Modificar</button>\n\
+                                            </div>\n\
+                                        </td>\n\
+                                    </tr>');
             });
         },
         error: function () {
@@ -45,8 +47,70 @@ function getAllUserByCaja() {
 
 }
 
-$(document).ready(function (){
-    
+$(document).ready(function () {
+
     getAllUserByCaja();
-    
+
 });
+
+
+
+function rDay(day) {
+
+    switch (day) {
+        case "0":
+            return "Domingo";
+            break;
+        case "1":
+            return "Lunes";
+            break;
+        case "2":
+            return "Martes";
+            break;
+        case "3":
+            return "Miercoles";
+            break;
+        case "4":
+            return "Jueves";
+            break;
+        case "5":
+            return "Viernes";
+            break;
+        case "6":
+            return "Sabado";
+            break;
+
+
+    }
+
+}
+
+function rhora(hour) {
+
+
+    var tamn = hour.length;
+
+    if (tamn >= 3) {
+   
+        var res = hour.split(".");
+
+        if (res[0] > 12) {
+            $re = res[0] - 12;
+            return $re + ":30 pm";
+        } else {
+            return  res[0] + ":30 am";
+        }
+
+
+    } else {
+
+        if (hour > 12) {
+            $re = hour - 12;
+            return $re + ":00 pm";
+        } else {
+            return  hour + ":00 am";
+        }
+
+    }
+
+}
