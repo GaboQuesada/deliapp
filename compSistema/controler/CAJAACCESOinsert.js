@@ -3,7 +3,7 @@ $(document).ready(function () {
     $("#newcashbox").submit(function (e) {
         e.preventDefault();
 
-        if ($("#pcdi").val() === "nd" || $("#pcdf").val() === "nd" || $("#pchi").val() === "nd" || $("#pchf").val() === "nd" || $("#userSearchh").val() === "nd") {
+        if ($("#pcdi").val() === "nd" || $("#pcdf").val() === "nd" || $("#pchi").val() === "nd" || $("#pchf").val() === "nd" || $("#userSearch").val() === "") {
 
 
             alertify.error("Faltan datos");
@@ -17,60 +17,93 @@ $(document).ready(function () {
                     }).show();
 
 
-        } else{
-          
-          if ($("#pcdf").val() !== "0" && $("#pcdi").val() > $("#pcdf").val()) {
+        } else {
 
-            alertify.error("Datos incorrectos");
-            alertify.alert()
-                    .setting({
-                        'label': 'Entendido',
-                        'message': 'El dia de inicio no puede ser anterior al dia de fin.',
-                        'onok': function () {
-                            alertify.success('Ahora si vamos a trabajar');
+            if ($("#pcdf").val() !== "0" && $("#pcdi").val() > $("#pcdf").val()) {
+
+                alertify.error("Datos incorrectos");
+                alertify.alert()
+                        .setting({
+                            'label': 'Entendido',
+                            'message': 'El dia de inicio no puede ser anterior al dia de fin.',
+                            'onok': function () {
+                                alertify.success('Ahora si vamos a trabajar');
+                            }
+                        }).show();
+
+
+            } else {
+
+                if ($("#pcdi").val() === $("#pcdf").val()) {
+
+                    if (sumh() === "t") {
+                        alertify.confirm('el acceso se dara de alta', 'Recuerde que fuera de este rango la caja no podra ser accedida', function () {
+
+
+                            $.ajax({
+                                url: "model/CAJAACCESOinsert.php",
+                                type: 'POST',
+                                dataType: "json",
+                                data: {cjid: $("#cjid").val(), userSearchh: $("#userSearchh").val(), pcdi: $("#pcdi").val(), pcdf: $("#pcdf").val(), pchi: $("#pchi").val(), pchf: $("#pchf").val()},
+                                beforeSend: function () {
+
+                                },
+                                success: function (respuesta) {
+                                    alertify.success('Agregado');
+                                    getAllUserByCaja();
+
+                                },
+                                error: function () {
+
+                                }
+                            });
+
                         }
-                    }).show();
-
-
-        } else{
-            
-            if($("#pcdi").val() === $("#pcdf").val()){
-                
-                    if( sumh() === "t"){
-                        alert("Es menor");
-                    }else{
-                        alert("Es mayor");
+                        , function () {
+                            alertify.error('Cancel')
+                        });
+                    } else {
+                        alertify.error("Datos incorrectos");
+                alertify.alert()
+                        .setting({
+                            'label': 'Entendido',
+                            'message': 'El hora de inicio no puede ser mayor a la hora del fin.',
+                            'onok': function () {
+                                alertify.success('Ahora si vamos a trabajar');
+                            }
+                        }).show();
                     }
-                
-            }else{
-                alertify.confirm('el acceso se dara de alta', 'Recuerde que fuera de este rango la caja no podra ser accedida', function () {
+
+                } else {
+                    alertify.confirm('el acceso se dara de alta', 'Recuerde que fuera de este rango la caja no podra ser accedida', function () {
 
 
-                    $.ajax({
-                        url: "model/CAJAACCESOinsert.php",
-                        type: 'POST',
-                        dataType: "json",
-                        data: {cjid: $("#cjid").val(), userSearchh: $("#userSearchh").val(), pcdi: $("#pcdi").val(), pcdf: $("#pcdf").val(), pchi: $("#pchi").val(), pchf: $("#pchf").val()},
-                        beforeSend: function () {
+                        $.ajax({
+                            url: "model/CAJAACCESOinsert.php",
+                            type: 'POST',
+                            dataType: "json",
+                            data: {cjid: $("#cjid").val(), userSearchh: $("#userSearchh").val(), pcdi: $("#pcdi").val(), pcdf: $("#pcdf").val(), pchi: $("#pchi").val(), pchf: $("#pchf").val()},
+                            beforeSend: function () {
 
-                        },
-                        success: function (respuesta) {
-                            alertify.success('Agregado');
-                            getAllUserByCaja();
+                            },
+                            success: function (respuesta) {
+                                alertify.success('Agregado');
+                                getAllUserByCaja();
 
-                        },
-                        error: function () {
+                            },
+                            error: function () {
 
-                        }
+                            }
+                        });
+
+                    }
+                    , function () {
+                        alertify.error('Cancel')
                     });
-
                 }
-                , function () {
-                    alertify.error('Cancel')
-                });
+
             }
-            
-        }}
+        }
     });
 
 
