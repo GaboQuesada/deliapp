@@ -41,12 +41,13 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Roles"] == 1) {
                 <div class="navbarlateral">
                     <?php include '../comps/navlateralbar.php'; ?>
                 </div>
-                <div id="cuerpobox" class="container">
+                <div id="masterbox">
+                    <div id="boxcontrol" class="container">
                     <div class="col-lg-12 ">
 
-                        <div class="container">
+                        <div>
                             <div class="row">
-                                <div class="col-sm">
+                                <div class="col-md">
 
 
                                     <div class="card">
@@ -89,7 +90,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Roles"] == 1) {
 
 
                                 </div>
-                                <div class="col-sm">
+                                <div class="col-md">
 
                                     <div class="card">
 
@@ -167,6 +168,8 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Roles"] == 1) {
 
                     </div>
                 </div>
+                </div>
+                
             </div>
         </div>
 
@@ -179,6 +182,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Roles"] == 1) {
         <script src="controler/subModulosGet.js"></script>
         <script src="controler/acceset.js"></script>
         <script src="controler/rolesUpdate.js"></script>
+        <script src="js/Rolessize.js"></script>
      
 
 
