@@ -20,7 +20,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Modulos"] == 1) {
         <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Rasa" rel="stylesheet">
 
-      
+
         <link rel="stylesheet" href="css/modulos.css" >
 
 
@@ -41,70 +41,80 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Modulos"] == 1) {
                 <div class="navbarlateral">
                     <?php include '../comps/navlateralbar.php'; ?>
                 </div>
-                
+
                 <div id="masterbox">
                     <div id="boxcontrol" class="container">
-                    <div class="col-lg-12 ">
+                        <div class="col-lg-12 ">
 
-      
-                        <div>
+
                             <div>
-                                <img style="display: inline-block" src="../img/logo.png" width="40" height="40">
-                                &numsp;
-                                <p style="display: inline-block; font-size: 18px; font-family: 'Permanent Marker',  cursive;"> Deliapp tiene muchas cosas para ti!</p>
+                                <div>
+                                    <img style="display: inline-block" src="../img/logo.png" width="40" height="40">
+                                    &numsp;
+                                    <p style="display: inline-block; font-size: 18px; font-family: 'Permanent Marker',  cursive;"> Deliapp tiene muchas cosas para ti!</p>
+                                </div>
+                                <p style="display: inline-block; font-size: 16px; font-family: 'Rasa', serif;">Siempre estamos trabajando en nuevas cosas, puede
+                                    ser que te llegue una notificacion de una mejora en un modulo ya contratado , o que este a tu dispocion una nueva modalidad para agregar.</p>
                             </div>
-                            <p style="display: inline-block; font-size: 16px; font-family: 'Rasa', serif;">Siempre estamos trabajando en nuevas cosas, puede
-                                ser que te llegue una notificacion de una mejora en un modulo ya contratado , o que este a tu dispocion una nueva modalidad para agregar.</p>
-                        </div>
 
-                        <div>
-                            <div class="boxmall">
-                                <div class=" headermbox"><p>Modulos disponibles:</p><hr></div>
+                            <div>
+                                <div class="boxmall">
+                                    <div class=" headermbox"><p>Modulos disponibles:</p><hr></div>
 
 
 
-                                <?php
-                                try {
-                                    $stmt = $conn->prepare("CALL MODULOSgetAll();");
+                                    <?php
+                                    try {
+                                        $stmt = $conn->prepare("CALL MODULOSgetAll();");
 
-                                    $stmt->execute();
-                                    $respuesta = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                                    $tam = count($respuesta);
+                                        $stmt->execute();
+                                        $respuesta = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                        $tam = count($respuesta);
 
-                                    for ($i = 0; $i < $tam; $i++) {
-                                        ?>
+                                        for ($i = 0; $i < $tam; $i++) {
+                                            ?>
 
 
 
-                                        <div style="display: inline-block">
-                                            <div class="boxmitem">
-                                               
+
+                                            <div class="boxmitem border p-1">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            One of three columns
+                                                        </div>
+                                                        <div class="col">
+                                                            One of three columns
+                                                        </div>
+
+                                                    </div>
+                                                </div>
                                             </div>
-                                            
-                                        </div>
-                                        <?php
+
+
+                                            <?php
+                                        }
+                                    } catch (PDOException $e) {
+
+
+                                        $respuesta['mensajelog'] = $e->getMessage();
+
+                                        print json_encode($respuesta);
                                     }
-                                } catch (PDOException $e) {
-
-
-                                    $respuesta['mensajelog'] = $e->getMessage();
-
-                                    print json_encode($respuesta);
-                                }
-                                ?>
+                                    ?>
 
 
 
 
+                                </div>
                             </div>
+
+
                         </div>
-
-
                     </div>
+
                 </div>
-                    
-                </div>
-                
+
             </div>
         </div>
 
