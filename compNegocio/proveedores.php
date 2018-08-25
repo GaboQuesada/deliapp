@@ -36,8 +36,11 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Proveedores"] == 1) {
                 <?php include '../comps/navlateral.php'; ?>
             </div>
             <div class="caja2" id="caja2">
-                <?php include '../comps/navlateralbar.php'; ?>
-                <div  class="container"  style="margin-bottom:30px; padding-bottom: 30px;">
+              <div class="navbarlateral">
+                        <?php include '../comps/navlateralbar.php'; ?>
+                    </div>
+                <div  class="container">
+                    
 
                 </div>
             </div>
