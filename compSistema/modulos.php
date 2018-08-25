@@ -20,10 +20,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Modulos"] == 1) {
         <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Rasa" rel="stylesheet">
 
-        <link rel="stylesheet" href="css/menusuperior.css" >
-        <link rel="stylesheet" href="css/boxmodel.css" >
-        <link rel="stylesheet" href="css/boxcuerpo.css" >
-        <link rel="stylesheet" href="css/menuseccion.css" >
+      
         <link rel="stylesheet" href="css/modulos.css" >
 
 
@@ -36,30 +33,33 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Modulos"] == 1) {
         <?php include '../comps/navsuperior.php'; ?>
 
 
-        <div class="contenedorcentral" id="contenedorcentral">
+        <div>
             <div class="caja1 " id="caja1">
                 <?php include '../comps/navlateral.php'; ?>
             </div>
             <div class="caja2" id="caja2">
-                <div id="cuerpobox" class="container">
+                <div class="navbarlateral">
+                    <?php include '../comps/navlateralbar.php'; ?>
+                </div>
+                
+                <div id="masterbox">
+                    <div id="boxcontrol" class="container">
                     <div class="col-lg-12 ">
 
-                        <div></div>
-
-
-
-                        <div class="container-fluid" id="getbox" style="margin-bottom: 9px;">
+      
+                        <div>
                             <div>
                                 <img style="display: inline-block" src="../img/logo.png" width="40" height="40">
                                 &numsp;
-                                <p style="display: inline-block; font-size: 18px; font-family: 'Permanent Marker',  cursive;"> Deliapp tiene muchas cosas para ti!</p></div>
+                                <p style="display: inline-block; font-size: 18px; font-family: 'Permanent Marker',  cursive;"> Deliapp tiene muchas cosas para ti!</p>
+                            </div>
                             <p style="display: inline-block; font-size: 16px; font-family: 'Rasa', serif;">Siempre estamos trabajando en nuevas cosas, puede
                                 ser que te llegue una notificacion de una mejora en un modulo ya contratado , o que este a tu dispocion una nueva modalidad para agregar.</p>
                         </div>
 
-                        <div class="container-fluid" >
+                        <div>
                             <div class="boxmall">
-                                <div class="container headermbox"><p>Modulos disponibles:</p><hr></div>
+                                <div class=" headermbox"><p>Modulos disponibles:</p><hr></div>
 
 
 
@@ -77,25 +77,10 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Modulos"] == 1) {
 
 
                                         <div style="display: inline-block">
-                                            <div class="media border p-1" style="width: 325px; background-color: orange">
-                                                <?php if ($respuesta[$i]['ses_et'] == 'ct') { ?> 
-                                                    <i  class="mr-3 mt-3 rounded-circle material-icons " style="width:60px; padding-top: 4%;  font-size: 45px;"><?php echo $respuesta[$i]['ses_im']; ?></i>  <?php } else { ?>
-                                                    <i  class="mr-3 mt-3 rounded-circle material-icons pulse" style="width:60px; color:olivedrab; padding-top: 4%;  font-size: 45px;"><?php echo $respuesta[$i]['ses_im']; ?></i>
-                                                <?php } ?>
-
-                                                <div class="media-body">
-                                                    <h6><strong><?php echo $respuesta[$i]['ses_no']; ?></strong></h6>
-                                                    <?php if ($respuesta[$i]['ses_et'] == 'ct') { ?> <p>Contratado</p> <?php } else { ?> <p class="pulse">Disponible</p> <?php } ?>
-
-                                                    <div class="btn-group btn-group-sm" role="group" aria-label="...">
-                                                        <?php if ($respuesta[$i]['ses_et'] == 'ct') { ?>
-                                                            <button onclick="showinf('<?php echo $respuesta[$i]['ses_no']; ?>', '<?php echo $respuesta[$i]['ses_de']; ?>')" type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModalLong">Descripcion</button><?php } else {
-                                                            ?> <button onclick="showinf('<?php echo $respuesta[$i]['ses_no']; ?>',<?php echo $respuesta[$i]['ses_de']; ?>)"  type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModalLong">Descripcion</button>
-                                                            <button type="button" class="btn btn-secondary btn-sm">Contratar</button> <?php } ?>
-
-                                                    </div>
-                                                </div>
+                                            <div class="boxmitem">
+                                               
                                             </div>
+                                            
                                         </div>
                                         <?php
                                     }
@@ -117,6 +102,9 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Modulos"] == 1) {
 
                     </div>
                 </div>
+                    
+                </div>
+                
             </div>
         </div>
 
@@ -150,6 +138,8 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Modulos"] == 1) {
         <?php include '../comps/compsjs.php'; ?>
 
         <script src="controler/MODULOSGetAll.js" ></script>
+        <script src="js/Rolessize.js"></script>
+        <script src="js/Modulossize.js"></script>
 
 
 

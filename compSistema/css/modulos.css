@@ -29,11 +29,53 @@ margin-bottom: 25px;
     
 }
 
+
+
+@media (min-width: 1200px) {      /*  mi compu   lista*/
+
+ .boxmitem{
+    width: 325px; 
+    background-color: orange;
+
+
+}
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+  .boxmitem{
+    width: 325px; 
+    background-color: orange;
+
+
+}  
+
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { /* primera horizontal*/
 .boxmitem{
-    
-    width: 240px;
-    height: 65px;
-    margin-left: 5px;
-    display: inline-block;
-    background-color: orangered;
+    width: 325px; 
+    background-color: orange;
+
+
+}
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+.boxmitem{
+     width: 100%; 
+    background-color: orange;
+
+
+}
+}
+
+@media (max-width: 575.98px) { 
+.boxmitem{
+    width: 100%; 
+    background-color: orange;
+
+
+}
+  
 }

@@ -17,10 +17,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Roles"] == 1) {
 
 
         <?php include '../comps/compscss.php'; ?>
-        <link rel="stylesheet" href="css/menusuperior.css" >
-        <link rel="stylesheet" href="css/boxmodel.css" >
-        <link rel="stylesheet" href="css/boxcuerpo.css" >
-        <link rel="stylesheet" href="css/menuseccion.css" >
+      
         <link rel="stylesheet" href="css/roles.css" >
 
 
