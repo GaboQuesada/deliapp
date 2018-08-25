@@ -58,10 +58,10 @@ body{
 
 
     }
-    
+
     .navbarlateral{
-        
-       display: none;
+
+        display: none;
     }
 }
 
@@ -82,6 +82,7 @@ body{
 
     }
     .caja2{
+        padding-top: 65px;
         background-image: url("../../img/fondo.jpg");
         margin-left: 80px;
         display: inline-block;
@@ -91,10 +92,10 @@ body{
 
 
     }
-    
+
     .navbarlateral{
-        
-       display: none;
+
+        display: none;
     }
 
 }
@@ -116,6 +117,7 @@ body{
 
     }
     .caja2{
+        padding-top: 65px;
         background-image: url("../../img/fondo.jpg");
         margin-left: 80px;
         display: inline-block;
@@ -125,10 +127,10 @@ body{
 
 
     }
-    
+
     .navbarlateral{
-        
-       display: none;
+
+        display: none;
     }
 }
 
@@ -142,17 +144,18 @@ body{
     .caja2{
 
         background-image: url("../../img/fondo.jpg");
-
+        padding-top: 60px;
         display: inline-block;
         position: absolute;
         height: 100%;
         width: 100%;
     }
-    
+
     .navbarlateral{
-        
-       display: block;
-         margin-top: 65px;
+
+        display: block;
+         margin-bottom: 15px;
+     
     }
 }
 
@@ -160,21 +163,22 @@ body{
 
     .caja1{
         display: none;
-        
+
     }
     .caja2{
 
         background-image: url("../../img/fondo.jpg");
-
+        padding-top: 60px;
         display: inline-block;
         position: absolute;
         height: 100%;
         width: 100%;
     }
-    
+
     .navbarlateral{
-        
-       display: block;
-       margin-top: 65px;
+
+        display: block;
+        margin-bottom: 15px;
+       
     }
 }
