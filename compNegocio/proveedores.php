@@ -29,7 +29,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Proveedores"] == 1) {
         <a id="iraAncla" href="#ancla"></a>
         <input type="hidden" id="tocompare">
         <?php include '../comps/ShowInfo.php'; ?>
-        <?php include './navsuperior.php'; ?>
+        <?php include '../comps/navsuperior.php'; ?>
 
 
         <div class="contenedorcentral" id="contenedorcentral">
