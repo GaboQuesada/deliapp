@@ -33,11 +33,14 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Roles"] == 1) {
         <?php include '../comps/navsuperior.php'; ?>
 
 
-        <div class="contenedorcentral" id="contenedorcentral" style="margin-bottom: 25px;">
+        <div class="contenedorcentral" id="contenedorcentral">
             <div class="caja1 " id="caja1">
-               <?php include '../comps/navlateral.php'; ?>
+                <?php include '../comps/navlateral.php'; ?>
             </div>
             <div class="caja2" id="caja2">
+                <div class="navbarlateral">
+                    <?php include '../comps/navlateralbar.php'; ?>
+                </div>
                 <div id="cuerpobox" class="container">
                     <div class="col-lg-12 ">
 
