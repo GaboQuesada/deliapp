@@ -80,11 +80,44 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Modulos"] == 1) {
                                             <div class="boxmitem border p-1">
                                                 <div class="container">
                                                     <div class="row">
-                                                        <div class="col">
-                                                            One of three columns
+                                                        <div class="col-2" >
+                                                            <?php if ($respuesta[$i]['ses_et'] == 'ct') { ?> 
+                                                                <i  class="mr-3 mt-3 rounded-circle material-icons " style="width:60px; padding-top: 4%; padding-left: 5px;  font-size: 45px;"><?php echo $respuesta[$i]['ses_im']; ?></i>  <?php } else { ?>
+                                                                <i  class="mr-3 mt-3 rounded-circle material-icons pulse" style="width:60px; color:olivedrab; padding-top: 4%;  font-size: 45px;"><?php echo $respuesta[$i]['ses_im']; ?></i>
+                                                            <?php } ?>
                                                         </div>
-                                                        <div class="col">
-                                                            One of three columns
+                                                        <div class="col-9">
+                                                            <div> <h6><strong><?php echo $respuesta[$i]['ses_no']; ?></strong></h6></div>
+                                                            <div><?php if ($respuesta[$i]['ses_et'] == 'ct') { ?> <p>Contratado</p> <?php } else { ?> <p class="pulse">Disponible</p> <?php } ?></div>
+                                                            <div>
+
+                                                                <?php if ($respuesta[$i]['ses_et'] == 'ct') { ?>
+                                                                    <div class="container">
+                                                                        <div class="row">
+                                                                            <div class="col-sm">
+                                                                                <button onclick="showinf('<?php echo $respuesta[$i]['ses_no']; ?>', '<?php echo $respuesta[$i]['ses_de']; ?>')" type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModalLong">Descripcion</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <?php
+                                                                } else {
+                                                                    ?> 
+
+                                                                    <div class="container">
+                                                                        <div class="row">
+                                                                            <div class="col-5">
+                                                                                <button  onclick="showinf('<?php echo $respuesta[$i]['ses_no']; ?>',<?php echo $respuesta[$i]['ses_de']; ?>)"  type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModalLong">Descripcion</button>
+                                                                            </div>
+                                                                            <div class="col-5">
+                                                                                <button  type="button" class="btn btn-secondary btn-sm">Contratar</button>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                <?php } ?>
+                                                            </div>
                                                         </div>
 
                                                     </div>

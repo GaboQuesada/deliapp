@@ -35,7 +35,7 @@
 @media (min-width: 1200px) {      /*  mi compu   lista*/
 
     .boxmitem{
-        width: 325px; 
+        width: 342px; 
         background-color: orange;
         margin-bottom: 5px;
         display: inline-block;
@@ -48,7 +48,7 @@
 @media (min-width: 992px) and (max-width: 1199.98px) { 
 
     .boxmitem{
-        width: 47%; 
+        width: 49%; 
         background-color: orange;
         margin-bottom: 5px;
         display: inline-block;
