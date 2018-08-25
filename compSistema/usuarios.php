@@ -20,7 +20,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
 
 
         <?php include '../comps/compscss.php'; ?>
-  
+
         <link rel="stylesheet" href="css/menusuperior.css" >
         <link rel="stylesheet" href="css/boxmodel.css" >
         <link rel="stylesheet" href="css/boxcuerpo.css" >
@@ -34,13 +34,15 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
         <input type="hidden" id="tocompare">
         <?php include '../comps/ShowInfo.php'; ?>
         <?php include '../comps/navsuperior.php'; ?>
-
-
-        <div class="contenedorcentral" id="contenedorcentral" style="margin-bottom: 25px;">
+        <div class="contenedorcentral" id="contenedorcentral">
             <div class="caja1 " id="caja1">
                 <?php include '../comps/navlateral.php'; ?>
             </div>
-            <div class="caja2" id="caja2" style="margin-bottom:30px; padding-bottom: 30px;">
+            <div class="caja2" id="caja2">
+                <div class="navbarlateral">
+                    <?php include '../comps/navlateralbar.php'; ?>
+                </div>
+
                 <div id="cuerpobox" class="container-fluid"  style="margin-bottom:30px; padding-bottom: 30px;">
 
                     <div class="container-fluid" >
@@ -175,36 +177,36 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
                         <div id="listausuariosmd"></div>
                         <p><strong>Modificar si es necesario.</strong></p>
                         <form enctype="multipart/form-data" method="post" name="mnewcashbox" id="mnewcashbox">
-                        <select class="custom-select" id="mrolidmd" name="mrolidmd">
-                          
-                            <option value="0" selected>Seleccionar Role </option>
-                            <?php
-                            try {
-                                $stmt = $conn->prepare("CALL ROLESgetAll();");
+                            <select class="custom-select" id="mrolidmd" name="mrolidmd">
 
-                                $stmt->execute();
-                                $respuesta = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                                $tam = count($respuesta);
+                                <option value="0" selected>Seleccionar Role </option>
+                                <?php
+                                try {
+                                    $stmt = $conn->prepare("CALL ROLESgetAll();");
 
-                                for ($i = 0; $i < $tam; $i++) {
-                                    ?>
-                                    <option value="<?php echo $respuesta[$i]['rol_id']; ?>"><?php echo $respuesta[$i]['rol_no']; ?> - <?php echo $respuesta[$i]['rol_de']; ?> </option>
+                                    $stmt->execute();
+                                    $respuesta = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                    $tam = count($respuesta);
 
-                                    <?php
+                                    for ($i = 0; $i < $tam; $i++) {
+                                        ?>
+                                        <option value="<?php echo $respuesta[$i]['rol_id']; ?>"><?php echo $respuesta[$i]['rol_no']; ?> - <?php echo $respuesta[$i]['rol_de']; ?> </option>
+
+                                        <?php
+                                    }
+                                } catch (PDOException $e) {
+
+
+                                    $respuesta['mensajelog'] = $e->getMessage();
+
+                                    print json_encode($respuesta);
                                 }
-                            } catch (PDOException $e) {
-
-
-                                $respuesta['mensajelog'] = $e->getMessage();
-
-                                print json_encode($respuesta);
-                            }
-                            ?>
-                        </select>
-                        <div class="form-group">
-                            <label for="disabledTextInput">Foto perfil</label>
-                            <input type="file" id="mpimu" onchange="readURLModificaUMD(this);" name="mpimu"  class="form-control" >
-                        </div>
+                                ?>
+                            </select>
+                            <div class="form-group">
+                                <label for="disabledTextInput">Foto perfil</label>
+                                <input type="file" id="mpimu" onchange="readURLModificaUMD(this);" name="mpimu"  class="form-control" >
+                            </div>
                     </div>
                     <div class="modal-footer">
                         <input type="hidden" name="mimgk" id="mimgk"/>
@@ -226,7 +228,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
         <script src="controler/usuarioSearch.js" ></script>
         <script src="controler/usuarioGetById.js" ></script>
         <script src="controler/usuarioUpdate.js" ></script>
-     
+
 
 
     </body>
