@@ -19,7 +19,7 @@ if (!empty($_SESSION["usuarioid"])) {
 
         <!-- Bootstrap CSS -->
         <?php include '../comps/compscss.php'; ?>
-        <link rel="stylesheet" href="css/index.css" >
+        <link rel="stylesheet" href="../comps/css/index.css" >
 
 
         <title>Hello, world!</title>
