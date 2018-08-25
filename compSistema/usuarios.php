@@ -230,7 +230,5 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
         <script src="controler/usuarioUpdate.js" ></script>
         <script src="js/Usersize.js" ></script>
 
-
-
     </body>
 </html>

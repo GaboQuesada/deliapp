@@ -1,10 +1,10 @@
 function getLiveSearchUsuarios() {
 
     $.ajax({
-        url: "model/usuarioSearch.php",
+        url: "model/cajaUsuarioLike.php",
         type: 'POST',
         dataType: "json",
-        data: {no: $("#no").val()},
+        data: {userSearch: $("#no").val()},
         beforeSend: function () {
 
         },
