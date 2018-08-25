@@ -1,0 +1,26 @@
+
+/* Css para el efecto del tittle de los menus de el Nav Bar lateral*/
+
+#showinfo{
+    position:absolute;
+    top:0;
+    left:70px;
+    width:100%;
+    height:100%;
+    background: #000;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+   display: none;
+    z-index:3000;
+}
+
+#showinfomsg{
+    font-size: 32px;
+    color: white;
+    position:absolute;
+    width: 30%;
+    height: 15%;
+    top:40%;
+    left: 40%;
+
+}

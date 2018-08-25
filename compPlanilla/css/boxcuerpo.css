@@ -1,0 +1,26 @@
+
+/*
+
+establece el estilo para lo que se encinetr a dentro de la caja 2 y del titulo de pagina
+
+*/
+
+.cajaEncabezado{
+
+    background-color: black; padding-top: 3px; padding-bottom: 3px; color: white; 
+    
+    border-radius: 10px 10px 31px 10px;
+    -moz-border-radius: 10px 10px 31px 10px;
+    -webkit-border-radius: 10px 10px 31px 10px;
+    border: 0px solid #000000;
+
+    -webkit-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.75);
+
+}
+
+.columEncabezado{
+
+    display: inline-block;
+}
