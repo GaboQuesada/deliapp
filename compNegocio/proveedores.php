@@ -17,10 +17,10 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Proveedores"] == 1) {
         <?php include '../comps/compscss.php'; ?>
 
 
-        <link rel="stylesheet" href="css/menusuperior.css" >
+      
         <link rel="stylesheet" href="css/boxmodel.css" >
         <link rel="stylesheet" href="css/boxcuerpo.css" >
-        <link rel="stylesheet" href="css/menuseccion.css" >
+        
 
 
         <title>Proveedores</title>

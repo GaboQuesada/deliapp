@@ -6,3 +6,7 @@
 <link rel="stylesheet" href="../lib/alertifyjs/css/themes/semantic.min.css" >
 <link rel="shortcut icon" href="../img/favicon.ico">
 <link rel="stylesheet" href="../comps/css/showinfo.css" >
+
+
+  <link rel="stylesheet" href="../comps/css/menusuperior.css" >
+  <link rel="stylesheet" href="../comps/css/menuseccion.css" >
