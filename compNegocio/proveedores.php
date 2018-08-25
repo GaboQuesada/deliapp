@@ -18,8 +18,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Proveedores"] == 1) {
 
 
       
-        <link rel="stylesheet" href="css/boxmodel.css" >
-        <link rel="stylesheet" href="css/boxcuerpo.css" >
+      
         
 
 

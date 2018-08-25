@@ -7,6 +7,7 @@
 <link rel="shortcut icon" href="../img/favicon.ico">
 <link rel="stylesheet" href="../comps/css/showinfo.css" >
 
-
-  <link rel="stylesheet" href="../comps/css/menusuperior.css" >
-  <link rel="stylesheet" href="../comps/css/menuseccion.css" >
+<link rel="stylesheet" href="../comps/css/boxcuerpo.css" >
+<link rel="stylesheet" href="../comps/css/boxmodel.css" >
+<link rel="stylesheet" href="../comps/css/menusuperior.css" >
+<link rel="stylesheet" href="../comps/css/menuseccion.css" >
