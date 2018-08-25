@@ -10,7 +10,7 @@ function getLiveSearchUsuarios() {
         },
         success: function (respuesta) {
 
-
+            alert("se ejecuto susese");
 
         },
         error: function () {
