@@ -28,16 +28,19 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Cajas"] == 1) {
         <?php include '../comps/ShowInfo.php'; ?>
         <?php include '../comps/navsuperior.php'; ?>
 
-        <div class="contenedorcentral" id="contenedorcentral" style="margin-bottom: 25px;">
+        <div>
             <div class="caja1 " id="caja1">
                 <?php include '../comps/navlateral.php'; ?>
             </div>
-            <div class="caja2" id="caja2" style="margin-bottom:30px; padding-bottom: 30px;">
-                <div id="cuerpobox" class="container"  style="margin-bottom:30px; padding-bottom: 30px;">
+            <div class="caja2" id="caja2">
+                 <div class="navbarlateral">
+                    <?php include '../comps/navlateralbar.php'; ?>
+                </div>
+                <div id="masterbox">
 
-                    <div class="container">
+                   <div id="boxcontrol" class="container">
                         <div class="row">
-                            <div class="col-lg-4">
+                            <div class="col-lg-4" style="margin-bottom: 20px;">
                                 <div class="card">
                                     <div class="card-body">
 
@@ -101,6 +104,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Cajas"] == 1) {
         <?php include '../comps/compsjs.php'; ?>
         <script src="controler/cajasInsert.js" ></script>
         <script src="controler/cajasGetAll.js" ></script>
+        <script src="js/Rolessize.js" ></script>
 
 
 
