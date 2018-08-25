@@ -182,7 +182,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Modulos"] == 1) {
 
         <script src="controler/MODULOSGetAll.js" ></script>
         <script src="js/Rolessize.js"></script>
-        <script src="js/Modulossize.js"></script>
+
 
 
 

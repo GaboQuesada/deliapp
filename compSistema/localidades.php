@@ -17,11 +17,6 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Localidades"] == 1) {
 
 
         <?php include '../comps/compscss.php'; ?>
-        <link rel="stylesheet" href="css/menusuperior.css" >
-        <link rel="stylesheet" href="css/boxmodel.css" >
-        <link rel="stylesheet" href="css/boxcuerpo.css" >
-        <link rel="stylesheet" href="css/menuseccion.css" >
-        <link rel="stylesheet" href="css/localidades.css" >
 
 
         <title>Localidades</title>
@@ -33,15 +28,18 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Localidades"] == 1) {
         <?php include '../comps/navsuperior.php'; ?>
 
 
-        <div class="contenedorcentral" id="contenedorcentral" style="margin-bottom: 25px;">
+        <div>
             <div class="caja1 " id="caja1">
                 <?php include '../comps/navlateral.php'; ?>
             </div>
-            <div class="caja2" id="caja2" style="margin-bottom:30px; padding-bottom: 30px;">
-                <div id="cuerpobox" class="container"  style="margin-bottom:30px; padding-bottom: 30px;">
-                    <div class="container">
+            <div class="caja2" id="caja2">
+                <div class="navbarlateral">
+                    <?php include '../comps/navlateralbar.php'; ?>
+                </div>
+                <div id="masterbox">
+                    <div id="boxcontrol" class="container">
                         <div class="row">
-                            <div class="col-sm">
+                            <div class="col-md">
                                 <strong><h5>Nueva Localidad</h5></strong>
                                 <hr>
                                 <form enctype="multipart/form-data" method="post" name="fileinfo" id="fileinfo"</form>
@@ -101,7 +99,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Localidades"] == 1) {
                                 <input type="submit" class="btn btn-primary btn-sm btn-block" value="Agregar" />
                                 </form>
                             </div>
-                            <div class="col-sm" style="background-color: white; padding-top: 10px;">
+                            <div class="col-md" style="background-color: white; padding-top: 10px;">
                                 <table class="table table-hover">
                                     <thead>
                                         <tr>
@@ -190,6 +188,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Localidades"] == 1) {
         <?php include '../comps/compsjs.php'; ?>
         <script src="controler/LOCALIDADinsert.js" ></script>
         <script src="controler/LocalidadesgetById.js" ></script>
+        <script src="js/Rolessize.js" ></script>
 
 
 
