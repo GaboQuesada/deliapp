@@ -20,11 +20,9 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
 
 
         <?php include '../comps/compscss.php'; ?>
+        <link rel="stylesheet" href="css/usuarios.css" >
 
-        <link rel="stylesheet" href="css/menusuperior.css" >
-        <link rel="stylesheet" href="css/boxmodel.css" >
-        <link rel="stylesheet" href="css/boxcuerpo.css" >
-        <link rel="stylesheet" href="css/menuseccion.css" >
+ 
 
 
         <title>Localidades</title>
@@ -34,7 +32,9 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
         <input type="hidden" id="tocompare">
         <?php include '../comps/ShowInfo.php'; ?>
         <?php include '../comps/navsuperior.php'; ?>
-        <div class="contenedorcentral" id="contenedorcentral">
+        
+        
+        <div>
             <div class="caja1 " id="caja1">
                 <?php include '../comps/navlateral.php'; ?>
             </div>
@@ -43,14 +43,14 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
                     <?php include '../comps/navlateralbar.php'; ?>
                 </div>
 
-                <div id="cuerpobox" class="container-fluid"  style="margin-bottom:30px; padding-bottom: 30px;">
+                <div id="masterbox">
 
-                    <div class="container-fluid" >
+                    <div id="boxcontrol"  class="container-fluid" >
                         <div class="row">
                             <div class="col-lg-3" style="margin-right: 15px;" >
 
 
-                                <div style="position: fixed; width:350px; margin-right:20px; ">
+                                <div id="boxConFormU" class="cajaformuserf">
                                     <div class="card">
                                         <div class="card-body">
 
@@ -228,6 +228,7 @@ if (!empty($_SESSION["usuarioid"]) && $_SESSION["Usuarios"] == 1) {
         <script src="controler/usuarioSearch.js" ></script>
         <script src="controler/usuarioGetById.js" ></script>
         <script src="controler/usuarioUpdate.js" ></script>
+        <script src="js/Usersize.js" ></script>
 
 
 
